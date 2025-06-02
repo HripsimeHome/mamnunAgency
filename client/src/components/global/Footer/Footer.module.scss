@@ -1,5 +1,95 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.footer {
+.footer {  
+  width: 100%;
+  color: $color-black;  
+  background-color: $color-white;  
+
+  &__container {
+    @include flexCol(space-between, center);
+    width: 100%;
+    padding: 50px 30px;
+
+    @include mdScreenMedia {
+      @include flexCol();
+      padding: 22px 0;
+    }
+  }
+
+  &__logoBlock {
+    @include mdScreenMedia {
+      text-align: center;
+      
+    }    
+  }
+
+  &__logoImgPosition {   
+
+    @include mdScreenMedia {
+      justify-content: center;
+    }
+  }
+
+  &__logoImg {
+    max-width: 178px;  
+   }
+  
+  &__emailAddress {
+    display: none;
+
+    @include mdScreenMedia {
+      display: block;
+      @include setFont(15px, 300);
+      line-height: 15px;
+      margin-top: 8px;
+    }
+  }
+
+  &__copyright {
+    @include setFont(16px, 400);
+    margin-top: 13px;
+  }
+
+  &__menuContainer {
+    display: flex;
+    gap: 80px;
+
+    @include lgScreenMedia {
+      gap: 40px;
+    }
+
+    @include mdScreenMedia {
+      display: none;
+    }
+  }
+
+  &__menuTitle {
+    @include setFont(22px, 600);
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__menuLink {      
+    @include setFont(16px, 300);
+    margin-top: 10px;
+
+    &:hover {
+      color: $color-purple;
+      transition: $transitionEaseOut;
+      cursor: pointer;
+    }
+    
+    &_active {
+      color: $color-purple; 
+
+      &:hover {       
+        cursor: default;
+      }  
+    }
+  }
 }
+

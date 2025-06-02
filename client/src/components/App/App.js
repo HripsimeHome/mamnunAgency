@@ -1,11 +1,11 @@
-import Header from "../global/Header/Header"; 
+import HeaderMenu from "../global/HeaderMenu/HeaderMenu"; 
 import Footer from "../global/Footer/Footer" 
  
 
 function App() {
   return (
     <>
-      <Header />
+      <HeaderMenu />
       <div className="container">
         Container
       </div>

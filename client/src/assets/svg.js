@@ -1,1 +1,2 @@
-export const arrowPrevIcon = "arrowPrev"; 
+export const burgerIcon = "burger";
+export const crossIcon = "cross";
