@@ -64,14 +64,14 @@
 @mixin setFont(
   $size,
   $weight,
-  $family: $font-fam-primary,
-  $color: $color-text,
+  $family: $font-family,
+ // $color: $color-white,
   $useMedia: true
 ) {
   font-size: $size;
   font-weight: $weight;
   font-family: $family;
-  color: $color;
+ // color: $color;
 
   @if ($useMedia) {
     @if ($size == 16px) {

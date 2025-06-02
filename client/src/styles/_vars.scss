@@ -9,16 +9,19 @@ $xl-screen: 1280px;
 // font
 $font-family: "Montserrat", sans-serif;
 
-// Transition
-$transition: all 0.3s;
+
+// Transition 
+$transition: all 0.3s; 
+$transitionEaseOut: all 0.3s ease-out 0s;     
 
 // colors
 
 $color-white: #ffffff;
 $color-black: #000000;
+$color-purple: #8C52FF;
+$color-lightPurple: #B164FF; // Title on top banner
+$color-grey: #919191;
+$color-lightGrey:#E5E5E5; //E2E2E2 - form field
+$color-darkGrey: #575757;
+
 $color-red: #e53935;
- 
-
-
-
-$color-lightGreen: #c7fe62;  
