@@ -1,0 +1,4 @@
+# client
+.history/
+client/node_modules/
+client/build
