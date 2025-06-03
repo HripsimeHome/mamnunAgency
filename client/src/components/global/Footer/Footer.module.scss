@@ -40,14 +40,14 @@
 
     @include mdScreenMedia {
       display: block;
-      @include setFont(15px, 300);
+      //@include setFont(15px, 300);
       line-height: 15px;
       margin-top: 8px;
     }
   }
 
   &__copyright {
-    @include setFont(16px, 400);
+    @include setFont(16px, 400, $color-black);
     margin-top: 13px;
   }
 
@@ -65,7 +65,7 @@
   }
 
   &__menuTitle {
-    @include setFont(22px, 600);
+    //@include setFont(22px, 600);
   }
 
   &__menu {
@@ -74,7 +74,7 @@
   }
 
   &__menuLink {      
-    @include setFont(16px, 300);
+    @include setFont(16px, 300, $color-black);
     margin-top: 10px;
 
     &:hover {

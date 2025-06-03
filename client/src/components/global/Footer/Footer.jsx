@@ -42,7 +42,9 @@ const Footer = () => {
               />
           </Link>
           <p className={styles.footer__copyright}>
-            &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
+            Copyright &copy; {new Date().getFullYear()} MG Elektro LLC. All rights reserved.
+            <br />
+            Designed & Created by <a href="https://webscover.com/" target="_blank" rel="noreferrer">webscover.com.</a>
           </p>          
         </div>        
       </div>      
@@ -51,3 +53,4 @@ const Footer = () => {
 };
 
 export default Footer;
+//   

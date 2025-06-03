@@ -4,7 +4,8 @@ const AboutMain = () => {
   return (
     <>
       <section className={styles.aboutMain}>
-        About
+        <div className="container">About          
+        </div>
       </section>
     </>
   );
