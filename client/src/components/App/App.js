@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <HeaderMenu />
-      <div className="container">
+      <div>
        <AppRouter />
       </div>
       <Footer />

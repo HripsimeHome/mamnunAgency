@@ -66,19 +66,18 @@
   }
 
   &__menuLink {
-    @include setFont(18px, 500);
-     color: $color-white;  
+    @include setFont(18px, 500, $color-white);    
     // margin-left: 58px;;
 
     &:hover {
       //color: $color-purple;
       cursor: pointer;
       transition: $transitionEaseOut;
-      text-decoration: underline;
+      //text-decoration: underline;      
     }
 
     &_active {
-      color: $color-purple;
+      color: $color-white;
       text-decoration: underline;
       //border-bttom: 2px solid $color-purple;
 

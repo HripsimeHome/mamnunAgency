@@ -40,9 +40,8 @@ a {
 }
 
 .container {
-  max-width: 1440px;
-  width: 100%;
-  //margin: 190px auto 50px;
+  max-width: 1480px;
+  width: 100%;  
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -76,9 +75,11 @@ a {
 /////////
  
 .wrapperBlack {
+  width: 100%;
   background-color: $color-black;  
 }
 
 .wrapperWhite {
+  width: 100%;
   background-color: $color-white;  
 }

@@ -1,0 +1,39 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.homeBrief {     
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  padding: 100px 0;
+
+   &__text {
+   margin-bottom: 25px;;   
+  }
+
+  .briefText {
+    width: 100%;    
+    @include setFont(20px, 400, $color-black);
+    text-align: justify;
+    line-height: 30px;
+  }
+  
+  &__mission {
+    max-width: 804px;
+    @extend .briefText;   
+  }
+
+  &__values {
+    max-width: 586px;
+     @extend .briefText;
+  }
+
+  &__missionImg {
+   max-width: 100%;   
+  }
+
+  &__valuesImg {
+   max-width: 100%;  
+   margin-bottom: 50px;;       
+  } 
+}
