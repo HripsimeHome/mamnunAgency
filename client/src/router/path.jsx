@@ -4,7 +4,7 @@ import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import TourismPage from "../pages/TourismPage";
 import EducationPage from "../pages/EducationPage";
-import VIPServicesPage from "../pages/VIPServicesPage";
+import servicesPage from "../pages/ServicesPage";
 import ContactsPage from "../pages/ContactsPage";
  
 import ErrorPage from "../pages/ErrorPage";
@@ -39,8 +39,8 @@ export const routes = [
     component: <EducationPage />,
   },
   {
-    path: vipServicesPagePath,
-    component: <VIPServicesPage />,
+    path: servicesPagePath,
+    component: <ServicesPage />,
   },
   {
     path: contactsPagePath,
