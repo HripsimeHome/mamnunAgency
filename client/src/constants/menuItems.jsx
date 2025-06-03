@@ -5,7 +5,7 @@ import {
   aboutPagePath,
   tourismPagePath,
   educationPagePath,
-  vipServicesPagePath,
+  servicesPagePath,
   contactsPagePath,
 
 } from "../router/path"
@@ -22,7 +22,7 @@ export const headerMenuItems =  [
   },
   {
     text: "Travel to Uzbekistan", 
-    link: tourismPagePath 
+   link: tourismPagePath 
   },
    {
     text: "Study Abroad Consulting", 
@@ -30,7 +30,7 @@ export const headerMenuItems =  [
   },  
   {
     text: "Extra VIP Services", 
-    link: vipServicesPagePath 
+    link: servicesPagePath 
   },
    {
     text: "Contact us", 

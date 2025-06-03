@@ -5,6 +5,7 @@ const ContactsMain = () => {
 
   return (    
     <section className={styles.contactsMain}>      
+    Contacts
     </section>
   );
 };

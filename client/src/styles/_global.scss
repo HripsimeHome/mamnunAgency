@@ -43,7 +43,7 @@ a {
   max-width: 1440px;
   width: 100%;
   //margin: 190px auto 50px;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   
@@ -62,9 +62,23 @@ a {
   }*/
 
   @include smScreenMedia {
-    max-width: 360px;
+    //max-width: 360px;
     //padding-left: 16px;
     // padding-right: 16px;
   }
   
+}
+
+
+
+
+
+/////////
+ 
+.wrapperBlack {
+  background-color: $color-black;  
+}
+
+.wrapperWhite {
+  background-color: $color-white;  
 }

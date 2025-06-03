@@ -1,11 +1,11 @@
-import VIPServicesMain from "../components/VIPServicesPage/VIPServicesMain/VIPServicesMain";
+import ServicesMain from "../components/ServicesPage/ServicesMain/ServicesMain";
 
-const VIPServicesPage = () => {
+const ServicesPage = () => {
   return (
     <>
-      <VIPServicesMain />
+      <ServicesMain />
     </>
   );
 };
 
-export default VIPServicesPage;
+export default ServicesPage;

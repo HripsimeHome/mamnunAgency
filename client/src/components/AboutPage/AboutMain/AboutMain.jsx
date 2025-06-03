@@ -3,7 +3,9 @@ import styles from "./AboutMain.module.scss";
 const AboutMain = () => {
   return (
     <>
-      <section className={styles.aboutMain}></section>
+      <section className={styles.aboutMain}>
+        About
+      </section>
     </>
   );
 };

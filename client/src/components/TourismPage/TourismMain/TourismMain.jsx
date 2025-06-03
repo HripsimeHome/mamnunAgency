@@ -3,7 +3,9 @@ import styles from "./TourismMain.module.scss";
 const TourismMain = () => {
   return (
     <>
-      <section className={styles.tourismMain}></section>
+      <section className={styles.tourismMain}>
+        Tourism
+      </section>
     </>
   );
 };

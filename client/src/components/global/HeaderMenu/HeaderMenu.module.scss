@@ -10,49 +10,31 @@
   transition: $transition;
 
   &__container {
-    @include flexCol(space-between);
-    padding: 20px 30px;
+    @include flexCol(space-between);    
     display: flex;
     align-items: center;
 
     @include smScreenMedia {
-      padding: 20px;
+      //padding: 20px;
      }
   }
 
-  .logoImgSize {   
+   &__logoImg {   
     width: 100%;   
     max-width: 93px;
-    height: auto;   
-  }
-
-  &__logoImg {   
-    @extend .logoImgSize;
-    margin-right: 60px;
+    height: auto;      
   
     @include lgScreenMedia {    
-     padding-right: 20px;
+     //padding-right: 20px;
     }
-  }
-
-  &__logoImgMenuOpen {
-    @extend .logoImgSize;   
-    margin: 0;
-    padding: 0;
-  }
-
-  &__leftBlock {
-    display: flex;
-    align-items: center;
-    gap: 10px;
   }
 
   // Desktop & Mobile Menu  
   &__menu {
     display: flex;
-    gap: 85px;       
+    gap: 58px;       
 
-    @include lgScreenMedia {
+    @include smScreenMedia {
       display: none;
       gap: 30px;  
     }
@@ -60,24 +42,25 @@
     &_open {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: start;
       position: fixed;
+      height: 100vh;
       top: 50%;
-      left: 50%;
+      //right: 0;
       transform: translate(-50%, -50%);
       z-index: 3;
       max-width: 500px;
       width: 100%;
       background-color: $color-black;  
       border-radius: 5px;  
-      padding: 50px 0 60px;   
+      padding-top: 150px;
+      padding-left: 20px;   
   
       @include smScreenMedia {
         max-width: 100%;
         height: 100vh;
-        justify-content: center;
-        padding: 20px 22px;
-        border-radius: 0;
+        //justify-content: center;    
+       
       }
     }
   }
@@ -85,6 +68,7 @@
   &__menuLink {
     @include setFont(18px, 500);
      color: $color-white;  
+    // margin-left: 58px;;
 
     &:hover {
       //color: $color-purple;
@@ -108,7 +92,7 @@
     background: none;    
     display: none;
 
-    @include lgScreenMedia {
+    @include smScreenMedia {
       display: block;
     }
   }
@@ -134,7 +118,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 10;
   }
 
   &__crossIcon {
@@ -156,14 +140,4 @@
     background: rgba(0, 0, 0, 0.7);
     z-index: 2;
   }
-
-  &__rightBlock {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    @include smScreenMedia {
-      gap: 10px;
-     }
-  } 
 }
