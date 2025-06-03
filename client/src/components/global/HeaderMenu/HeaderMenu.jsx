@@ -42,7 +42,7 @@ const HeaderMenu = () => {
     <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
         {/* Left Block */}        
-        <div className={styles.headerMenu__leftBlock}>        
+        <div>        
           <Link 
             to={homePagePath}>            
               <ImageWebp 
@@ -50,65 +50,56 @@ const HeaderMenu = () => {
                 srcSet={logoWebpImage}
                 alt="MAMNUN Agency"                 
                 className={styles.headerMenu__logoImg} />             
-          </Link>          
-                   
-          <nav className={`
-            ${styles.headerMenu__menu}
-            ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
-            {isMenuOpen && (
-              
-               <>             
-                <Link 
-                  to={homePagePath}>
-                  <ImageWebp 
-                    src={logoImage} 
-                    srcSet={logoWebpImage}
-                    alt="MAMNUN Agency"   
-                    className={styles.headerMenu__logoImgMenuOpen} />
-                </Link>   
-
-                <button 
-                  className={styles.headerMenu__btnClose} 
-                  onClick={toggleMenu}>
-                  <Svg 
-                    id={crossIcon} 
-                    className={styles.headerMenu__crossIcon} />
-                </button>                
-              </>              
-            )}
-
-            {headerMenuItems.map(({ text, link }, index) => (
-              
-              <NavLink
-                to={link}
-                key={index}
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                    : styles.headerMenu__menuLink
-                }
-                onClick={() => isMenuOpen && setIsMenuOpen(false)}
-              >
-                {text}
-              </NavLink>
+          </Link> 
+          </div>
              
-            ))}          
-                       
-          </nav>         
-        </div>
+            <div>       
+            <nav className={`
+              ${styles.headerMenu__menu}
+              ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
+              {isMenuOpen && (
+                
+                <>           
+                 
+                  <button 
+                    className={styles.headerMenu__btnClose} 
+                    onClick={toggleMenu}>
+                    <Svg 
+                      id={crossIcon} 
+                      className={styles.headerMenu__crossIcon} />
+                  </button>                
+                </>              
+              )}
 
-        {/* Right Block */}
-        <div className={styles.headerMenu__rightBlock}>         
-         
-         
-          <button 
+              {headerMenuItems.map(({ text, link }, index) => (
+                
+                <NavLink
+                  to={link}
+                  key={index}
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                      : styles.headerMenu__menuLink
+                  }
+                  onClick={() => isMenuOpen && setIsMenuOpen(false)}
+                >
+                  {text}
+                </NavLink>              
+              ))}         
+                        
+            </nav>  
+             <button 
             className={styles.headerMenu__btnBurger} 
             onClick={toggleMenu}>
             <Svg 
               id={burgerIcon} 
               className={styles.headerMenu__burgerIcon} />
           </button>
-        </div>       
+              </div>        
+         
+
+        {/* Right Block */}
+           
       </div>
 
       {/* Overlay for Mobile Menu */}

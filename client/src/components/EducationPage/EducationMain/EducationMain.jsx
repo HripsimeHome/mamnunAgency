@@ -3,7 +3,9 @@ import styles from "./EducationMain.module.scss";
 const EducationMain = () => {
   return (
     <>
-      <section className={styles.educationMain}></section>
+      <section className={styles.educationMain}>
+        Education
+      </section>
     </>
   );
 };
