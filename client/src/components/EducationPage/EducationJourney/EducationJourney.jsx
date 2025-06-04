@@ -4,7 +4,11 @@ const EducationJourney = () => {
   return (    
     <section className={`${styles.educationJourney} wrapperWhite`}>
       <div className="container">
-        Unlock Your Global Education Journey with Us!
+        <h2 className="titleBlackh2">Unlock Your Global Education Journey&nbsp;          
+          <span className="titlePurpleh2">with Us!             
+          </span>
+        </h2>  
+       
 
       </div>      
     </section>  
