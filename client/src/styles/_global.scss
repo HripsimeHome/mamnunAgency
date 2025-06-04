@@ -29,14 +29,35 @@ a {
   text-decoration: none;
 }
 
-.pointer {
-  cursor: pointer;
-}
+// .pointer {
+//   cursor: pointer;
+// }
 
 #root {
  // min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.titlePurpleh1 {
+  @include setFont(125px, 600, $color-purple);
+  line-height: 100px;
+}
+
+.titleWhiteh2 {
+  @include setFont(65px, 600, $color-white);
+}
+.titleBlackh2 {
+  @include setFont(65px, 600, $color-black);
+}
+.titlePurpleh2 {
+  @include setFont(65px, 600, $color-purple);
+}
+
+ 
+
+.textRed {
+  color: $color-red;
 }
 
 .container {

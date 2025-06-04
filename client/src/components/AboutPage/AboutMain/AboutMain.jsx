@@ -2,12 +2,11 @@ import styles from "./AboutMain.module.scss";
 
 const AboutMain = () => {
   return (
-    <>
-      <section className={styles.aboutMain}>
-        <div className="container">About          
-        </div>
-      </section>
-    </>
+    <section className={`${styles.aboutMainboutMain} wrapperBlack`}>
+      <div className="container">    
+        
+      </div>    
+    </section>  
   );
 };
 

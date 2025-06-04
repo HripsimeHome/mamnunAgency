@@ -4,7 +4,8 @@ const EducationFAQ = () => {
   return (
    <section className={`${styles.educationFAQ} wrapperBlack`}>
     <div className="container">
-      FAQ
+      <h1 className="titlePurpleh2">FAQ
+      </h1> 
 
     </div>      
    </section>  

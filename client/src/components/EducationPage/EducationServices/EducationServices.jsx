@@ -4,7 +4,17 @@ const EducationServices = () => {
   return (
    <section className={`${styles.educationServices} wrapperBlack`}>
     <div className="container">
-      Unlock Your Global Education Journey with Us!
+      <h2 className="titleWhiteh2">Additional&nbsp;          
+        <span className="titlePurpleh2">Services             
+        </span>
+        <br />
+          <span className="titleWhiteh2">(Available for an Extra Fee)             
+        </span>
+      </h2> 
+
+
+        
+
 
     </div>      
    </section>  
