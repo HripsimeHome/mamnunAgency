@@ -13,13 +13,13 @@ const EducationPage = () => {
     <>
       <EducationHeader />
       <EducationStudying />
-      <EducationStudyingAbroad />
+      <EducationStudyingAbroad />*
       <EducationOffer />
-      <EducationScholarships />
+      <EducationScholarships /> 
       <EducationJourney />
       <EducationServices />
       <EducationStories />
-      <EducationFAQ />
+     <EducationFAQ /> 
     </>
   );
 };

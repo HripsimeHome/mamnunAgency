@@ -39,6 +39,7 @@ a {
   flex-direction: column;
 }
 
+
 .titlePurpleh1 {
   @include setFont(125px, 600, $color-purple);
   line-height: 100px;
@@ -47,13 +48,35 @@ a {
 .titleWhiteh2 {
   @include setFont(65px, 600, $color-white);
 }
+
 .titleBlackh2 {
   @include setFont(65px, 600, $color-black);
 }
+
 .titlePurpleh2 {
   @include setFont(65px, 600, $color-purple);
 }
 
+
+.titlePurpleh3 {
+  @include setFont(36px, 600, $color-purple);
+}
+
+.titleBlackh3 {
+  @include setFont(36px, 600, $color-black);
+}
+
+
+
+
+.titleBlackh4 {
+  @include setFont(20px, 600, $color-black);
+}
+
+
+.center {
+  text-align: center;
+}
  
 
 .textRed {
@@ -104,3 +127,7 @@ a {
   width: 100%;
   background-color: $color-white;  
 }
+
+
+
+

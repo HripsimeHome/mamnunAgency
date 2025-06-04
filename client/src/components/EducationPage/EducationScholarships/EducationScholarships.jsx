@@ -8,6 +8,10 @@ const EducationScholarships = () => {
           <span className="titlePurpleh2">Financial Aid             
           </span>
         </h2>  
+        <p className={styles.sducationScholarships__subTitle}> 
+          Universities worldwide offer a variety of scholarships and financial aid options to support students in their academic pursuits. Let’s look through the
+
+        </p>
       </div>      
     </section>  
   );
