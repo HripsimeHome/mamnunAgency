@@ -8,9 +8,12 @@ const EducationServices = () => {
         <span className="titlePurpleh2">Services             
         </span>
         <br />
-          <span className="titleWhiteh2">(Available for an Extra Fee)             
+        <span className="titleWhiteh2">(Available for an Extra Fee)             
         </span>
       </h2> 
+
+
+      test
 
 
         
