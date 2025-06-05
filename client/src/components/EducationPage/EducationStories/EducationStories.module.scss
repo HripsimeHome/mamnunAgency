@@ -18,17 +18,66 @@
     border: 1px solid $color-black;
     border-radius: 25px;
     box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 25px;
+    margin: 50px 25px;
   }
 
-  hr {
-        border: none;
-    border-top: 1px solid #f3f3f3;
-    margin: 12px 0;
-    outline: 0;
+  &__cardText {
+     @include setFont(18px, 400, $color-black);
+     line-height: 25px;
+     padding: 25px;    
   }
-   
 
+  &__cardLine {
+     border: none;
+     border-top: 2px solid $color-black;    
+     outline: 0;
+
+     @include smScreenMedia {
+      border-top: 1px solid $color-black;    
+    }
+  }
+
+  &__storyContainer {
+     @include flexCol(space-between, center);
+     padding: 25px;    
+  }
+
+  &__storyBLock {
+     @include flexCol();
+     gap: 15px;
+  }
+  
+  &__storyInfo {
+     @include flexCol(center, start);
+     flex-direction: column;
+     gap: 3px;     
+  }
+
+  &__studientName {
+     @include setFont(18px, 500, $color-black);    
+  }
+
+  &__storyTitle {
+     @include setFont(18px, 400, $color-black);    
+  }
+
+ &__storyImg {
+     max-width: 70px;
+     height: auto;
+     border-radius: 50px;
+ }   
+ 
+
+ &__starBlock {
+     display: flex
+ } 
+
+  &__starIcon {
+     @include svg(30px, 30px);
+     margin-left: 5px;
+ } 
+
+ 
 }
 
 
