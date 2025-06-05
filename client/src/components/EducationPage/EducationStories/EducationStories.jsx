@@ -11,6 +11,7 @@ import {
   starStoryIcon 
 } from "../../../assets/svg";
 
+
 const EducationStories = () => {
   return (
     <section className={`${styles.educationStories} wrapperWhite`}>
@@ -19,12 +20,63 @@ const EducationStories = () => {
         </span>
       </h2>  
 
-      <div className={styles.educationStories__cardContainer}> 
-        <div className={styles.educationStories__card}> 
-          <p className={styles.educationStories__cardText}>
+      <div className={styles.educationStories__slideContainer}> 
+        <div className={styles.educationStories__slide}> 
+          <p className={styles.educationStories__slideDescription}>
             As I navigated the challenge of choosing the right destination for my academic journey, my focus was primarily on my passion for football. MAMNUN Agency played a crucial role in helping me identify the best educational path for my future. Applying to study in Warsaw turned out to be one of the best decisions of my life. Not only am I pursuing my diploma, which is a significant step towards my career, but I also have the incredible opportunity to play for one of the top football teams in Poland. Thanks to MAMNUN, I am successfully balancing my education and my love for the game!
           </p>          
-          <hr className={styles.educationStories__cardLine} />
+          <hr className={styles.educationStories__slideLine} />
+
+          <div className={styles.educationStories__storyContainer}> 
+            <div className={styles.educationStories__storyBLock}>
+              <ImageWebp 
+                src={storyImage} 
+                srcSet={storyWebpImage}
+                alt="Success stories of the students"                 
+                className={styles.educationStories__storyImg} 
+              /> 
+
+              <div className={styles.educationStories__storyInfo}>
+                <span className={styles.educationStories__studientName}>
+                  Farrukh A.
+                </span>
+                <span className={styles.educationStories__storyTitle}>
+                  A Winning Combination of Education and Football
+                </span>
+              </div>
+            </div>
+
+            <div className={styles.educationStories__starBlock}>
+              <Svg 
+                id={starStoryIcon}
+                className={styles.educationStories__starIcon}
+              />
+                <Svg 
+                id={starStoryIcon}
+                className={styles.educationStories__starIcon}
+              />
+                <Svg 
+                id={starStoryIcon}
+                className={styles.educationStories__starIcon}
+              />
+                <Svg 
+                id={starStoryIcon}
+                className={styles.educationStories__starIcon}
+              />
+                <Svg 
+                id={starStoryIcon}
+                className={styles.educationStories__starIcon}
+              />
+            </div> 
+          </div>    
+        </div>  
+        {/* /slide  */}
+
+        <div className={styles.educationStories__slide}> 
+          <p className={styles.educationStories__slideDescription}>
+            As I navigated the challenge of choosing the right destination for my academic journey, my focus was primarily on my passion for football. MAMNUN Agency played a crucial role in helping me identify the best educational path for my future. Applying to study in Warsaw turned out to be one of the best decisions of my life. Not only am I pursuing my diploma, which is a significant step towards my career, but I also have the incredible opportunity to play for one of the top football teams in Poland. Thanks to MAMNUN, I am successfully balancing my education and my love for the game!
+          </p>          
+          <hr className={styles.educationStories__slideLine} />
 
           <div className={styles.educationStories__storyContainer}> 
             <div className={styles.educationStories__storyBLock}>
@@ -67,12 +119,10 @@ const EducationStories = () => {
                 className={styles.educationStories__starIcon}
               />
             </div> 
-          </div>        
-
-
-
+          </div>    
         </div>
-        
+          {/* /slide      */}
+              
       </div>   
     </section>  
   );
