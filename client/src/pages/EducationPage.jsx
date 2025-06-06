@@ -16,7 +16,7 @@ const EducationPage = () => {
       <EducationStudyingAbroad />
       <EducationOffer /> 
       <EducationScholarships /> 
-       <EducationJourney />
+      <EducationJourney />
       <EducationServices />
       <EducationStories />
      <EducationFAQ />  
