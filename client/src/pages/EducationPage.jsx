@@ -13,7 +13,7 @@ const EducationPage = () => {
     <>
       <EducationHeader />
       <EducationStudying />
-      <EducationStudyingAbroad />*
+      <EducationStudyingAbroad />
       <EducationOffer />
       <EducationScholarships /> 
       <EducationJourney />

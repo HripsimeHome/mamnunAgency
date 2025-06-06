@@ -4,6 +4,8 @@ export const crossIcon = "cross";
 
 //Education
 
+export const languageCoursesIcon = "languageCourses";
+
 export const starStoryIcon = "starStory";
  
 
