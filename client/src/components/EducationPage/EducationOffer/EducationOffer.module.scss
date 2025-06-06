@@ -3,10 +3,11 @@
 
 
 .educationOffer{
+  padding: 100px 0;
+
   &__container {
     display: flex;
-    gap: 159px;
-    padding: 100px 0;
+    gap: 159px;    
   }
 
   &__leftColumn {
@@ -45,6 +46,10 @@
   &__titleBlock {
     @include flexCol(center, start);          
     gap: 15px;
+
+      @include mdScreenMedia {
+      justify-content: start;    
+    }
   }
 
   &__icon {     
@@ -58,12 +63,6 @@
 
   &__description {
     @include setFont(22px, 400, $color-black);
-    text-align: justify;
-     
+    text-align: justify;     
   }
-   
-
-
-
 }
-
