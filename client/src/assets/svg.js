@@ -5,8 +5,7 @@ export const crossIcon = "cross";
 // Education - WWe offer 
 export const languageCoursesIcon = "languageCourses";
 
-
- // Education - Scholarships
+// Education - Scholarships
 export const meritBasedIcon = "meritBased";
 export const needBasedIcon = "needBased";
 export const specificScholarshipsIcon = "specificScholarships";

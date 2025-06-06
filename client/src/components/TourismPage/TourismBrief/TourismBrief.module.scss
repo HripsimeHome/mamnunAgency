@@ -1,6 +1,24 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.TourismBrief {     
+.tourismBrief {   
+  
+  &__test {
+    @include flexCol();
+    width: 100%;
+    gap: 50px;
+    padding: 100px 0;
+  }
+
+  &__text {
+    max-width: 804px;
+    width: 100%;
+  }
+
+  &__briefImg {
+    max-width: 586px;
+    width: 100%;
+    height: auto;
+  }
    
 }
