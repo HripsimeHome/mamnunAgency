@@ -57,7 +57,6 @@ const tabData = [
     description: "Many governments and universities provide grants that do not need to be repaid. These can be based on merit, need, or specific criteria set by the institution."
   },
 
-  // TFinancial Aid Options
   {
     icon: grantsIcon,
     title: "Grants:",
@@ -100,7 +99,6 @@ const EducationScholarships = () => {
           </span>     
         </div>
         {/* tabTitleContainer */}
-
          
         {tabData.map(({ icon, title, description }, index) => (           
           <div className={styles.educationScholarships__tabContent}>           
@@ -120,9 +118,7 @@ const EducationScholarships = () => {
             </div>        
           </div> 
         ))}
-        {/* tabContent */}
- 
-
+        {/* tabContent */} 
 
         <p className={styles.educationScholarships__text}> 
           It is important to note that the availability and types of scholarships and financial aid can vary significantly from university to university. Each institution has its own policies, funding sources, and criteria for awarding financial support. If you wish to get ore detailed information, feel free to contact us to          
