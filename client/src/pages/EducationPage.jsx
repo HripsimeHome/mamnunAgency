@@ -11,15 +11,15 @@ import EducationFAQ from "../components/EducationPage/EducationFAQ/EducationFAQ"
 const EducationPage = () => {
   return (
     <>
-      <EducationHeader />
+    * <EducationHeader />
       <EducationStudying />
       <EducationStudyingAbroad />
-      <EducationOffer />
+      <EducationOffer /> 
       <EducationScholarships /> 
-      <EducationJourney />
+       <EducationJourney />
       <EducationServices />
       <EducationStories />
-     <EducationFAQ /> 
+     <EducationFAQ />  
     </>
   );
 };
