@@ -2,12 +2,21 @@
 @import "../../../styles/vars";
 
 .aboutVideo {  
+  padding: 100px 0;
+
+   &__video {
+     @include flexCol();
+     flex-direction: column;
+   
+  }
 
     &__text {
      @include setFont(18px, 400, $color-white);
      line-height: 30px;
      text-align: center;
      padding-top: 28px;
+      max-width: 1052px;
+     width: 100%;
   }
    
 }
