@@ -1,0 +1,28 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.aboutFooter {    
+  padding: 100px 0; 
+
+  &__text {
+    @include flexCol();
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+   
+  &__title {
+    @include setFont(60px, 600, $color-black); 
+    line-height: 60px;
+  }
+
+  &__companyBlock {   
+    display: flex;
+    flex-direction: column;
+  }
+    &__companyName {
+    @include setFont(40px, 800, $color-black); 
+    
+  }
+  
+}

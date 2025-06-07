@@ -27,7 +27,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>      
+    <footer className={`${styles.footer} wrapperWhite`}>      
       <div className={`${styles.footer__container} container`}>
         <div className={styles.footer__logoBlock}>
           <Link 

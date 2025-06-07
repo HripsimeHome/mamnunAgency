@@ -66,4 +66,21 @@
     text-align: justify; 
     line-height: 30px;    
   }  
+
+  &__test {
+   display: flex;
+   flex-direction: column;
+  } 
+
+  &__btnTest {
+    @include flexCol();
+    align-self: flex-end;
+    max-width: 586px;
+    width: 100%;
+    padding: 20px;
+  } 
+   
+
+
+
 }

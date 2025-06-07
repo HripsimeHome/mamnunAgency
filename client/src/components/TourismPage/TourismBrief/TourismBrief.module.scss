@@ -3,16 +3,20 @@
 
 .tourismBrief {   
   
-  &__test {
-    @include flexCol();
+  &__content {
+    display: flex;
     width: 100%;
     gap: 50px;
     padding: 100px 0;
   }
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     max-width: 804px;
     width: 100%;
+    text-align: justify;
   }
 
   &__briefImg {
