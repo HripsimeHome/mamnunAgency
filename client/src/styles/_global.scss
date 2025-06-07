@@ -39,7 +39,15 @@ a {
   flex-direction: column;
 }
 
+.center {
+  text-align: center;
+} 
 
+.textRed {
+  color: $color-red;
+}
+
+// Titles
 .titlePurpleh1 {
   @include setFont(125px, 600, $color-purple);
   line-height: 100px;
@@ -57,7 +65,6 @@ a {
   @include setFont(65px, 600, $color-purple);
 }
 
-
 .titlePurpleh3 {
   @include setFont(36px, 600, $color-purple);
 }
@@ -66,21 +73,26 @@ a {
   @include setFont(36px, 600, $color-black);
 }
 
-
-
-
 .titleBlackh4 {
   @include setFont(20px, 600, $color-black);
 }
 
+// Button
 
-.center {
-  text-align: center;
-}
- 
+.btnPrimary {
+  @include flexCol();
+  background: transparent;
+  outline: 2px solid $color-purple;
+  border-radius: 30px;
+  @include setFont(18px, 700, $color-white); 
 
-.textRed {
-  color: $color-red;
+  &:hover {
+    background-color: green;      
+  }
+
+  &:active  {
+    background-color: blue;     
+  }
 }
 
 .container {
@@ -108,16 +120,10 @@ a {
     //max-width: 360px;
     //padding-left: 16px;
     // padding-right: 16px;
-  }
-  
+  }  
 }
 
 
-
-
-
-/////////
- 
 .wrapperBlack {
   width: 100%;
   background-color: $color-black;  
@@ -127,7 +133,3 @@ a {
   width: 100%;
   background-color: $color-white;  
 }
-
-
-
-

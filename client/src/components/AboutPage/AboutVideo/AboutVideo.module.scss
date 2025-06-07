@@ -1,6 +1,13 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.aboutVideo {     
+.aboutVideo {  
+
+    &__text {
+     @include setFont(18px, 400, $color-white);
+     line-height: 30px;
+     text-align: center;
+     padding-top: 28px;
+  }
    
 }

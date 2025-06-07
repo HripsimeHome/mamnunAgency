@@ -120,14 +120,18 @@ const EducationScholarships = () => {
         ))}
         {/* tabContent */} 
 
-        <p className={styles.educationScholarships__text}> 
-          It is important to note that the availability and types of scholarships and financial aid can vary significantly from university to university. Each institution has its own policies, funding sources, and criteria for awarding financial support. If you wish to get ore detailed information, feel free to contact us to          
-         </p>
+        <div className={styles.educationScholarships__test}>
+          <p className={styles.educationScholarships__text}> 
+            It is important to note that the availability and types of scholarships and financial aid can vary significantly from university to university. Each institution has its own policies, funding sources, and criteria for awarding financial support. If you wish to get ore detailed information, feel free to contact us to          
+          </p>
 
-         <Link 
-          to={contactsPagePath}>          
-          get free consultation
-         </Link>
+          <Link 
+            to={contactsPagePath}
+            className={`${styles.educationScholarships__btnTest} btnPrimary`}>          
+            get free consultation
+          </Link>
+        </div> 
+
       </div>      
     </section>  
   );
