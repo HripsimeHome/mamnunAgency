@@ -1,0 +1,38 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.aboutHeader {    
+
+   &__content {
+    display: flex;
+    width: 100%;
+    gap: 160px;
+  }
+
+  &__title {
+    @include setFont(34px, 600, $color-purple); 
+    text-align: left;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 804px;
+    width: 100%;
+    text-align: justify;
+    padding-top: 150px
+  }
+
+  // &__briefImg {
+  //   max-width: 586px;
+  //   width: 100%;
+  //   height: auto;
+  // }
+  
+  &__logo {
+    max-width: 375px;
+    height: auto;
+   // width: 100%;
+  }
+}

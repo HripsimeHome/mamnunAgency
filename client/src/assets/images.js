@@ -8,6 +8,10 @@ import missionWebpImage from "./images/home/mission.webp";
 import valuesImage from "./images/home/values.jpg";
 import valuesWebpImage from "./images/home/values.webp";
 
+// About
+import logoBlackImage from "./images/logos/logoBlack.png";
+import logoBlackWebpImage from "./images/logos/logoBlack.webp";
+
 //Tourism
 import tourismBriefImage from "./images/tourism/tourismBrief.jpg";
 import tourismBriefWebpImage from "./images/tourism/tourismBrief.webp";
@@ -28,6 +32,10 @@ export {
 
   valuesImage,
   valuesWebpImage,
+
+  // About
+  logoBlackImage, 
+  logoBlackWebpImage,
 
   //Tourism
   tourismBriefImage, 
