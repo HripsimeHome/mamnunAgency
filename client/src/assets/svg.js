@@ -2,6 +2,27 @@
 export const burgerIcon = "burger";
 export const crossIcon = "cross";
 
+// About
+export const educationIcon = "education";
+export const opportunitiesIcon ="opportunities";
+export const scholarshipsIcon ="scholarships";
+export const servicesIcon = "services";
+export const travelIcon = "travel";
+export const VIPIcon = "VIP";
+export const transportationIcon = "transportation";
+export const supportIcon = "support";
+export const culturalDifferencesIcon = "culturalDifferences";
+export const consultationIcon = "consultation";
+export const relationshipsIcon = "relationships";
+export const feedbackIcon = "feedback";
+export const trustIcon = "trust";
+export const partnerIcon = "partner";
+ 
+
+
+
+
+
 // Education - WWe offer 
 export const languageCoursesIcon = "languageCourses";
 
