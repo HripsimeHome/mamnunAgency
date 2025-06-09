@@ -32,36 +32,29 @@ const AboutHeader = () => {
           />
         </div>{/* content */}
 
+        <div className={styles.aboutHeader__briefContainer}> 
+          <div className={styles.aboutHeader__briefBlock}> 
+            <h2 className="titleBlackh2">Our&nbsp;
+              <span className="titlePurpleh2">Vision             
+              </span>
+            </h2>  
+            <p className={styles.aboutHeader__description}>               
+              To bridge global learning opportunities, providing diverse educational programs worldwide to students while crafting unique travel experiences and memorable journeys customized to individual aspirations. Through education and travel, we strive to foster a global perspective, and cultural understanding.
+            </p> 
+          </div>
 
 
-
-      <div className={styles.aboutHeader__briefContainer}> 
-        <div className={styles.aboutHeader__briefBlock}> 
-          <h2 className="titleBlackh2">Our&nbsp;
-            <span className="titlePurpleh2">Vision             
-            </span>
-          </h2>  
-          <p className={styles.aboutHeader__description}>               
-            To bridge global learning opportunities, providing diverse educational programs worldwide to students while crafting unique travel experiences and memorable journeys customized to individual aspirations. Through education and travel, we strive to foster a global perspective, and cultural understanding.
-          </p> 
-        </div>
-
-
-         <div className={styles.aboutHeader__briefBlock}> 
-          <h2 className="titleBlackh2">Our&nbsp;
-            <span className="titlePurpleh2">Mission             
-            </span>
-          </h2>  
-          <p className={styles.aboutHeader__description}>               
-            To challenge cultural stereotypes by promoting education and travel as opportunities for personal and professional growth for everyone.
-          </p> 
-        </div>
-
+          <div className={styles.aboutHeader__briefBlock}> 
+            <h2 className="titleBlackh2">Our&nbsp;
+              <span className="titlePurpleh2">Mission             
+              </span>
+            </h2>  
+            <p className={styles.aboutHeader__description}>               
+              To challenge cultural stereotypes by promoting education and travel as opportunities for personal and professional growth for everyone.
+            </p> 
+          </div>
         </div>
         {/* briefContainer */}
-
-
-
 
       </div>      
    </section>  
