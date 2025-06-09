@@ -13,14 +13,13 @@ import logoBlackImage from "./images/logos/logoBlack.png";
 import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 
 //Tourism
-import tourismBriefImage from "./images/tourism/tourismBrief.jpg";
-import tourismBriefWebpImage from "./images/tourism/tourismBrief.webp";
+import tourismBriefImage from "./images/tourism/brief/tourismBrief.jpg";
+import tourismBriefWebpImage from "./images/tourism/brief/tourismBrief.webp";
 
 
 //Education
-import storyImage from "./images/education/story.jpg";
-import storyWebpImage from "./images/education/story.webp";
-
+import storyImage from "./images/education/stories/story.jpg";
+import storyWebpImage from "./images/education/stories/story.webp";
 
 export {
   // Home
