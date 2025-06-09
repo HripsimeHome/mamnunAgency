@@ -16,6 +16,23 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 import tourismBriefImage from "./images/tourism/brief/tourismBrief.jpg";
 import tourismBriefWebpImage from "./images/tourism/brief/tourismBrief.webp";
 
+import samarkandImage from "./images/tourism/destinations/samarkand.jpg";
+import samarkandWebpImage from "./images/tourism/destinations/samarkand.webp";
+
+import bukharaImage from "./images/tourism/destinations/bukhara.jpg";
+import bukharaWebpImage from "./images/tourism/destinations/bukhara.webp";
+
+import khivaImage from "./images/tourism/destinations/khiva.jpg";
+import khivaWebpImage from "./images/tourism/destinations/khiva.webp";
+
+import tashkentImage from "./images/tourism/destinations/tashkent.jpg";
+import tashkentWebpImage from "./images/tourism/destinations/tashkent.webp";
+
+import nukusImage from "./images/tourism/destinations/nukus.jpg";
+import nukusWebpImage from "./images/tourism/destinations/nukus.webp";
+
+import chimganImage from "./images/tourism/destinations/chimgan.jpg";
+import chimganWebpImage from "./images/tourism/destinations/chimgan.webp";
 
 //Education
 import storyImage from "./images/education/stories/story.jpg";
@@ -25,26 +42,32 @@ export {
   // Home
   logoImage,
   logoWebpImage,
-
   missionImage,
   missionWebpImage,
-
   valuesImage,
   valuesWebpImage,
 
   // About
-  logoBlackImage, 
+  logoBlackImage,
   logoBlackWebpImage,
 
   //Tourism
-  tourismBriefImage, 
+  tourismBriefImage,
   tourismBriefWebpImage,
+  samarkandImage,
+  samarkandWebpImage,
+  bukharaImage,
+  bukharaWebpImage,
+  khivaImage,
+  khivaWebpImage,
+  tashkentImage,
+  tashkentWebpImage,
+  nukusImage,
+  nukusWebpImage,
+  chimganImage,
+  chimganWebpImage,
 
   //Education
-  storyImage, 
+  storyImage,
   storyWebpImage,
-
-
-
-
 };
