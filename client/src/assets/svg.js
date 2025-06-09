@@ -17,11 +17,6 @@ export const relationshipsIcon = "relationships";
 export const feedbackIcon = "feedback";
 export const trustIcon = "trust";
 export const partnerIcon = "partner";
- 
-
-
-
-
 
 // Education - WWe offer 
 export const languageCoursesIcon = "languageCourses";
