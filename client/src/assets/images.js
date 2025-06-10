@@ -13,6 +13,9 @@ import logoBlackImage from "./images/logos/logoBlack.png";
 import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 
 //Tourism
+import tourismHeaderImage from "./images/tourism/header/tourismHeader.jpg";
+import tourismHeaderWebpImage from "./images/tourism/header/tourismHeader.webp";
+
 import tourismBriefImage from "./images/tourism/brief/tourismBrief.jpg";
 import tourismBriefWebpImage from "./images/tourism/brief/tourismBrief.webp";
 
@@ -35,8 +38,16 @@ import chimganImage from "./images/tourism/destinations/chimgan.jpg";
 import chimganWebpImage from "./images/tourism/destinations/chimgan.webp";
 
 //Education
+
+import educationHeaderImage from "./images/education/header/educationHeader.jpg";
+import educationHeaderWebpImage from "./images/education/header/educationHeader.webp";
+
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
+
+// Services
+import servicesHeaderImage from "./images/services/header/servicesHeader.jpg";
+import servicesHeaderWebpImage from "./images/services/header/servicesHeader.webp";
 
 export {
   // Home
@@ -52,6 +63,8 @@ export {
   logoBlackWebpImage,
 
   //Tourism
+  tourismHeaderImage,
+  tourismHeaderWebpImage,
   tourismBriefImage,
   tourismBriefWebpImage,
   samarkandImage,
@@ -70,4 +83,10 @@ export {
   //Education
   storyImage,
   storyWebpImage,
+  educationHeaderImage,
+  educationHeaderWebpImage,
+
+  // Services
+  servicesHeaderImage,
+  servicesHeaderWebpImage,
 };

@@ -6,7 +6,6 @@ const EducationFAQ = () => {
     <div className="container">
       <h1 className="titlePurpleh2">FAQ
       </h1> 
-
     </div>      
    </section>  
   );

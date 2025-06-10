@@ -1,6 +1,6 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.educationHeader {
-
+.banner {
+    @include bgWebp("../../../assets/images/education/header/educationHeader.jpg","../../../assets/images/education/header/educationHeader.webp");
 }
