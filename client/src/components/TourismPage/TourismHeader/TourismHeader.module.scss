@@ -1,6 +1,9 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.tourismHeader {
-  
+.banner {
+  @include bgWebp(
+    "../../../assets/images/tourism/header/tourismHeader.jpg",
+    "../../../assets/images/tourism/header/tourismHeader.webp"
+  );
 }
