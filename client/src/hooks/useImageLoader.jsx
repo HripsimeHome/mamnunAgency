@@ -17,7 +17,7 @@ export const useImageLoader = ( image, webpImg, shouldLoad = true) => {
 
     preloadImages(webpImg, image);
     
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return loading;

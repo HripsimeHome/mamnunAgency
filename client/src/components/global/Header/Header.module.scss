@@ -2,13 +2,11 @@
 @import "../../../styles/vars";
 
 .header {
-  width: 100%;
-  aspect-ratio: 6/2;
+  position: relative;
   @include flexCol();
-  flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  transition: $transition;
+   aspect-ratio: 6/2;
+  //flex-direction: column;
+ 
   //background-blend-mode: hue;
   //background-color: rgb(0 0 0 / 35%);
   text-align: center;
@@ -17,17 +15,40 @@
     aspect-ratio: 6/2.5;
   }
 
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+   // @include flexCol();  
+   
+   
+    //background-position: center;
+    transition: $transition;
+    z-index: 1;
+  }
+
   @include smScreenMedia {
-    aspect-ratio: 6/4;
+    //aspect-ratio: 6/4;
   }
 
   &_load {
     background-color: #888787;
   }
+  
+  &__textContainer {
+    @include flexCol();
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
 
   &__title {
-    @include setFont(96px, 600, $color-purple);    
-    margin-bottom: 25px;    
+    @include setFont(96px, 600, $color-purple);
+    margin-bottom: 25px;
 
     @include mdScreenMedia {
       //font-size: 30px;
@@ -35,15 +56,15 @@
     }
 
     @include smScreenMedia {
-     // font-size: 24px;
+      // font-size: 24px;
     }
   }
 
   &__subtitle {
-    @include setFont(23px, 400, $color-white);  
-    line-height: 30px;   
+    @include setFont(23px, 400, $color-white);
+    line-height: 30px;
     padding: 0 30px;
-    
+
     @include mdScreenMedia {
       //font-size: 16px;
     }
