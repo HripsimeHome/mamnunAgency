@@ -4,12 +4,11 @@
 .header {
   position: relative;
   @include flexCol();
-   aspect-ratio: 6/2;
-  //flex-direction: column;
- 
+  aspect-ratio: 6/2;
   //background-blend-mode: hue;
   //background-color: rgb(0 0 0 / 35%);
   text-align: center;
+  background-color: $color-darkGrey;
 
   @media (max-width: 1200px) {
     aspect-ratio: 6/2.5;
@@ -21,30 +20,26 @@
     top: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;   
-   // @include flexCol();  
-   
-   
-    //background-position: center;
+    object-fit: cover;
     transition: $transition;
     z-index: 1;
-  }
+    opacity: 1;
+
+    &_inactive {
+      opacity: 0;
+    }
+  } 
 
   @include smScreenMedia {
     //aspect-ratio: 6/4;
   }
 
-  &_load {
-    background-color: #888787;
-  }
-  
   &__textContainer {
     @include flexCol();
     flex-direction: column;
     position: relative;
     z-index: 2;
   }
-
 
   &__title {
     @include setFont(96px, 600, $color-purple);

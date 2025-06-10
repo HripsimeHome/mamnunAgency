@@ -3,17 +3,18 @@ import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import { useImageLoader } from "../../../hooks/useImageLoader";
 
 
-
-
-const Header = ({ image, webpImage, title, subtitle }) => {
+const Header = ({ image, webpImage, alt, title, subtitle }) => {
   const loading = useImageLoader( image, webpImage);
   return (
     <header className={styles.header}>
       <ImageWebp
         src={image}
         srcSet={webpImage}
-        alt="MAMNUN Agency"
-        className={styles.header__img}
+        alt={alt}
+        className={`
+          ${styles.header__img}
+          ${loading ? styles.header__img_inactive : ""}         
+        `}
       />
       <div className="container">
         <div className={styles.header__textContainer}>
