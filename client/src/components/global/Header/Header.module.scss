@@ -11,9 +11,12 @@
   transition: $transition;
   //background-blend-mode: hue;
   //background-color: rgb(0 0 0 / 35%);
+  text-align: center;
+
   @media (max-width: 1200px) {
     aspect-ratio: 6/2.5;
   }
+
   @include smScreenMedia {
     aspect-ratio: 6/4;
   }
@@ -23,29 +26,25 @@
   }
 
   &__title {
-    @include setFont(60px, 700, $color-white);
-    text-align: center;
-    margin-bottom: 28px;
-    font-style: italic;
+    @include setFont(96px, 600, $color-purple);    
+    margin-bottom: 25px;    
 
     @include mdScreenMedia {
-      font-size: 30px;
-      margin-bottom: 12px;
+      //font-size: 30px;
+      //margin-bottom: 12px;
     }
 
     @include smScreenMedia {
-      font-size: 24px;
+     // font-size: 24px;
     }
   }
-  &__subtitle {
-    @include setFont(20px, 700, $color-white);
-    font-style: italic;
-    text-align: center;
-    max-width: 800px;
-    margin-bottom: 16px;
 
+  &__subtitle {
+    @include setFont(23px, 400, $color-white);  
+    line-height: 30px;   
+    
     @include mdScreenMedia {
-      font-size: 16px;
+      //font-size: 16px;
     }
   }
 }
