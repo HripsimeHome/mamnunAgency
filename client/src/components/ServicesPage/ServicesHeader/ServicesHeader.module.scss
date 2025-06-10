@@ -1,9 +1,0 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
-
-.banner {
-  @include bgWebp(
-    "../../../assets/images/services/header/servicesHeader.jpg",
-    "../../../assets/images/services/header/servicesHeader.webp"
-  );
-}
