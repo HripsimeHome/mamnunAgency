@@ -1,4 +1,5 @@
 import styles from "./Header.module.scss";
+import { useImageLoader } from "../../../hooks/useImageLoader";
 
 const Header = ({ image, webpImage, backgroundClass, title, subtitle }) => {
   return (
