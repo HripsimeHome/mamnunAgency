@@ -42,6 +42,7 @@
   &__subtitle {
     @include setFont(23px, 400, $color-white);  
     line-height: 30px;   
+    padding: 0 30px;
     
     @include mdScreenMedia {
       //font-size: 16px;
