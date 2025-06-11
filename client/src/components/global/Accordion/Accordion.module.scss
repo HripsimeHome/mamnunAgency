@@ -19,6 +19,13 @@
     background-color: #f9f9f9;
   }
 
+  
+  &__iconTest {
+    width: 40px;
+    height: 40px;;
+  }
+  
+
   &__icon {
     font-size: 1.5rem;
   }
@@ -30,6 +37,7 @@
     color: #333;
     animation: fadeIn 0.3s ease-in-out;
   }
+
 }
 
 @keyframes fadeIn {
