@@ -1,9 +1,71 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.homeNews { 
-
+.homeNews {
   &__slideContainer {
     @include flexCol();
+    gap: 88px;
+    padding: 50px 0 100px;
   }
+
+  &__slide {
+    max-width: 425px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   // @include setFont(18px, 400, $color-black);
+    border: 3px solid $color-black;
+    border-radius: 25px;
+    padding: 25px;    
+
+    &:hover {
+     background-color: $color-black;    
+     cursor: pointer;
+    }
+  }
+
+  &__img {
+    max-width: 375px;
+    //width: 100%;
+    border-radius: 25px;
+  }
+
+  &__title {
+    @include setFont(24px, 600, $color-black);
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    &:hover {
+     color: $color-white;        
+    }
+  }
+
+  &__description {
+    @include setFont(18px, 400, $color-black);
+
+    &:hover {
+     color: $color-white;        
+    }
+  }
+
+  &__date {
+    @include setFont(18px, 300, $color-black);
+    margin-top: 5px;
+
+     &:hover {
+     color: $color-white;       
+    }
+  }
+
+  // Modal
+
+  &__modal {
+    max-width: 1069px;
+    width: 100%;
+    background-color: $color-black;
+    border-radius: 50px;
+    border: 3px solid $color-white;
+  }
+  
+
 }
