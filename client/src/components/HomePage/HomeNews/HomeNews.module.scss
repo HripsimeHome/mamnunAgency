@@ -3,4 +3,7 @@
 
 .homeNews { 
 
+  &__slideContainer {
+    @include flexCol();
+  }
 }
