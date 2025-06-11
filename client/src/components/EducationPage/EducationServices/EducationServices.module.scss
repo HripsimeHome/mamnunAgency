@@ -3,8 +3,12 @@
 
 
 .educationServices{  
+  
+  padding: 100px 0;
 
-
+  &__text {
+    @include setFont(20px, 400, $color-white)
+  }
 
 }
 
