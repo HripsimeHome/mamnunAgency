@@ -8,6 +8,18 @@ const HomeNews = () => {
           <span className="titlePurpleh2">Blog             
           </span>
         </h2>  
+
+        <div className={styles.homeNews__slideContainer}>
+
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+
+
+        </div>
+
+
+
       </div>   
     </section>  
   );
