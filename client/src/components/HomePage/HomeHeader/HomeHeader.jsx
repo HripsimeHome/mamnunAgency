@@ -7,11 +7,11 @@ import  {
 const HomeHeader = () => {
   return (        
     <section className={styles.homeHeader}>   
-        
+        {/* <source src="/videos/home/home.mp4" type="video/mp4" /> */}
       <video 
         controls autoPlay muted loop
         className={styles.homeHeader__video}>     
-       {/* <source src="/videos/home/home.mp4" type="video/mp4" /> */}
+       
         <source src={homeVideo} />
        Your browser does not support the video tag.
       </video>
