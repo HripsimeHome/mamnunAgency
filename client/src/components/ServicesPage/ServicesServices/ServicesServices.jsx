@@ -7,7 +7,27 @@ const ServicesServices = () => {
         <h2 className="titleWhiteh2">Our&nbsp;           
           <span className="titlePurpleh2">Services       
           </span>
-        </h2>    
+        </h2>  
+
+
+        <div className={styles.servicesServices__flipCard}>
+          <div className={styles.servicesServices__flipCardInner}>
+            <div className={styles.servicesServices__front}>
+              Front
+            </div>
+            <div className={styles.servicesServices__back}>
+              Back
+            </div>
+          </div>
+        </div>
+        {/* flipCard */}
+
+
+
+
+
+
+
       </div>
     </section>
   );

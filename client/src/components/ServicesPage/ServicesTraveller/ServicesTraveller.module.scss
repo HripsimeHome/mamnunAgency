@@ -2,14 +2,29 @@
 @import "../../../styles/vars";
 
 .servicesTraveller {
+  padding: 100px 0;
 
-  &__flipCard {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px; 
+  &__text {
+    @include setFont(18px, 400, $color-black);
   }
 
-  &__flipCardInner {
+  &__cardContainer {
+    display: flex;
+    flex-direction: column;    
+    gap: 25px;
+    margin-top: 50px;
+    // max-width: 1440px;
+    // width: 100%;
+  }
+
+  &__card {    
+   // width: 300px;
+    //height: 350px;
+   height: 350px;
+   perspective: 1000px; 
+  }
+
+  &__cardInner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -17,12 +32,12 @@
     transform-style: preserve-3d;
   }
 
-  &__flipCard:hover &__flipCardInner {
+  &__card:hover &__cardInner {
     transform: rotateY(180deg);
   }
 
-  &__front,
-  &__back {
+  &__cardFront,
+  &__cardBack {
     position: absolute;
     width: 100%;
     height: 100%;    
@@ -32,56 +47,39 @@
     background-color: #f0f0f0;    
   }
 
-  &__back {
-    background-color: #000;
-    @include setFont(20px, 400, $color-white);
+  &__cardBack {   
+    background-color: $color-white;   
+    border:4px solid $color-black;
+    border-radius: 20px;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  &__cardBackTextBlock {
+    @include flexCol();
+    flex-direction: column;
+    
+  }
+  
+  &__cardBackTitle{
+    @include setFont(32px, 600, $color-black);
+    align-self: flex-start;    
+  }
+
+  &__cardBackText{
+    @include setFont(22px, 400, $color-black);
+    line-height: 30px;;
+    margin-bottom: 25px;
+  }
+   
+
+   &__cardFront {
+
+    &:hover {
+     cursor: pointer;
+   }
   }
 }
-
-
-
-  
-  // &__flipCard {
-  //   position: relative;
-  //   width: 500px;
-  //   height: 500px;
-  //   transform-style: preserve-3d;
-     
-  // }
-
-  // &__front {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   background-color: $color-black;
-  //   width: 100%;
-  //   height: 100%;
-  //   @include flexCol();
-  //   @include setFont(20px, 400, $color-white);
-  //   transition: transform 0.6;
-  //   backface-visibility: hidden;
-
-  //   &:hover {
-  //       transform: rotateY(-100deg);
-  //   }
-  // }
-
-  //   &__back {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   background-color: $color-white;
-  //   width: 100%;
-  //   height: 100%;
-  //   @include flexCol();
-  //   @include setFont(20px, 400, $color-black);
-  //   transition: transform 0.6;
-  //   backface-visibility: hidden;
-
-  //   transform: rotateY(100deg);
-
-  //     &:hover {
-  //     transform: translateY(30deg);
-  //   }
-  // }

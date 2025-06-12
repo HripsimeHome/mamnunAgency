@@ -7,14 +7,19 @@ import  {
 const HomeHeader = () => {
   return (        
     <section className={styles.homeHeader}>   
-        {/* <source src="/videos/home/home.mp4" type="video/mp4" /> */}
+      {/* <source src="/videos/home/home.mp4" type="video/mp4" /> */}
+
+{/*       
       <video 
         controls autoPlay muted loop
-        className={styles.homeHeader__video}>     
-       
+        className={styles.homeHeader__video}>        
         <source src={homeVideo} />
        Your browser does not support the video tag.
-      </video>
+      </video> */}
+
+
+
+
       {/* три девиза 
         1. Travel Far горит кнопка Tourism 
         2. Learn Deep горит кнопка Education
