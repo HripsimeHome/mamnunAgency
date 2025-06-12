@@ -14,14 +14,14 @@ const newsData = [
 
   {
     image: newsImage, 
-    title: "News blog 1",
+    title: "Dedicated to delivering exceptional education",
     description: "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
     date: "01.05.2025"
   },
 
   {
     image: newsImage, 
-    title: "News blog 1",
+    title: "News blog 3",
     description: "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
     date: "01.05.2025"
   },
