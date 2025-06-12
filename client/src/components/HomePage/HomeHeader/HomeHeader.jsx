@@ -1,9 +1,20 @@
 import styles from "./HomeHeader.module.scss";
- 
+
+import  {
+  homeVideo  
+} from "../../../assets/videos"
 
 const HomeHeader = () => {
   return (        
-    <section className={styles.homeHeader}>     
+    <section className={styles.homeHeader}>   
+        
+      <video 
+        controls autoPlay muted loop
+        className={styles.homeHeader__video}>     
+       {/* <source src="/videos/home/home.mp4" type="video/mp4" /> */}
+        <source src={homeVideo} />
+       Your browser does not support the video tag.
+      </video>
       {/* три девиза 
         1. Travel Far горит кнопка Tourism 
         2. Learn Deep горит кнопка Education
@@ -11,7 +22,7 @@ const HomeHeader = () => {
         */}
 
       {/* или h1 */}
-{/* 
+      {/* 
       <h2 className="titleWhiteh2">
       Travel Far    
       </h2>
@@ -24,11 +35,8 @@ const HomeHeader = () => {
       Experience True Satisfaction    
       </h2> */}
 
-      {/* <video width="1052" height="562" controls autoPlay muted loop>     
-       <source src="/videos/home/home.mp4" type="video/mp4" />
-       Your browser does not support the video tag.
-      </video> */}
-       
+
+ 
     </section>  
   );
 };
