@@ -10,11 +10,11 @@
 }
 
 body {
-  font-family: $font-family;  
+  font-family: $font-family;
   color: $color-black;
-  background-color: $color-white;  
+  background-color: $color-white;
 
-    // Body Scrollbar
+  // Body Scrollbar
 
   &::-webkit-scrollbar {
     width: 11px;
@@ -62,14 +62,18 @@ a {
 // }
 
 #root {
- // min-height: 100vh;
+  // min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .center {
   text-align: center;
-} 
+}
+
+.textPurple {
+  color: $color-purple;
+}
 
 .textRed {
   color: $color-red;
@@ -112,24 +116,24 @@ a {
   background: transparent;
   outline: 2px solid $color-purple;
   border-radius: 30px;
-  @include setFont(18px, 700, $color-white); 
+  @include setFont(18px, 700, $color-white);
 
   &:hover {
-    background-color: green;      
+    background-color: green;
   }
 
-  &:active  {
-    background-color: blue;     
+  &:active {
+    background-color: blue;
   }
 }
 
 .container {
   max-width: 1480px;
-  width: 100%;  
+  width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  
+
   // border: 1px solid green;
   /*
   @include xlScreenMedia {
@@ -148,15 +152,15 @@ a {
     //max-width: 360px;
     //padding-left: 16px;
     // padding-right: 16px;
-  }  
+  }
 }
 
 .wrapperBlack {
   width: 100%;
-  background-color: $color-black;  
+  background-color: $color-black;
 }
 
 .wrapperWhite {
   width: 100%;
-  background-color: $color-white;  
+  background-color: $color-white;
 }

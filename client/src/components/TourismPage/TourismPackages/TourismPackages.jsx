@@ -1,124 +1,101 @@
 import styles from "./TourismPackages.module.scss";
-import Svg from "../../layout/Svg/Svg";
+import Tabs from "../../global/Tabs/Tabs";
 
-import {   
-   classicTourIcon,
-   explorerIcon,
-   customToursIcon,
-   themedExperiencesIcon, 
-   dressModestlyIcon, 
-   localEtiquetteIcon,
-   currencyIcon,
-   languageIcon,
-   visitIcon  
-     
+import {
+  classicTourIcon,
+  explorerIcon,
+  customToursIcon,
+  themedExperiencesIcon,
+  dressModestlyIcon,
+  localEtiquetteIcon,
+  currencyIcon,
+  languageIcon,
+  visitIcon,
 } from "../../../assets/svg";
 
-const tabData = [
-  {
-    icon: classicTourIcon,
-    title: "Classic Uzbekistan Tour:",
-    description: "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva."
-  },
+const tabHeaders = [
+  "Travel Packages and Itineraries",
+  "Cultural Tips and Travel Advice",
+];
 
-  {
-    icon: explorerIcon,
-    title: "Silk Road Explorer:",
-    description: "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks."
-  }, 
-
-  {
-    icon: customToursIcon,
-    title: "Custom Tours:",
-    description: "Tell us your interests, and we will build a personalized itinerary just for you."
-  }, 
-
-  {
-    icon: themedExperiencesIcon,
-    title: "Themed Experiences:",
-    description: "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers."
-  },
-
- //Second tab
- {
-    icon: dressModestlyIcon,
-    title: "Dress Modestly:",
-    description: "While Uzbekistan is a secular country, modest dress is appreciated, especially when visiting religious sites."
-  },
-
-  {
-    icon: localEtiquetteIcon,
-    title: "Local Etiquette:",
-    description: "Greetings are important – a firm handshake (between men), along with a smile and polite conversation, goes a long way."
-  },
-
-  {
-    icon: currencyIcon,
-    title: "Currency",
-    description: "The Uzbek Som (UZS) is the local currency. Credit cards are increasingly accepted in cities, but cash is still king in smaller towns."
-  },
-
-  {
-    icon: languageIcon,
-    title: "Language:",
-    description: "Uzbek is the official language, but Russian is widely spoken. English is growing in popularity, especially among younger locals and those in the tourism industry."
-  },
-
-  {
-    icon: visitIcon,
-    title: "Best Time to Visit:",
-    description: "Spring (April to June) and autumn (September to early November) offer pleasant weather and vibrant landscapes."
-  }
-]
+const tabContentGroups = [
+  [
+    {
+      icon: classicTourIcon,
+      title: "Classic Uzbekistan Tour:",
+      description:
+        "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva.",
+    },
+    {
+      icon: explorerIcon,
+      title: "Silk Road Explorer:",
+      description:
+        "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks.",
+    },
+    {
+      icon: customToursIcon,
+      title: "Custom Tours:",
+      description: "Tell us your interests, and we will build a personalized itinerary just for you.",
+    },
+    {
+      icon: themedExperiencesIcon,
+      title: "Themed Experiences:",
+      description:
+        "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers.",
+    },
+  ],
+  
+  [
+    {
+      icon: dressModestlyIcon,
+      title: "Dress Modestly:",
+      description:
+        "While Uzbekistan is a secular country, modest dress is appreciated, especially when visiting religious sites.",
+    },
+    {
+      icon: localEtiquetteIcon,
+      title: "Local Etiquette:",
+      description:
+        "Greetings are important – a firm handshake (between men), along with a smile and polite conversation, goes a long way.",
+    },
+    {
+      icon: currencyIcon,
+      title: "Currency:",
+      description:
+        "The Uzbek Som (UZS) is the local currency. Credit cards are increasingly accepted in cities, but cash is still king in smaller towns.",
+    },
+    {
+      icon: languageIcon,
+      title: "Language:",
+      description:
+        "Uzbek is the official language, but Russian is widely spoken. English is growing in popularity, especially among younger locals and those in the tourism industry.",
+    },
+    {
+      icon: visitIcon,
+      title: "Best Time to Visit:",
+      description: "Spring (April to June) and autumn (September to early November) offer pleasant weather and vibrant landscapes.",
+    },
+  ],
+];
 
 const TourismPackages = () => {
-  return (        
+  return (
     <section className={`${styles.tourismPackages} wrapperBlack`}>
-      <div className="container">  
-        <h2 className="titleWhiteh2">Travel packages + Cultural&nbsp;           
-          <span className="titlePurpleh2">tips and recommendations         
-          </span>
-        </h2>  
+      <div className="container">
+        <h2 className="titleWhiteh2">
+          Travel packages + Cultural&nbsp;
+          <span className="titlePurpleh2">tips and recommendations</span>
+        </h2>
         <p className={styles.tourismPackages__text}>
-          We offer a range of thoughtfully crafted travel packages tailored to your interests and travel style. Choose from:
+          We offer a range of thoughtfully crafted travel packages tailored to
+          your interests and travel style. Choose from:
         </p>
-
-        {/* //Tab title */}
-        <div className={styles.tourismPackages__tabTitleContainer}>          
-          <span className={styles.tourismPackages__whiteText}>
-            Travel Packages and Itineraries              
-          </span>
-          <span className={styles.tourismPackages__greyText}>
-            Cultural Tips and Travel Advice
-          </span>     
-        </div>
-        {/* tabTitleContainer */}
-
-        {tabData.map(({ icon, title, description }, index) => (           
-          <div className={styles.tourismPackages__tabContent}>           
-            <div 
-              key={index} 
-              className={styles.tourismPackages__titleBlock}>
-              <Svg
-                id={icon} 
-                className={styles.tourismPackages__icon} 
-              />
-              <h3 className={styles.tourismPackages__title}>
-              {title}
-              </h3>
-            </div>
-            <div className={styles.tourismPackages__description}>
-              {description}                      
-            </div>        
-          </div> 
-        ))}
-        {/* tabContent */} 
-
-        <p className={styles.tourismPackages__text}>
-        Each package includes accommodations, transportation, expert guides, entrance fees, and 24/7 support.
+        <Tabs tabHeaders={tabHeaders} tabContentGroups={tabContentGroups} />
+         <p className={styles.tourismPackages__text}>
+          Each package includes accommodations, transportation, expert guides, entrance fees, and 24/7 support.
         </p>
-      </div>      
-    </section>  
+      </div>
+    </section>
   );
 };
 
