@@ -23,14 +23,12 @@ const tabContentGroups = [
     {
       icon: classicTourIcon,
       title: "Classic Uzbekistan Tour:",
-      description:
-        "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva.",
+      description: "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva.",
     },
     {
       icon: explorerIcon,
       title: "Silk Road Explorer:",
-      description:
-        "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks.",
+      description: "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks.",
     },
     {
       icon: customToursIcon,
@@ -40,8 +38,7 @@ const tabContentGroups = [
     {
       icon: themedExperiencesIcon,
       title: "Themed Experiences:",
-      description:
-        "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers.",
+      description: "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers.",
     },
   ],
   

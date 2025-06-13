@@ -12,13 +12,10 @@ const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
         {tabHeaders.map((header, index) => (
           <span
             key={index}
-            className={
-              index === activeTabIndex
-                ? styles.tabs__activeText
-                : styles.tabs__inActiveText
-            }
+            className={`            
+              ${index === activeTabIndex ? styles.tabs__active : styles.tabs__inActive}
+            `}
             onClick={() => setActiveTabIndex(index)}
-            style={{ cursor: "pointer" }}
           >
             {header}
           </span>
