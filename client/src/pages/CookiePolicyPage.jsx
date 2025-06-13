@@ -1,5 +1,4 @@
  
-
 function CookiePolicy() {
   return (
     <section className="wrapperWhite">
@@ -9,7 +8,7 @@ function CookiePolicy() {
         </h1>      
 
         <p>
-          This Cookies Policy outlines the principles for the use of cookies and similar technologies on the website webscover.com, operated by MAMNUN Agency. You can contact the company via email at <a href="mailto:info@mamnunagency.com"> info@mamnunagency.com</a> or by phone at +998949181305; +998774222882.
+          This Cookies Policy outlines the principles for the use of cookies and similar technologies on the website webscover.com, operated by MAMNUN Agency. You can contact the company via email at <a href="mailto:info@mamnunagency.com">info@mamnunagency.com</a> or by phone at +998949181305; +998774222882.
         </p>
 
         <h2>
@@ -51,7 +50,7 @@ function CookiePolicy() {
           4. Contact
         </h2>
         <p>
-          If you have any questions regarding the Cookies Policy or other issues related to personal data, please contact us at <a href="mailto:info@mamnunagency.com"> info@mamnunagency.com </a>.
+          If you have any questions regarding the Cookies Policy or other issues related to personal data, please contact us at <a href="mailto:info@mamnunagency.com">info@mamnunagency.com</a>.
         </p>
         <p>
           This Cookies Policy may be updated periodically, so we recommend regularly reviewing its content.
