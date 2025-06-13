@@ -1,6 +1,7 @@
 import styles from "./TourismServices.module.scss";
 import Svg from "../../layout/Svg/Svg";
 
+
 import {
   itinerariesIcon,
   museumIcon,
@@ -138,6 +139,33 @@ const TourismServices = () => {
           Services&nbsp;
           <span className="titlePurpleh2">we provide</span>
         </h2>
+
+        <div className={styles.tourismServices__titleBlock}>
+
+         <div className={styles.tourismServices__linePosition}>
+            <div className={styles.tourismServices__arrowLine}></div>
+            <Svg
+              id={feedbackIcon}              
+              className={styles.tourismServices__arrowIcon}
+            />
+          </div>
+
+          
+
+           <h3 className={styles.tourismServices__sectionTitle}>
+            Travel & Culture
+           </h3>
+        </div>
+        {/* titleBLock */}
+
+
+
+
+
+
+
+
+
 
         <div className={styles.tourismServices__panelContainer}>
           {servicesData.map(({ icon, title, description }, index) => (
