@@ -1,5 +1,6 @@
 import styles from "./EducationScholarships.module.scss";
 import { Link } from "react-router-dom";
+import Tabs from "../../global/Tabs/Tabs"
 import Svg from "../../layout/Svg/Svg";
 
 import {  
@@ -78,6 +79,8 @@ const tabData = [
 ]
 
 const EducationScholarships = () => {
+   const tabHeaders = ["Types of Scholarships", "Financial Aid Options"];
+   
   return (    
     <section className={`${styles.educationScholarships} wrapperBlack`}>
       <div className="container"> 
@@ -89,48 +92,8 @@ const EducationScholarships = () => {
           Universities worldwide offer a variety of scholarships and financial aid options to support students in their academic pursuits. Let’s look through the
         </p>
 
-        {/* //Tab title */}
-        <div className={styles.educationScholarships__tabTitleContainer}>          
-          <span className={styles.educationScholarships__whiteText}>
-            Types of Scholarships              
-          </span>
-          <span className={styles.educationScholarships__greyText}>
-            Financial Aid Options
-          </span>     
-        </div>
-        {/* tabTitleContainer */}
-         
-        {tabData.map(({ icon, title, description }, index) => (           
-          <div className={styles.educationScholarships__tabContent}>           
-            <div 
-              key={index} 
-              className={styles.educationScholarships__titleBlock}>
-              <Svg
-                id={icon} 
-                className={styles.educationScholarships__icon} 
-              />
-              <h3 className={styles.educationScholarships__title}>
-              {title}
-              </h3>
-            </div>
-            <div className={styles.educationScholarships__description}>
-              {description}                      
-            </div>        
-          </div> 
-        ))}
-        {/* tabContent */} 
-
-        <div className={styles.educationScholarships__test}>
-          <p className={styles.educationScholarships__text}> 
-            It is important to note that the availability and types of scholarships and financial aid can vary significantly from university to university. Each institution has its own policies, funding sources, and criteria for awarding financial support. If you wish to get ore detailed information, feel free to contact us to          
-          </p>
-
-          <Link 
-            to={contactsPagePath}
-            className={`${styles.educationScholarships__btnTest} btnPrimary`}>          
-            get free consultation
-          </Link>
-        </div> 
+       
+      
 
       </div>      
     </section>  
@@ -138,3 +101,19 @@ const EducationScholarships = () => {
 };
 
 export default EducationScholarships;
+
+
+
+
+
+        // <div className={styles.educationScholarships__test}>
+        //   <p className={styles.educationScholarships__text}> 
+        //     It is important to note that the availability and types of scholarships and financial aid can vary significantly from university to university. Each institution has its own policies, funding sources, and criteria for awarding financial support. If you wish to get ore detailed information, feel free to contact us to          
+        //   </p>
+
+        //   <Link 
+        //     to={contactsPagePath}
+        //     className={`${styles.educationScholarships__btnTest} btnPrimary`}>          
+        //     get free consultation
+        //   </Link>
+        // </div> 

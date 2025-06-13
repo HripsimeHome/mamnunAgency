@@ -2,5 +2,24 @@
 @import "../../../styles/vars";
 
 .servicesBook {     
-     
+  padding: 100px 0;
+
+  &__formContainer {
+    @include flexCol();    
+    width: 100%;
+  }
+
+  &__form {
+    max-width: 828px;    
+  }
+
+  &__formBtn {
+    width: 100%;    
+  }
+
+  &__formTitle {
+   @include setFont(28px, 600, $color-black);
+    margin-bottom: 15px;
+    line-height: 30px;
+  }   
 }
