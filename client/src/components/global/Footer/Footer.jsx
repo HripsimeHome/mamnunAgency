@@ -6,7 +6,14 @@ import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 //import Svg from "../../layout/Svg/Svg";
 
 import {    
-  homePagePath
+  homePagePath,
+  aboutPagePath,
+  tourismPagePath,
+  educationPagePath,  
+  servicesPagePath,
+  contactsPagePath, 
+  privacyPolicyPagePath,
+  cookiePolicyPagePath
 } from "../../../router/path";
 
 import {
@@ -45,7 +52,22 @@ const Footer = () => {
             Copyright &copy; {new Date().getFullYear()} MG Elektro LLC. All rights reserved.
             <br />
             Designed & Created by <a href="https://webscover.com/" target="_blank" rel="noreferrer">webscover.com.</a>
-          </p>          
+          </p>  
+
+
+
+          <Link
+            to={privacyPolicyPagePath}>
+            Privacy Policy
+          </Link>
+
+              <Link
+            to={cookiePolicyPagePath}>
+            Cookie Policy
+          </Link>
+
+
+
         </div>        
       </div>      
     </footer>

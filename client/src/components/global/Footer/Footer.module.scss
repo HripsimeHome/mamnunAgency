@@ -3,6 +3,7 @@
 
 .footer {    
   border-top: 2px solid $color-black;
+  color: $color-black;
 
   &__container {
     @include flexCol(space-between, center);
