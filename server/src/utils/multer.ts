@@ -3,6 +3,7 @@ import { ParamsDictionary } from "express-serve-static-core";
 import multer from "multer";
 import { ParsedQs } from "qs";
 import { AppError } from "./appError.js";
+import { errorTypes } from "../constants/errors.js";
 
 export const multerStorage = multer.diskStorage({
   destination: (_req, _file, cb) => {
@@ -23,10 +24,14 @@ const multerFilter = (
   file: Express.Multer.File,
   cb: multer.FileFilterCallback
 ) => {
-  if (file.mimetype.startsWith("image") || file.mimetype.startsWith("video")) {
+  if (file.mimetype.startsWith("image")) {
     cb(null, true);
   } else {
-    cb(new AppError("Please upload only images", 400));
+    cb(
+      new AppError("Please upload only images", 400, {
+        image: errorTypes.invalidvalue,
+      })
+    );
   }
 };
 
