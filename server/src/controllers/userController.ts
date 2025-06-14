@@ -160,10 +160,10 @@ export const forgotPassword = catchAsync(async (req, res, next) => {
   await user.save();
 
   try {
-    await new Email(
-      user,
-      `${process.env.CLIENT_HOST}admin/resetPassword/${resetToken}`
-    ).sendForgotPass();
+    await new Email().sendForgotPass(
+      `${process.env.CLIENT_HOST}admin/resetPassword/${resetToken}`,
+      user.email
+    );
 
     res.status(200).json({
       status: "success",

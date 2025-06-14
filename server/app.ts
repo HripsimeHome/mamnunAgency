@@ -5,11 +5,12 @@ import rateLimit from "express-rate-limit";
 import { xss } from "express-xss-sanitizer";
 import helmet from "helmet";
 import hpp from "hpp";
+import { AppError } from "./src/utils/appError.js";
 import { globalErrorHandler } from "./src/controllers/errorController.js";
 import { userRouter } from "./src/routes/userRouter.js";
 import { newsRouter } from "./src/routes/newsRouter.js";
-import { AppError } from "./src/utils/appError.js";
 import { certificateRouter } from "./src/routes/certificateRouter.js";
+import { contactRouter } from "./src/routes/contactsRouter.js";
 
 export const app = express();
 
@@ -47,6 +48,7 @@ app.use("/api", express.static("public"));
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/news", newsRouter);
 app.use("/api/v1/certificates", certificateRouter);
+app.use("/api/v1/contact", contactRouter);
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} in this server`, 404));

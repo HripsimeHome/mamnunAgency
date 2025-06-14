@@ -1,0 +1,67 @@
+import { CONTACT_FORM_TYPES } from "../constants/ContactFormTypes.js";
+import { errorTypes } from "../constants/errors.js";
+import { IContactForm } from "../definitions/IContactForm.js";
+import { AppError } from "../utils/appError.js";
+import { catchAsync } from "../utils/catchAsync.js";
+import { Email } from "../utils/email.js";
+
+export const sendContactMail = catchAsync(async (req, res, next) => {
+  const reqData: IContactForm = {
+    fullName: req.body.fullName,
+    contactNumber: req.body.contactNumber,
+    needAssistanceAs: req.body.needAssistanceAs,
+    email: req.body.email,
+    telegramLink: req.body.telegramLink,
+    message: req.body.message,
+  };
+  // validation
+
+  const errorObj: {
+    [key in keyof IContactForm]?: typeof errorTypes.invalidvalue;
+  } = {};
+
+  const validateField = (key: keyof IContactForm, value: any) => {
+    if (!value) return errorTypes.invalidvalue;
+
+    switch (key) {
+      case "needAssistanceAs":
+        return Object.keys(CONTACT_FORM_TYPES).includes(value)
+          ? null
+          : errorTypes.invalidvalue;
+      case "email":
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+          ? null
+          : errorTypes.invalidvalue;
+      case "telegramLink":
+        return /^https:\/\/t\.me\/[a-zA-Z0-9_]+$/.test(value)
+          ? null
+          : errorTypes.invalidvalue;
+      default:
+        return null;
+    }
+  };
+
+  const { needAssistanceAs } = reqData;
+  const skipFields = {
+    telegramLink: ["Partner", "Traveler"].includes(needAssistanceAs),
+    email: ["Student", "Parent"].includes(needAssistanceAs),
+  };
+
+  for (const key in reqData) {
+    const typedKey = key as keyof IContactForm;
+    if (skipFields[typedKey as keyof typeof skipFields]) continue;
+
+    const error = validateField(typedKey, reqData[typedKey]);
+    if (error) errorObj[typedKey] = error;
+  }
+
+  if (Object.values(errorObj).length) {
+    return next(new AppError("please fill all fields", 400, errorObj));
+  }
+
+  await new Email().sendContactForm(reqData);
+  res.status(200).json({
+    status: "success",
+    message: "Contact form submitted successfully",
+  });
+});

@@ -2,21 +2,16 @@ import { convert } from "html-to-text";
 import nodemailer, { TransportOptions } from "nodemailer";
 import pug from "pug";
 import { DIRNAME } from "../constants/Dirname.js";
+import { IContactForm } from "../definitions/IContactForm.js";
 
 interface MyTransportOptions extends TransportOptions {
   host: string;
 }
 
 export class Email {
-  url: string;
-  to: string;
-  firstName: string;
   from: string;
 
-  constructor(user: { email: string }, url: string) {
-    this.url = url;
-    this.to = user.email;
-    this.firstName = "Admin";
+  constructor() {
     this.from = "Mamnun Agency";
   }
 
@@ -30,19 +25,22 @@ export class Email {
     });
   }
 
-  async send(template: string, subject: string) {
+  async send<T extends Record<any, any>>(
+    template: string,
+    subject: string,
+    params: T,
+    to: string,
+    from?: string
+  ): Promise<void> {
     try {
       const html = pug.renderFile(
         `${DIRNAME}dist/src/views/emails/${template}.pug`,
-        {
-          name: this.firstName,
-          url: this.url,
-        }
+        params
       );
 
       const options = {
-        from: this.from,
-        to: this.to,
+        from: from || this.from,
+        to: to,
         subject,
         html,
         text: convert(html, { wordwrap: 80 }),
@@ -55,7 +53,26 @@ export class Email {
     }
   }
 
-  async sendForgotPass() {
-    await this.send("forgotPass", "Forgot Your Password");
+  async sendForgotPass(url: string, userEmail: string) {
+    await this.send(
+      "forgotPass",
+      "Forgot Your Password",
+      {
+        name: "Admin",
+        url: url,
+      },
+      userEmail
+    );
+  }
+  async sendContactForm(params: IContactForm) {
+    const supportMail = process.env.SUPPORT_MAIL;
+
+    if (!supportMail) throw new Error("support mail not found in env");
+    await this.send(
+      "contact",
+      "New Contact Form Submission",
+      params,
+      supportMail
+    );
   }
 }
