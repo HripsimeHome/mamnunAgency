@@ -6,37 +6,37 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: $color-black;
+  background-color: $color-secondary;
   transition: $transition;
 
   &__container {
-    @include flexCol(space-between);    
+    @include flexCol(space-between);
     display: flex;
     align-items: center;
 
     @include smScreenMedia {
       //padding: 20px;
-     }
-  }
-
-   &__logoImg {   
-    width: 100%;   
-    max-width: 93px;
-    height: auto;      
-  
-    @include lgScreenMedia {    
-     //padding-right: 20px;
     }
   }
 
-  // Desktop & Mobile Menu  
+  &__logoImg {
+    width: 100%;
+    max-width: 93px;
+    height: auto;
+
+    @include lgScreenMedia {
+      //padding-right: 20px;
+    }
+  }
+
+  // Desktop & Mobile Menu
   &__menu {
     display: flex;
-    gap: 58px;       
+    gap: 58px;
 
     @include smScreenMedia {
       display: none;
-      gap: 30px;  
+      gap: 30px;
     }
 
     &_open {
@@ -45,50 +45,48 @@
       align-items: start;
       position: fixed;
       height: 100vh;
-      top: 50%;
-      //right: 0;
-      transform: translate(-50%, -50%);
+      top: 0;
+      right: 0;
       z-index: 3;
-      max-width: 500px;
+      max-width: 193px;
       width: 100%;
-      background-color: $color-black;  
-      border-radius: 5px;  
+      background-color: $color-secondary;
+      border-radius: 5px;
       padding-top: 150px;
-      padding-left: 20px;   
-  
+      padding-left: 20px;
+
       @include smScreenMedia {
         max-width: 100%;
         height: 100vh;
-        //justify-content: center;    
-       
+        //justify-content: center;
       }
     }
   }
 
   &__menuLink {
-    @include setFont(18px, 500, $color-white);    
+    @include setFont(18px, 500, $color-white);
     // margin-left: 58px;;
 
     &:hover {
-      //color: $color-purple;
+      //color: $color-primary;
       cursor: pointer;
       transition: $transitionEaseOut;
-      //text-decoration: underline;      
+      //text-decoration: underline;
     }
 
     &_active {
       color: $color-white;
       text-decoration: underline;
-      //border-bttom: 2px solid $color-purple;
+      //border-bttom: 2px solid $color-primary;
 
       &:hover {
         cursor: default;
       }
     }
   }
-  
+
   &__btnBurger {
-    background: none;    
+    background: none;
     display: none;
 
     @include smScreenMedia {
@@ -97,17 +95,17 @@
   }
 
   &__burgerIcon {
-    @include svg(27px, $color-white);   
+    @include svg(27px, $color-white);
 
     &:hover {
-      fill: $color-purple;
+      fill: $color-primary;
       cursor: pointer;
       transition: $transition;
     }
 
     @include smScreenMedia {
       @include svg(24px, $color-white);
-     }
+    }
   }
 
   &__btnClose {
@@ -121,13 +119,13 @@
   }
 
   &__crossIcon {
-    @include svg(40px, $color-white);        
+    @include svg(40px, $color-white);
 
     &:hover {
-      fill: $color-purple;
+      fill: $color-primary;
       transition: $transition;
     }
-  }  
+  }
 
   // Overlay Effect
   &__overlay {

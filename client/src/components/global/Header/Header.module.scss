@@ -27,7 +27,7 @@
     &_inactive {
       opacity: 0;
     }
-  } 
+  }
 
   @include smScreenMedia {
     //aspect-ratio: 6/4;
@@ -41,7 +41,7 @@
   }
 
   &__title {
-    @include setFont(96px, 600, $color-purple);
+    @include setFont(96px, 600, $color-lightPrimary);
     margin-bottom: 25px;
 
     @include mdScreenMedia {

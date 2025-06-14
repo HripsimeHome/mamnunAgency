@@ -1,16 +1,16 @@
 import styles from "./Header.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
-import { useImageLoader } from "../../../hooks/useImageLoader";
-
+import { useState } from "react";
 
 const Header = ({ image, webpImage, alt, title, subtitle }) => {
-  const loading = useImageLoader( image, webpImage);
+  const [loading, setLoading] = useState(true);
   return (
     <header className={styles.header}>
       <ImageWebp
         src={image}
         srcSet={webpImage}
         alt={alt}
+        onLoad={() => setLoading(false)}
         className={`
           ${styles.header__img}
           ${loading ? styles.header__img_inactive : ""}         

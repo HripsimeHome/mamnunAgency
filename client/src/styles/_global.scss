@@ -11,7 +11,7 @@
 
 body {
   font-family: $font-family;
-  color: $color-black;
+  color: $color-secondary;
   background-color: $color-white;
 
   // Body Scrollbar
@@ -26,7 +26,7 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $color-purple;
+    background: $color-primary;
     border-radius: 2px;
   }
 
@@ -39,27 +39,13 @@ body {
   }
 
   &::-moz-scrollbar-thumb {
-    background: $color-purple;
+    background: $color-primary;
   }
-}
-
-button,
-button:focus,
-button:focus-visible,
-button:active,
-a:focus-visible {
-  outline: none;
-  border: none;
-  background-color: transparent;
 }
 
 a {
   text-decoration: none;
 }
-
-// .pointer {
-//   cursor: pointer;
-// }
 
 #root {
   // min-height: 100vh;
@@ -72,7 +58,7 @@ a {
 }
 
 .textPurple {
-  color: $color-purple;
+  color: $color-primary;
 }
 
 .textRed {
@@ -81,7 +67,7 @@ a {
 
 // Titles
 .titlePurpleh1 {
-  @include setFont(125px, 600, $color-purple);
+  @include setFont(125px, 600, $color-primary);
   line-height: 100px;
 }
 
@@ -90,23 +76,23 @@ a {
 }
 
 .titleBlackh2 {
-  @include setFont(65px, 600, $color-black);
+  @include setFont(65px, 600, $color-secondary);
 }
 
 .titlePurpleh2 {
-  @include setFont(65px, 600, $color-purple);
+  @include setFont(65px, 600, $color-primary);
 }
 
 .titlePurpleh3 {
-  @include setFont(36px, 600, $color-purple);
+  @include setFont(36px, 600, $color-primary);
 }
 
 .titleBlackh3 {
-  @include setFont(36px, 600, $color-black);
+  @include setFont(36px, 600, $color-secondary);
 }
 
 .titleBlackh4 {
-  @include setFont(20px, 600, $color-black);
+  @include setFont(20px, 600, $color-secondary);
 }
 
 // Button
@@ -114,16 +100,27 @@ a {
 .btnPrimary {
   @include flexCol();
   background: transparent;
-  outline: 2px solid $color-purple;
+  outline: 2px solid $color-primary;
   border-radius: 30px;
   @include setFont(18px, 700, $color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    background-color: green;
+    // background: linear-gradient(90deg, #8C52FF 0%, #B164FF 100%);
+   // background: linear-gradient(to bottom, #8c52ff 0%, #b164ff 100%);
+   
+background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25), inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25), inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
   }
 
   &:active {
-    background-color: blue;
+    //background: linear-gradient(90deg, #8C52FF 0%, #B164FF 50%, #B164FF 100%);
+    background: linear-gradient(
+      to bottom,
+      #8c52ff 0%,
+      #8c52ff 50%,
+      #b164ff 100%
+    );
   }
 }
 
@@ -134,7 +131,6 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 
-  // border: 1px solid green;
   /*
   @include xlScreenMedia {
     max-width: 960px;
@@ -157,7 +153,7 @@ a {
 
 .wrapperBlack {
   width: 100%;
-  background-color: $color-black;
+  background-color: $color-secondary;
 }
 
 .wrapperWhite {
