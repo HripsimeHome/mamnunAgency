@@ -1,25 +1,25 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.servicesBook {     
+.servicesBook {
   padding: 100px 0;
 
   &__formContainer {
-    @include flexCol();    
+    @include flexCol();
     width: 100%;
   }
 
   &__form {
-    max-width: 828px;    
+    max-width: 828px;
   }
 
   &__formBtn {
-    width: 100%;    
+    width: 100%;
   }
 
   &__formTitle {
-   @include setFont(28px, 600, $color-black);
+    @include setFont(28px, 600, $color-secondary);
     margin-bottom: 15px;
     line-height: 30px;
-  }   
+  }
 }

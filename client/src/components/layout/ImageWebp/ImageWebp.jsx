@@ -17,7 +17,7 @@ const ImageWebp = ({
       } ${pictureClass ? pictureClass : ""}`}
     >
       <source srcSet={srcSet} type="image/webp" />
-      <img alt={alt} src={src} ref={forwardedRef} {...properties} />
+      <img  alt={alt} src={src} ref={forwardedRef} {...properties} />
     </picture>
   );
 };

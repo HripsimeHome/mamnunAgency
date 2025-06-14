@@ -1,9 +1,9 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.footer {    
-  border-top: 2px solid $color-black;
-  color: $color-black;
+.footer {
+  border-top: 2px solid $color-secondary;
+  color: $color-secondary;
 
   &__container {
     @include flexCol(space-between, center);
@@ -18,21 +18,20 @@
 
   &__logoBlock {
     @include mdScreenMedia {
-      text-align: center;      
-    }    
+      text-align: center;
+    }
   }
 
-  &__logoImgPosition {   
-
+  &__logoImgPosition {
     @include mdScreenMedia {
       justify-content: center;
     }
   }
 
   &__logoImg {
-    max-width: 178px;  
-   }
-  
+    max-width: 178px;
+  }
+
   &__emailAddress {
     display: none;
 
@@ -45,7 +44,7 @@
   }
 
   &__copyright {
-    @include setFont(16px, 400, $color-black);
+    @include setFont(16px, 400, $color-secondary);
     margin-top: 13px;
   }
 
@@ -71,22 +70,22 @@
     flex-direction: column;
   }
 
-  &__menuLink {      
-    @include setFont(16px, 300, $color-black);
+  &__menuLink {
+    @include setFont(16px, 300, $color-secondary);
     margin-top: 10px;
 
     &:hover {
-      color: $color-purple;
+      color: $color-primary;
       transition: $transitionEaseOut;
       cursor: pointer;
     }
-    
-    &_active {
-      color: $color-purple; 
 
-      &:hover {       
+    &_active {
+      color: $color-primary;
+
+      &:hover {
         cursor: default;
-      }  
+      }
     }
   }
 }

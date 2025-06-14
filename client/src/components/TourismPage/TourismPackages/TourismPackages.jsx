@@ -1,5 +1,5 @@
 import styles from "./TourismPackages.module.scss";
-import Tabs from "../../global/Tabs/Tabs";
+import Tabs from "../../layout/Tabs/Tabs";
 
 import {
   classicTourIcon,

@@ -143,7 +143,7 @@ const TourismServices = () => {
         <div className={styles.tourismServices__titleBlock}>
 
          <div className={styles.tourismServices__linePosition}>
-            <div className={styles.tourismServices__arrowLine}></div>
+            <span className={styles.tourismServices__arrowLine}></span>
             <Svg
               id={feedbackIcon}              
               className={styles.tourismServices__arrowIcon}

@@ -1,7 +1,6 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-
 .educationStories {
   padding: 100px 0;
 
@@ -13,76 +12,67 @@
   &__slide {
     max-width: 778px;
     width: 100%;
-    @include setFont(18px, 400, $color-black);
+    @include setFont(18px, 400, $color-secondary);
     line-height: 25px;
-    background-color: $color-white; 
-    border: 1px solid $color-black;
+    background-color: $color-white;
+    border: 1px solid $color-secondary;
     border-radius: 25px;
-    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 50px 25px;
   }
 
   &__slideDescription {
-     @include setFont(18px, 400, $color-black);
-     line-height: 25px;
-     padding: 25px;    
+    @include setFont(18px, 400, $color-secondary);
+    line-height: 25px;
+    padding: 25px;
   }
 
   &__slideLine {
-     border: none;
-     border-top: 2px solid $color-black;    
-     outline: 0;
+    border: none;
+    border-top: 2px solid $color-secondary;
+    outline: 0;
 
-     @include smScreenMedia {
-      border-top: 1px solid $color-black;    
+    @include smScreenMedia {
+      border-top: 1px solid $color-secondary;
     }
   }
 
   &__storyContainer {
-     @include flexCol(space-between, center);
-     padding: 25px;    
+    @include flexCol(space-between, center);
+    padding: 25px;
   }
 
   &__storyBLock {
-     @include flexCol();
-     gap: 15px;
+    @include flexCol();
+    gap: 15px;
   }
-  
+
   &__storyInfo {
-     @include flexCol(center, start);
-     flex-direction: column;
-     gap: 3px;     
+    @include flexCol(center, start);
+    flex-direction: column;
+    gap: 3px;
   }
 
   &__studientName {
-     @include setFont(18px, 500, $color-black);    
+    @include setFont(18px, 500, $color-secondary);
   }
 
   &__storyTitle {
-     @include setFont(18px, 400, $color-black);    
+    @include setFont(18px, 400, $color-secondary);
   }
 
- &__storyImg {
-     max-width: 70px;
-     height: auto;
-     border-radius: 50px;
- }   
- 
+  &__storyImg {
+    max-width: 70px;
+    height: auto;
+    border-radius: 50px;
+  }
 
- &__starBlock {
-     display: flex
- } 
+  &__starBlock {
+    display: flex;
+  }
 
   &__starIcon {
-     @include svg(30px, 30px);
-     margin-left: 5px;
- } 
-
- 
+    @include svg(30px, 30px);
+    margin-left: 5px;
+  }
 }
-
-
-
-
-
- 
