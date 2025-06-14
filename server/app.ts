@@ -7,6 +7,7 @@ import helmet from "helmet";
 import hpp from "hpp";
 import { globalErrorHandler } from "./src/controllers/errorController.js";
 import { userRouter } from "./src/routes/userRouter.js";
+import { newsRouter } from "./src/routes/newsRouter.js";
 import { AppError } from "./src/utils/appError.js";
 
 export const app = express();
@@ -43,6 +44,7 @@ app.use("/api", express.static("public"));
 
 // ROUTES2
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/news", newsRouter);
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} in this server`, 404));

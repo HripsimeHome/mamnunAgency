@@ -5,14 +5,8 @@ import { ParsedQs } from "qs";
 import { AppError } from "./appError.js";
 
 export const multerStorage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: (_req, _file, cb) => {
     let path = "public/";
-    if (
-      req.originalUrl.includes("property") &&
-      file.mimetype.startsWith("video")
-    )
-      path = path + "properties/videos/";
-
     cb(null, path);
   },
   filename: (req, file, cb) => {

@@ -10,6 +10,7 @@ const dbUsername = process.env.DB_USERNAME || "";
 const db = new Sequelize(dbName, dbUsername, dbPassword, {
   host: dbHost,
   dialect: "mysql",
+  logging: false,
 });
 
 export { db };

@@ -92,7 +92,6 @@ export const globalErrorHandler: ErrorRequestHandler = (
   err.statusCode = err.statusCode || 500;
   err.status = err.status || "error";
   let error = { ...err };
-  console.log({ err });
 
   if (err instanceof ValidationError) {
     error = { ...err } as ValidationError;
@@ -123,8 +122,6 @@ export const handleRequiredFieldsError = (
 ): { [x: string]: string } | null => {
   let errors: { [x: string]: string } | null = null;
   fields.forEach((item) => {
-    console.log({ item });
-
     if (!body[item]) {
       if (!errors) errors = {};
       errors[item] = errorTypes.emptyField;

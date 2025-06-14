@@ -6,8 +6,6 @@ export const resizeImage = async (
   sizes: [number, number] = [800, 500]
 ) => {
   try {
-    console.log("jpeg");
-
     await sharp(file)
       .resize(...sizes)
       .toFormat("jpeg")

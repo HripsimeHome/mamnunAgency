@@ -21,13 +21,6 @@ export class Email {
   }
 
   newTransport() {
-    console.log({
-      auth: {
-        user: process.env.GMAIL_USERNAME,
-        pass: process.env.GMAIL_PASSWORD,
-      },
-    });
-
     return nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -57,7 +50,8 @@ export class Email {
 
       await this.newTransport().sendMail(options);
     } catch (error) {
-      console.log("email sending error", error);
+      console.error("email sending error", error);
+      throw new Error("email sending error");
     }
   }
 

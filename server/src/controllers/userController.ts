@@ -170,7 +170,7 @@ export const forgotPassword = catchAsync(async (req, res, next) => {
       message: "Token sent to email",
     });
   } catch (err) {
-    console.log("ERR", err);
+    console.error("ERR", err);
     user.passwordResetToken = undefined;
   }
 });
