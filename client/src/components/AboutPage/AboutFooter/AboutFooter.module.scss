@@ -14,6 +14,14 @@
   &__title {
     @include setFont(60px, 600, $color-secondary);
     line-height: 60px;
+
+    @include mdScreenMedia {    
+     font-size: 32px;   
+    }
+
+    @include smScreenMedia {    
+     font-size: 15px;   
+    }
   }
 
   &__companyBlock {

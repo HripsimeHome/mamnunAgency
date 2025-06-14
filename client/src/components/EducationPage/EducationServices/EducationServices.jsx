@@ -1,6 +1,6 @@
 import styles from "./EducationServices.module.scss";
 import { Link } from "react-router-dom"
-import Accordion from "../../global/Accordion/Accordion";
+import Accordion from "../../layout/Accordion/Accordion";
 
 
 import  {

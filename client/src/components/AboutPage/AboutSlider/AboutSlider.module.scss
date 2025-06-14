@@ -2,11 +2,16 @@
 @import "../../../styles/vars";
 
 .aboutSlider {
+
   &__slideContainer {
     @include flexCol();
     gap: 148px;
     padding-top: 200px;
     padding-bottom: 100px;
+
+    @include mdScreenMedia {    
+      flex-direction: column;    
+    }
   }
 
   &__slide {

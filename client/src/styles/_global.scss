@@ -17,7 +17,7 @@ body {
   // Body Scrollbar
 
   &::-webkit-scrollbar {
-    width: 11px;
+    width: 12px;
   }
 
   &::-webkit-scrollbar-track {
@@ -31,7 +31,7 @@ body {
   }
 
   &::-moz-scrollbar {
-    width: 11px;
+    width: 21px;
   }
 
   &::-moz-scrollbar-track {
@@ -83,6 +83,21 @@ a {
   @include setFont(65px, 600, $color-primary);
 }
 
+
+.titleWhiteh2, .titleBlackh2, .titlePurpleh2 {
+
+   @include mdScreenMedia {    
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  @include smScreenMedia {       
+     font-size: 24px;
+     font-weight: 500;
+  }
+}
+
+
 .titlePurpleh3 {
   @include setFont(36px, 600, $color-primary);
 }
@@ -105,16 +120,12 @@ a {
   @include setFont(18px, 700, $color-white);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-  &:hover {
-    // background: linear-gradient(90deg, #8C52FF 0%, #B164FF 100%);
-   // background: linear-gradient(to bottom, #8c52ff 0%, #b164ff 100%);
-   
-background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25), inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25), inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
+  &:hover {   
+    background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25), inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25), inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
   }
 
-  &:active {
-    //background: linear-gradient(90deg, #8C52FF 0%, #B164FF 50%, #B164FF 100%);
+  &:active {   
     background: linear-gradient(
       to bottom,
       #8c52ff 0%,
@@ -160,3 +171,14 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0
   width: 100%;
   background-color: $color-white;
 }
+
+.leftWidth {
+  width: 60%;
+}
+
+.righttWidth {
+  width: 40%;
+  
+}
+
+

@@ -45,12 +45,12 @@
     margin-bottom: 25px;
 
     @include mdScreenMedia {
-      //font-size: 30px;
+      font-size: 32px;
       //margin-bottom: 12px;
     }
 
     @include smScreenMedia {
-      // font-size: 24px;
+      font-size: 24px;
     }
   }
 
@@ -60,7 +60,11 @@
     padding: 0 30px;
 
     @include mdScreenMedia {
-      //font-size: 16px;
+     font-size: 14px;
+    }
+
+     @include smScreenMedia {
+      font-size: 24px;
     }
   }
 }
