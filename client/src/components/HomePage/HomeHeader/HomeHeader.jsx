@@ -1,24 +1,14 @@
 import styles from "./HomeHeader.module.scss";
 
-import  {
-  homeVideo  
-} from "../../../assets/videos"
-
 const HomeHeader = () => {
-  return (        
-    <section className={styles.homeHeader}>   
-      {/* <source src="/videos/home/home.mp4" type="video/mp4" /> */}
-
-      
-      <video 
-        controls autoPlay muted loop
-        className={styles.homeHeader__video}>        
-        <source src={homeVideo} />
-       Your browser does not support the video tag.
-      </video>
-
-
-
+  return (
+    <section className={styles.homeHeader}>
+      {process.env.NODE_ENV !== "development" && (
+        <video autoPlay muted loop className={styles.homeHeader__video}>
+          Your browser does not support the video tag.
+          <source src="/videos/home/home.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* три девиза 
         1. Travel Far горит кнопка Tourism 
@@ -39,10 +29,7 @@ const HomeHeader = () => {
       <h2 className="titleWhiteh2">
       Experience True Satisfaction    
       </h2> */}
-
-
- 
-    </section>  
+    </section>
   );
 };
 

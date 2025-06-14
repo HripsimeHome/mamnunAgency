@@ -1,64 +1,67 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.tourismServices {     
-   padding: 100px 0;
+.tourismServices {
+  padding: 100px 0;
 
-   &__titleBlock {
-     @include flexCol(space-between, center);
-     margin-bottom: 25px;
-   }
+  &__titleBlock {
+    @include flexCol(space-between, center);
+    margin-bottom: 25px;
+  }
 
-   &__linePosition {
-    @include flexCol(); max-width: 854px;
-   }
-
-   &__arrowLine {   
+  &__linePosition {
+    display: flex;
+    align-items: center;
+    max-width: 854px;
     width: 100%;
-    height: 4px; 
+  }
+
+  &__arrowLine {
+    width: 100%;
+    height: 4px;
     background-color: $color-white;
-   }
+  }
 
-   &__arrowIcon {
-     @include svg(35px, 35px);
-   }
+  &__arrowIcon {
+    @include svg(35px, 35px);
+  }
 
-   &__sectionTitle {
-     @include setFont(36px, 400, $color-white);
-   }   
+  &__sectionTitle {
+    @include setFont(36px, 400, $color-white);
+  }
 
-   &__panelContainer {   
+  &__panelContainer {
     display: flex;
     flex-direction: column;
-    gap: 25px;    
-    margin-bottom: 25px;   
-   }
-   
-   &__panel {
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  &__panel {
     background-color: $color-white;
     display: flex;
     gap: 25px;
-    border-radius: 25px; 
+    border-radius: 25px;
     padding: 20px;
-   }
+  }
 
-   &__content {
+  &__content {
     display: flex;
-    flex-direction: column;   
-   }
+    flex-direction: column;
+  }
 
-   &__title {
-    @include setFont(20px, 600, $color-black);      
-     line-height: 20px; 
-     padding-bottom: 20PX; 
-   }
+  &__title {
+    @include setFont(20px, 600, $color-secondary);
+    line-height: 20px;
+    padding-bottom: 20px;
+  }
 
-   &__description {
-    @include setFont(18px, 400, $color-black);   
-    line-height: 25px;  
-   }   
+  &__description {
+    @include setFont(18px, 400, $color-secondary);
+    line-height: 25px;
+  }
 
-   &__icon {
-     @include svg(78px, 75px);
-   }
+  &__icon {
+    @include svg(78px, 75px);
+  }
 }

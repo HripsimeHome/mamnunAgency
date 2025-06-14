@@ -1,6 +1,6 @@
 import styles from "./EducationScholarships.module.scss";
 import { Link } from "react-router-dom";
-import Tabs from "../../global/Tabs/Tabs"
+import Tabs from "../../layout/Tabs/Tabs"
 
 import {  
   contactsPagePath 

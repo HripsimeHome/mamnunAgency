@@ -1,8 +1,8 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.aboutFooter {    
-  padding: 100px 0; 
+.aboutFooter {
+  padding: 100px 0;
 
   &__text {
     @include flexCol();
@@ -10,19 +10,17 @@
     gap: 25px;
     text-align: center;
   }
-   
+
   &__title {
-    @include setFont(60px, 600, $color-black); 
+    @include setFont(60px, 600, $color-secondary);
     line-height: 60px;
   }
 
-  &__companyBlock {   
+  &__companyBlock {
     display: flex;
     flex-direction: column;
   }
-    &__companyName {
-    @include setFont(40px, 800, $color-black); 
-    
+  &__companyName {
+    @include setFont(40px, 800, $color-secondary);
   }
-  
 }

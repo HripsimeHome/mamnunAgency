@@ -1,17 +1,16 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.aboutHeader {    
-
-   &__content {
+.aboutHeader {
+  &__content {
     display: flex;
     width: 100%;
-    margin-bottom: 200px;;
+    margin-bottom: 200px;
     gap: 160px;
   }
 
   &__title {
-    @include setFont(34px, 600, $color-purple); 
+    @include setFont(34px, 600, $color-primary);
     text-align: left;
   }
 
@@ -22,7 +21,7 @@
     max-width: 804px;
     width: 100%;
     text-align: justify;
-    padding-top: 150px
+    padding-top: 150px;
   }
 
   // &__briefImg {
@@ -30,58 +29,57 @@
   //   width: 100%;
   //   height: auto;
   // }
-  
+
   &__logoAnim {
     max-width: 375px;
     height: auto;
-    order: 2; 
+    order: 2;
 
     @include mdScreenMedia {
-       order: 1;    
-    }  
-   // width: 100%;
+      order: 1;
+    }
+    // width: 100%;
   }
 
   &__firstParagraph {
-   order: 0;   
+    order: 0;
   }
 
   &__secondParagraph {
-   order: 1;  
+    order: 1;
     @include mdScreenMedia {
-      order: 2;    
-    }   
+      order: 2;
+    }
   }
 
-  
   &__briefContainer {
     display: flex;
     gap: 48px;
 
     @include mdScreenMedia {
-      flex-direction: column;    
-    }    
-  } 
+      flex-direction: column;
+    }
+  }
 
-   &__briefBlock {
-    @include flexCol();     
-    flex-direction: column;   
-      
+  &__briefBlock {
+    @include flexCol();
+    flex-direction: column;
+
     min-height: 249px;
-    @include setFont(18px, 400, $color-black);   
-    background-color: $color-white; 
-    border: 3px solid $color-black;
+    @include setFont(18px, 400, $color-secondary);
+    background-color: $color-white;
+    border: 3px solid $color-secondary;
     border-radius: 25px;
-    
+
     padding: 25px;
-   //box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    //box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     //margin: 50px 25px;
   }
 
   &__description {
-    @include setFont(18px, 400, $color-black);
+    @include setFont(18px, 400, $color-secondary);
     text-align: justify;
-    line-height: 25px;    
-    padding-top: 50px;    
+    line-height: 25px;
+    padding-top: 50px;
   }
 }
