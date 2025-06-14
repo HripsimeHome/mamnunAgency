@@ -7,6 +7,10 @@
   &__container {
     display: flex;
     gap: 159px;
+
+    @include mdScreenMedia {    
+     flex-direction: column;  
+    }
   }
 
   &__leftColumn {

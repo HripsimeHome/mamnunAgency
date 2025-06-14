@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   background-color: $color-secondary;
   transition: $transition;
 
@@ -88,6 +88,7 @@
   &__btnBurger {
     background: none;
     display: none;
+    border: none;
 
     @include smScreenMedia {
       display: block;

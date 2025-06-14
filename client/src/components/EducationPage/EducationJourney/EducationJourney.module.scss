@@ -7,10 +7,18 @@
   &__journeyBlock {
     @include flexCol(space-between, start);
     margin-top: 50px;
+
+    @include mdScreenMedia {    
+     flex-direction: column; 
+    }
   }
 
   &__journeyColumn {
     width: 50%;
+
+    @include mdScreenMedia {    
+     width: 100%; 
+    }
   }
 
   // List

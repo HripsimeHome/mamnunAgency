@@ -1,5 +1,5 @@
 import styles from "./AboutFAQ.module.scss";
-import Accordion from "../../global/Accordion/Accordion";
+import Accordion from "../../layout/Accordion/Accordion";
 
 import { meritBasedIcon } from "../../../assets/svg";
 

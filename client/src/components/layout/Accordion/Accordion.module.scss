@@ -1,0 +1,50 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.accordion {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+
+  &__header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+
+  
+  &__iconTest {
+    width: 40px;
+    height: 40px;;
+  }
+  
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+
+  &__content {
+    padding: 1rem;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
