@@ -167,7 +167,7 @@ function PrivacyPolicyPage() {
           This Privacy Policy may be updated periodically, so we recommend reviewing its content regularly.
         </p>
         <p>
-         <strong>Last updated:</strong> [July 1, 2025.]
+         <strong>Last updated:</strong> July 1, 2025.
         </p>         
       </div>
     </section>
