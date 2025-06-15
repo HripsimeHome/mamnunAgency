@@ -103,7 +103,7 @@ const EducationFAQ = () => {
   return (
    <section className={`${styles.educationFAQ} wrapperBlack`}>
     <div className="container">
-      <h1 className="titlePurpleh2">
+      <h1 className="titlePrimarryH2">
         FAQ
       </h1> 
 

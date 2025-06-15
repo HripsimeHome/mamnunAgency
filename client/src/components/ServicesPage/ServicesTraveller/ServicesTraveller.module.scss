@@ -69,14 +69,15 @@
   }  
 
   &__cardFrontTitle {
+    
     @include setFont(32px, 600, $color-white);   
-    padding-right: 25px;
-    position: relative;
+      padding-right: 25px;
+      position: relative;
 
-        @include flexCol();
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
+    @include flexCol();
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
   }
 
   &__cardBack {
