@@ -12,6 +12,7 @@ import {
   educationPagePath,  
   servicesPagePath,
   contactsPagePath, 
+  imprintPagePath,
   privacyPolicyPagePath,
   cookiePolicyPagePath
 } from "../../../router/path";
@@ -55,11 +56,17 @@ const Footer = () => {
           </p>  
 
 
+          <Link
+            to={imprintPagePath}>
+            Impirit
+          </Link>
+          <br /> 
 
           <Link
             to={privacyPolicyPagePath}>
             Privacy Policy
           </Link>
+           <br /> 
 
               <Link
             to={cookiePolicyPagePath}>
