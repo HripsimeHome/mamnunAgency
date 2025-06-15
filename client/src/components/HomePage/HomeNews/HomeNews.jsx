@@ -60,7 +60,11 @@ const HomeNews = () => {
               className={styles.homeNews__slide}
               // onClick={}
             >
-              <img src={image} alt="News" className={styles.homeNews__img} />
+              <img 
+              src={image} 
+              alt={title}
+              className={styles.homeNews__img} 
+              />
               <h4 className={styles.homeNews__title}>{title}</h4>
               <p className={styles.homeNews__description}>{description}</p>
               <span className={styles.homeNews__date}>{date}</span>
