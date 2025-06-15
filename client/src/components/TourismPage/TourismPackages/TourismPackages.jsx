@@ -23,25 +23,29 @@ const tabContentGroups = [
     {
       icon: classicTourIcon,
       title: "Classic Uzbekistan Tour:",
-      description: "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva.",
+      description:
+        "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva.",
     },
     {
       icon: explorerIcon,
       title: "Silk Road Explorer:",
-      description: "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks.",
+      description:
+        "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks.",
     },
     {
       icon: customToursIcon,
       title: "Custom Tours:",
-      description: "Tell us your interests, and we will build a personalized itinerary just for you.",
+      description:
+        "Tell us your interests, and we will build a personalized itinerary just for you.",
     },
     {
       icon: themedExperiencesIcon,
       title: "Themed Experiences:",
-      description: "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers.",
+      description:
+        "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers.",
     },
   ],
-  
+
   [
     {
       icon: dressModestlyIcon,
@@ -70,7 +74,8 @@ const tabContentGroups = [
     {
       icon: visitIcon,
       title: "Best Time to Visit:",
-      description: "Spring (April to June) and autumn (September to early November) offer pleasant weather and vibrant landscapes.",
+      description:
+        "Spring (April to June) and autumn (September to early November) offer pleasant weather and vibrant landscapes.",
     },
   ],
 ];
@@ -79,17 +84,18 @@ const TourismPackages = () => {
   return (
     <section className={`${styles.tourismPackages} wrapperBlack`}>
       <div className="container">
-        <h2 className="titleWhiteh2">
+        <h2 className="titleWhiteH2">
           Travel packages + Cultural&nbsp;
-          <span className="titlePurpleh2">tips and recommendations</span>
+          <span className="titlePrimarryH2">tips and recommendations</span>
         </h2>
         <p className={styles.tourismPackages__text}>
           We offer a range of thoughtfully crafted travel packages tailored to
           your interests and travel style. Choose from:
         </p>
         <Tabs tabHeaders={tabHeaders} tabContentGroups={tabContentGroups} />
-         <p className={styles.tourismPackages__text}>
-          Each package includes accommodations, transportation, expert guides, entrance fees, and 24/7 support.
+        <p className={styles.tourismPackages__text}>
+          Each package includes accommodations, transportation, expert guides,
+          entrance fees, and 24/7 support.
         </p>
       </div>
     </section>

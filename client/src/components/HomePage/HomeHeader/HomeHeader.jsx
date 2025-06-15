@@ -18,15 +18,15 @@ const HomeHeader = () => {
 
       {/* или h1 */}
       {/* 
-      <h2 className="titleWhiteh2">
+      <h2 className="titleWhiteH2">
       Travel Far    
       </h2>
 
-      <h2 className="titleWhiteh2">
+      <h2 className="titleWhiteH2">
       Learn Deep    
       </h2>
 
-      <h2 className="titleWhiteh2">
+      <h2 className="titleWhiteH2">
       Experience True Satisfaction    
       </h2> */}
     </section>

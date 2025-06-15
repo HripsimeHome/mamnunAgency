@@ -1,15 +1,13 @@
-
 import styles from "./ContactsMain.module.scss";
 
 const ContactsMain = () => {
-
-  return (     
-    <section className={`${styles.contactsMain} wrapperWhite`}>     
+  return (
+    <section className={`${styles.contactsMain} wrapperWhite`}>
       <div className="container">
-        <h2 className="titlePurpleh2">Write&nbsp;
-          <span className="titleBlackh2">to us             
-          </span>
-        </h2>      
+        <h2 className="titlePrimarryH2">
+          Write&nbsp;
+          <span className="titleSecondaryH2">to us</span>
+        </h2>
       </div>
     </section>
   );
