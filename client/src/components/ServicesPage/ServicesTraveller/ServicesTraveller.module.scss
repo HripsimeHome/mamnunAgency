@@ -18,16 +18,12 @@
   }
 
   &__card {
-    // width: 300px;
-    //height: 350px;
-    height: 350px;
+    min-height: 350px;
     perspective: 1000px;
-
-     justify-content: end;
-
+    justify-content: end;
     position: relative;
    // @include flexCol();
-      aspect-ratio: 6/2;
+    aspect-ratio: 6/2;
   }
 
   &__cardInner {
@@ -53,14 +49,13 @@
     background-color: #f0f0f0;
   }
 
-  &__cardFront {
-   
-    //background-color: rgb(0 0 0 / 35%);
-    text-align: center;
+  &__cardFront {     
+    display: flex;
     background-color: $color-darkGrey;
+    border-radius: 20px;
 
     @media (max-width: 1200px) {
-      aspect-ratio: 6/2.5;
+      aspect-ratio: 6/2.5;     
     }
 
      &:hover {
@@ -68,16 +63,22 @@
     }
   }  
 
-  &__cardFrontTitle {
-    
-    @include setFont(32px, 600, $color-white);   
-      padding-right: 25px;
-      position: relative;
+    &__cardFront::before {
+    content: "";
+    position: absolute;
+    z-index: 2; 
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);   
+    border-radius: 20px;
+}
 
-    @include flexCol();
-      flex-direction: column;
-      position: relative;
+  &__cardFrontTitle {    
+    @include setFont(32px, 600, $color-white);   
+      display: flex;
+      align-self: center;       
       z-index: 2;
+      padding-left: 25px;
+      padding-right: 25px; 
   }
 
   &__cardBack {
@@ -107,7 +108,7 @@
     margin-bottom: 25px;
   }
 
-    &__img {
+  &__img {
     position: absolute;
     left: 0;
     top: 0;
@@ -116,7 +117,8 @@
     object-fit: cover;
     transition: $transition;
     z-index: 1;
-    opacity: 1;
+    opacity: 1;   
+     border-radius: 20px;
 
     &_inactive {
       opacity: 0;

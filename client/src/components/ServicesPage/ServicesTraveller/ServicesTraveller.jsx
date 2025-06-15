@@ -130,7 +130,7 @@ const ServicesTraveller = () => {
                     srcSet={webpImage}
                     alt={title}
                     //onLoad={() => setLoading(false)}
-                    className={styles.servicesTraveller_img}
+                    className={styles.servicesTraveller__img}
                   />
 
                   <h3 className={styles.servicesTraveller__cardFrontTitle}>
