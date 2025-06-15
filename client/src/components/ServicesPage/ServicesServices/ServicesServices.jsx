@@ -6,7 +6,7 @@ const ServicesServices = () => {
       <div className="container">
         <h2 className="titleWhiteH2">
           Our&nbsp;
-          <span className="titlePrimarryH2">Services</span>
+          <span className="titlePrimaryH2">Services</span>
         </h2>
 
         <div className={styles.servicesServices__flipCard}>

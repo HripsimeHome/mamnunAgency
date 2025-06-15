@@ -86,7 +86,7 @@ const TourismPackages = () => {
       <div className="container">
         <h2 className="titleWhiteH2">
           Travel packages + Cultural&nbsp;
-          <span className="titlePrimarryH2">tips and recommendations</span>
+          <span className="titlePrimaryH2">tips and recommendations</span>
         </h2>
         <p className={styles.tourismPackages__text}>
           We offer a range of thoughtfully crafted travel packages tailored to

@@ -7,7 +7,7 @@ const AboutFooter = () => {
         <div className={styles.aboutFooter__text}>
           <h2 className={styles.aboutFooter__title}>
             Feel free to&nbsp;
-            <span className="titlePrimarryH2">reach out&nbsp;</span>
+            <span className="titlePrimaryH2">reach out&nbsp;</span>
             if you have any other questions or need further assistance!
           </h2>
 

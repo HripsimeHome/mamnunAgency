@@ -155,7 +155,7 @@ const TourismServices = () => {
       <div className="container">
         <h2 className="titleWhiteH2">
           Services&nbsp;
-          <span className="titlePrimarryH2">we provide</span>
+          <span className="titlePrimaryH2">we provide</span>
         </h2>
 
         {serviceSections.map((section, index) => (

@@ -133,7 +133,7 @@ const TourismDestinations = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           Popular Destinations and Attractions&nbsp;
-          <span className="titlePrimarryH2">in Uzbekistan</span>
+          <span className="titlePrimaryH2">in Uzbekistan</span>
         </h2>
         <p className={styles.tourismDestinations__introText}>
           We also offer exclusive travel tips, local secrets, and

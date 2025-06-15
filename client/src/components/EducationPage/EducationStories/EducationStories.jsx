@@ -106,7 +106,7 @@ const EducationStories = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           Success stories of the&nbsp;
-          <span className="titlePrimarryH2">students placed abroad</span>
+          <span className="titlePrimaryH2">students placed abroad</span>
         </h2>
 
         <div className={styles.educationStories__slideContainer}>

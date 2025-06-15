@@ -41,7 +41,7 @@ const AboutHeader = () => {
           <div className={styles.aboutHeader__briefBlock}>
             <h2 className="titleSecondaryH2">
               Our&nbsp;
-              <span className="titlePrimarryH2">Vision</span>
+              <span className="titlePrimaryH2">Vision</span>
             </h2>
             <p className={styles.aboutHeader__description}>
               To bridge global learning opportunities, providing diverse
@@ -55,7 +55,7 @@ const AboutHeader = () => {
           <div className={styles.aboutHeader__briefBlock}>
             <h2 className="titleSecondaryH2">
               Our&nbsp;
-              <span className="titlePrimarryH2">Mission</span>
+              <span className="titlePrimaryH2">Mission</span>
             </h2>
             <p className={styles.aboutHeader__description}>
               To challenge cultural stereotypes by promoting education and

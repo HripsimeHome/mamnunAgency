@@ -60,7 +60,7 @@ const EducationServices = () => {
       <div className="container">
         <h2 className="titleWhiteH2">
           Additional&nbsp;
-          <span className="titlePrimarryH2">Services</span>
+          <span className="titlePrimaryH2">Services</span>
           <br />
           <span className="titleWhiteH2">(Available for an Extra Fee)</span>
         </h2>

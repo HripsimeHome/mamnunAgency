@@ -90,7 +90,7 @@ const EducationStudying = () => {
         <h2 className="titleSecondaryH2">
           Pros and Cons of studying&nbsp;
           <br />
-          <span className="titlePrimarryH2">in Uzbekistan</span>
+          <span className="titlePrimaryH2">in Uzbekistan</span>
         </h2>
 
         <div className={styles.educationStudying__accordionContainer}>

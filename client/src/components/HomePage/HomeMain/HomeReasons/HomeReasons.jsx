@@ -5,7 +5,7 @@ const HomeReasons = () => {
     <section className={styles.homeReasons}>
       <h2 className="titleWhiteH2">
         Reasons to&nbsp;
-        <span className="titlePrimarryH2">Choouse Us</span>
+        <span className="titlePrimaryH2">Choouse Us</span>
       </h2>
     </section>
   );
