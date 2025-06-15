@@ -10,6 +10,11 @@ import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
 import CookiePolicyPage from "../pages/CookiePolicyPage";
 
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
+import { Navigate } from "react-router-dom";
+import AdminLoginPage from "../pages/Admin/AdminLoginPage";
+import ForgotPasswordPage from "../pages/Admin/ForgotPasswordPage";
+import ResetPasswordPage from "../pages/Admin/ResetPasswordPage";
 
 // Paths
 
@@ -21,6 +26,17 @@ export const servicesPagePath = "/services";
 export const contactsPagePath = "/contacts";
 export const privacyPolicyPagePath = "/privacyPolicy";
 export const cookiePolicyPagePath = "/cookiePolicy";
+
+// admin panel
+export const adminPagePath = "/admin";
+
+// auth
+export const adminLoginPagePath = adminPagePath + "/login";
+export const adminForgotPasswordPagePath = adminPagePath + "/forgotPassword";
+export const adminResetPasswordPagePath = adminPagePath + "/resetPassword";
+
+// news
+export const adminNewsPagePath = adminPagePath + "/news";
 
 // Routes
 
@@ -57,6 +73,40 @@ export const routes = [
   {
     path: cookiePolicyPagePath,
     component: <CookiePolicyPage />,
+  },
+
+  //   admin panel
+  {
+    path: adminPagePath,
+    component: (
+      <PrivateRoute
+        element={<Navigate to={adminNewsPagePath} replace={true} />}
+      />
+    ),
+  },
+  {
+    path: adminLoginPagePath,
+    component: <PrivateRoute element={<AdminLoginPage />} noAuth={true} />,
+  },
+  {
+    path: adminForgotPasswordPagePath,
+    component: <PrivateRoute element={<ForgotPasswordPage />} noAuth={true} />,
+  },
+  {
+    path: adminResetPasswordPagePath,
+    component: (
+      <PrivateRoute
+        element={<Navigate to={adminLoginPagePath} replace={true} />}
+      />
+    ),
+    children: [
+      {
+        path: ":token",
+        component: (
+          <PrivateRoute element={<ResetPasswordPage />} noAuth={true} />
+        ),
+      },
+    ],
   },
   {
     path: "*",

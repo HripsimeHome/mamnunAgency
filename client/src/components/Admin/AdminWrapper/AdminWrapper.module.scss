@@ -1,0 +1,32 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.appWrapper {
+  transition: $transition;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_active {
+    margin-left: 200px;
+    padding-top: 60px;
+    background-color: #f5f5f5;
+
+    @include smScreenMedia {
+      margin-left: 0;
+    }
+  }
+
+  &_pasive {
+    background: $color-secondary;
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

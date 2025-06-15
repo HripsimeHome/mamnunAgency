@@ -58,3 +58,8 @@ export const loansIcon = "loans";
 
 // Education - Stories
 export const starStoryIcon = "starStory";
+
+// Admin Panel
+
+export const logoutIcon = "logout";
+export const leftBurgerIcon = "leftBurger";

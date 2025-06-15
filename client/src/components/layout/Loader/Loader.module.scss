@@ -1,0 +1,49 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.loader {
+  @include flexCol();
+  flex-direction: column;
+  gap: 16px;
+
+  &__wrapper {
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    position: relative;
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
+  &__inner {
+    border-radius: 50%;
+    background-color: $color-white;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__anim {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 101%;
+    background-color: $color-white;
+    z-index: 2;
+    animation: loader 2s linear infinite;
+  }
+
+  &__txt {
+    text-align: center;
+    @include setFont(18px, 700, $color-primary);
+  }
+}
+
+@keyframes loader {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

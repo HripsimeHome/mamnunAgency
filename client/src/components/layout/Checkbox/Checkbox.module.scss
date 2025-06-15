@@ -1,0 +1,55 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+
+  &__label {
+    @include setFont(15px, 400);
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    padding-block: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      transform: translateY(-50%);
+      top: 50%;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-position: center;
+      border: 2px solid #565454;
+      background-color: $color-white;
+    }
+
+    & span,
+    & span div {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__input {
+    visibility: hidden;
+    width: 0;
+
+    &:checked + label {
+      &::before {
+        background-image: url("../../../assets/svg/check.svg");
+      }
+    }
+  }
+}
