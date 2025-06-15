@@ -50,11 +50,8 @@ import educationHeaderWebpImage from "./images/education/header/educationHeader.
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
 
-// Services
-import servicesHeaderImage from "./images/services/header/servicesHeader.jpg";
-import servicesHeaderWebpImage from "./images/services/header/servicesHeader.webp";
-
-
+// Services 
+// Services traveller
 import businessTravelersImage from "./images/services/traveller/businessTravelers.jpg";
 import businessTravelersWebpImage from "./images/services/traveller/businessTravelers.webp";
 
@@ -64,13 +61,11 @@ import seniorTravelersWebpImage from "./images/services/traveller/seniorTraveler
 import familiesTravelingImage from "./images/services/traveller/familiesTraveling.jpg";
 import familiesTravelingWebpImage from "./images/services/traveller/familiesTraveling.webp";
 
-
 import unaccompaniedMinorsImage from "./images/services/traveller/unaccompaniedMinors.jpg";
 import unaccompaniedMinorsWebpImage from "./images/services/traveller/unaccompaniedMinors.webp";
 
 import luxuryVacationersImage from "./images/services/traveller/luxuryVacationers.jpg";
 import luxuryVacationerssWebpImage from "./images/services/traveller/luxuryVacationers.webp";
-
 
 import corporateGroupsImage from "./images/services/traveller/corporateGroups.jpg";
 import corporateGroupsWebpImage from "./images/services/traveller/corporateGroups.webp";
@@ -87,7 +82,21 @@ import travelEnthusiastsWebpImage from "./images/services/traveller/travelEnthus
 import wellnessTravelersImage from "./images/services/traveller/wellnessTravelers.jpg";
 import wellnessTravelersWebpImage from "./images/services/traveller/wellnessTravelers.webp";
 
+// Services - Services section
+import servicesHeaderImage from "./images/services/header/servicesHeader.jpg";
+import servicesHeaderWebpImage from "./images/services/header/servicesHeader.webp";
 
+import VIPImage from "./images/services/services/VIP.png";
+import VIPWebpImage from "./images/services/services/VIP.webp";
+
+import fastServicesImage from "./images/services/services/fastServices.jpg";
+import fastServicesWebpImage from "./images/services/services/fastServices.webp";
+
+import transferServicesImage from "./images/services/services/transferServices.jpg";
+import transferServicessWebpImage from "./images/services/services/transferServices.webp";
+
+import railwayStationsImage from "./images/services/services/railwayStations.jpg";
+import railwayStationsWebpImage from "./images/services/services/railwayStations.webp";
 
 
 export {
@@ -135,37 +144,34 @@ export {
   servicesHeaderWebpImage,
 
   //Services traveller
-  businessTravelersImage, 
+  businessTravelersImage,
   businessTravelersWebpImage,
-
-  seniorTravelersImage, 
-  seniorTravelersWebpImage, 
-
-  familiesTravelingImage, 
-  familiesTravelingWebpImage, 
-
-  unaccompaniedMinorsImage, 
-  unaccompaniedMinorsWebpImage, 
-
-  luxuryVacationersImage, 
-  luxuryVacationerssWebpImage, 
-
+  seniorTravelersImage,
+  seniorTravelersWebpImage,
+  familiesTravelingImage,
+  familiesTravelingWebpImage,
+  unaccompaniedMinorsImage,
+  unaccompaniedMinorsWebpImage,
+  luxuryVacationersImage,
+  luxuryVacationerssWebpImage,
   corporateGroupsImage,
   corporateGroupsWebpImage,
-
   agentsAgenciesImage,
   agentsAgenciesWebpImage,
-
   eventAttendeesImage,
   eventAttendeesWebpImage,
-
   travelEnthusiastssImage,
   travelEnthusiastsWebpImage,
-
   wellnessTravelersImage,
- wellnessTravelersWebpImage,
-   
+  wellnessTravelersWebpImage,
 
-
-
+  //Services - Services section
+  VIPImage,
+  VIPWebpImage,
+  fastServicesImage,
+  fastServicesWebpImage,
+  transferServicesImage,
+  transferServicessWebpImage,
+  railwayStationsImage,
+  railwayStationsWebpImage,
 };
