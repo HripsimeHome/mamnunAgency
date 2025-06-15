@@ -31,7 +31,7 @@ const HomeServices = () => {
     <section className={styles.homeServices}>
       <h2 className="titleWhiteH2">
         Overview of&nbsp;
-        <span className="titlePrimarryH2">Our Services</span>
+        <span className="titlePrimaryH2">Our Services</span>
       </h2>
 
       <div className={styles.educationServices__accordionContainer}>

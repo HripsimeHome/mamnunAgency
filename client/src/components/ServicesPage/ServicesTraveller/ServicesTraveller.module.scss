@@ -18,11 +18,9 @@
   }
 
   &__card {
-    min-height: 350px;
+    min-height: 350px; // ?
     perspective: 1000px;
-    justify-content: end;
     position: relative;
-   // @include flexCol();
     aspect-ratio: 6/2;
   }
 
@@ -49,17 +47,25 @@
     background-color: #f0f0f0;
   }
 
-  &__cardFront {     
-    display: flex;
+  &__cardFront {   
+    @include flexCol(end, center);    
     background-color: $color-darkGrey;
     border-radius: 20px;
 
     @media (max-width: 1200px) {
       aspect-ratio: 6/2.5;     
-    }
+    }   
 
      &:hover {
       cursor: pointer;
+    }
+
+    &_reversed {       
+      justify-content: start;    
+    }
+
+    @include smScreenMedia {
+      justify-content: center;      
     }
   }  
 
@@ -70,15 +76,23 @@
     inset: 0;
     background-color: rgba(0, 0, 0, 0.3);   
     border-radius: 20px;
-}
+  }
 
   &__cardFrontTitle {    
     @include setFont(32px, 600, $color-white);   
-      display: flex;
-      align-self: center;       
-      z-index: 2;
-      padding-left: 25px;
-      padding-right: 25px; 
+     z-index: 2;
+     padding-left: 25px;
+     padding-right: 25px; 
+
+    @include mdScreenMedia {
+      font-size: 24px;    
+      text-align: center;
+    }
+
+    @include smScreenMedia {
+      font-size: 18px;   
+      line-height: 20px;; 
+    }
   }
 
   &__cardBack {
@@ -92,9 +106,8 @@
     padding: 25px;
   }
 
-    &__cardBackTitle {
-    @include setFont(32px, 600, $color-secondary);
-    align-self: flex-start;
+   &__cardBackTitle {
+    @include setFont(32px, 600, $color-secondary);      
   }
 
   &__cardBackTextBlock {
@@ -118,7 +131,7 @@
     transition: $transition;
     z-index: 1;
     opacity: 1;   
-     border-radius: 20px;
+    border-radius: 20px;
 
     &_inactive {
       opacity: 0;

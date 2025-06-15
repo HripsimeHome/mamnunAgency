@@ -103,7 +103,7 @@ const EducationStudyingAbroad = () => {
       <div className="container">
         <h2 className="titleWhiteH2">
           Pros and Cons of studying&nbsp;
-          <span className="titlePrimarryH2">abroad</span>
+          <span className="titlePrimaryH2">abroad</span>
         </h2>
 
         <div className={styles.educationStudying__accordionContainer}>

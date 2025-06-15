@@ -50,7 +50,7 @@ const HomeNews = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           News&nbsp;
-          <span className="titlePrimarryH2">Blog</span>
+          <span className="titlePrimaryH2">Blog</span>
         </h2>
 
         <div className={styles.homeNews__slideContainer}>
@@ -60,11 +60,7 @@ const HomeNews = () => {
               className={styles.homeNews__slide}
               // onClick={}
             >
-              <img 
-              src={image} 
-              alt={title}
-              className={styles.homeNews__img} 
-              />
+              <img src={image} alt={title} className={styles.homeNews__img} />
               <h4 className={styles.homeNews__title}>{title}</h4>
               <p className={styles.homeNews__description}>{description}</p>
               <span className={styles.homeNews__date}>{date}</span>

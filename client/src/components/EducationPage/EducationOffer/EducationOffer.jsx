@@ -75,7 +75,7 @@ const EducationOffer = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           We&nbsp;
-          <span className="titlePrimarryH2">offer</span>
+          <span className="titlePrimaryH2">offer</span>
         </h2>
 
         <div className={styles.educationOffer__container}>
@@ -114,7 +114,7 @@ const EducationOffer = () => {
 
         {/* <h2 className="titleSecondaryH2">Application process and       
            <br />   
-          <span className="titlePrimarryH2">requirements             
+          <span className="titlePrimaryH2">requirements             
           </span>
         </h2>  */}
       </div>

@@ -93,7 +93,7 @@ const EducationScholarships = () => {
       <div className="container">
         <h2 className="titleWhiteH2">
           Scholarships and&nbsp;
-          <span className="titlePrimarryH2">Financial Aid</span>
+          <span className="titlePrimaryH2">Financial Aid</span>
         </h2>
         <p className={styles.educationScholarships__text}>
           Universities worldwide offer a variety of scholarships and financial
