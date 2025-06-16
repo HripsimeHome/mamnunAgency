@@ -1,21 +1,33 @@
+// General
+import VIPImage from "./images/icons/VIP.png";
+import VIPWebpImage from "./images/icons/VIP.webp";
+
 // Home
 import logoImage from "./images/logos/logo.png";
 import logoWebpImage from "./images/logos/logo.webp";
 
-import expertiseImage from "./images/home/icons/expertise.png";
-import expertiseWebpImage from "./images/home/icons/expertise.webp";
+import expertiseImage from "./images/home/icons/reasons/expertise.png";
+import expertiseWebpImage from "./images/home/icons/reasons/expertise.webp";
 
-import personalizedApproachImage from "./images/home/icons/personalizedApproach.png";
-import personalizedApproachWebpImage from "./images/home/icons/personalizedApproach.webp";
+import personalizedApproachImage from "./images/home/icons/reasons/personalizedApproach.png";
+import personalizedApproachWebpImage from "./images/home/icons/reasons/personalizedApproach.webp";
 
-import improvementImage from "./images/home/icons/improvement.png";
-import improvementWebpImage from "./images/home/icons/improvement.webp";
+import improvementImage from "./images/home/icons/reasons/improvement.png";
+import improvementWebpImage from "./images/home/icons/reasons/improvement.webp";
 
-import strongRelationshipsImage from "./images/home/icons/strongRelationships.png";
-import strongRelationshipsWebpImage from "./images/home/icons/strongRelationships.webp";
+import strongRelationshipsImage from "./images/home/icons/reasons/strongRelationships.png";
+import strongRelationshipsWebpImage from "./images/home/icons/reasons/strongRelationships.webp";
 
-import transparencyIntegrityImage from "./images/home/icons/transparencyIntegrity.png";
-import transparencyIntegrityWebpImage from "./images/home/icons/transparencyIntegrity.webp";
+import transparencyIntegrityImage from "./images/home/icons/reasons/transparencyIntegrity.png";
+import transparencyIntegrityWebpImage from "./images/home/icons/reasons/transparencyIntegrity.webp";
+
+// Home Accordion
+
+import educationImage from "./images/home/icons/accordion/education.png";
+import educationWebpImage from "./images/home/icons/accordion/education.webp";
+
+import travelImage from "./images/home/icons/accordion/travel.png";
+import travelebpImage from "./images/home/icons/accordion/travel.webp";
 
 import newsImage from "./images/home/news/news.jpg";
 
@@ -109,8 +121,8 @@ import wellnessTravelersWebpImage from "./images/services/traveller/wellnessTrav
 import servicesHeaderImage from "./images/services/header/servicesHeader.jpg";
 import servicesHeaderWebpImage from "./images/services/header/servicesHeader.webp";
 
-import VIPImage from "./images/services/services/VIP.png";
-import VIPWebpImage from "./images/services/services/VIP.webp";
+import VIPServicesImage from "./images/services/services/VIPServices.png";
+import VIPServicesWebpImage from "./images/services/services/VIPServices.webp";
 
 import fastServicesImage from "./images/services/services/fastServices.jpg";
 import fastServicesWebpImage from "./images/services/services/fastServices.webp";
@@ -122,6 +134,11 @@ import railwayStationsImage from "./images/services/services/railwayStations.jpg
 import railwayStationsWebpImage from "./images/services/services/railwayStations.webp";
 
 export {
+
+//General 
+ VIPImage,
+ VIPWebpImage,
+ 
   // Home
   logoImage,
   logoWebpImage,
@@ -136,6 +153,12 @@ export {
   transparencyIntegrityImage,
   transparencyIntegrityWebpImage,
   newsImage,
+
+  //  Home Accordion
+  educationImage,
+  educationWebpImage,
+  travelImage,
+  travelebpImage,
 
   // About
   logoBlackImage,
@@ -204,8 +227,8 @@ export {
   wellnessTravelersWebpImage,
 
   //Services - Services section
-  VIPImage,
-  VIPWebpImage,
+  VIPServicesImage,
+  VIPServicesWebpImage,
   fastServicesImage,
   fastServicesWebpImage,
   transferServicesImage,

@@ -5,8 +5,8 @@ import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import { contactsPagePath } from "../../../router/path";
 
 import {
-  VIPImage,
-  VIPWebpImage,
+  VIPServicesImage,
+  VIPServicesWebpImage,
   fastServicesImage,
   fastServicesWebpImage,
   transferServicesImage,
@@ -18,8 +18,8 @@ import {
 const cards = [
   {
     title: "Full VVIP Services",
-    image: VIPImage,
-    webpImage: VIPWebpImage,
+    image: VIPServicesImage,
+    webpImage: VIPServicesWebpImage,
     backDescription:
       "Experience unparalleled luxury and convenience with our Full VIP options, designed to elevate every aspect of your travel journey. With our Full VIP options for Arrival, Departure and Transit, you can travel with confidence, knowing that every detail is taken care of, allowing you to focus on what truly matters.",
   },

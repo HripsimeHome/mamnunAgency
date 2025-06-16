@@ -1,5 +1,16 @@
 <svg width="0" height="0" class="hidden" xmlns="http://www.w3.org/2000/svg">
  
+ //General
+ 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 13" id="arrowWhite">
+    <path d="M1 1L14.5 11L28 1" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+  </symbol>  
+ 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 13" id="arrowPurple">
+    <path d="M28 12L14.5 2L0.999999 12" stroke="#B164FF" stroke-width="2" stroke-linecap="round"></path>
+  </symbol> 
+ 
+ 
 // Header 
   
   <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 18" id="burger">

@@ -106,16 +106,12 @@ const EducationStudyingAbroad = () => {
           <span className="titlePrimaryH2">abroad</span>
         </h2>
 
-        <div className={styles.educationStudying__accordionContainer}>
-          {accordionItems.map(({ icon, title, content }, index) => (
-            <Accordion
-              key={index}
-              icon={icon}
-              title={title}
-              content={content}
-            />
-          ))}
-        </div>
+         <>
+          <Accordion 
+            accordionItems={accordionItems} 
+            className={styles.educationStudyingAbroad__accordionContainer}
+          />
+        </>
         <p className={styles.educationStudyingAbroad__text}>
           At MAMNUN, we are here to guide you through these considerations,
           ensuring you have all the information you need to make the best

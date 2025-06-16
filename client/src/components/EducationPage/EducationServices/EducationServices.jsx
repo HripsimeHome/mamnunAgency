@@ -64,17 +64,11 @@ const EducationServices = () => {
           <br />
           <span className="titleWhiteH2">(Available for an Extra Fee)</span>
         </h2>
-
-        <div className={styles.educationServices__accordionContainer}>
-          {accordionItems.map(({ icon, title, content }, index) => (
-            <Accordion
-              key={index}
-              icon={icon}
-              title={title}
-              content={content}
-            />
-          ))}
-        </div>
+         <>
+           <Accordion 
+            accordionItems={accordionItems}          
+          />
+         </>
 
         <p className={styles.educationServices__text}>
           For more details or to request any of these services, please
