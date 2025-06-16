@@ -2,43 +2,58 @@
 @import "../../../styles/vars";
 
 .accordion {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-top: 50px;
+
+  &__item {
+   // border-bottom: 1px solid #ccc;
+    //margin-bottom: 0px;
+  }
 
   &__header {
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
+    @include flexCol(space-between, center);
+    width: 100%;   
+    @include setFont(35px, 400, $color-white);   
+    text-align: left;      
+    background: transparent;
+    border: 2px solid $color-white; 
+    border-radius: 25px;
     cursor: pointer;
-    background-color: #f9f9f9;
+    //margin-bottom: 15px;
+    padding: 25px;
   }
 
+  &__headerWhite {
+     @include setFont(35px, 400, $color-secondary);  
+     border: 2px solid $color-secondary; 
+  }
   
-  &__iconTest {
-    width: 40px;
-    height: 40px;;
-  }
-  
+  &__titlePosition {
+     @include flexCol();
+     gap: 25px;
+  }  
 
-  &__icon {
-    font-size: 1.5rem;
-  }
-
-  &__content {
-    padding: 1rem;
+  &__content {    
     background-color: #fff;
-    font-size: 1rem;
+    @include setFont(18px, 400, $color-white);  
+    line-height: 30px;
     color: #333;
+    border-radius: 25px;
+    margin-top: 25px;
+    padding: 25px;
     animation: fadeIn 0.3s ease-in-out;
   }
 
+   &__toggleIcon {
+    width: 27px;
+    height: 10px;
+    flex-shrink: 0;
+  }
 }
+
 
 @keyframes fadeIn {
   from {

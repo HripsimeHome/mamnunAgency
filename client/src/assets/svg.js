@@ -1,6 +1,9 @@
-// Header
+// General
 export const burgerIcon = "burger";
 export const crossIcon = "cross";
+
+export const arrowWhiteIcon = "arrowWhite";
+export const arrowPurpleIcon = "arrowPurple";
 
 // About
 export const educationIcon = "education";
