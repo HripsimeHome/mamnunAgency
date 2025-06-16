@@ -57,6 +57,14 @@ import nukusWebpImage from "./images/tourism/destinations/nukus.webp";
 import chimganImage from "./images/tourism/destinations/chimgan.jpg";
 import chimganWebpImage from "./images/tourism/destinations/chimgan.webp";
 
+//Tourism Gallery
+
+import previewImage from "./images/tourism/gallery/preview.jpg";
+import previewWebpImage from "./images/tourism/gallery/preview.webp";
+
+import thumbnailImage from "./images/tourism/gallery/thumbnail.jpg";
+import thumbnailwWebpImage from "./images/tourism/gallery/thumbnail.webp";
+
 //Education
 
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
@@ -156,6 +164,12 @@ export {
   nukusWebpImage,
   chimganImage,
   chimganWebpImage,
+
+  //Tourism Gallery
+  previewImage,
+  previewWebpImage,
+  thumbnailImage,
+  thumbnailwWebpImage,
 
   //Education
   storyImage,

@@ -1,5 +1,5 @@
 import styles from "./TourismPackages.module.scss";
-import Tabs from "../../layout/Tabs/Tabs";
+import Tabs from "../../../layout/Tabs/Tabs";
 
 import {
   classicTourIcon,
@@ -11,7 +11,7 @@ import {
   currencyIcon,
   languageIcon,
   visitIcon,
-} from "../../../assets/svg";
+} from "../../../../assets/svg";
 
 const tabHeaders = [
   "Travel Packages and Itineraries",
@@ -82,7 +82,7 @@ const tabContentGroups = [
 
 const TourismPackages = () => {
   return (
-    <section className={`${styles.tourismPackages} wrapperBlack`}>
+    <section className={styles.tourismPackages}>
       <div className="container">
         <h2 className="titleWhiteH2">
           Travel packages + Cultural&nbsp;
