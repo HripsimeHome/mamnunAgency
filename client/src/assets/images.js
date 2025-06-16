@@ -2,17 +2,32 @@
 import logoImage from "./images/logos/logo.png";
 import logoWebpImage from "./images/logos/logo.webp";
 
-import missionImage from "./images/home/mission.jpg";
-import missionWebpImage from "./images/home/mission.webp";
+import expertiseImage from "./images/home/icons/expertise.png";
+import expertiseWebpImage from "./images/home/icons/expertise.webp";
 
-import valuesImage from "./images/home/values.jpg";
-import valuesWebpImage from "./images/home/values.webp";
+import personalizedApproachImage from "./images/home/icons/personalizedApproach.png";
+import personalizedApproachWebpImage from "./images/home/icons/personalizedApproach.webp";
+
+import improvementImage from "./images/home/icons/improvement.png";
+import improvementWebpImage from "./images/home/icons/improvement.webp";
+
+import strongRelationshipsImage from "./images/home/icons/strongRelationships.png";
+import strongRelationshipsWebpImage from "./images/home/icons/strongRelationships.webp";
+
+import transparencyIntegrityImage from "./images/home/icons/transparencyIntegrity.png";
+import transparencyIntegrityWebpImage from "./images/home/icons/transparencyIntegrity.webp";
 
 import newsImage from "./images/home/news/news.jpg";
 
 // About
 import logoBlackImage from "./images/logos/logoBlack.png";
 import logoBlackWebpImage from "./images/logos/logoBlack.webp";
+
+import missionImage from "./images/home/mission.jpg";
+import missionWebpImage from "./images/home/mission.webp";
+
+import valuesImage from "./images/home/values.jpg";
+import valuesWebpImage from "./images/home/values.webp";
 
 //Tourism
 import tourismHeaderImage from "./images/tourism/header/tourismHeader.jpg";
@@ -50,7 +65,7 @@ import educationHeaderWebpImage from "./images/education/header/educationHeader.
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
 
-// Services 
+// Services
 // Services traveller
 import businessTravelersImage from "./images/services/traveller/businessTravelers.jpg";
 import businessTravelersWebpImage from "./images/services/traveller/businessTravelers.webp";
@@ -98,20 +113,29 @@ import transferServicessWebpImage from "./images/services/services/transferServi
 import railwayStationsImage from "./images/services/services/railwayStations.jpg";
 import railwayStationsWebpImage from "./images/services/services/railwayStations.webp";
 
-
 export {
   // Home
   logoImage,
   logoWebpImage,
-  missionImage,
-  missionWebpImage,
-  valuesImage,
-  valuesWebpImage,
+  expertiseImage,
+  expertiseWebpImage,
+  personalizedApproachImage,
+  personalizedApproachWebpImage,
+  improvementImage,
+  improvementWebpImage,
+  strongRelationshipsImage,
+  strongRelationshipsWebpImage,
+  transparencyIntegrityImage,
+  transparencyIntegrityWebpImage,
   newsImage,
 
   // About
   logoBlackImage,
   logoBlackWebpImage,
+  missionImage,
+  missionWebpImage,
+  valuesImage,
+  valuesWebpImage,
 
   //Tourism
   tourismHeaderImage,
