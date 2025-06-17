@@ -1,11 +1,15 @@
+
 // General
+import logoImage from "./images/logos/logo.png";
+import logoWebpImage from "./images/logos/logo.webp";
+
+import logoBlackImage from "./images/logos/logoBlack.png";
+import logoBlackWebpImage from "./images/logos/logoBlack.webp";
+
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
 // Home
-import logoImage from "./images/logos/logo.png";
-import logoWebpImage from "./images/logos/logo.webp";
-
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
 import expertiseWebpImage from "./images/home/icons/reasons/expertise.webp";
 
@@ -32,9 +36,6 @@ import travelebpImage from "./images/home/icons/accordion/travel.webp";
 import newsImage from "./images/home/news/news.jpg";
 
 // About
-import logoBlackImage from "./images/logos/logoBlack.png";
-import logoBlackWebpImage from "./images/logos/logoBlack.webp";
-
 import missionImage from "./images/home/mission.jpg";
 import missionWebpImage from "./images/home/mission.webp";
 
@@ -136,12 +137,16 @@ import railwayStationsWebpImage from "./images/services/services/railwayStations
 export {
 
 //General 
- VIPImage,
- VIPWebpImage,
- 
-  // Home
   logoImage,
   logoWebpImage,
+
+  logoBlackImage,
+  logoBlackWebpImage,
+
+  VIPImage,
+  VIPWebpImage,
+ 
+  // Home
   expertiseImage,
   expertiseWebpImage,
   personalizedApproachImage,
@@ -161,8 +166,6 @@ export {
   travelebpImage,
 
   // About
-  logoBlackImage,
-  logoBlackWebpImage,
   missionImage,
   missionWebpImage,
   valuesImage,
