@@ -114,7 +114,7 @@ const AdminCertificates = () => {
 
   return (
     <section className={styles.adminCertificates}>
-      <h3 className={styles.adminCertificates__title}>Certificates</h3>
+      <h3 className={"titleBlackh3"}>Certificates</h3>
       <Addbtn onAdd={() => dispatch(getCertificatesList(curPage))} />
       {certificates && certificates.length ? (
         <div className={styles.adminCertificates__list}>

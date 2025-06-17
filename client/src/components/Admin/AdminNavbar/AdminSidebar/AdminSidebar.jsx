@@ -10,6 +10,7 @@ import TransitionProvider, {
 import {
   adminCertificatesPagePath,
   adminNewsPagePath,
+  adminSettingsPagePath,
 } from "../../../../router/path";
 import Backdrop from "../../../layout/Backdrop/Backdrop";
 import ImageWebp from "../../../layout/ImageWebp/ImageWebp";
@@ -60,6 +61,15 @@ const AdminSidebar = ({ show, onClose }) => {
             className={activeNavLinks}
           >
             Certificates
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              if (isMobile) onClose();
+            }}
+            to={adminSettingsPagePath}
+            className={activeNavLinks}
+          >
+            Settings
           </NavLink>
         </nav>
       </TransitionProvider>

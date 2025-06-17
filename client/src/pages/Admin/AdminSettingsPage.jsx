@@ -1,7 +1,6 @@
-import AdminSettingsWrapper from "../../components/Admin/AdminSettingsPage/AdminSettingsWrapper/AdminSettingsWrapper";
-
+import AdminSettings from "../../components/Admin/AdminSettingsPage/AdminSettings/AdminSettings";
 const AdminSettingsPage = () => {
-  return <AdminSettingsWrapper />;
+  return <AdminSettings />;
 };
 
 export default AdminSettingsPage;

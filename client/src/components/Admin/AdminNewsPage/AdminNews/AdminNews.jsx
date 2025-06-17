@@ -46,7 +46,7 @@ const AdminNews = () => {
 
   return (
     <section className={styles.adminNews}>
-      <h3 className={styles.adminNews__title}>News</h3>
+      <h3 className={"titleBlackh3"}>News</h3>
       <MainBtn
         onClick={() => setAddModalOpened(true)}
         className={styles.adminNews__addbtn}

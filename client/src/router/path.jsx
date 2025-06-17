@@ -17,6 +17,7 @@ import ForgotPasswordPage from "../pages/Admin/ForgotPasswordPage";
 import ResetPasswordPage from "../pages/Admin/ResetPasswordPage";
 import AdminNewsPage from "../pages/Admin/AdminNewsPage";
 import AdminCertificatesPage from "../pages/Admin/AdminCertificatesPage";
+import AdminSettingsPage from "../pages/Admin/AdminSettingsPage";
 
 // Paths
 
@@ -40,6 +41,7 @@ export const adminResetPasswordPagePath = adminPagePath + "/resetPassword";
 // news
 export const adminNewsPagePath = adminPagePath + "/news";
 export const adminCertificatesPagePath = adminPagePath + "/certificates";
+export const adminSettingsPagePath = adminPagePath + "/settings";
 
 // Routes
 
@@ -118,6 +120,10 @@ export const routes = [
   {
     path: adminCertificatesPagePath,
     component: <PrivateRoute element={<AdminCertificatesPage />} />,
+  },
+  {
+    path: adminSettingsPagePath,
+    component: <PrivateRoute element={<AdminSettingsPage />} />,
   },
   {
     path: "*",
