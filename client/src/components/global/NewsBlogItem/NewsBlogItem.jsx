@@ -17,7 +17,6 @@ const PinBtn = ({ id, activeDayNews }) => {
     e.stopPropagation();
     try {
       setLoading(true);
-      console.log({ activeDayNews });
 
       await dispatch(updateActiveDayNews(id)).unwrap();
       dispatch(

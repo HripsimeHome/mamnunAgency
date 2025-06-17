@@ -59,7 +59,7 @@ const AdminSidebar = ({ show, onClose }) => {
             to={adminCertificatesPagePath}
             className={activeNavLinks}
           >
-            News
+            Certificates
           </NavLink>
         </nav>
       </TransitionProvider>

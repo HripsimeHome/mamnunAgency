@@ -4,7 +4,6 @@ import Modal from "../../layout/Modal/Modal";
 import styles from "./AdminDeleteModal.module.scss";
 import MainBtn from "../../layout/MainBtn/MainBtn";
 import { useDispatch } from "react-redux";
-import { deleteNews } from "../../../store/slices/newsSlice";
 import { openTooltip } from "../../../store/slices/UISlice";
 const AdminDeleteModal = ({
   show,
@@ -20,8 +19,7 @@ const AdminDeleteModal = ({
   const handleDelete = async () => {
     try {
       setLoading(true);
-      await deleteNews(id);
-      onDelete();
+      onDelete(id);
       onClose();
       dispatch(openTooltip("News deleted successfully"));
     } catch (error) {

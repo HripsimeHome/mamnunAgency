@@ -8,7 +8,7 @@ import NewsBlogItem from "../../../global/NewsBlogItem/NewsBlogItem";
 import DataLoader from "../../../layout/DataLoader/DataLoader";
 import { ADMIN_NEWS_PAGE_SIZE } from "../../../../constants/pagination";
 import AdminNewsAddEditModal from "../AdminNewsAddEditModal/AdminNewsAddEditModal";
-import AdminNewsDeleteModal from "../../AdminDeleteModal/AdminDeleteModal";
+import AdminDeleteModal from "../../AdminDeleteModal/AdminDeleteModal";
 
 const AdminNews = () => {
   const dispatch = useDispatch();
@@ -29,6 +29,15 @@ const AdminNews = () => {
     dispatch(getNewsList(1));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const onDelete = async (id) => {
+    // eslint-disable-next-line no-undef
+    await deleteNews(id);
+
+    const page = news.length === 1 && curPage > 1 ? curPage - 1 : curPage;
+    dispatch(getNewsList(page));
+    setCurPage(page);
+  };
 
   const onEdit = (id) => {
     setEditingItemid(id);
@@ -95,16 +104,11 @@ const AdminNews = () => {
         />
       )}
       {deleteingItemid && (
-        <AdminNewsDeleteModal
+        <AdminDeleteModal
           show={deleteModalOpened}
           onClose={() => setDeleteModalOpened(false)}
           id={deleteingItemid}
-          onDelete={() => {
-            const page =
-              news.length === 1 && curPage > 1 ? curPage - 1 : curPage;
-            dispatch(getNewsList(page));
-            setCurPage(page);
-          }}
+          onDelete={onDelete}
           title={"Delete News"}
           confirmText={"Are you sure you want to delete this news item?"}
         />
