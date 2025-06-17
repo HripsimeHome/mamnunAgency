@@ -14,7 +14,9 @@
 
   &__menuContainer {
     display: flex;
-    gap: 75px;
+    justify-self: center;
+    width: 100%;
+    gap: 85px;
 
     // @include lgScreenMedia {
     //   gap: 40px;
@@ -23,8 +25,10 @@
 
   &__logoBlock {
     text-align: center;
+   // margin-right: 30px;
+
     // @include mdScreenMedia {
-    //   text-align: center;
+       
     // }
   }
 
@@ -36,6 +40,7 @@
 
   &__logoImg {
     max-width: 178px;
+    width: 100%;;
     margin-bottom: 25px;
   }
 

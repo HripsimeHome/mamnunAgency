@@ -1,9 +1,9 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.socialIcons {
-  display: flex;     
-  gap: 10px;   
+.socialIcons {   
+    display: flex;     
+    gap: 10px;       
 
   &__icon {
     @include svg(44px, 44px);

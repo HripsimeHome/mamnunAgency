@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
 import { Link, NavLink } from "react-router-dom";
-import { footerMenuItems } from "../../../constants/menuItems"
+import { footerMenuItems, paymentsData } from "../../../constants/footerInfo";
 import SocialIcons from "../../layout/SocialIcons/SocialIcons";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
@@ -10,49 +10,14 @@ import {
   cookiePolicyPagePath,
 } from "../../../router/path";
 
-
-import {
-  logoBlackImage,
-  logoBlackWebpImage,
-  uzcardImage,
-  uzcardWebpImage,
-  humoImage,
-  humoWebpImage,
-  mastercardImage,
-  mastercardWebpImage,
-  visaImage,
-  mvisaWebpImage,
+import { 
+  logoBlackImage, 
+  logoBlackWebpImage 
 } from "../../../assets/images";
 
 // import {
 //   emailAddress
 // } from "../../../constants/contacts";
-
-const paymentsData = [
-  {
-    image: uzcardImage,
-    webpImage: uzcardWebpImage,
-    alt: "UZCARD",
-  },
-
-  {
-    image: humoImage,
-    webpImage: humoWebpImage,
-    alt: "HUMO",
-  },
-
-  {
-    image: mastercardImage,
-    webpImage: mastercardWebpImage,
-    alt: "Visa",
-  },
-
-  {
-    image: visaImage,
-    webpImage: mvisaWebpImage,
-    alt: "Mastercard",
-  },
-];
 
 const Footer = () => {
   return (
@@ -66,67 +31,37 @@ const Footer = () => {
                 srcSet={logoBlackWebpImage}
                 alt="Logo"
                 className={styles.footer__logoImg}
-                pictureClass={styles.footer__logoImgPosition} // ???
+                //pictureClass={styles.footer__logoImgPosition} 
               />
               MAMNUN Agency
             </Link>
           </div>
 
-
-
-
-
-
-
-        <div className={styles.footer__menuContainer}>
-          {footerMenuItems.map((menu, index) => (
-            <div key={index}>
-              <h3 className={styles.footer__menuTitle}>
-                {menu.title}
-              </h3>
-              <nav className={styles.footer__menu}>
-                {menu.items.map((item, i) => (
-                  <NavLink 
-                    key={i}                      
-                    to={item.link}   
-                    target={item.target 
-                      ? item.target 
-                      : "_self"}                    
-                    rel={item.target === "_blank" ? "noreferrer"
-                      : undefined}   
-                    className={({ isActive }) =>
-                      isActive
-                      ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
-                      : styles.footer__menuLink
-                      }                  
+          <div className={styles.footer__menuContainer}>
+            {footerMenuItems.map((menu, index) => (
+              <div key={index}>
+                <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
+                <nav className={styles.footer__menu}>
+                  {menu.items.map((item, i) => (
+                    <NavLink
+                      key={i}
+                      to={item.link}
+                      target={item.target ? item.target : "_self"}
+                      rel={item.target === "_blank" ? "noreferrer" : undefined}
+                      className={({ isActive }) =>
+                        isActive
+                          ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
+                          : styles.footer__menuLink
+                      }
                     >
-                    {item.text}                  
-                  </NavLink>
-                ))}
-              </nav>
-            </div>
-          ))}
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div> {/* menuContainer */}
-
-
-
-
-
-
+                      {item.text}
+                    </NavLink>
+                  ))}
+                </nav>
+              </div>
+            ))}
+          </div>
+        </div>{/* menuContainer */}
 
         <div className={styles.footer__info}>
           <div className={styles.footer__sociaBlock}>

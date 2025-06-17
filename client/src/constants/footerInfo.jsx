@@ -1,44 +1,31 @@
-//  Header menu
 
-import {
-  homePagePath,
+import {  
   aboutPagePath,
   tourismPagePath,
   educationPagePath,
   servicesPagePath,
-  contactsPagePath,
   imprintPagePath,
 } from "../router/path";
 
-export const headerMenuItems = [
-  {
-    text: "Home",
-    link: homePagePath,
-  },
-  {
-    text: "About us",
-    link: aboutPagePath,
-  },
-  {
-    text: "Travel to Uzbekistan",
-    link: tourismPagePath,
-  },
-  {
-    text: "Study Abroad Consulting",
-    link: educationPagePath,
-  },
-  {
-    text: "Extra VIP Services",
-    link: servicesPagePath,
-  },
-  {
-    text: "Contact us",
-    link: contactsPagePath,
-  },
-];
+import { 
+  phone,
+  email,
+  address  
+} from "./contacts"
+
+import {
+  uzcardImage,
+  uzcardWebpImage,
+  humoImage,
+  humoWebpImage,
+  mastercardImage,
+  mastercardWebpImage,
+  visaImage,
+  mvisaWebpImage,
+} from "../assets/images";
+
 
 //  Footer menu
-
 export const footerMenuItems = [
   {
     title: "Our Services",
@@ -58,7 +45,7 @@ export const footerMenuItems = [
     title: "About Us",
     items: [
       {
-        text: "Twitter",
+        text: "Who We Are",
         link: aboutPagePath,
       },
 
@@ -71,6 +58,7 @@ export const footerMenuItems = [
       {
         text: "Terms and Conditions",
         link: "https://drive.google.com/drive/folders/1jRuDPBiNrYH5EVAva4UFuxAp-J14-S0C?usp=share_link",
+        target: "_blank",
       },
 
       {
@@ -105,14 +93,48 @@ export const footerMenuItems = [
     title: "Contact Us",
     items: [
       {
-        text: "Company Name",
+        text: "MAMNUN Agency",
       },
 
-      { text: "Address:" },
+      { 
+        text: `Address: ${address}`
+      },
 
-      { text: "Email:" },
+      {
+        text: `Email: ${email}`,
+        link: `mailto:${email}`,        
+        },
 
-      { text: "Phone:" },
+      {
+        text: `Phone: ${phone}`         
+      },
     ],
+  },
+];
+
+// Payments images
+export const paymentsData = [
+  {
+    image: uzcardImage,
+    webpImage: uzcardWebpImage,
+    alt: "UZCARD",
+  },
+
+  {
+    image: humoImage,
+    webpImage: humoWebpImage,
+    alt: "HUMO",
+  },
+
+  {
+    image: mastercardImage,
+    webpImage: mastercardWebpImage,
+    alt: "Visa",
+  },
+
+  {
+    image: visaImage,
+    webpImage: mvisaWebpImage,
+    alt: "Mastercard",
   },
 ];
