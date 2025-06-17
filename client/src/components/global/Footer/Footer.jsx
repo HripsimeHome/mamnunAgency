@@ -20,6 +20,18 @@ import {
 import {
   logoBlackImage,
   logoBlackWebpImage,
+
+  uzcardImage,
+  uzcardWebpImage,
+
+  humoImage,
+  humoWebpImage,
+
+  mastercardImage,
+  mastercardWebpImage,
+
+  visaImage,
+  mvisaWebpImage,
 } from "../../../assets/images";
 
 import {
@@ -31,6 +43,32 @@ import {
 // import {  
 //   emailAddress  
 // } from "../../../constants/contacts";
+
+const paymentsData = [
+  {
+    image: uzcardImage,
+    webpImage: uzcardWebpImage,  
+    alt: "UZCARD",     
+  }, 
+
+  {
+    image: humoImage,
+    webpImage: humoWebpImage,    
+    alt: "HUMO",    
+  },
+
+  {
+    image: mastercardImage,
+    webpImage: mastercardWebpImage, 
+    alt: "Visa",       
+  }, 
+
+  {
+    image: visaImage,
+    webpImage: mvisaWebpImage,    
+    alt: "Mastercard",    
+  }, 
+]
 
 
 const Footer = () => {
@@ -62,8 +100,42 @@ const Footer = () => {
 
 
       <div className={styles.footer__bottom}>
+        <div className={styles.footer__socialMedia}>
+          <h4>
+            Our social media channels:
+          </h4>
+          icons
+        </div>
 
+        <div className={styles.footer__feedback}>
+          <h4>
+            Leave Your feedback Trustpilot
+          </h4>
+          <h5>
+            MAMNUN Agency
+          </h5>       
+        </div>
+
+        <div className={styles.footer__payments}>
+         <h4>
+          We accept:
+          </h4>
+          
+          <div lassName={styles.footer__paymentsCard}>
+          {paymentsData.map(({image, webpImage, alt}, index) => (
+          <ImageWebp 
+            key={index}
+            src={image} 
+            srcSet={webpImage}
+            alt={alt}                
+            className={styles.footer__paymentsImg} 
+          /> 
+          ))}
+          </div>
+        </div>
       </div>
+      {/* footer__bottom */}
+
 
       <div className={styles.footer__copyrightContainer}>
         <p className={styles.footer__copyright}>
@@ -84,10 +156,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      {/* copyrightContainer */}
-
-
-       
+      {/* copyrightContainer */}     
 
       </div>      
     </footer>
@@ -95,10 +164,6 @@ const Footer = () => {
 };
 
 export default Footer;
-//   
-
-
-
 
 
 //           <Link
