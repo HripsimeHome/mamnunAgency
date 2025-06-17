@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.adminDeleteModal {
+  padding: 16px 25px 20px;
+
+  &__main {
+    @include flexCol();
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__confirmText {
+    @include setFont(16px, 400, $color-white);
+    text-align: center;
+  }
+  &__actions {
+    width: 100%;
+    @include flexCol();
+    gap: 15px;
+  }
+}

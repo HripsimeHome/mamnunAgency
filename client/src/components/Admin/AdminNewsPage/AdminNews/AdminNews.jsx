@@ -8,6 +8,7 @@ import NewsBlogItem from "../../../global/NewsBlogItem/NewsBlogItem";
 import DataLoader from "../../../layout/DataLoader/DataLoader";
 import { ADMIN_NEWS_PAGE_SIZE } from "../../../../constants/pagination";
 import AdminNewsAddEditModal from "../AdminNewsAddEditModal/AdminNewsAddEditModal";
+import AdminNewsDeleteModal from "../../AdminDeleteModal/AdminDeleteModal";
 
 const AdminNews = () => {
   const dispatch = useDispatch();
@@ -17,8 +18,10 @@ const AdminNews = () => {
   const resultCount = useSelector((state) => state.news.resultCount);
   const [addModalOpened, setAddModalOpened] = useState(false);
   const [editModalOpened, setEditModalOpened] = useState(false);
-  const [curPage, setCurPage] = useState(1);
   const [editingItemid, setEditingItemid] = useState(null);
+  const [deleteModalOpened, setDeleteModalOpened] = useState(false);
+  const [deleteingItemid, setDeleteingItemid] = useState(null);
+  const [curPage, setCurPage] = useState(1);
 
   const editingItem = news?.find((item) => item.id === editingItemid);
 
@@ -50,11 +53,9 @@ const AdminNews = () => {
               key={item.id}
               isAdmin={true}
               onEdit={onEdit}
-              onDelete={() => {
-                const page =
-                  news.length === 1 && curPage > 1 ? curPage - 1 : curPage;
-                dispatch(getNewsList(page));
-                setCurPage(page);
+              onDelete={(id) => {
+                setDeleteingItemid(id);
+                setDeleteModalOpened(true);
               }}
               onClick={onEdit}
             />
@@ -91,6 +92,21 @@ const AdminNews = () => {
           onClose={() => setEditModalOpened(false)}
           isEdit
           newsData={editingItem}
+        />
+      )}
+      {deleteingItemid && (
+        <AdminNewsDeleteModal
+          show={deleteModalOpened}
+          onClose={() => setDeleteModalOpened(false)}
+          id={deleteingItemid}
+          onDelete={() => {
+            const page =
+              news.length === 1 && curPage > 1 ? curPage - 1 : curPage;
+            dispatch(getNewsList(page));
+            setCurPage(page);
+          }}
+          title={"Delete News"}
+          confirmText={"Are you sure you want to delete this news item?"}
         />
       )}
     </section>

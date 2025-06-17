@@ -6,40 +6,9 @@ import Svg from "../../layout/Svg/Svg";
 import { deleteIcon, editIcon, pinIcon } from "../../../assets/svg";
 import { noImage } from "../../../assets/images";
 import { useDispatch } from "react-redux";
-import {
-  deleteNews,
-  updateActiveDayNews,
-} from "../../../store/slices/newsSlice";
+import { updateActiveDayNews } from "../../../store/slices/newsSlice";
 import { openTooltip } from "../../../store/slices/UISlice";
 
-const DeleteBtn = ({ id, onDelete }) => {
-  const dispatch = useDispatch();
-  const [loading, setLoading] = useState(false);
-
-  const handleDelete = async (e) => {
-    e.stopPropagation();
-    try {
-      setLoading(true);
-      await deleteNews(id);
-      onDelete();
-      dispatch(openTooltip("News deleted successfully"));
-    } catch (error) {
-      dispatch(openTooltip("Failed to delete news"));
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <button
-      onClick={handleDelete}
-      disabled={loading}
-      className={`${styles.newsBlogItem__actionBtn} ${styles.newsBlogItem__deleteBtn}`}
-    >
-      <Svg id={deleteIcon} />
-    </button>
-  );
-};
 const PinBtn = ({ id, activeDayNews }) => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
@@ -117,7 +86,17 @@ const NewsBlogItem = ({
                   <Svg id={editIcon} />
                 </button>
               )}
-              {onDelete && <DeleteBtn id={id} onDelete={onDelete} />}
+              {onDelete && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDelete(id);
+                  }}
+                  className={`${styles.newsBlogItem__actionBtn} ${styles.newsBlogItem__deleteBtn}`}
+                >
+                  <Svg id={deleteIcon} />
+                </button>
+              )}
               <PinBtn id={id} activeDayNews={activeDayNews} />
             </div>
           </>

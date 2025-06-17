@@ -7,7 +7,10 @@ import { isMobile } from "../../../../constants/globals";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../../providers/TransitionProvider";
-import { adminNewsPagePath } from "../../../../router/path";
+import {
+  adminCertificatesPagePath,
+  adminNewsPagePath,
+} from "../../../../router/path";
 import Backdrop from "../../../layout/Backdrop/Backdrop";
 import ImageWebp from "../../../layout/ImageWebp/ImageWebp";
 import styles from "./AdminSidebar.module.scss";
@@ -49,24 +52,15 @@ const AdminSidebar = ({ show, onClose }) => {
           >
             News
           </NavLink>
-          {/* <NavLink
-            onClick={() => {
-              if (isMobile) onClose();
-            }}
-            to={adminArchivePagePath}
-            className={activeNavLinks}
-          >
-            Archive
-          </NavLink>
           <NavLink
             onClick={() => {
               if (isMobile) onClose();
             }}
-            to={adminSettingsPagePath}
+            to={adminCertificatesPagePath}
             className={activeNavLinks}
           >
-            Settings
-          </NavLink> */}
+            News
+          </NavLink>
         </nav>
       </TransitionProvider>
     </>
