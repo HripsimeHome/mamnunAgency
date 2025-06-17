@@ -5,21 +5,24 @@
   border-top: 2px solid $color-secondary;
   color: $color-secondary;
   padding-top: 100px;
-  padding-bottom: 50px;;
+  padding-bottom: 50px;
 
-   &__menuContainer {
-      //@include flexCol();
-      display: flex;
-      gap: 75px;
+  &__container {
+    @include flexCol(space-between, start);
+    gap: 85px;
+  }
+
+  &__menuContainer {
+    display: flex;
+    gap: 75px;
 
     // @include lgScreenMedia {
     //   gap: 40px;
     // }
   }
 
-  
   &__logoBlock {
-      text-align: center;
+    text-align: center;
     // @include mdScreenMedia {
     //   text-align: center;
     // }
@@ -33,11 +36,12 @@
 
   &__logoImg {
     max-width: 178px;
-    margin-bottom: 25px;;
+    margin-bottom: 25px;
   }
-  
+
   &__menuTitle {
-    //@include setFont(22px, 600);
+   @include setFont(24px, 600, $color-secondary);
+    margin-bottom: 15px;
   }
 
   &__menu {
@@ -46,8 +50,9 @@
   }
 
   &__menuLink {
-    @include setFont(16px, 300, $color-secondary);
-    margin-top: 10px;
+    @include setFont(18px, 400, $color-secondary);    
+    line-height: 20px;
+    margin-bottom: 15px;
 
     &:hover {
       color: $color-primary;
@@ -64,56 +69,56 @@
     }
   }
 
-
- 
-
-  &__bottom {
-  @include flexCol(space-between, center);   
-    gap: 180px;
-    margin-top: 46px;
-    margin-bottom: 20px;
+  &__info {
+    @include flexCol(space-between, start);
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
-
 
   &__sociaBlock {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 46px;    
   }
 
-
-
-
   &__paymentsBLock {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 46px;    
   }
 
   &__paymentsCard {
-    display: flex;     
-    gap: 10px;     
-  }
-  
-  
-
-
-// Copyright
-
-  &__copyrightContainer {
     display: flex;
-    align-items: center;;
-    justify-content: flex-end;    
-    gap: 180px;
+    gap: 10px;
+  }
+
+  // Copyright
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;    
   }
 
   &__copyright {
     @include setFont(20px, 400, $color-secondary);
     text-align: center;
     line-height: 30px;
-    margin-top: 13px;
   }
 
+  &__privacyBlock {
+    @include flexCol(space-between, center);
+    gap: 25px;
+
+    a {
+      @include setFont(20px, 400, $color-secondary);
+
+      &:hover {
+        color: $color-secondary;
+        text-decoration: underline;
+      }
+    }
+  }
 }
