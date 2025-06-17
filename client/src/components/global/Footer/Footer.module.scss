@@ -83,22 +83,6 @@
   }
 
 
- &__socialIconsPosition {
-    display: flex;     
-    gap: 10px;     
-  }
-
-   &__socialIcon {
-    @include svg(44px, 44px);
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-
-
-
 
 
   &__paymentsBLock {

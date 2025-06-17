@@ -149,6 +149,24 @@ import transferServicessWebpImage from "./images/services/services/transferServi
 import railwayStationsImage from "./images/services/services/railwayStations.jpg";
 import railwayStationsWebpImage from "./images/services/services/railwayStations.webp";
 
+// Contacts
+import phoneImage from "./images/contacts/icons/phone.png";
+import phoneWebpImage from "./images/contacts/icons/phone.webp";
+
+import emailImage from "./images/contacts/icons/email.png";
+import emailWebpImage from "./images/contacts/icons/email.webp";
+
+
+import locationImage from "./images/contacts/icons/location.png";
+import locationWebpImage from "./images/contacts/icons/location.webp";
+
+
+
+
+
+
+
+
 export {
 
 //General 
@@ -266,4 +284,15 @@ export {
   transferServicessWebpImage,
   railwayStationsImage,
   railwayStationsWebpImage,
+
+ // Contacts
+  phoneImage,
+  phoneWebpImage,
+
+  emailImage, 
+  emailWebpImage, 
+
+  locationImage, 
+  locationWebpImage,
+  
 };
