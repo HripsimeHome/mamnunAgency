@@ -8,6 +8,12 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
+import noImage from "./images/common/noImage.png";
+import noImageWebp from "./images/common/noImage.webp";
+
+import loaderFrameImage from "./images/common/loaderFrame.png";
+import loaderFrameWebpImage from "./images/common/loaderFrame.webp";
+
 //Footer
 
 import uzcardImage from "./images/footer/cards/uzcard.png";
@@ -159,6 +165,10 @@ import locationWebpImage from "./images/contacts/icons/location.webp";
 
 export {
   //General
+  noImage,
+  noImageWebp,
+  loaderFrameImage,
+  loaderFrameWebpImage,
   logoImage,
   logoWebpImage,
   logoBlackImage,
