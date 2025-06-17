@@ -5,6 +5,12 @@ export const crossIcon = "cross";
 export const arrowWhiteIcon = "arrowWhite";
 export const arrowPurpleIcon = "arrowPurple";
 
+export const youtubeIcon = "youtube";
+export const linkedInIcon = "linkedIn";
+export const facebookIcon = "facebook";
+export const instagramIcon = "instagram";
+export const telegramIcon = "telegram";
+
 // About
 export const educationIcon = "education";
 export const opportunitiesIcon = "opportunities";
