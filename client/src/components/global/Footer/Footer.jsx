@@ -1,9 +1,10 @@
  
 import styles from "./Footer.module.scss";
 import { Link, NavLink } from "react-router-dom";
+import SocialIcons from "../../layout/SocialIcons/SocialIcons"
 //import { footerMenuItems } from "../../../constants/menuItems"
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
-import Svg from "../../layout/Svg/Svg";
+
 
 import {    
   homePagePath,
@@ -30,49 +31,10 @@ import {
   mvisaWebpImage,
 } from "../../../assets/images";
 
-import {
-  youtubeIcon,
-  linkedInIcon,
-  facebookIcon,
-  instagramIcon,
-  telegramIcon, 
-} from "../../../assets/svg"; 
-
+ 
 // import {  
 //   emailAddress  
 // } from "../../../constants/contacts";
-
-const socialIconsData = [
-  {
-    icon: youtubeIcon,       
-    alt: "YouTube",    
-    link: "https://youtube.com/@mamnunagency?si=nbS2rhZMimU_iyJP", 
-  }, 
-
-  {
-    icon: linkedInIcon,       
-    alt: "LinkedIn",     
-    link: "https://www.linkedin.com/posts/mamnun-agency_internationaleducation-travel-educationagency-activity-7296309658208653315--Gdi?utm_source=share&utm_medium=member_android&rcm=ACoAAECGuLcBS5-TA8HIIsE57k1Lm_2ly88mfZM", 
-  }, 
-
-  {
-    icon: facebookIcon,       
-    alt: "Facebook",
-    link: "https://www.facebook.com/profile.php?id=61572399132304",     
-  }, 
-
-  {
-    icon: instagramIcon,       
-    alt: "Instagram",
-    link: "https://www.instagram.com/mamnunagency?igsh=bzk0dGt4anhqbTlw",     
-  }, 
-
-  {
-    icon: telegramIcon,       
-    alt: "Telegram",
-    link: "https://t.me/mamnuneducation",     
-  }, 
-]
 
 const paymentsData = [
   {
@@ -131,26 +93,11 @@ const Footer = () => {
           <div className={styles.footer__sociaBlock}>
             <h4>
               Our social media channels:
-            </h4>          
+            </h4>        
                     
-            <div className={styles.footer__socialIconsPosition}>
-              {socialIconsData.map(({ icon, alt, link }, index) => (
-              <a 
-                key={index} 
-                href={link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label={alt}
-              >
-                <Svg 
-                  id={icon}             
-                  alt={alt}                
-                  className={styles.footer__socialIcon} 
-                />
-              </a>
-            ))}
-
-            </div>
+           
+            <SocialIcons />
+           
           </div> {/* socialMedia */}
 
           <div className={styles.footer__feedback}>

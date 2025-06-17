@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.contacts {
+  padding: 100px 0;
+
+  &__container {
+    @include flexCol(space-between, center);
+    padding-top: 50px;
+    gap: 28px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    @include mdScreenMedia {
+      flex-direction: row;
+    }
+  }
+}
