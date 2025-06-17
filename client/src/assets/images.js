@@ -9,6 +9,21 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
+//Footer
+
+import uzcardImage from "./images/footer/cards/uzcard.png";
+import uzcardWebpImage from "./images/footer/cards/uzcard.webp";
+
+import humoImage from "./images/footer/cards/humo.png";
+import humoWebpImage from "./images/footer/cards/humo.webp";
+
+import mastercardImage from "./images/footer/cards/mastercard.png";
+import mastercardWebpImage from "./images/footer/cards/mastercard.webp";
+
+import visaImage from "./images/footer/cards/visa.png";
+import mvisaWebpImage from "./images/footer/cards/visa.webp";
+
+
 // Home
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
 import expertiseWebpImage from "./images/home/icons/reasons/expertise.webp";
@@ -145,6 +160,19 @@ export {
 
   VIPImage,
   VIPWebpImage,
+
+  // Footer
+  humoImage,
+  humoWebpImage,
+
+  uzcardImage,
+  uzcardWebpImage,
+
+  mastercardImage,
+  mastercardWebpImage,
+
+  visaImage,
+  mvisaWebpImage,
  
   // Home
   expertiseImage,

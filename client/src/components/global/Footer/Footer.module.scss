@@ -4,6 +4,8 @@
 .footer {
   border-top: 2px solid $color-secondary;
   color: $color-secondary;
+  padding-top: 100px;
+  padding-bottom: 50px;;
 
    &__menuContainer {
       //@include flexCol();
@@ -62,6 +64,29 @@
     }
   }
 
+
+ 
+
+  &__bottom {
+  @include flexCol(space-between, center);   
+    gap: 180px;
+    margin-top: 46px;
+    margin-bottom: 20px;
+  }
+
+  &__payments {
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 46px;    
+  }
+
+  &__paymentsCard {
+   display: flex;     
+   gap: 10px;      
+  }
+  
+  
 
 
 // Copyright
