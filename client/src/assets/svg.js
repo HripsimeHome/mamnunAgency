@@ -67,3 +67,14 @@ export const loansIcon = "loans";
 
 // Education - Stories
 export const starStoryIcon = "starStory";
+
+// Admin Panel
+
+export const logoutIcon = "logout";
+export const leftBurgerIcon = "leftBurger";
+export const sliderArrowRightIcon = "sliderArrowRight";
+export const sliderArrowLeftIcon = "sliderArrowLeft";
+export const editIcon = "edit";
+export const deleteIcon = "delete";
+export const pinIcon = "pin";
+export const attachIcon = "attach";

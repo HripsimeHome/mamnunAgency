@@ -1,0 +1,26 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.adminNews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__addbtn {
+    max-width: 200px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include lgScreenMedia {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mdScreenMedia {
+      grid-template-columns: 1fr;
+    }
+  }
+}

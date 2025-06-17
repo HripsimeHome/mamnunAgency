@@ -1,0 +1,71 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.adminNewsAddEditModal {
+  height: 578px;
+  padding: 16px 20px 10px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  &__col {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 15px;
+    overflow: hidden;
+
+    &_fields {
+      flex: 1;
+    }
+  }
+  &__attachFile {
+    flex: 1;
+    border-radius: 25px;
+    @include flexCol();
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border: 3px solid transparent;
+    transition: $transition;
+    background-color: $color-lightGrey;
+    position: relative;
+    &_attached {
+      border-color: $color-primary;
+      background-color: rgba(34, 39, 50, 0.425);
+    }
+
+    &_invalid {
+      border-color: $color-red;
+    }
+    & svg {
+      width: 30%;
+    }
+  }
+  &__fileImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__fileInput {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  &__formMain {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__textArea {
+    flex: 1;
+  }
+}

@@ -2,3 +2,8 @@
 .history/
 client/node_modules/
 client/build
+server/config-loc.env
+server/node_modules/
+server/dist
+server/public/news/
+server/public/certificates/

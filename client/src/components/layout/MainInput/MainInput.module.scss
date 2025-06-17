@@ -1,0 +1,43 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.mainInput {
+  width: 100%;
+  background: $color-lightGrey;
+  outline: none;
+  border: 3px solid transparent;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: $transition;
+  @include setFont(18px, 400);
+
+  @include mdScreenMedia {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  &:not(&_disabled) {
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-color: $color-primary;
+    }
+  }
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $color-secondary;
+    box-shadow: 0 0 0px 1000px $color-white inset;
+  }
+
+  ::placeholder {
+    color: $color-grey;
+  }
+
+  &_invalid {
+    border-color: $color-red;
+  }
+
+  &_textArea {
+    resize: none;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.adminFooter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  --txt-color: #757575;
+
+  &_light {
+    --txt-color: #f3f5fb;
+  }
+
+  &__copirightBlock {
+    padding: 12px;
+    @include flexCol();
+  }
+
+  &_light a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__copyrightTxt {
+    @include setFont(14px, 500, var(--txt-color));
+    text-align: center;
+
+    & span {
+      white-space: nowrap;
+    }
+
+    & a {
+      color: $color-primary;
+    }
+
+    @include lgScreenMedia {
+      font-size: 15px;
+    }
+
+    @include smScreenMedia {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,2 @@
+export const ADMIN_NEWS_PAGE_SIZE = 12;
+export const ADMIN_CERTIFICATES_PAGE_SIZE = 15;
