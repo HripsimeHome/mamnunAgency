@@ -17,8 +17,12 @@ const PinBtn = ({ id, activeDayNews }) => {
     e.stopPropagation();
     try {
       setLoading(true);
+      console.log({ activeDayNews });
+
       await dispatch(updateActiveDayNews(id)).unwrap();
-      dispatch(openTooltip("News Pined successfully"));
+      dispatch(
+        openTooltip(`News ${activeDayNews ? "Unppined" : "Pined"} successfully`)
+      );
     } catch (error) {
       dispatch(openTooltip("Failed to pin news"));
     } finally {
