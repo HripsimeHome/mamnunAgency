@@ -1,0 +1,50 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.paginationStyled {
+  @include flexCol();
+  gap: 10px;
+  margin-top: 40px;
+
+  @include mdScreenMedia {
+    margin-top: 26px;
+  }
+
+  &__arrow {
+    @include svg(16px, inherit);
+    padding-top: 3px;
+  }
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    @include flexCol();
+    border-radius: 8px;
+    @include setFont(16px, 400);
+    background: transparent;
+    padding-bottom: 3px;
+    cursor: pointer;
+
+    &_disabled {     
+      background: transparent;
+      color: $color-white;
+      fill: $color-white;
+      & {
+        display: none;;
+      }
+    }
+
+    &:hover,
+    &_active {
+      background: $color-primary;
+      color: $color-white;
+      fill: $color-white;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    color: inherit;
+  }
+}

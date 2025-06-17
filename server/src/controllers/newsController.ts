@@ -16,7 +16,7 @@ export const saveNewsImage = catchAsync(async (req, _, next) => {
     );
 
     deleteFiles([req.file.filename]);
-    req.body.imagePath = `/news/resized-${req.file.filename.slice(
+    req.body.image = `/news/resized-${req.file.filename.slice(
       0,
       req.file.filename.lastIndexOf(".")
     )}.jpeg`;
@@ -81,10 +81,10 @@ export const updateActiveDayNews = catchAsync(async (req, res, next) => {
       activeDayNews: true,
     },
   });
-  if (dayNews) {
+  if (dayNews && !updatingNews.activeDayNews) {
     await dayNews.update({ activeDayNews: false });
   }
-  await updatingNews.update({ activeDayNews: true });
+  await updatingNews.update({ activeDayNews: !updatingNews.activeDayNews });
 
   res.send({ status: "success", data: updatingNews });
 });
@@ -94,8 +94,8 @@ export const updateNews = catchAsync(async (req, res, next) => {
   if (!updatingNews) {
     return next(new AppError("invalid id param"));
   }
-  if (req.body.imagePath) {
-    deleteFiles([updatingNews.imagePath]);
+  if (req.body.image) {
+    deleteFiles([updatingNews.image]);
   }
 
   await updatingNews.update(req.body);

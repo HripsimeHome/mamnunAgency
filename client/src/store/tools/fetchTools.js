@@ -3,12 +3,10 @@ import { lsProps } from "../../utils/lsProps";
 
 export const isProduction = process.env.NODE_ENV === "production";
 export const baseUrl = "/api/v1";
-export const proxy = isProduction
-  ? "https://realitybulgaria.onrender.com"
-  : "http://localhost:5000";
+export const proxy = isProduction ? "" : "http://localhost:5000";
 
 export const authConfig = (isFormData) => {
-  const token = getLSItem(lsProps.token, true);
+  const token = getLSItem(lsProps.token);
 
   const headers = {
     Authorization: token ? `Bearer ${token}` : "",
@@ -20,35 +18,17 @@ export const authConfig = (isFormData) => {
   return { headers };
 };
 
-// properties
-export const getPropertiesUrl = "/property";
-export const createPropertyUrl = "/property/create";
-export const getPropertiesFiltersUrl = "/property/filters";
-export const archivePropertyUrl = "/property/archive";
-
-// locations
-export const createLocationUrl = "/location/create";
-export const getLocationUrl = "/location/";
-
-// equipments
-export const createEquipmentUrl = "/equipment/create";
-export const getEquipmentUrl = "/equipment/";
-
-// user
-export const loginUrl = "/users/login";
-export const changePasswordUrl = "/users/changePassword";
-export const forgotPasswordUrl = "/users/forgotPassword";
-export const resetPasswordUrl = "/users/resetPassword";
-
 export const fetchRequest = async (
   fetchUrl,
   method = "GET",
   body = null,
-  config = authConfig()
+  conf
 ) => {
   const filteredBody = {};
 
   const isFormData = body instanceof FormData;
+
+  const config = conf || authConfig(isFormData);
   if (body && !isFormData) {
     for (let key in body) {
       if (body[key]) {

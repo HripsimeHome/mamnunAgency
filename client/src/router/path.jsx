@@ -15,6 +15,8 @@ import { Navigate } from "react-router-dom";
 import AdminLoginPage from "../pages/Admin/AdminLoginPage";
 import ForgotPasswordPage from "../pages/Admin/ForgotPasswordPage";
 import ResetPasswordPage from "../pages/Admin/ResetPasswordPage";
+import AdminNewsPage from "../pages/Admin/AdminNewsPage";
+import AdminCertificatesPage from "../pages/Admin/AdminCertificatesPage";
 
 // Paths
 
@@ -37,6 +39,7 @@ export const adminResetPasswordPagePath = adminPagePath + "/resetPassword";
 
 // news
 export const adminNewsPagePath = adminPagePath + "/news";
+export const adminCertificatesPagePath = adminPagePath + "/certificates";
 
 // Routes
 
@@ -107,6 +110,14 @@ export const routes = [
         ),
       },
     ],
+  },
+  {
+    path: adminNewsPagePath,
+    component: <PrivateRoute element={<AdminNewsPage />} />,
+  },
+  {
+    path: adminCertificatesPagePath,
+    component: <PrivateRoute element={<AdminCertificatesPage />} />,
   },
   {
     path: "*",

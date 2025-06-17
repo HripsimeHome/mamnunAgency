@@ -8,7 +8,7 @@ class News extends Model<INews, NewsCreationAttributes> implements INews {
   public id!: number;
   public title!: string;
   public description!: string;
-  public imagePath!: string;
+  public image!: string;
   public date!: Date;
   public activeDayNews?: boolean;
 
@@ -31,7 +31,7 @@ News.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    imagePath: {
+    image: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
@@ -51,7 +51,7 @@ News.init(
     timestamps: false,
     hooks: {
       beforeDestroy: async (news) => {
-        deleteFiles([news.imagePath]);
+        deleteFiles([news.image]);
       },
     },
   }

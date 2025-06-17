@@ -16,7 +16,7 @@ export const saveCertificateImage = catchAsync(async (req, _, next) => {
     );
 
     deleteFiles([req.file.filename]);
-    req.body.imagePath = `/certificates/resized-${req.file.filename.slice(
+    req.body.image = `/certificates/resized-${req.file.filename.slice(
       0,
       req.file.filename.lastIndexOf(".")
     )}.jpeg`;

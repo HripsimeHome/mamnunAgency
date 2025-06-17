@@ -1,3 +1,10 @@
+// Common
+import noImage from "./images/common/noImage.png";
+import noImageWebp from "./images/common/noImage.webp";
+
+import loaderFrameImage from "./images/common/loaderFrame.png";
+import loaderFrameWebpImage from "./images/common/loaderFrame.webp";
+
 // Home
 import logoImage from "./images/logos/logo.png";
 import logoWebpImage from "./images/logos/logo.webp";
@@ -52,6 +59,12 @@ import servicesHeaderImage from "./images/services/header/servicesHeader.jpg";
 import servicesHeaderWebpImage from "./images/services/header/servicesHeader.webp";
 
 export {
+  // Common
+  noImage,
+  noImageWebp,
+  loaderFrameImage,
+  loaderFrameWebpImage,
+
   // Home
   logoImage,
   logoWebpImage,

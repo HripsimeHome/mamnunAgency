@@ -15,7 +15,7 @@ export function getLSItem(key, isParse) {
 export const setLSItem = (key, data, useSession) => {
   storages[useSession ? "sessionStorage" : "localStorage"].setItem(
     key,
-    JSON.stringify(data)
+    typeof data === "object" ? JSON.stringify(data) : data
   );
 };
 

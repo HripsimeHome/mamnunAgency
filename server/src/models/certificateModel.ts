@@ -10,7 +10,7 @@ class Certificate
   implements ICertificate
 {
   public id!: number;
-  public imagePath!: string;
+  public image!: string;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -24,7 +24,7 @@ Certificate.init(
       primaryKey: true,
     },
 
-    imagePath: {
+    image: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
@@ -35,7 +35,7 @@ Certificate.init(
     timestamps: true,
     hooks: {
       beforeDestroy: async (certificate) => {
-        deleteFiles([certificate.imagePath]);
+        deleteFiles([certificate.image]);
       },
     },
   }

@@ -1,14 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getLSItem, removeLSItem, setLSItem } from "../../utils/localStorage";
 import { lsProps } from "../../utils/lsProps";
-import {
-  changePasswordUrl,
-  fetchRequest,
-  forgotPasswordUrl,
-  loginUrl,
-  resetPasswordUrl,
-  setFormError,
-} from "../tools/fetchTools";
+import { fetchRequest, setFormError } from "../tools/fetchTools";
 
 const initialState = {
   token: "",
@@ -21,6 +14,12 @@ const initialState = {
   resetPassLoading: false,
   resetPassError: null,
 };
+
+// user
+const loginUrl = "/users/login";
+const changePasswordUrl = "/users/changePassword";
+const forgotPasswordUrl = "/users/forgotPassword";
+const resetPasswordUrl = "/users/resetPassword";
 
 export const loginUser = createAsyncThunk(
   "user/login",

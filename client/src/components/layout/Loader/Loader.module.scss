@@ -11,25 +11,13 @@
     height: 60px;
     padding: 4px;
     position: relative;
-    background-color: $color-primary;
     border-radius: 50%;
+    overflow: hidden;
   }
-  &__inner {
-    border-radius: 50%;
-    background-color: $color-white;
+  &__img {
     width: 100%;
     height: 100%;
-  }
-
-  &__anim {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 101%;
-    background-color: $color-white;
-    z-index: 2;
+    object-fit: contain;
     animation: loader 2s linear infinite;
   }
 
@@ -41,9 +29,9 @@
 
 @keyframes loader {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
