@@ -18,8 +18,8 @@ import {
 } from "../../../router/path";
 
 import {
-  logoImage,
-  logoWebpImage
+  logoBlackImage,
+  logoBlackWebpImage,
 } from "../../../assets/images";
 
 import {
@@ -35,47 +35,60 @@ import {
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} wrapperWhite`}>      
-      <div className={`${styles.footer__container} container`}>
+    <footer className={`${styles.footer} wrapperWhite`}>  
+     <div className="container">  
+      <div className={styles.footer__menuContainer}>
         <div className={styles.footer__logoBlock}>
           <Link 
             to={homePagePath}              
             >
             <ImageWebp  
-              src={logoImage}
-              srcSet={logoWebpImage}
+              src={logoBlackImage}
+              srcSet={logoBlackWebpImage}
               alt="Logo" 
               className={styles.footer__logoImg}
               pictureClass={styles.footer__logoImgPosition}
-              />
-          </Link>
-          <p className={styles.footer__copyright}>
-            Copyright &copy; {new Date().getFullYear()} MG Elektro LLC. All rights reserved.
-            <br />
-            Designed & Created by <a href="https://webscover.com/" target="_blank" rel="noreferrer">webscover.com.</a>
-          </p>  
+              />              
+              MAMNUN Agency
+          </Link>           
+        </div>  
+
+        <div>
+          Menu
+        </div>
+        {/* Menu */}
+      </div> 
+      {/* menuContainer */}
 
 
-          <Link
-            to={imprintPagePath}>
-            Impirit
-          </Link>
-          <br /> 
+      <div className={styles.footer__bottom}>
 
+      </div>
+
+      <div className={styles.footer__copyrightContainer}>
+        <p className={styles.footer__copyright}>
+          Copyright &copy; {new Date().getFullYear()} MG Elektro LLC. All rights reserved.
+          <br />
+          Designed & Created by <a href="https://webscover.com/" target="_blank" rel="noreferrer">webscover.com.</a>
+        </p>  
+
+        <div>
           <Link
             to={privacyPolicyPagePath}>
             Privacy Policy
-          </Link>
-           <br /> 
+          </Link>       
 
-              <Link
+          <Link
             to={cookiePolicyPagePath}>
             Cookie Policy
           </Link>
+        </div>
+      </div>
+      {/* copyrightContainer */}
 
 
+       
 
-        </div>        
       </div>      
     </footer>
   );
@@ -83,3 +96,14 @@ const Footer = () => {
 
 export default Footer;
 //   
+
+
+
+
+
+//           <Link
+//             to={imprintPagePath}>
+//             Impirit
+//           </Link>
+//           <br /> 
+
