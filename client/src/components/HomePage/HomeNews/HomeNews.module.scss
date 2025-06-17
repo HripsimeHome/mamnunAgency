@@ -6,6 +6,10 @@
     @include flexCol();
     gap: 88px;
     padding: 50px 0 100px;
+
+    @include mdScreenMedia {    
+     flex-direction: column; 
+    }
   }
 
   &__slide {

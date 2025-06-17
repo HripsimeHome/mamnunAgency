@@ -10,13 +10,19 @@ import Svg from "../../layout/Svg/Svg";
 
 // import { useLazy } from "../../../hooks/useLazy";
 
-import {  
-  homePagePath 
+
+import {
+  homePagePath,
+  aboutPagePath,
+  tourismPagePath,
+  educationPagePath,
+  servicesPagePath,
+  contactsPagePath,
 } from "../../../router/path";
 
-import { 
-  headerMenuItems
- } from "../../../constants/menuItems";
+// import { 
+//   headerMenuItems
+//  } from "../../../constants/menuItems";
 
  import {
    logoImage,
@@ -27,6 +33,34 @@ import {
    burgerIcon,
    crossIcon 
 } from "../../../assets/svg";
+
+const headerMenuItems = [
+  {
+    text: "Home",
+    link: homePagePath,
+  },
+  {
+    text: "About us",
+    link: aboutPagePath,
+  },
+  {
+    text: "Travel to Uzbekistan",
+    link: tourismPagePath,
+  },
+  {
+    text: "Study Abroad Consulting",
+    link: educationPagePath,
+  },
+  {
+    text: "Extra VIP Services",
+    link: servicesPagePath,
+  },
+  {
+    text: "Contact us",
+    link: contactsPagePath,
+  },
+];
+
 
 
 const HeaderMenu = () => {
@@ -95,7 +129,7 @@ const HeaderMenu = () => {
               id={burgerIcon} 
               className={styles.headerMenu__burgerIcon} />
           </button>
-              </div>        
+              </div>       
          
 
         {/* Right Block */}

@@ -1,9 +1,9 @@
-import ContactsMain from "../components/ContactsPage/ContactsMain/ContactsMain";
+import Contacts from "../components/ContactsPage/Contacts/Contacts";
 
 const ContactsPage = () => {
   return (
     <>
-      <ContactsMain />
+      <Contacts />
     </>
   );
 };

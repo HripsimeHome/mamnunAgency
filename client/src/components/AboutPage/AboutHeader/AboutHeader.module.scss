@@ -7,6 +7,10 @@
     width: 100%;
     margin-bottom: 200px;
     gap: 160px;
+
+    @include mdScreenMedia {    
+     flex-direction: column;  
+  }
   }
 
   &__title {

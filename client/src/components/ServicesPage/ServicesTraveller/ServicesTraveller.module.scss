@@ -18,17 +18,17 @@
   }
 
   &__card {
-    // width: 300px;
-    //height: 350px;
-    height: 350px;
+    min-height: 350px; // ?
     perspective: 1000px;
+    position: relative;
+    aspect-ratio: 6/2;
   }
 
   &__cardInner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    transition: transform 2s;
     transform-style: preserve-3d;
   }
 
@@ -42,9 +42,57 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    @include flexCol();
+   // @include flexCol();
     @include setFont(20px, 400, $color-secondary);
     background-color: #f0f0f0;
+  }
+
+  &__cardFront {   
+    @include flexCol(end, center);    
+    background-color: $color-darkGrey;
+    border-radius: 20px;
+
+    @media (max-width: 1200px) {
+      aspect-ratio: 6/2.5;     
+    }   
+
+     &:hover {
+      cursor: pointer;
+    }
+
+    &_reversed {       
+      justify-content: start;    
+    }
+
+    @include smScreenMedia {
+      justify-content: center;      
+    }
+  }  
+
+    &__cardFront::before {
+    content: "";
+    position: absolute;
+    z-index: 2; 
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);   
+    border-radius: 20px;
+  }
+
+  &__cardFrontTitle {    
+    @include setFont(32px, 600, $color-white);   
+     z-index: 2;
+     padding-left: 25px;
+     padding-right: 25px; 
+
+    @include mdScreenMedia {
+      font-size: 24px;    
+      text-align: center;
+    }
+
+    @include smScreenMedia {
+      font-size: 18px;   
+      line-height: 20px;; 
+    }
   }
 
   &__cardBack {
@@ -58,14 +106,13 @@
     padding: 25px;
   }
 
+   &__cardBackTitle {
+    @include setFont(32px, 600, $color-secondary);      
+  }
+
   &__cardBackTextBlock {
     @include flexCol();
     flex-direction: column;
-  }
-
-  &__cardBackTitle {
-    @include setFont(32px, 600, $color-secondary);
-    align-self: flex-start;
   }
 
   &__cardBackText {
@@ -74,9 +121,20 @@
     margin-bottom: 25px;
   }
 
-  &__cardFront {
-    &:hover {
-      cursor: pointer;
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition;
+    z-index: 1;
+    opacity: 1;   
+    border-radius: 20px;
+
+    &_inactive {
+      opacity: 0;
     }
   }
 }

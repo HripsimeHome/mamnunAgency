@@ -6,9 +6,9 @@ import TourismPage from "../pages/TourismPage";
 import EducationPage from "../pages/EducationPage";
 import ServicesPage from "../pages/ServicesPage";
 import ContactsPage from "../pages/ContactsPage";
+import ImprintPage  from "../pages/ImprintPage";
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
 import CookiePolicyPage from "../pages/CookiePolicyPage";
-
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import { Navigate } from "react-router-dom";
@@ -27,6 +27,7 @@ export const tourismPagePath = "/tourism";
 export const educationPagePath = "/education";
 export const servicesPagePath = "/services";
 export const contactsPagePath = "/contacts";
+export const imprintPagePath = "/imprint";
 export const privacyPolicyPagePath = "/privacyPolicy";
 export const cookiePolicyPagePath = "/cookiePolicy";
 
@@ -70,6 +71,10 @@ export const routes = [
   {
     path: contactsPagePath,
     component: <ContactsPage />,
+  },
+  {
+    path: imprintPagePath,
+    component: <ImprintPage />,
   },
   {
     path: privacyPolicyPagePath,

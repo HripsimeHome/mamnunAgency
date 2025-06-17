@@ -1,4 +1,3 @@
-export const twitterUrl = "https://x.com";
-export const telegramUrl = "https://web.telegram.org";
-export const emailAddress = "info@deepsu.ai1";
-export const documentation = "https://deepsuai.gitbook.io/whitepaper"
+export const phone = "+998949181305; +998774222882";
+export const email = "info@mamnunagency.com";
+export const address = "Botyr Zakirov street 1A/1, 100039 Tashkent, Uzbekistan (NestOne Block B)"; 

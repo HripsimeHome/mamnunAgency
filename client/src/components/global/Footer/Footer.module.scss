@@ -4,65 +4,49 @@
 .footer {
   border-top: 2px solid $color-secondary;
   color: $color-secondary;
+  padding-top: 100px;
+  padding-bottom: 50px;
 
   &__container {
-    @include flexCol(space-between, center);
-    width: 100%;
-    padding: 50px 30px;
-
-    @include mdScreenMedia {
-      @include flexCol();
-      padding: 22px 0;
-    }
-  }
-
-  &__logoBlock {
-    @include mdScreenMedia {
-      text-align: center;
-    }
-  }
-
-  &__logoImgPosition {
-    @include mdScreenMedia {
-      justify-content: center;
-    }
-  }
-
-  &__logoImg {
-    max-width: 178px;
-  }
-
-  &__emailAddress {
-    display: none;
-
-    @include mdScreenMedia {
-      display: block;
-      //@include setFont(15px, 300);
-      line-height: 15px;
-      margin-top: 8px;
-    }
-  }
-
-  &__copyright {
-    @include setFont(16px, 400, $color-secondary);
-    margin-top: 13px;
+    @include flexCol(space-between, start);
+    gap: 85px;
   }
 
   &__menuContainer {
     display: flex;
-    gap: 80px;
+    justify-self: center;
+    width: 100%;
+    gap: 85px;
 
-    @include lgScreenMedia {
-      gap: 40px;
-    }
+    // @include lgScreenMedia {
+    //   gap: 40px;
+    // }
+  }
 
-    @include mdScreenMedia {
-      display: none;
-    }
+  &__logoBlock {
+    text-align: center;
+   // margin-right: 30px;
+
+    // @include mdScreenMedia {
+       
+    // }
+  }
+
+  &__logoImgPosition {
+    // @include mdScreenMedia {
+    //   justify-content: center;
+    // }
+  }
+
+  &__logoImg {
+    max-width: 178px;
+    width: 100%;;
+    margin-bottom: 25px;
   }
 
   &__menuTitle {
-    //@include setFont(22px, 600);
+   @include setFont(24px, 600, $color-secondary);
+    margin-bottom: 15px;
   }
 
   &__menu {
@@ -71,8 +55,9 @@
   }
 
   &__menuLink {
-    @include setFont(16px, 300, $color-secondary);
-    margin-top: 10px;
+    @include setFont(18px, 400, $color-secondary);    
+    line-height: 20px;
+    margin-bottom: 15px;
 
     &:hover {
       color: $color-primary;
@@ -85,6 +70,59 @@
 
       &:hover {
         cursor: default;
+      }
+    }
+  }
+
+  &__info {
+    @include flexCol(space-between, start);
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__sociaBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__paymentsBLock {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__paymentsCard {
+    display: flex;
+    gap: 10px;
+  }
+
+  // Copyright
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;    
+  }
+
+  &__copyright {
+    @include setFont(20px, 400, $color-secondary);
+    text-align: center;
+    line-height: 30px;
+  }
+
+  &__privacyBlock {
+    @include flexCol(space-between, center);
+    gap: 25px;
+
+    a {
+      @include setFont(20px, 400, $color-secondary);
+
+      &:hover {
+        color: $color-secondary;
+        text-decoration: underline;
       }
     }
   }

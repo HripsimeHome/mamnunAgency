@@ -17,7 +17,7 @@ body {
   // Body Scrollbar
 
   &::-webkit-scrollbar {
-    width: 11px;
+    width: 12px;
   }
 
   &::-webkit-scrollbar-track {
@@ -31,7 +31,7 @@ body {
   }
 
   &::-moz-scrollbar {
-    width: 11px;
+    width: 21px;
   }
 
   &::-moz-scrollbar-track {
@@ -44,7 +44,13 @@ body {
 }
 
 a {
+  color: $color-primary;
   text-decoration: none;
+
+  &:hover {
+   color: $color-lightPrimary;
+  // text-decoration: underline
+  }
 }
 
 #root {
@@ -57,41 +63,61 @@ a {
   text-align: center;
 }
 
+// Text
+
 .textPurple {
   color: $color-primary;
 }
+
+// .textSecondary {
+
+// }
 
 .textRed {
   color: $color-red;
 }
 
 // Titles
-.titlePurpleh1 {
+.titlePrimaryH1 {
   @include setFont(125px, 600, $color-primary);
   line-height: 100px;
 }
 
-.titleWhiteh2 {
+.titleWhiteH2 {
   @include setFont(65px, 600, $color-white);
 }
 
-.titleBlackh2 {
+.titleSecondaryH2 {
   @include setFont(65px, 600, $color-secondary);
 }
 
-.titlePurpleh2 {
+.titlePrimaryH2 {
   @include setFont(65px, 600, $color-primary);
 }
 
-.titlePurpleh3 {
+.titleWhiteH2,
+.titleSecondaryH2,
+.titlePrimaryH2 {
+  @include mdScreenMedia {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  @include smScreenMedia {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.titlePrimaryH3 {
   @include setFont(36px, 600, $color-primary);
 }
 
-.titleBlackh3 {
+.titleSecondaryH3 {
   @include setFont(36px, 600, $color-secondary);
 }
 
-.titleBlackh4 {
+.titleSecondaryH4 {
   @include setFont(20px, 600, $color-secondary);
 }
 
@@ -101,20 +127,18 @@ a {
   @include flexCol();
   background: transparent;
   outline: 2px solid $color-primary;
-  border-radius: 30px;
-  @include setFont(18px, 700, $color-white);
+  border-radius: 30px; 
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    // background: linear-gradient(90deg, #8C52FF 0%, #B164FF 100%);
-   // background: linear-gradient(to bottom, #8c52ff 0%, #b164ff 100%);
-   
-background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25), inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25), inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
+    background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
+      inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25),
+      inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25),
+      inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
   }
 
   &:active {
-    //background: linear-gradient(90deg, #8C52FF 0%, #B164FF 50%, #B164FF 100%);
     background: linear-gradient(
       to bottom,
       #8c52ff 0%,
@@ -123,6 +147,17 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0
     );
   }
 }
+
+.btnPrimaryWhite {
+  @extend .btnPrimary;
+   @include setFont(18px, 700, $color-white);
+}
+.btnPrimaryBlack {
+  @extend .btnPrimary;
+  
+    @include setFont(18px, 700, $color-secondary);
+}
+
 
 .container {
   max-width: 1480px;
@@ -160,3 +195,12 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), inset -5px -5px 20px 0 rgba(0, 0, 0
   width: 100%;
   background-color: $color-white;
 }
+
+.width60 {
+  width: 60%;
+}
+
+.width40 {
+  width: 40%;
+}
+ 
