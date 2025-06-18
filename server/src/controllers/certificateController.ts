@@ -40,9 +40,11 @@ export const getCertificates = catchAsync(async (req, res) => {
   // Ensure valid pagination values
   const limit = pageSizeNumber > 0 ? pageSizeNumber : 20;
   const offset = (pageNumber > 0 ? pageNumber - 1 : 0) * limit;
+  let order: OrderItem[] = [["updatedAt", "DESC"]];
 
   const data = await Certificate.findAll({
     limit,
+    order,
     offset,
   });
 
