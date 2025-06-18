@@ -6,9 +6,14 @@ const MainBtn = memo(
   ({ className, children, withBg, isNegative, ...properties }) => {
     return (
       <button
-        className={`${styles.mainBtn} ${withBg ? styles.mainBtn_withBg : ""} ${
+        className={`
+          ${styles.mainBtn} 
+          ${withBg ? styles.mainBtn_withBg : ""} 
+          ${
           isNegative ? styles.mainBtn_negative : ""
-        } ${className ? className : ""}`}
+        }
+         ${className ? className : ""}
+         `}
         {...properties}
       >
         {children}

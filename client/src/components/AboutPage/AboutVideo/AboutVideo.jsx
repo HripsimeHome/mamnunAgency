@@ -6,7 +6,7 @@ const AboutVideo = () => {
       <div className="container">
         <div className={styles.aboutVideo__video}>
           {process.env.NODE_ENV !== "development" && (
-            <video width="1052" height="562" autoPlay loop>
+            <video width="1052" height="562" autoPlay muted loop>
               <source src="/videos/about/about.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>

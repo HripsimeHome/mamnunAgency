@@ -20,9 +20,6 @@ import {
   contactsPagePath,
 } from "../../../router/path";
 
-// import { 
-//   headerMenuItems
-//  } from "../../../constants/menuItems";
 
  import {
    logoImage,
@@ -62,7 +59,6 @@ const headerMenuItems = [
 ];
 
 
-
 const HeaderMenu = () => {
 
  // const { isInView, ref } = useLazy(0.8);
@@ -79,68 +75,63 @@ const HeaderMenu = () => {
         <div>        
           <Link 
             to={homePagePath}>            
-              <ImageWebp 
-                src={logoImage} 
-                srcSet={logoWebpImage}
-                alt="MAMNUN Agency"                 
-                className={styles.headerMenu__logoImg} />             
+            <ImageWebp 
+              src={logoImage} 
+              srcSet={logoWebpImage}
+              alt="MAMNUN Agency"                 
+              className={styles.headerMenu__logoImg} />             
           </Link> 
-          </div>
+        </div>
              
-            <div>       
-            <nav className={`
-              ${styles.headerMenu__menu}
-              ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
-              {isMenuOpen && (
+        <div>       
+          <nav className={`
+            ${styles.headerMenu__menu}
+            ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
+            {isMenuOpen && (
+              
+              <>           
                 
-                <>           
-                 
-                  <button 
-                    className={styles.headerMenu__btnClose} 
-                    onClick={toggleMenu}>
-                    <Svg 
-                      id={crossIcon} 
-                      className={styles.headerMenu__crossIcon} />
-                  </button>                
-                </>              
-              )}
+                <button 
+                  className={styles.headerMenu__btnClose} 
+                  onClick={toggleMenu}>
+                  <Svg 
+                    id={crossIcon} 
+                    className={styles.headerMenu__crossIcon} />
+                </button>                
+              </>              
+            )}
 
-              {headerMenuItems.map(({ text, link }, index) => (
-                
-                <NavLink
-                  to={link}
-                  key={index}
-                  className={({ isActive }) =>
-                    isActive
-                      ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                      : styles.headerMenu__menuLink
-                  }
-                  onClick={() => isMenuOpen && setIsMenuOpen(false)}
-                >
-                  {text}
-                </NavLink>              
-              ))}         
-                        
-            </nav>  
-             <button 
+            {headerMenuItems.map(({ text, link }, index) => (
+              
+              <NavLink
+                to={link}
+                key={index}
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                    : styles.headerMenu__menuLink
+                }
+                onClick={() => isMenuOpen && setIsMenuOpen(false)}
+              >
+                {text}
+              </NavLink>              
+            ))}                         
+          </nav>  
+          <button 
             className={styles.headerMenu__btnBurger} 
             onClick={toggleMenu}>
             <Svg 
               id={burgerIcon} 
               className={styles.headerMenu__burgerIcon} />
           </button>
-              </div>       
-         
-
-        {/* Right Block */}
-           
+        </div>  {/* Right Block */}           
       </div>
 
       {/* Overlay for Mobile Menu */}
       {isMenuOpen && 
-        <div 
-          className={styles.headerMenu__overlay} 
-          onClick={toggleMenu} />}
+      <div 
+        className={styles.headerMenu__overlay} 
+        onClick={toggleMenu} />}
     </div>
   );
 };

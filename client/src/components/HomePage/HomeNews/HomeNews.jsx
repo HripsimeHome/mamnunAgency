@@ -13,6 +13,15 @@ import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
 import "swiper/css/pagination";
 import "./sliderDots.scss";
 import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
+import { newsImage } from "../../../assets/images";
+
+const dummyData = Array.from({ length: 5 }, (_, i) => ({
+  id: i + 1,
+  title: `News Title ${i + 1}`,
+  description: `This is a sample description for news item ${i + 1}.`,
+  image: newsImage,
+  date: `2024-06-${String(i + 1).padStart(2, "0")}`,
+}));
 
 const HomeNews = () => {
   const dispatch = useDispatch();
@@ -23,19 +32,20 @@ const HomeNews = () => {
   const [selectedNewsId, setSelectedNewsId] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
 
+  const data = dummyData;
   useEffect(() => {
     dispatch(getNewsList(1));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedItem =
-    news && news.length
-      ? news.find((item) => item.id === selectedNewsId)
+    data && data.length
+      ? data.find((item) => item.id === selectedNewsId)
       : null;
 
   return (
     <TransitionProvider
-      inProp={!!(news && news.length)}
+      inProp={!!(data && data.length)}
       style={TransitionStyleTypes.height}
       height={700}
       className={`${styles.homeNews} wrapperWhite`}
@@ -82,9 +92,9 @@ const HomeNews = () => {
               },
             }}
           >
-            {news &&
-              news?.length &&
-              news.map((item, index) => (
+            {data &&
+              data?.length &&
+              data.map((item, index) => (
                 <SwiperSlide key={index}>
                   <NewsBlogItem
                     {...item}

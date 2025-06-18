@@ -10,10 +10,8 @@ import {
   cookiePolicyPagePath,
 } from "../../../router/path";
 
-import { 
-  logoBlackImage, 
-  logoBlackWebpImage 
-} from "../../../assets/images";
+import { logoBlackImage, logoBlackWebpImage } from "../../../assets/images";
+import { Fragment } from "react";
 
 // import {
 //   emailAddress
@@ -31,7 +29,7 @@ const Footer = () => {
                 srcSet={logoBlackWebpImage}
                 alt="Logo"
                 className={styles.footer__logoImg}
-                //pictureClass={styles.footer__logoImgPosition} 
+                //pictureClass={styles.footer__logoImgPosition}
               />
               MAMNUN Agency
             </Link>
@@ -42,27 +40,46 @@ const Footer = () => {
               <div key={index}>
                 <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
                 <nav className={styles.footer__menu}>
-                  {menu.items.map((item, i) => (
-                    <NavLink
-                      key={i}
-                      to={item.link}
-                      target={item.target ? item.target : "_self"}
-                      rel={item.target === "_blank" ? "noreferrer" : undefined}
-                      className={({ isActive }) =>
-                        isActive
-                          ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
-                          : styles.footer__menuLink
-                      }
-                    >
-                      {item.text}
-                    </NavLink>
-                  ))}
+                  {menu.items.map((item, i) => {
+                    const LinkTag = item.isOutLink ? "a" : NavLink;
+
+                    return (
+                      <Fragment key={i}>
+                        {item.link ? (
+                          <LinkTag
+                            {...(item.isOutLink
+                              ? { href: item.link }
+                              : { to: item.link })}
+                            to={item.link}
+                            target={item.target ? item.target : "_self"}
+                            rel={
+                              item.target === "_blank"
+                                ? "noreferrer"
+                                : undefined
+                            }
+                            className={
+                              item.isOutLink
+                                ? styles.footer__menuLink
+                                : ({ isActive }) =>
+                                    isActive
+                                      ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
+                                      : styles.footer__menuLink
+                            }
+                          >
+                            {item.text}
+                          </LinkTag>
+                        ) : (
+                          <span>{item.text}</span>
+                        )}
+                      </Fragment>
+                    );
+                  })}
                 </nav>
               </div>
             ))}
           </div>
-        </div>{/* menuContainer */}
-
+        </div>
+        {/* menuContainer */}
         <div className={styles.footer__info}>
           <div className={styles.footer__sociaBlock}>
             <h4>Our social media channels:</h4>

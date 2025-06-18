@@ -11,7 +11,7 @@ const EducationJourney = () => {
 
         <div className={styles.educationJourney__journeyBlock}>
           <div className={styles.educationJourney__journeyColumn}>
-            <h3 className="titlePurpleh3">How We Assist You:</h3>
+            <h3 className="titlePrimaryH3">How We Assist You:</h3>
 
             <ul className={styles.educationJourney__journeyList}>
               <li>Tailoring programs to meet your unique needs</li>

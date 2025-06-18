@@ -1,0 +1,88 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.select {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  &__dropDownBtn {
+    transition: $transition;
+    @include flexCol(space-between);
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 46px;
+    padding: 15px 16px;
+    background: $color-black03;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__dropDownBtnContent {
+    @include flexCol(space-between);
+    width: 100%;
+  }
+
+  &__selectDropdownBtnText {
+    color: $color-white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include setFont(14px, 500, $color-black);
+
+    &_placeholder {
+      color: $color-grey04;
+    }
+  }
+
+  &__arrowDownIcon {
+    @include svg(14px, transparent, 8px);
+    transition: $transition;
+  }
+
+  &__arrowDownIcon_active {
+    transform: rotate(180deg);
+  }
+
+  &__dropdownContent {
+    background: #f3f7f7;  
+    position: absolute;
+    bottom: -5px;
+    transform: translateY(100%);
+    left: 0;
+    z-index: 1;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    min-width: 100%;
+  }
+
+  &__dropdownContentItems {
+    max-height: 225px;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  &__dropdownItem {
+    padding: 6px 16px;
+    @include setFont(14px, 500, $color-black);
+    transition: $transition;
+    @include flexCol(center, flex-start);
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
+}

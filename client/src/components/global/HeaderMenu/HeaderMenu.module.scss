@@ -10,9 +10,7 @@
   transition: $transition;
 
   &__container {
-    @include flexCol(space-between);
-    display: flex;
-    align-items: center;
+    @include flexCol(space-between, center);
 
     @include smScreenMedia {
       //padding: 20px;
@@ -65,22 +63,36 @@
 
   &__menuLink {
     @include setFont(18px, 500, $color-white);
-    // margin-left: 58px;;
+    position: relative;
+    padding-bottom: 4px;
 
     &:hover {
-      //color: $color-primary;
+      color: $color-lightPrimary;
       cursor: pointer;
       transition: $transitionEaseOut;
-      //text-decoration: underline;
     }
 
     &_active {
       color: $color-white;
-      text-decoration: underline;
-      //border-bttom: 2px solid $color-primary;
+      transition: color 0.9s ease, border-color 09.3s ease;
+      padding-bottom: 5px;
 
       &:hover {
+        color: $color-white;
         cursor: default;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: $color-lightPrimary;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
       }
     }
   }
