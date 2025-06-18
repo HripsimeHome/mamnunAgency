@@ -1,5 +1,4 @@
 import styles from "./ServicesServices.module.scss";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
@@ -109,10 +108,6 @@ const ServicesServices = () => {
                       <p className={styles.servicesServices__cardBackText}>
                         {backDescription}
                       </p>
-
-                      {/* <Link to={contactsPagePath} className="btnPrimaryBlack">
-                        Learn more
-                      </Link> */}
 
                       <MainBtn
                         onClick={() => navigate(contactsPagePath)}
