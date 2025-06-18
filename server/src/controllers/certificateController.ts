@@ -12,14 +12,12 @@ export const saveCertificateImage = catchAsync(async (req, _, next) => {
   if (req.file) {
     await resizeImage(
       req.file.path,
-      `public/certificates/resized-${req.file.filename}`
+      `public/certificates/resized-${req.file.filename}`,
+      false
     );
 
     deleteFiles([req.file.filename]);
-    req.body.image = `/certificates/resized-${req.file.filename.slice(
-      0,
-      req.file.filename.lastIndexOf(".")
-    )}.jpeg`;
+    req.body.image = `/certificates/resized-${req.file.filename}`;
   }
   return next();
 });
