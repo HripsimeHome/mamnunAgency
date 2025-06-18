@@ -149,6 +149,17 @@ export const updateActiveDayNews = createAsyncThunk(
   }
 );
 
+const getActiveDayNewsUrl = "/news/dayNews";
+export const getActiveDayNews = async () => {
+  try {
+    const resData = await fetchRequest(getActiveDayNewsUrl);
+    return resData.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
 export const newsSlice = createSlice({
   name: "newsSlice",
   initialState,
