@@ -1,7 +1,7 @@
 import styles from "./EducationOffer.module.scss";
-import Svg from "../../layout/Svg/Svg";
+import Svg from "../../../layout/Svg/Svg";
 
-import { starStoryIcon } from "../../../assets/svg";
+import { starStoryIcon } from "../../../../assets/svg";
 
 const offerData = [
   {

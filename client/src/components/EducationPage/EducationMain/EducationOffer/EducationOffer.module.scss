@@ -1,5 +1,5 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
 
 .educationOffer {
   padding: 100px 0;
@@ -8,8 +8,8 @@
     display: flex;
     gap: 159px;
 
-    @include mdScreenMedia {    
-     flex-direction: column;  
+    @include mdScreenMedia {
+      flex-direction: column;
     }
   }
 

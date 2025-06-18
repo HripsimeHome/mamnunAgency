@@ -31,8 +31,8 @@ const Footer = () => {
                 className={styles.footer__logoImg}
                 //pictureClass={styles.footer__logoImgPosition}
               />
-              MAMNUN Agency
-            </Link>
+            </Link>{" "}
+            MAMNUN Agency
           </div>
 
           <div className={styles.footer__menuContainer}>
@@ -110,20 +110,26 @@ const Footer = () => {
         </div>{" "}
         {/* footer__info */}
         <div className={styles.footer__bottom}>
-          <p className={styles.footer__copyright}>
-            Copyright &copy; {new Date().getFullYear()} MG Elektro LLC. All
-            rights reserved.
-            <br />
-            Designed & Created by{" "}
-            <a href="https://webscover.com/" target="_blank" rel="noreferrer">
-              webscover.com.
-            </a>
-          </p>
+          <div className={styles.footer__col}></div>
+          {/* Need Empty div */}
 
-          <div className={styles.footer__privacyBlock}>
-            <Link to={privacyPolicyPagePath}>Privacy Policy</Link>
+          <div className={styles.footer__col}>
+            <p className={styles.footer__copyright}>
+              Copyright &copy; {new Date().getFullYear()} MG Elektro LLC. All
+              rights reserved.
+              <br />
+              Designed & Created by{" "}
+              <a href="https://webscover.com/" target="_blank" rel="noreferrer">
+                webscover.com.
+              </a>
+            </p>
+          </div>
 
-            <Link to={cookiePolicyPagePath}>Cookie Policy</Link>
+          <div className={styles.footer__col}>
+            <div className={styles.footer__privacyBlock}>
+              <Link to={privacyPolicyPagePath}>Privacy Policy</Link>
+              <Link to={cookiePolicyPagePath}>Cookie Policy</Link>
+            </div>
           </div>
         </div>
         {/* copyrightContainer */}

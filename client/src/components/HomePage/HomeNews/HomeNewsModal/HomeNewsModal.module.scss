@@ -5,6 +5,7 @@
   height: 578px;
   padding: 50px;
   max-width: 1070px;
+  border: 3px solid $color-white;
 
   @include lgScreenMedia {
     max-width: 700px;

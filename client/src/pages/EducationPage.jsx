@@ -1,7 +1,7 @@
 import EducationHeader from "../components/EducationPage/EducationHeader/EducationHeader";
 import EducationStudying from "../components/EducationPage/EducationStudying/EducationStudying";
 import EducationStudyingAbroad from "../components/EducationPage/EducationStudyingAbroad/EducationStudyingAbroad";
-import EducationOffer from "../components/EducationPage/EducationOffer/EducationOffer";
+import EducationMain from "../components/EducationPage/EducationMain/EducationMain";
 import EducationScholarships from "../components/EducationPage/EducationScholarships/EducationScholarships";
 import EducationJourney from "../components/EducationPage/EducationJourney/EducationJourney";
 import EducationServices from "../components/EducationPage/EducationServices/EducationServices";
@@ -14,12 +14,12 @@ const EducationPage = () => {
       <EducationHeader />
       <EducationStudying />
       <EducationStudyingAbroad />
-      <EducationOffer /> 
-      <EducationScholarships /> 
+      <EducationMain />
+      <EducationScholarships />
       <EducationJourney />
       <EducationServices />
       <EducationStories />
-     <EducationFAQ />  
+      <EducationFAQ />
     </>
   );
 };
