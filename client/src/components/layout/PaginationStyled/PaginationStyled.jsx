@@ -1,5 +1,8 @@
 import Pagination from "react-js-pagination";
-import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import {
+  paginationArrowLeftIcon,
+  paginationArrowRightIcon,
+} from "../../../assets/svg";
 import Svg from "../Svg/Svg";
 
 import styles from "./PaginationStyled.module.scss";
@@ -26,13 +29,13 @@ const PaginationStyled = ({
           hideFirstLastPages={true}
           prevPageText={
             <Svg
-              id={sliderArrowLeftIcon}
+              id={paginationArrowLeftIcon}
               className={styles.paginationStyled__arrow}
             />
           }
           nextPageText={
             <Svg
-              id={sliderArrowRightIcon}
+              id={paginationArrowRightIcon}
               className={styles.paginationStyled__arrow}
             />
           }

@@ -29,7 +29,7 @@ const TransitionProvider = ({
     },
     height: {
       from: { maxHeight: "0px" },
-      enter: { maxHeight: height || "165px" },
+      enter: { maxHeight: `${height}px` || "165px" },
       leave: { maxHeight: "0px" },
     },
     rotateX: {

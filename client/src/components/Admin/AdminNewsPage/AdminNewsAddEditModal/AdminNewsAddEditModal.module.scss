@@ -19,6 +19,11 @@
 
     &_fields {
       flex: 1;
+
+      @include smScreenMedia {
+        grid-template-rows: 4fr 6fr;
+        grid-template-columns: 1fr;
+      }
     }
   }
   &__attachFile {

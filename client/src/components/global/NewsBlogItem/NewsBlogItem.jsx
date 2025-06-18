@@ -8,6 +8,7 @@ import { noImage } from "../../../assets/images";
 import { useDispatch } from "react-redux";
 import { updateActiveDayNews } from "../../../store/slices/newsSlice";
 import { openTooltip } from "../../../store/slices/UISlice";
+import { formatDate } from "../../../utils/formatDate";
 
 const PinBtn = ({ id, activeDayNews }) => {
   const dispatch = useDispatch();
@@ -53,9 +54,13 @@ const NewsBlogItem = ({
   onEdit,
   onClick,
   onDelete,
+  className,
 }) => {
   return (
-    <div className={styles.newsBlogItem} onClick={() => onClick(id)}>
+    <div
+      className={`${styles.newsBlogItem} ${className || ""}`}
+      onClick={() => onClick(id)}
+    >
       <img
         src={setImagePath(image)}
         alt="News"
@@ -69,15 +74,7 @@ const NewsBlogItem = ({
       <h4 className={styles.newsBlogItem__title}>{title}</h4>
       <p className={styles.newsBlogItem__description}>{description}</p>
       <div className={styles.newsBlogItem__footer}>
-        <span className={styles.newsBlogItem__date}>
-          {new Date(date)
-            .toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "2-digit",
-              year: "numeric",
-            })
-            .replaceAll("/", ".")}
-        </span>
+        <span className={styles.newsBlogItem__date}>{formatDate(date)}</span>
         {isAdmin && (
           <>
             <div className={styles.newsBlogItem__actions}>
