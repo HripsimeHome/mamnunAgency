@@ -30,7 +30,7 @@ function App() {
 
       {!isAdmin && <Footer />}
       <Tooltip />
-      <TodayNewsModal />
+      {process.env.NODE_ENV === "production" && <TodayNewsModal />}
     </>
   );
 }
