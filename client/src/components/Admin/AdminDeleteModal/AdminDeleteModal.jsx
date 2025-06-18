@@ -21,9 +21,9 @@ const AdminDeleteModal = ({
       setLoading(true);
       onDelete(id);
       onClose();
-      dispatch(openTooltip("News deleted successfully"));
+      dispatch(openTooltip("Item deleted successfully"));
     } catch (error) {
-      dispatch(openTooltip("Failed to delete news"));
+      dispatch(openTooltip("Failed to delete item"));
     } finally {
       setLoading(false);
     }
