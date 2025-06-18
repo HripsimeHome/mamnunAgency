@@ -34,7 +34,7 @@
   }
 
   &__card:hover &__cardInner {
-    transform: rotateY(180deg);
+    //transform: rotateY(180deg);
   }
 
   &__cardFront,
@@ -77,7 +77,7 @@
   }
 
   &__cardFrontTitle {    
-    @include setFont(32px, 600, $color-white);   
+    @include setFont(32px, 400, $color-white);   
      z-index: 2;
      padding-left: 25px;
      padding-right: 25px; 
@@ -97,16 +97,43 @@
     background-color: $color-white;
     border: 4px solid $color-secondary;
     border-radius: 20px;
-    transform: rotateY(180deg);
+   // transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     //padding: 25px;
   }
 
-   &__cardBackTitle {
-    @include setFont(32px, 600, $color-secondary);      
+
+  &__cardTestContainer {
+    position: relative;
   }
+
+   &__cardTest01 {
+    @include setFont(200px, 400, #F0F0F0);    
+   // margin-top: -51px;  
+    position: absolute;
+    top: -40px;
+  }
+
+  
+
+   &__cardBackTitle {
+    @include setFont(32px, 400, $color-secondary);      
+    position: absolute;
+    top: 60px;
+    left: 10px;
+  }
+
+  //    &__cardBackTitle::before {
+  //   content: "01";
+  //   position: absolute;
+  //   z-index: 2; 
+  //   inset: 0;
+  //   background-color: rgba(0, 0, 0, 0.3);   
+        
+  // }
+
 
   &__cardBackTextBlock {
     @include flexCol();

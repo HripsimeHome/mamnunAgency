@@ -84,10 +84,6 @@ const Contacts = () => {
              
             <SocialIcons />
            </div>
-
-
-
-
         </div> {/* contacts__container */}
       </div>
     </section>
