@@ -11,6 +11,10 @@ export const facebookIcon = "facebook";
 export const instagramIcon = "instagram";
 export const telegramIcon = "telegram";
 
+// Home
+export const sliderArrowLeftIcon = "sliderArrowLeft";
+export const sliderArrowRightIcon = "sliderArrowRight";
+
 // About
 export const educationIcon = "education";
 export const opportunitiesIcon = "opportunities";
@@ -69,11 +73,10 @@ export const loansIcon = "loans";
 export const starStoryIcon = "starStory";
 
 // Admin Panel
-
 export const logoutIcon = "logout";
 export const leftBurgerIcon = "leftBurger";
-export const sliderArrowRightIcon = "sliderArrowRight";
-export const sliderArrowLeftIcon = "sliderArrowLeft";
+export const paginationArrowRightIcon = "paginationArrowRight";
+export const paginationArrowLeftIcon = "paginationArrowLeft";
 export const editIcon = "edit";
 export const deleteIcon = "delete";
 export const pinIcon = "pin";

@@ -9,6 +9,7 @@ import Footer from "../global/Footer/Footer";
 import Tooltip from "../layout/Tooltip/Tooltip";
 import { useDispatch } from "react-redux";
 import HeaderMenu from "../global/HeaderMenu/HeaderMenu";
+import TodayNewsModal from "../global/TodayNewsModal/TodayNewsModal";
 
 function App() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
 
       {!isAdmin && <Footer />}
       <Tooltip />
+      {process.env.NODE_ENV === "production" && <TodayNewsModal />}
     </>
   );
 }

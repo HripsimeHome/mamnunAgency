@@ -6,6 +6,7 @@ import App from "./components/App/App";
 import { store } from "./store/store";
 
 import "./styles/_style.scss";
+import "swiper/css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -1,52 +1,45 @@
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./HomeNews.module.scss";
-
-import { newsImage } from "../../../assets/images";
-
-const newsData = [
-  {
-    image: newsImage,
-    title: "News blog 1",
-    description:
-      "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
-    date: "01.05.2025",
-  },
-
-  {
-    image: newsImage,
-    title: "Dedicated to delivering exceptional education",
-    description:
-      "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
-    date: "01.05.2025",
-  },
-
-  {
-    image: newsImage,
-    title: "News blog 3",
-    description:
-      "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
-    date: "01.05.2025",
-  },
-
-  {
-    image: newsImage,
-    title: "News blog 1",
-    description:
-      "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
-    date: "01.05.2025",
-  },
-
-  {
-    image: newsImage,
-    title: "News blog 1",
-    description:
-      "We are a proud family-owned company dedicated to delivering exceptional education and travel services customized just for you.",
-    date: "01.05.2025",
-  },
-];
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import NewsBlogItem from "../../global/NewsBlogItem/NewsBlogItem";
+import { useEffect, useRef, useState } from "react";
+import { getNewsList } from "../../../store/slices/newsSlice";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import Svg from "../../layout/Svg/Svg";
+import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import "swiper/css/pagination";
+import "./sliderDots.scss";
+import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
 
 const HomeNews = () => {
+  const dispatch = useDispatch();
+  const news = useSelector((state) => state.news.data);
+  const nextButtonRef = useRef(null);
+  const prevButtonRef = useRef(null);
+  const paginationContainerRef = useRef(null);
+  const [selectedNewsId, setSelectedNewsId] = useState(null);
+  const [modalOpened, setModalOpened] = useState(false);
+
+  useEffect(() => {
+    dispatch(getNewsList(1));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const selectedItem =
+    news && news.length
+      ? news.find((item) => item.id === selectedNewsId)
+      : null;
+
   return (
-    <section className={`${styles.homeNews} wrapperWhite`}>
+    <TransitionProvider
+      inProp={!!(news && news.length)}
+      style={TransitionStyleTypes.height}
+      height={700}
+      className={`${styles.homeNews} wrapperWhite`}
+    >
       <div className="container">
         <h2 className="titleSecondaryH2">
           News&nbsp;
@@ -54,22 +47,84 @@ const HomeNews = () => {
         </h2>
 
         <div className={styles.homeNews__slideContainer}>
-          {newsData.map(({ image, title, description, date }, index) => (
-            <div
-              key={index}
-              className={styles.homeNews__slide}
-              // onClick={}
-            >
-              <img src={image} alt={title} className={styles.homeNews__img} />
-              <h4 className={styles.homeNews__title}>{title}</h4>
-              <p className={styles.homeNews__description}>{description}</p>
-              <span className={styles.homeNews__date}>{date}</span>
+          <Swiper
+            slidesPerView={1}
+            className={styles.homeNews__slider}
+            spaceBetween={0}
+            modules={[Navigation, Pagination]}
+            pagination={{
+              clickable: true,
+              renderBullet: (index, className) =>
+                `<span class="${className}">${index + 1}</span>`,
+            }}
+            onBeforeInit={(swiper) => {
+              if (typeof swiper.params.navigation === "object") {
+                swiper.params.navigation.nextEl = nextButtonRef.current;
+                swiper.params.navigation.prevEl = prevButtonRef.current;
+              }
+            }}
+            navigation={{
+              nextEl: nextButtonRef.current,
+              prevEl: prevButtonRef.current,
+            }}
+            breakpoints={{
+              576: {
+                slidesPerView: 1.8,
+                spaceBetween: 30,
+                slidesOffsetBefore: 20,
+                slidesOffsetAfter: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 83,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+              },
+            }}
+          >
+            {news &&
+              news?.length &&
+              news.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <NewsBlogItem
+                    {...item}
+                    className={styles.homeNews__slide}
+                    onClick={(id) => {
+                      setSelectedNewsId(id);
+                      setModalOpened(true);
+                    }}
+                  />
+                </SwiperSlide>
+              ))}
+            <div className={styles.homeNews__sliderNavigation}>
+              <button
+                ref={prevButtonRef}
+                className={styles.homeNews__sliderNavBtn}
+              >
+                <Svg id={sliderArrowLeftIcon} />
+              </button>
+              <div
+                className={styles.homeNews__pagination}
+                ref={paginationContainerRef}
+              ></div>
+              <button
+                ref={nextButtonRef}
+                className={styles.homeNews__sliderNavBtn}
+              >
+                <Svg id={sliderArrowRightIcon} />
+              </button>
             </div>
-          ))}
-          {/* slide */}
+          </Swiper>
         </div>
       </div>
-    </section>
+      {selectedItem && (
+        <HomeNewsModal
+          show={modalOpened}
+          onClose={() => setModalOpened(false)}
+          {...selectedItem}
+        />
+      )}
+    </TransitionProvider>
   );
 };
 
