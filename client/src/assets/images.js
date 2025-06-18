@@ -1,4 +1,3 @@
-
 // General
 import logoImage from "./images/logos/logo.png";
 import logoWebpImage from "./images/logos/logo.webp";
@@ -8,6 +7,12 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
+
+import noImage from "./images/common/noImage.png";
+import noImageWebp from "./images/common/noImage.webp";
+
+import loaderFrameImage from "./images/common/loaderFrame.png";
+import loaderFrameWebpImage from "./images/common/loaderFrame.webp";
 
 //Footer
 
@@ -22,7 +27,6 @@ import mastercardWebpImage from "./images/footer/cards/mastercard.webp";
 
 import visaImage from "./images/footer/cards/visa.png";
 import mvisaWebpImage from "./images/footer/cards/visa.webp";
-
 
 // Home
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
@@ -156,42 +160,32 @@ import phoneWebpImage from "./images/contacts/icons/phone.webp";
 import emailImage from "./images/contacts/icons/email.png";
 import emailWebpImage from "./images/contacts/icons/email.webp";
 
-
 import locationImage from "./images/contacts/icons/location.png";
 import locationWebpImage from "./images/contacts/icons/location.webp";
 
-
-
-
-
-
-
-
 export {
-
-//General 
+  //General
+  noImage,
+  noImageWebp,
+  loaderFrameImage,
+  loaderFrameWebpImage,
   logoImage,
   logoWebpImage,
-
   logoBlackImage,
   logoBlackWebpImage,
-
   VIPImage,
   VIPWebpImage,
 
   // Footer
   humoImage,
   humoWebpImage,
-
   uzcardImage,
   uzcardWebpImage,
-
   mastercardImage,
   mastercardWebpImage,
-
   visaImage,
   mvisaWebpImage,
- 
+
   // Home
   expertiseImage,
   expertiseWebpImage,
@@ -285,14 +279,11 @@ export {
   railwayStationsImage,
   railwayStationsWebpImage,
 
- // Contacts
+  // Contacts
   phoneImage,
   phoneWebpImage,
-
-  emailImage, 
-  emailWebpImage, 
-
-  locationImage, 
+  emailImage,
+  emailWebpImage,
+  locationImage,
   locationWebpImage,
-  
 };

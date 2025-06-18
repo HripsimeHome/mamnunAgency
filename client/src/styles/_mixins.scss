@@ -52,6 +52,10 @@
   border: $border;
   background: $bg;
   cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 @mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
@@ -61,15 +65,10 @@
   stroke: $stroke;
 }
 
-@mixin setFont(
-  $size,
-  $weight, 
-  $color,
-  $useMedia: true
-) {
+@mixin setFont($size, $weight, $color: $color-secondary, $useMedia: true) {
   font-size: $size;
   font-weight: $weight;
-  color: $color   
+  color: $color;
 }
 
 @mixin flexCol($layout: center, $align: center) {
@@ -88,5 +87,3 @@
 // .class {
 //   @include bgWebp("../../assets/images/all/example.png","../../assets/images/all/example.webp")
 // }
- 
- 

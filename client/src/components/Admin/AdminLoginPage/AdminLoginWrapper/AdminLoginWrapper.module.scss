@@ -1,0 +1,17 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.loginWrapper {
+  &__checkboxLabel {
+    color: $color-primary;
+  }
+
+  &__link {
+    @include setFont(15px, 400, $color-primary);
+    margin-top: 15px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
