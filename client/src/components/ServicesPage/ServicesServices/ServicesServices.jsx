@@ -1,5 +1,7 @@
 import styles from "./ServicesServices.module.scss";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 import { contactsPagePath } from "../../../router/path";
@@ -18,7 +20,7 @@ import {
 const cards = [
   {
     title: "Full VVIP Services",
-    titleNumber: "01",
+    stepNumber: "01",
     image: VIPServicesImage,
     webpImage: VIPServicesWebpImage,
     backDescription:
@@ -26,7 +28,7 @@ const cards = [
   },
   {
     title: "Meet and Greet, Fast Track Services",
-    titleNumber: "02",
+    stepNumber: "02",
     image: fastServicesImage,
     webpImage: fastServicesWebpImage,
     backDescription:
@@ -34,7 +36,7 @@ const cards = [
   },
   {
     title: "Transfer Services Worldwide",
-    titleNumber: "03",
+    stepNumber: "03",
     image: transferServicesImage,
     webpImage: transferServicessWebpImage,
     backDescription:
@@ -43,7 +45,7 @@ const cards = [
 
   {
     title: "Meet and Greet at Railway Stations",
-    titleNumber: "04",
+    stepNumber: "04",
     image: railwayStationsImage,
     webpImage: railwayStationsWebpImage,
     backDescription:
@@ -52,6 +54,8 @@ const cards = [
 ];
 
 const ServicesServices = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={`${styles.servicesServices} wrapperBlack`}>
       <div className="container">
@@ -61,54 +65,68 @@ const ServicesServices = () => {
         </h2>
 
         <div className={styles.servicesServices__cardContainer}>
-          {cards.map(({ title, titleNumber, image, webpImage, backDescription }, index) => (
-            <div key={index} className={styles.servicesServices__card}>
-              <div className={styles.servicesServices__cardInner}>
-                {/* <div
-                  key={index}
-                  className={styles.servicesServices__cardFront}
-                >
-                  <ImageWebp
-                    src={image}
-                    srcSet={webpImage}
-                    alt={title}
-                    //onLoad={() => setLoading(false)}
-                    className={styles.servicesServices__img}
-                  />
-                  <h3 className={styles.servicesServices__cardFrontTitle}>
-                    {title}
-                  </h3>
-                </div> */}
-                {/* cardFront */}
-
-                <div key={index} className={styles.servicesServices__cardBack}>
-
-                  <div key={index} className={styles.servicesServices__cardTestContainer}>
-
-                  <span className={styles.servicesServices__cardTest01}>
-                    {titleNumber}
-                  </span>
-                  <h3 className={styles.servicesServices__cardBackTitle}>
-                    {title}
-                  </h3>
+          {cards.map(
+            (
+              { title, stepNumber, image, webpImage, backDescription },
+              index
+            ) => (
+              <div key={index} className={styles.servicesServices__card}>
+                <div className={styles.servicesServices__cardInner}>
+                  <div
+                    key={index}
+                    className={styles.servicesServices__cardFront}
+                  >
+                    <ImageWebp
+                      src={image}
+                      srcSet={webpImage}
+                      alt={title}
+                      //onLoad={() => setLoading(false)}
+                      className={styles.servicesServices__img}
+                    />
+                    <h3 className={styles.servicesServices__cardFrontTitle}>
+                      {title}
+                    </h3>
                   </div>
-                  
+                  {/* cardFront */}
 
-                  
-                  <div className={styles.servicesServices__cardBackTextBlock}>
-                    <p className={styles.servicesServices__cardBackText}>
-                      {backDescription}
-                    </p>
+                  <div
+                    key={index}
+                    className={styles.servicesServices__cardBack}
+                  >
+                    <div
+                      key={index}
+                      className={styles.servicesServices__cardTitleBlock}
+                    >
+                      <span className={styles.servicesServices__cardStep}>
+                        {stepNumber}
+                      </span>
+                      <h3 className={styles.servicesServices__cardBackTitle}>
+                        {title}
+                      </h3>
+                    </div>
 
-                    <Link to={contactsPagePath} className="btnPrimaryBlack">
-                      Learn more
-                    </Link>
+                    <div className={styles.servicesServices__cardBackTextBlock}>
+                      <p className={styles.servicesServices__cardBackText}>
+                        {backDescription}
+                      </p>
+
+                      {/* <Link to={contactsPagePath} className="btnPrimaryBlack">
+                        Learn more
+                      </Link> */}
+
+                      <MainBtn
+                        onClick={() => navigate(contactsPagePath)}
+                        className={styles.authWrapper__btn}
+                      >
+                        Learn more
+                      </MainBtn>
+                    </div>
                   </div>
+                  {/* Back */}
                 </div>
-                {/* Back */}
               </div>
-            </div>
-          ))}
+            )
+          )}
           {/* Card */}
         </div>
         {/* flipCardContainer */}

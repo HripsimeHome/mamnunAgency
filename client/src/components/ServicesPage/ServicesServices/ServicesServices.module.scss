@@ -10,7 +10,7 @@
 
   &__cardContainer {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     margin-top: 50px;
     // max-width: 1440px;
@@ -18,11 +18,9 @@
   }
 
   &__card {
-    max-width: 690px;
-    min-height: 515px; // ?
+    aspect-ratio: 690/515;
     perspective: 1000px;
     position: relative;
-    aspect-ratio: 6/2;
   }
 
   &__cardInner {
@@ -34,7 +32,7 @@
   }
 
   &__card:hover &__cardInner {
-    //transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   &__cardFront,
@@ -43,53 +41,53 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-   // @include flexCol();
+    // @include flexCol();
     @include setFont(20px, 400, $color-secondary);
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     padding: 25px;
   }
 
-  &__cardFront {   
-    @include flexCol(center, end);    
+  &__cardFront {
+    @include flexCol(center, end);
     background-color: $color-darkGrey;
-    border-radius: 20px;    
+    border-radius: 20px;
 
     // @media (max-width: 1200px) {
-    //   aspect-ratio: 6/2.5;     
-    // }   
+    //   aspect-ratio: 6/2.5;
+    // }
 
-     &:hover {
+    &:hover {
       cursor: pointer;
     }
 
     @include smScreenMedia {
-      justify-content: center;      
+      justify-content: center;
     }
-  }  
+  }
 
-    &__cardFront::before {
+  &__cardFront::before {
     content: "";
     position: absolute;
-    z-index: 2; 
+    z-index: 2;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);   
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
   }
 
-  &__cardFrontTitle {    
-    @include setFont(32px, 400, $color-white);   
-     z-index: 2;
-     padding-left: 25px;
-     padding-right: 25px; 
+  &__cardFrontTitle {
+    @include setFont(32px, 400, $color-white);
+    z-index: 2;
+    padding-left: 25px;
+    padding-right: 25px;
 
     @include mdScreenMedia {
-      font-size: 24px;    
+      font-size: 24px;
       text-align: center;
     }
 
     @include smScreenMedia {
-      font-size: 18px;   
-      line-height: 20px;; 
+      font-size: 18px;
+      line-height: 20px;
     }
   }
 
@@ -97,53 +95,54 @@
     background-color: $color-white;
     border: 4px solid $color-secondary;
     border-radius: 20px;
-   // transform: rotateY(180deg);
+    transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
     //padding: 25px;
   }
 
-
-  &__cardTestContainer {
+  &__cardTitleBlock {
     position: relative;
   }
 
-   &__cardTest01 {
-    @include setFont(200px, 400, #F0F0F0);    
-   // margin-top: -51px;  
-    position: absolute;
-    top: -40px;
+  &__cardStep {
+    @include setFont(200px, 400, #f0f0f0);
+    // margin-top: -51px;
+    line-height: 180px;
   }
 
-  
-
-   &__cardBackTitle {
-    @include setFont(32px, 400, $color-secondary);      
+  &__cardBackTitle {
+    @include setFont(32px, 400, $color-secondary);
     position: absolute;
-    top: 60px;
+    top: 50%;
     left: 10px;
+    transform: translateY(-50%);
   }
 
   //    &__cardBackTitle::before {
   //   content: "01";
   //   position: absolute;
-  //   z-index: 2; 
+  //   z-index: 2;
   //   inset: 0;
-  //   background-color: rgba(0, 0, 0, 0.3);   
-        
-  // }
+  //   background-color: rgba(0, 0, 0, 0.3);
 
+  // }
 
   &__cardBackTextBlock {
     @include flexCol();
     flex-direction: column;
+    overflow: hidden;
+    flex: 1;
   }
 
   &__cardBackText {
     @include setFont(22px, 400, $color-secondary);
     line-height: 30px;
     margin-bottom: 25px;
+    overflow: hidden;
+    flex: 1;
   }
 
   &__img {
@@ -155,7 +154,7 @@
     object-fit: cover;
     transition: $transition;
     z-index: 1;
-    opacity: 1;   
+    opacity: 1;
     border-radius: 20px;
 
     &_inactive {

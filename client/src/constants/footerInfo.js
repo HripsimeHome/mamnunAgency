@@ -1,5 +1,4 @@
-
-import {  
+import {
   aboutPagePath,
   tourismPagePath,
   educationPagePath,
@@ -7,11 +6,7 @@ import {
   imprintPagePath,
 } from "../router/path";
 
-import { 
-  phone,
-  email,
-  address  
-} from "./contacts"
+import { phone, email, address } from "./contacts";
 
 import {
   uzcardImage,
@@ -23,7 +18,6 @@ import {
   visaImage,
   mvisaWebpImage,
 } from "../assets/images";
-
 
 //  Footer menu
 export const footerMenuItems = [
@@ -96,17 +90,20 @@ export const footerMenuItems = [
         text: "MAMNUN Agency",
       },
 
-      { 
-        text: `Address: ${address}`
+      {
+        text: `Address: ${address}`,
       },
 
       {
         text: `Email: ${email}`,
-        link: `mailto:${email}`,        
-        },
+        link: `mailto:${email}`,
+        isOutLink: true,
+      },
 
       {
-        text: `Phone: ${phone}`         
+        text: `Phone: ${phone}`,
+        link: `tel:${phone}`,
+        //isOutLink: true,
       },
     ],
   },
