@@ -2,7 +2,7 @@ import styles from "./EducationJourney.module.scss";
 
 const EducationJourney = () => {
   return (
-    <section className={`${styles.educationJourney} wrapperWhite`}>
+    <section className={`${styles.educationJourney} wrapperWhite wrapperPadding`}>
       <div className="container">
         <h2 className="titleSecondaryH2 center">
           Unlock Your Global Education Journey&nbsp;

@@ -2,8 +2,6 @@
 @import "../../../styles/vars";
 
 .tourismServices {
-  padding: 100px 0;
-
   &__titleBlock {
     @include flexCol(space-between, center);
     margin-bottom: 25px;
@@ -16,9 +14,9 @@
   &__arrowPicture {
     width: 60%;
   }
-  
-  &__arrowLine { 
-    width: 100%; 
+
+  &__arrowLine {
+    width: 100%;
 
     &_reversed {
       transform: rotateY(180deg);
@@ -32,13 +30,13 @@
   &__sectionTitle {
     @include setFont(36px, 400, $color-white);
 
-    @include mdScreenMedia {    
-     font-size: 24px;     
-  }
+    @include mdScreenMedia {
+      font-size: 24px;
+    }
 
-    @include smScreenMedia {       
+    @include smScreenMedia {
       font-size: 18px;
-    }    
+    }
   }
 
   &__panelContainer {

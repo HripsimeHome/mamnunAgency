@@ -99,16 +99,18 @@ const accordionItems = [
 
 const EducationStudyingAbroad = () => {
   return (
-    <section className={`${styles.educationStudyingAbroad} wrapperBlack`}>
+    <section
+      className={`${styles.educationStudyingAbroad} wrapperBlack wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleWhiteH2">
           Pros and Cons of studying&nbsp;
           <span className="titlePrimaryH2">abroad</span>
         </h2>
 
-         <>
-          <Accordion 
-            accordionItems={accordionItems} 
+        <>
+          <Accordion
+            accordionItems={accordionItems}
             className={styles.educationStudyingAbroad__accordionContainer}
           />
         </>

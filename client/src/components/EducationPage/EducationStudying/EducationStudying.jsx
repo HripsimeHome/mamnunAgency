@@ -5,7 +5,7 @@ const accordionItems = [
   // Плюсы
   {
     // image: ,
-    // webpImage: ,    
+    // webpImage: ,
     title: "Accessibility",
     content:
       "Education is compulsory and free for 11 years for locals, ensuring that a significant portion of the population has access to basic education.",
@@ -94,19 +94,21 @@ const accordionItems = [
 
 const EducationStudying = () => {
   return (
-     <section className={`${styles.educationStudying} wrapperWhite`}>
+    <section
+      className={`${styles.educationStudying} wrapperWhite wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleSecondaryH2">
           Pros and Cons of studying&nbsp;
           <br />
           <span className="titlePrimaryH2">in Uzbekistan</span>
-        </h2>    
+        </h2>
         <>
-          <Accordion 
+          <Accordion
             accordionItems={accordionItems}
-            className={styles.educationStudying__accordionContainer} 
-          />   
-        </>            
+            className={styles.educationStudying__accordionContainer}
+          />
+        </>
       </div>
     </section>
   );

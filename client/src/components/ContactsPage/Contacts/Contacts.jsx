@@ -41,7 +41,7 @@ const Contacts = () => {
   const navigate = useNavigate();
 
   return (
-    <section className={`${styles.contacts} wrapperWhite`}>
+    <section className={`${styles.contacts} wrapperWhite wrapperPadding`}>
       <div className="container">
         <h2 className="titlePrimaryH2">
           Write&nbsp;

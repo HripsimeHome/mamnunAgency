@@ -48,7 +48,7 @@ const HomeNews = () => {
       inProp={!!(data && data.length)}
       style={TransitionStyleTypes.height}
       height={700}
-      className={`${styles.homeNews} wrapperWhite`}
+      className={`${styles.homeNews} wrapperWhite wrapperPadding`}
     >
       <div className="container">
         <h2 className="titleSecondaryH2">

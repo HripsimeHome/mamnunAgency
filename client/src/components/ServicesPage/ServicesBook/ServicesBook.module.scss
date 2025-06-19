@@ -2,8 +2,6 @@
 @import "../../../styles/vars";
 
 .servicesBook {
-  padding: 100px 0;
-
   &__formContainer {
     @include flexCol();
     width: 100%;
