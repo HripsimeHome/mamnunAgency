@@ -11,7 +11,6 @@ const TourismBrief = () => {
     <section className={`${styles.tourismBrief} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.tourismBrief__content}>
-          {/* First Paragraph */}
           <div className={styles.tourismBrief__text1}>
             <p>
               Our travel services to Uzbekistan are designed to offer a seamless
@@ -25,7 +24,6 @@ const TourismBrief = () => {
             </p>
           </div>
 
-          {/* Image */}
           <div className={styles.tourismBrief__imageColumn}>
             <ImageWebp
               src={tourismBriefImage}
@@ -35,7 +33,6 @@ const TourismBrief = () => {
             />
           </div>
 
-          {/* Second Paragraph */}
           <div className={styles.tourismBrief__text2}>
             <p>
               We also believe that the true magic of Uzbekistan lies in its

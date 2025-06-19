@@ -3,65 +3,97 @@
 
 .aboutHeader {
   &__content {
-    display: flex;
-    width: 100%;
-    margin-bottom: 200px;
-    gap: 160px;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 50px;
+    grid-template-areas:
+      "text1 animation"
+      "text2 animation";
+    text-align: justify;
 
     @include mdScreenMedia {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text1"
+        "animation"
+        "text2";
     }
   }
 
   &__title {
     @include setFont(34px, 600, $color-primary);
+
     text-align: left;
+    margin-bottom: 25px;
+
+    @include smScreenMedia {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+
+    @include smScreenMedia {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
   }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 804px;
+  &__text1 {
+    grid-area: text1;
+    padding-top: 100px;
+
+    @include smScreenMedia {
+      padding-top: 30px;
+    }
+
+    @include smScreenMedia {
+      padding-top: 25px;
+    }
+  }
+
+  &__text2 {
+    grid-area: text2;
+  }
+
+  &__text1,
+  &__text2 {
+    @include setFont(23px, 400, $color-secondary);
+    line-height: 30px;
+
+    @include mdScreenMedia {
+      font-size: 16px;
+    }
+    @include smScreenMedia {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__imageColumn {
+    grid-area: animation;
+
+    @include mdScreenMedia {
+      @include flexCol();
+    }
+  }
+
+  &__briefImg {
     width: 100%;
-    text-align: justify;
-    padding-top: 150px;
-  }
-
-  // &__briefImg {
-  //   max-width: 586px;
-  //   width: 100%;
-  //   height: auto;
-  // }
-
-  &__logoAnim {
-    max-width: 375px;
     height: auto;
-    order: 2;
-
-    @include mdScreenMedia {
-      order: 1;
-    }
-    // width: 100%;
-  }
-
-  &__firstParagraph {
-    order: 0;
-  }
-
-  &__secondParagraph {
-    order: 1;
-    @include mdScreenMedia {
-      order: 2;
-    }
   }
 
   &__briefContainer {
     display: flex;
     gap: 48px;
+    padding-top: 100px;
 
     @include mdScreenMedia {
       flex-direction: column;
+    }
+
+    @include smScreenMedia {
+      padding-top: 50px;
     }
   }
 
