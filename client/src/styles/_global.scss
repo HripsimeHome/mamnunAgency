@@ -15,7 +15,6 @@ body {
   background-color: $color-white;
 
   // Body Scrollbar
-
   &::-webkit-scrollbar {
     width: 12px;
   }
@@ -69,10 +68,6 @@ a {
   color: $color-primary;
 }
 
-// .textSecondary {
-
-// }
-
 .textRed {
   color: $color-red;
 }
@@ -121,41 +116,38 @@ a {
   @include setFont(20px, 600, $color-secondary);
 }
 
-// Button
+.wrapperBlack {
+  width: 100%;
+  background-color: $color-secondary;
+}
 
-.btnPrimary {
-  @include flexCol();
-  background: transparent;
-  outline: 2px solid $color-primary;
-  border-radius: 30px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+.wrapperWhite {
+  width: 100%;
+  background-color: $color-white;
+}
 
-  &:hover {
-    background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
-      inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25),
-      inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25),
-      inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
-  }
+.width60 {
+  width: 60%;
 
-  &:active {
-    background: linear-gradient(
-      to bottom,
-      #8c52ff 0%,
-      #8c52ff 50%,
-      #b164ff 100%
-    );
+  @include mdScreenMedia {
+    width: 100%;
   }
 }
 
-.btnPrimaryWhite {
-  @extend .btnPrimary;
-  @include setFont(18px, 700, $color-white);
+.width40 {
+  width: 40%;
 }
-.btnPrimaryBlack {
-  @extend .btnPrimary;
 
-  @include setFont(18px, 700, $color-secondary);
+.wrapperPadding {
+  padding: 100px 0;
+
+  @include mdScreenMedia {
+    padding: 25px 0;
+  }
+
+  @include smScreenMedia {
+    padding: 25px 0;
+  }
 }
 
 .container {
@@ -183,26 +175,4 @@ a {
     //padding-left: 16px;
     // padding-right: 16px;
   }
-}
-
-.wrapperBlack {
-  width: 100%;
-  background-color: $color-secondary;
-}
-
-.wrapperWhite {
-  width: 100%;
-  background-color: $color-white;
-}
-
-.width60 {
-  width: 60%;
-}
-
-.width40 {
-  width: 40%;
-}
-
-.wrapperPadding {
-  padding: 100px 0;
 }

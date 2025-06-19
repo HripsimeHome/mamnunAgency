@@ -2,15 +2,14 @@ import styles from "./AboutVideo.module.scss";
 
 const AboutVideo = () => {
   return (
-    <section className={`${styles.aboutVideo} wrapperBlack wrapperPadding`}>
+    <section className={`${styles.aboutVideo}`}>
       <div className="container">
-        <div className={styles.aboutVideo__video}>
-          {process.env.NODE_ENV !== "development" && (
-            <video width="1052" height="562" autoPlay muted loop>
-              <source src="/videos/about/about.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          )}
+        <div className={styles.aboutVideo__videoContainer}>
+          <video className={styles.aboutVideo__video} autoPlay muted loop>
+            <source src="/videos/about/about.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
           <p className={styles.aboutVideo__text}>
             We are also a premier travel agency dedicated to providing unique
             travel packages and exceptional services. Our expertise extends

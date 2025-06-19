@@ -1,0 +1,40 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.aboutVideo {
+  &__videoContainer {
+    @include flexCol();
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__video {
+    max-width: 70%;
+
+    @include mdScreenMedia {
+      // max-width: 706px;
+    }
+
+    @include smScreenMedia {
+      //max-width: 320px;
+    }
+  }
+
+  &__text {
+    @include setFont(18px, 400, $color-white);
+    line-height: 30px;
+    text-align: center;
+    padding-top: 28px;
+    max-width: 1052px;
+
+    @include mdScreenMedia {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include smScreenMedia {
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+}
