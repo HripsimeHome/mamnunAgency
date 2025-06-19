@@ -61,6 +61,9 @@ import missionWebpImage from "./images/home/mission.webp";
 import valuesImage from "./images/home/values.jpg";
 import valuesWebpImage from "./images/home/values.webp";
 
+import aboutMapImage from "./images/about/aboutMap.png";
+import aboutMapWebpImage from "./images/about/aboutMap.webp";
+
 //Tourism
 import tourismHeaderImage from "./images/tourism/header/tourismHeader.jpg";
 import tourismHeaderWebpImage from "./images/tourism/header/tourismHeader.webp";
@@ -210,6 +213,8 @@ export {
   missionWebpImage,
   valuesImage,
   valuesWebpImage,
+  aboutMapImage,
+  aboutMapWebpImage,
 
   //Tourism
   tourismHeaderImage,
