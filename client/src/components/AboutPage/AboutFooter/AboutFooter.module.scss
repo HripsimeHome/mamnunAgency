@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .aboutFooter {
-  &__text {
+  &__textBlock {
     @include flexCol();
     flex-direction: column;
     gap: 25px;
@@ -15,10 +15,12 @@
 
     @include mdScreenMedia {
       font-size: 32px;
+      line-height: 40px;
     }
 
     @include smScreenMedia {
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 40px;
     }
   }
 
