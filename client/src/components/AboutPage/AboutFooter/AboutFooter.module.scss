@@ -2,8 +2,6 @@
 @import "../../../styles/vars";
 
 .aboutFooter {
-  padding: 100px 0;
-
   &__text {
     @include flexCol();
     flex-direction: column;
@@ -15,12 +13,12 @@
     @include setFont(60px, 600, $color-secondary);
     line-height: 60px;
 
-    @include mdScreenMedia {    
-     font-size: 32px;   
+    @include mdScreenMedia {
+      font-size: 32px;
     }
 
-    @include smScreenMedia {    
-     font-size: 15px;   
+    @include smScreenMedia {
+      font-size: 15px;
     }
   }
 

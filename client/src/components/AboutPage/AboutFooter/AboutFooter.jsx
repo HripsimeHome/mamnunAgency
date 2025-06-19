@@ -2,7 +2,7 @@ import styles from "./AboutFooter.module.scss";
 
 const AboutFooter = () => {
   return (
-    <section className={`${styles.aboutFooter} wrapperWhite`}>
+    <section className={`${styles.aboutFooter} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.aboutFooter__text}>
           <h2 className={styles.aboutFooter__title}>

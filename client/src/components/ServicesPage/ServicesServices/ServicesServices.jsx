@@ -56,7 +56,9 @@ const ServicesServices = () => {
   const navigate = useNavigate();
 
   return (
-    <section className={`${styles.servicesServices} wrapperBlack`}>
+    <section
+      className={`${styles.servicesServices} wrapperBlack wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleWhiteH2">
           Our&nbsp;

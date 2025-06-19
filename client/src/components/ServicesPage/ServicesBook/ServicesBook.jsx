@@ -3,7 +3,7 @@ import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 
 const ServicesBook = () => {
   return (
-    <section className={`${styles.servicesBook} wrapperWhite`}>
+    <section className={`${styles.servicesBook} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.servicesBook__formContainer}>
           <div className={styles.servicesBook__form}>

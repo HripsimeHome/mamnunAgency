@@ -101,7 +101,7 @@ const accordionItems = [
 
 const EducationFAQ = () => {
   return (
-    <section className={`${styles.educationFAQ} wrapperBlack`}>
+    <section className={`${styles.educationFAQ} wrapperBlack wrapperPadding`}>
       <div className="container">
         <h1 className="titlePrimaryH2">FAQ</h1>
          <>

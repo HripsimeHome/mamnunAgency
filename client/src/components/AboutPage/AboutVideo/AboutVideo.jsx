@@ -2,7 +2,7 @@ import styles from "./AboutVideo.module.scss";
 
 const AboutVideo = () => {
   return (
-    <section className={`${styles.aboutVideo} wrapperBlack`}>
+    <section className={`${styles.aboutVideo} wrapperBlack wrapperPadding`}>
       <div className="container">
         <div className={styles.aboutVideo__video}>
           {process.env.NODE_ENV !== "development" && (

@@ -31,8 +31,8 @@ const Footer = () => {
                 className={styles.footer__logoImg}
                 //pictureClass={styles.footer__logoImgPosition}
               />
-            </Link>{" "}
-            MAMNUN Agency
+              MAMNUN Agency
+            </Link>
           </div>
 
           <div className={styles.footer__menuContainer}>

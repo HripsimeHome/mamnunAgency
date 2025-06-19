@@ -48,8 +48,8 @@ a {
   text-decoration: none;
 
   &:hover {
-   color: $color-lightPrimary;
-  // text-decoration: underline
+    color: $color-lightPrimary;
+    // text-decoration: underline
   }
 }
 
@@ -127,7 +127,7 @@ a {
   @include flexCol();
   background: transparent;
   outline: 2px solid $color-primary;
-  border-radius: 30px; 
+  border-radius: 30px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   &:hover {
@@ -150,14 +150,13 @@ a {
 
 .btnPrimaryWhite {
   @extend .btnPrimary;
-   @include setFont(18px, 700, $color-white);
+  @include setFont(18px, 700, $color-white);
 }
 .btnPrimaryBlack {
   @extend .btnPrimary;
-  
-    @include setFont(18px, 700, $color-secondary);
-}
 
+  @include setFont(18px, 700, $color-secondary);
+}
 
 .container {
   max-width: 1480px;
@@ -203,4 +202,7 @@ a {
 .width40 {
   width: 40%;
 }
- 
+
+.wrapperPadding {
+  padding: 100px 0;
+}

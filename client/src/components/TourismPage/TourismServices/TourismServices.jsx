@@ -151,7 +151,9 @@ const serviceSections = [
 
 const TourismServices = () => {
   return (
-    <section className={`${styles.tourismServices} wrapperBlack`}>
+    <section
+      className={`${styles.tourismServices} wrapperBlack wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleWhiteH2">
           Services&nbsp;

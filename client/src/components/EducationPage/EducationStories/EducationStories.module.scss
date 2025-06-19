@@ -2,14 +2,12 @@
 @import "../../../styles/vars";
 
 .educationStories {
-  padding: 100px 0;
-
   &__slideContainer {
     display: flex;
     margin: 50px 0;
-    
-    @include smScreenMedia {    
-     flex-direction: column; 
+
+    @include smScreenMedia {
+      flex-direction: column;
     }
   }
 

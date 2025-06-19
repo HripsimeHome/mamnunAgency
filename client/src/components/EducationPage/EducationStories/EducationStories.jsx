@@ -102,7 +102,9 @@ const storyData = [
 
 const EducationStories = () => {
   return (
-    <section className={`${styles.educationStories} wrapperWhite`}>
+    <section
+      className={`${styles.educationStories} wrapperWhite wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleSecondaryH2">
           Success stories of the&nbsp;

@@ -72,52 +72,48 @@ const offerData = [
 const EducationOffer = () => {
   return (
     <section className={`${styles.educationOffer} wrapperWhite`}>
-      <div className="container">
-        <h2 className="titleSecondaryH2">
-          We&nbsp;
-          <span className="titlePrimaryH2">offer</span>
-        </h2>
+      <h2 className="titleSecondaryH2">
+        We&nbsp;
+        <span className="titlePrimaryH2">offer</span>
+      </h2>
 
-        <div className={styles.educationOffer__container}>
-          {/* Left column: first 4 items */}
-          <div className={styles.educationOffer__leftColumn}>
-            {offerData
-              .slice(0, 4)
-              .map(({ icon, title, description }, index) => (
-                <div className={styles.educationOffer__panel} key={index}>
-                  <div className={styles.educationOffer__titleBlock}>
-                    <Svg id={icon} className={styles.educationOffer__icon} />
-                    <h3 className={styles.educationOffer__title}>{title}</h3>
-                  </div>
-                  <p className={styles.educationOffer__description}>
-                    {description}
-                  </p>
-                </div>
-              ))}
-          </div>
-
-          {/* Right column */}
-          <div className={styles.educationOffer__rightColumn}>
-            {offerData.slice(4).map(({ icon, title, description }, index) => (
-              <div className={styles.educationOffer__panel} key={index + 4}>
-                <div className={styles.educationOffer__titleBlock}>
-                  <Svg id={icon} className={styles.educationOffer__icon} />
-                  <h3 className={styles.educationOffer__title}>{title}</h3>
-                </div>
-                <p className={styles.educationOffer__description}>
-                  {description}
-                </p>
+      <div className={styles.educationOffer__container}>
+        {/* Left column: first 4 items */}
+        <div className={styles.educationOffer__leftColumn}>
+          {offerData.slice(0, 4).map(({ icon, title, description }, index) => (
+            <div className={styles.educationOffer__panel} key={index}>
+              <div className={styles.educationOffer__titleBlock}>
+                <Svg id={icon} className={styles.educationOffer__icon} />
+                <h3 className={styles.educationOffer__title}>{title}</h3>
               </div>
-            ))}
-          </div>
+              <p className={styles.educationOffer__description}>
+                {description}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* <h2 className="titleSecondaryH2">Application process and       
+        {/* Right column */}
+        <div className={styles.educationOffer__rightColumn}>
+          {offerData.slice(4).map(({ icon, title, description }, index) => (
+            <div className={styles.educationOffer__panel} key={index + 4}>
+              <div className={styles.educationOffer__titleBlock}>
+                <Svg id={icon} className={styles.educationOffer__icon} />
+                <h3 className={styles.educationOffer__title}>{title}</h3>
+              </div>
+              <p className={styles.educationOffer__description}>
+                {description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* <h2 className="titleSecondaryH2">Application process and       
            <br />   
           <span className="titlePrimaryH2">requirements             
           </span>
         </h2>  */}
-      </div>
     </section>
   );
 };

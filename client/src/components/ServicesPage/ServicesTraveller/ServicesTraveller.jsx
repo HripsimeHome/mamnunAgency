@@ -1,5 +1,6 @@
 import styles from "./ServicesTraveller.module.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 import { contactsPagePath } from "../../../router/path";
@@ -105,8 +106,11 @@ const cards = [
 ];
 
 const ServicesTraveller = () => {
+  const navigate = useNavigate();
   return (
-    <section className={`${styles.servicesTraveller} wrapperWhite`}>
+    <section
+      className={`${styles.servicesTraveller} wrapperWhite wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleSecondaryH2">
           Every Traveler&nbsp;
@@ -150,9 +154,12 @@ const ServicesTraveller = () => {
                       {backDescription}
                     </p>
 
-                    <Link to={contactsPagePath} className="btnPrimaryBlack">
+                    <MainBtn
+                      onClick={() => navigate(contactsPagePath)}
+                      className={styles.authWrapper__btn}
+                    >
                       Learn more
-                    </Link>
+                    </MainBtn>
                   </div>
                 </div>
                 {/* Back */}

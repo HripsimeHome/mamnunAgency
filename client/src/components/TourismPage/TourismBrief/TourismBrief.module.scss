@@ -1,17 +1,15 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.tourismBrief {   
-  
+.tourismBrief {
   &__content {
     display: flex;
     width: 100%;
     gap: 50px;
-    padding: 100px 0;
 
-    @include mdScreenMedia {    
+    @include mdScreenMedia {
       flex-direction: column;
-     }
+    }
   }
 
   &__text {
@@ -28,5 +26,4 @@
     width: 100%;
     height: auto;
   }
-   
 }

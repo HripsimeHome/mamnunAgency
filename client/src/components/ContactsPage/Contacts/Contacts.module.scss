@@ -2,19 +2,17 @@
 @import "../../../styles/vars";
 
 .contacts {
-  padding: 100px 0;
-
   &__container {
     @include flexCol(space-between, start);
     padding-top: 50px;
     gap: 28px;
 
-     @include mdScreenMedia {
-      flex-direction: column;       
+    @include mdScreenMedia {
+      flex-direction: column;
     }
   }
 
-  &__info {    
+  &__info {
     display: flex;
     flex-direction: column;
 
@@ -29,24 +27,23 @@
     gap: 10px;
     margin-bottom: 25px;
 
-   @include mdScreenMedia {
+    @include mdScreenMedia {
       flex-direction: column;
-      text-align: center;      
+      text-align: center;
     }
   }
 
   &__icon {
-  // width: 32px;
+    // width: 32px;
     height: 40px;
-    margin-right: 0.75rem; 
+    margin-right: 0.75rem;
   }
 
   &__title {
-    @include setFont(24px, 500, $color-secondary);    
+    @include setFont(24px, 500, $color-secondary);
   }
 
   &__text {
-    @include setFont(18px, 500, $color-secondary); 
+    @include setFont(18px, 500, $color-secondary);
   }
-  
 }

@@ -1,5 +1,3 @@
-//import AboutMain from "../components/AboutPage/AboutMain/AboutMain";
-
 import AboutHeader from "../components/AboutPage/AboutHeader/AboutHeader";
 import AboutSlider from "../components/AboutPage/AboutSlider/AboutSlider";
 import AboutVideo from "../components/AboutPage/AboutVideo/AboutVideo";
@@ -9,14 +7,13 @@ import AboutFooter from "../components/AboutPage/AboutFooter/AboutFooter";
 
 const AboutPage = () => {
   return (
-    <>  
-      <AboutHeader />   
-      <AboutSlider />      
+    <>
+      <AboutHeader />
+      <AboutSlider />
       <AboutVideo />
       <AboutMap />
       <AboutFAQ />
       <AboutFooter />
-      {/* <AboutMain />  */}
     </>
   );
 };

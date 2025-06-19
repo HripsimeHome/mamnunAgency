@@ -1,6 +1,7 @@
 import styles from "./EducationScholarships.module.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Tabs from "../../layout/Tabs/Tabs";
+import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 
 import { contactsPagePath } from "../../../router/path";
 
@@ -88,8 +89,11 @@ const tabContentGroups = [
 ];
 
 const EducationScholarships = () => {
+  const navigate = useNavigate();
   return (
-    <section className={`${styles.educationScholarships} wrapperBlack`}>
+    <section
+      className={`${styles.educationScholarships} wrapperBlack wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleWhiteH2">
           Scholarships and&nbsp;
@@ -112,12 +116,17 @@ const EducationScholarships = () => {
             wish to get ore detailed information, feel free to contact us to
           </p>
 
-          <Link
-            to={contactsPagePath}
-            className={`${styles.educationScholarships__btnTest} btnPrimaryWhite`}
+          <MainBtn
+            onClick={() => navigate(contactsPagePath)}
+            className={`
+         
+              ${styles.authWrapper__btn} 
+              ${styles.educationScholarships__btn}
+              `}
+            withWhite
           >
-            get free consultation
-          </Link>
+            Get free consultation
+          </MainBtn>
         </div>
       </div>
     </section>

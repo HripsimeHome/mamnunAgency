@@ -1,12 +1,15 @@
 import EducationOffer from "./EducationOffer/EducationOffer";
 import EducationRequirements from "./EducationRequirements/EducationRequirements";
 
+//import EducationRequirements from "./EducationRequirements/EducationRequirements"
 function EducationMain() {
   return (
-    <div>
-      <EducationOffer />
-      <EducationRequirements />
-    </div>
+    <section className="wrapperWhite wrapperPadding">
+      <div className="container">
+        <EducationOffer />
+        <EducationRequirements />
+      </div>
+    </section>
   );
 }
 
