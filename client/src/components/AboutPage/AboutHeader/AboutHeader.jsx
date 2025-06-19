@@ -8,18 +8,30 @@ const AboutHeader = () => {
     <section className={`${styles.aboutHeader} wrapperWhite`}>
       <div className="container">
         <div className={styles.aboutHeader__content}>
-          <div className={styles.aboutHeader__text}>
+          <div className={styles.aboutHeader__text1}>
             <h2 className={styles.aboutHeader__title}>
               MAMNUN is not just an education consultancy agency
             </h2>
-            <p className={styles.aboutHeader__firstParagraph}>
+            <p>
               We are also a premier travel agency dedicated to providing unique
               travel packages and exceptional services. Our expertise extends
               beyond education, as we offer VIP passenger ground handling with
               Fast Track assistance at airports, ensuring a seamless travel
               experience for our clients.
             </p>
-            <p className={styles.aboutHeader__secondParagraph}>
+          </div>
+
+          <div className={styles.aboutHeader__imageColumn}>
+            <ImageWebp
+              src={logoBlackImage}
+              srcSet={logoBlackWebpImage}
+              alt="MAMNUN Agency"
+              className={styles.aboutHeader__logoAnim}
+            />
+          </div>
+
+          <div className={styles.aboutHeader__text2}>
+            <p>
               Whether you are seeking educational opportunities or planning your
               next adventure, MAMNUN is here to cater to all your travel needs,
               including ground transportation across the globe. Experience the
@@ -27,13 +39,6 @@ const AboutHeader = () => {
               satisfaction is our top priority!
             </p>
           </div>
-
-          <ImageWebp
-            src={logoBlackImage}
-            srcSet={logoBlackWebpImage}
-            alt="MAMNUN Agency"
-            className={styles.aboutHeader__logoAnim}
-          />
         </div>
         {/* content */}
 

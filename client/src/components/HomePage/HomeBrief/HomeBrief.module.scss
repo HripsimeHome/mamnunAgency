@@ -2,41 +2,39 @@
 @import "../../../styles/vars";
 
 .homeBrief {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 40px;
   width: 100%;
-  gap: 50px;
 
-  @include mdScreenMedia {    
-   flex-direction: column;    
+  @include mdScreenMedia {
+    grid-template-columns: 1fr;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
   }
 
   &__text {
-    margin-bottom: 25px;
-  }
-
-  .briefText {
-    width: 100%;
     @include setFont(20px, 400, $color-secondary);
     text-align: justify;
     line-height: 30px;
+
+    @include mdScreenMedia {
+      font-size: 30px;
+    }
+    @include smScreenMedia {
+      font-size: 14px;
+    }
   }
 
-  &__mission {
-    max-width: 804px;
-    @extend .briefText;
-  }
-
-  &__values {
-    max-width: 586px;
-    @extend .briefText;
-  }
-
-  &__missionImg {
-    max-width: 100%;
-  }
-
+  &__missionImg,
   &__valuesImg {
-    max-width: 100%;
-    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
   }
 }
