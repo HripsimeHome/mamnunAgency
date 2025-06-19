@@ -1,6 +1,6 @@
+import React from "react";
 import styles from "./TourismBrief.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
-
 import {
   tourismBriefImage,
   tourismBriefWebpImage,
@@ -11,7 +11,8 @@ const TourismBrief = () => {
     <section className={`${styles.tourismBrief} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.tourismBrief__content}>
-          <div className={styles.tourismBrief__text}>
+          {/* First Paragraph */}
+          <div className={styles.tourismBrief__text1}>
             <p>
               Our travel services to Uzbekistan are designed to offer a seamless
               and unforgettable experience. From customized private tours and
@@ -22,6 +23,20 @@ const TourismBrief = () => {
               your first inquiry to your safe return home, we are with you every
               step of the way.
             </p>
+          </div>
+
+          {/* Image */}
+          <div className={styles.tourismBrief__imageColumn}>
+            <ImageWebp
+              src={tourismBriefImage}
+              srcSet={tourismBriefWebpImage}
+              alt="MAMNUN Agency"
+              className={styles.tourismBrief__briefImg}
+            />
+          </div>
+
+          {/* Second Paragraph */}
+          <div className={styles.tourismBrief__text2}>
             <p>
               We also believe that the true magic of Uzbekistan lies in its
               people. That’s why our tours offer meaningful integration with
@@ -31,13 +46,6 @@ const TourismBrief = () => {
               moments create real connections and lifelong memories.
             </p>
           </div>
-
-          <ImageWebp
-            src={tourismBriefImage}
-            srcSet={tourismBriefWebpImage}
-            alt="MAMNUN Agency"
-            className={styles.tourismBrief__briefImg}
-          />
         </div>
       </div>
     </section>

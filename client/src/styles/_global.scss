@@ -78,29 +78,35 @@ a {
   line-height: 100px;
 }
 
-.titleWhiteH2 {
-  @include setFont(65px, 600, $color-white);
+.titlePrimaryH2 {
+  color: $color-primary;
 }
 
 .titleSecondaryH2 {
-  @include setFont(65px, 600, $color-secondary);
+  color: $color-secondary;
 }
 
-.titlePrimaryH2 {
-  @include setFont(65px, 600, $color-primary);
+.titleWhiteH2 {
+  color: $color-white;
 }
 
-.titleWhiteH2,
+.titlePrimaryH2,
 .titleSecondaryH2,
-.titlePrimaryH2 {
+.titleWhiteH2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+
   @include mdScreenMedia {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 40px;
   }
 
   @include smScreenMedia {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 20px;
   }
 }
 

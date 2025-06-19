@@ -3,27 +3,38 @@
 
 .tourismBrief {
   &__content {
-    display: flex;
-    width: 100%;
-    gap: 50px;
+    display: grid;
+    //  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 6fr 4fr;
+    gap: 15px;
+    grid-template-areas:
+      "text1 image"
+      "text2 image";
 
     @include mdScreenMedia {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text1"
+        "image"
+        "text2";
     }
   }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 804px;
-    width: 100%;
-    text-align: justify;
+  &__text1 {
+    grid-area: text1;
+  }
+
+  &__text2 {
+    grid-area: text2;
+  }
+
+  &__imageColumn {
+    grid-area: image;
   }
 
   &__briefImg {
-    max-width: 586px;
     width: 100%;
     height: auto;
+    display: block;
   }
 }

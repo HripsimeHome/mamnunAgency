@@ -5,7 +5,7 @@ const AboutFooter = () => {
     <section className={`${styles.aboutFooter} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.aboutFooter__textBlock}>
-          <h2 className={styles.aboutFooter__title}>
+          <h2 className="titleSecondaryH2">
             Feel free to&nbsp;
             <span className="titlePrimaryH2">reach out&nbsp;</span>
             if you have any other questions or need further assistance!
