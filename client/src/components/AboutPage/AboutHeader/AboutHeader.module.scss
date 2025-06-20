@@ -2,21 +2,24 @@
 @import "../../../styles/vars";
 
 .aboutHeader {
+  padding-top: 44px;
+
   &__content {
     display: grid;
-    grid-template-columns: 6fr 4fr;
-    gap: 50px;
+    grid-template-columns: 8fr 5fr;
+    gap: 15px 50px;
     grid-template-areas:
       "text1 animation"
       "text2 animation";
     text-align: justify;
 
-    @include mdScreenMedia {
+    @include xlScreenMedia {
       grid-template-columns: 1fr;
       grid-template-areas:
         "text1"
         "animation"
         "text2";
+      justify-items: center;
     }
   }
 
@@ -41,7 +44,7 @@
 
   &__text1 {
     grid-area: text1;
-    padding-top: 100px;
+    align-self: flex-end;
 
     @include smScreenMedia {
       padding-top: 30px;
@@ -54,6 +57,7 @@
 
   &__text2 {
     grid-area: text2;
+    align-self: flex-start;
   }
 
   &__text1,
@@ -70,11 +74,60 @@
     }
   }
 
-  &__imageColumn {
+  &__logoWrapper {
     grid-area: animation;
+    @include flexCol();
+    position: relative;
+    animation: logoAnim 1s linear;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 600px;
+  }
 
-    @include mdScreenMedia {
-      @include flexCol();
+  &__logoAnim {
+    width: 100%;
+  }
+
+  &__logoAnimPicture {
+    width: 60%;
+    aspect-ratio: 1/1;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__assetCol {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    @include flexCol(space-between);
+    flex-direction: column;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &:nth-child(2) {
+      animation-name: assetsAnim1;
+    }
+    &:nth-child(3) {
+      animation-name: assetsAnim2;
+    }
+    &:nth-child(4) {
+      animation-name: assetsAnim3;
+    }
+    &:nth-child(5) {
+      animation-name: assetsAnim4;
+    }
+  }
+
+  &__assetImgPicture {
+    @include smScreenMedia {
+      max-height: 20%;
+    }
+  }
+  &__assetImg {
+    @include smScreenMedia {
+      max-height: 100%;
     }
   }
 
@@ -117,5 +170,48 @@
     text-align: justify;
     line-height: 25px;
     padding-top: 50px;
+  }
+}
+@keyframes assetsAnim1 {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes assetsAnim2 {
+  from {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(405deg);
+  }
+}
+
+@keyframes assetsAnim3 {
+  from {
+    transform: translateX(-50%) rotate(90deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(450deg);
+  }
+}
+
+@keyframes assetsAnim4 {
+  from {
+    transform: translateX(-50%) rotate(135deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(495deg);
+  }
+}
+@keyframes logoAnim {
+  from {
+    transform: scale(0) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(720deg);
   }
 }
