@@ -1,0 +1,22 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.educationRequirements {
+  &__stepContainer {
+  }
+
+  &__step {
+    max-width: 150px;
+    max-height: 150px; // ??
+    @include setFont(40px, 500, #575757);
+    line-height: 30px;
+    background-color: $color-white;
+    border: 5px solid #575757;
+    border-radius: 100%;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+  }
+}
