@@ -5,6 +5,9 @@ import logoWebpImage from "./images/logos/logo.webp";
 import logoBlackImage from "./images/logos/logoBlack.png";
 import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 
+import relationshipBlackImage from "./images/icons/relationshipBlack.png";
+import relationshipBlackWebpImage from "./images/icons/relationshipBlack.webp";
+
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
@@ -45,7 +48,6 @@ import transparencyIntegrityImage from "./images/home/icons/reasons/transparency
 import transparencyIntegrityWebpImage from "./images/home/icons/reasons/transparencyIntegrity.webp";
 
 // Home Accordion
-
 import educationImage from "./images/home/icons/accordion/education.png";
 import educationWebpImage from "./images/home/icons/accordion/education.webp";
 
@@ -90,7 +92,6 @@ import chimganImage from "./images/tourism/destinations/chimgan.jpg";
 import chimganWebpImage from "./images/tourism/destinations/chimgan.webp";
 
 //Tourism Gallery
-
 import previewImage from "./images/tourism/gallery/preview.jpg";
 import previewWebpImage from "./images/tourism/gallery/preview.webp";
 
@@ -98,12 +99,13 @@ import thumbnailImage from "./images/tourism/gallery/thumbnail.jpg";
 import thumbnailwWebpImage from "./images/tourism/gallery/thumbnail.webp";
 
 //Education
-
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
 import educationHeaderWebpImage from "./images/education/header/educationHeader.webp";
 
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
+
+//Education - Application process andg requirements
 
 // Services
 // Services traveller
@@ -165,16 +167,18 @@ import locationWebpImage from "./images/contacts/icons/location.webp";
 
 export {
   //General
-  noImage,
-  noImageWebp,
-  loaderFrameImage,
-  loaderFrameWebpImage,
   logoImage,
   logoWebpImage,
   logoBlackImage,
   logoBlackWebpImage,
   VIPImage,
   VIPWebpImage,
+  relationshipBlackImage,
+  relationshipBlackWebpImage,
+  noImage,
+  noImageWebp,
+  loaderFrameImage,
+  loaderFrameWebpImage,
 
   // Footer
   humoImage,
