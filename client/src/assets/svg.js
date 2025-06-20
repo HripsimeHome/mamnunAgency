@@ -55,6 +55,10 @@ export const currencyIcon = "currency";
 export const languageIcon = "language";
 export const visitIcon = "visit";
 
+// Tourism galery
+
+export const tourismGallerySliderArrowIcon = "tourismGallerySliderArrow";
+
 // Education - WWe offer
 export const languageCoursesIcon = "languageCourses";
 
