@@ -4,6 +4,8 @@ import ImageWebp from "../../../layout/ImageWebp/ImageWebp";
 import {
   relationshipBlackImage,
   relationshipBlackWebpImage,
+  folderImage,
+  folderWebpImage,
 } from "../../../../assets/images";
 
 const requirementsData = [
@@ -47,18 +49,21 @@ function EducationRequirements() {
   return (
     <section className={styles.educationRequirements}>
       <h2 className="titleSecondaryH2">
-        Application process andg&nbsp;
+        Application process and&nbsp;
         <br />
         <span className="titlePrimaryH2">requirements</span>
       </h2>
 
-      <div className={styles.educationRequirements__stepContainer}>
-        <ImageWebp
-          src={relationshipBlackImage}
-          srcSet={relationshipBlackWebpImage}
-          alt="Application process and requirements"
-          className={styles.educationRequirements__icon}
-        />
+      <div className={styles.educationRequirements__test}>
+        {requirementsData.map(({ step, title, image, webpImage }) => (
+          <div className={styles.educationRequirements__stepContainer}>
+            <div className={styles.educationRequirements__circle}>
+              <span className={styles.educationRequirements__step}>{step}</span>
+            </div>
+
+            <span className={styles.educationRequirements__title}>{title}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

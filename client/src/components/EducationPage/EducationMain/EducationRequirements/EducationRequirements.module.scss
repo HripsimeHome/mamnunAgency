@@ -2,21 +2,46 @@
 @import "../../../../styles/vars";
 
 .educationRequirements {
-  &__stepContainer {
+  &__test {
+    display: flex;
+    gap: 70px;
   }
 
-  &__step {
-    max-width: 150px;
-    max-height: 150px; // ??
-    @include setFont(40px, 500, #575757);
-    line-height: 30px;
+  &__stepContainer {
+    @include flexCol();
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 233px;
+    text-align: center;
+  }
+
+  &__circle {
+    @include flexCol();
+    // max-width: 100px; // ??
+    width: 100px;
+    height: 100px;
     background-color: $color-white;
     border: 5px solid #575757;
     border-radius: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__step {
+    @include setFont(40px, 500, #575757);
+    line-height: 30px;
+  }
+
+  &__title {
+    @include setFont(24px, 500, $color-secondary);
+    line-height: 30px;
   }
 
   &__icon {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    width: 100%;
   }
 }

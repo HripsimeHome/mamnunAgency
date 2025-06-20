@@ -8,6 +8,9 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 import relationshipBlackImage from "./images/icons/relationshipBlack.png";
 import relationshipBlackWebpImage from "./images/icons/relationshipBlack.webp";
 
+import folderImage from "./images/icons/folder.png";
+import folderWebpImage from "./images/icons/folder.webp";
+
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
@@ -175,6 +178,8 @@ export {
   VIPWebpImage,
   relationshipBlackImage,
   relationshipBlackWebpImage,
+  folderImage,
+  folderWebpImage,
   noImage,
   noImageWebp,
   loaderFrameImage,
