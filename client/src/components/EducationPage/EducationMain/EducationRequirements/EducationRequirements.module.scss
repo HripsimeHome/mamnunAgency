@@ -5,29 +5,77 @@
   &__test {
     display: flex;
     gap: 70px;
+    margin-top: 75px;
+
+    @include mdScreenMedia {
+      justify-content: center;
+      gap: 40px;
+    }
   }
 
   &__stepContainer {
     @include flexCol();
-    justify-content: start;
     flex-direction: column;
+    justify-content: start;
     gap: 15px;
     max-width: 233px;
     text-align: center;
+    align-items: center;
   }
 
   &__circle {
-    @include flexCol();
-    // max-width: 100px; // ??
-    width: 100px;
-    height: 100px;
-    background-color: $color-white;
-    border: 5px solid #575757;
-    border-radius: 100%;
+    width: 150px; // fixed container size to prevent layout shift
+    height: 150px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
 
-    &:hover {
-      cursor: pointer;
-    }
+  &__flipInner {
+    width: 100px; // initial smaller circle size
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out, width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+    border: 5px solid #575757;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__circle:hover &__flipInner {
+    width: 150px; // scale up to fill container on hover
+    height: 150px;
+    transform: rotateY(180deg);
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    @include flexCol();
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+  }
+
+  &__front {
+    z-index: 2;
+    border: none; // already on flipInner
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    background-color: $color-white;
+    padding: 5px;
+    border: none; // already on flipInner
   }
 
   &__step {
@@ -35,13 +83,13 @@
     line-height: 30px;
   }
 
+  &__icon {
+    width: 72px;
+    object-fit: contain;
+  }
+
   &__title {
     @include setFont(24px, 500, $color-secondary);
     line-height: 30px;
-  }
-
-  &__icon {
-    max-width: 100px;
-    width: 100%;
   }
 }
