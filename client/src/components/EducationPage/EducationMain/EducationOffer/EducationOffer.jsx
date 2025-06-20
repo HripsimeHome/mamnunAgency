@@ -2,6 +2,8 @@ import styles from "./EducationOffer.module.scss";
 import Svg from "../../../layout/Svg/Svg";
 
 import { starStoryIcon } from "../../../../assets/svg";
+import { useLazy } from "../../../../hooks/useLazy";
+import { useEffect, useState } from "react";
 
 const offerData = [
   {
@@ -69,7 +71,34 @@ const offerData = [
   },
 ];
 
+const Panel = ({ index, icon, title, description, setVisited, active }) => {
+  const { ref, isInView } = useLazy(0.3, undefined, true);
+
+  useEffect(() => {
+    if (isInView) setVisited(index);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
+
+  return (
+    <div
+      className={`${styles.educationOffer__panel} ${
+        active ? styles.educationOffer__panel_active : ""
+      }`}
+      ref={ref}
+    >
+      <div className={styles.educationOffer__titleBlock}>
+        <Svg id={icon} className={styles.educationOffer__icon} />
+        <h3 className={styles.educationOffer__title}>{title}</h3>
+      </div>
+      <p className={styles.educationOffer__description}>{description}</p>
+    </div>
+  );
+};
+
 const EducationOffer = () => {
+  const [activePanelIndex, setActivePanelIndex] = useState(0);
+  console.log({ activePanelIndex });
+
   return (
     <section className={`${styles.educationOffer} wrapperWhite`}>
       <h2 className="titleSecondaryH2">
@@ -78,42 +107,17 @@ const EducationOffer = () => {
       </h2>
 
       <div className={styles.educationOffer__container}>
-        {/* Left column: first 4 items */}
-        <div className={styles.educationOffer__leftColumn}>
-          {offerData.slice(0, 4).map(({ icon, title, description }, index) => (
-            <div className={styles.educationOffer__panel} key={index}>
-              <div className={styles.educationOffer__titleBlock}>
-                <Svg id={icon} className={styles.educationOffer__icon} />
-                <h3 className={styles.educationOffer__title}>{title}</h3>
-              </div>
-              <p className={styles.educationOffer__description}>
-                {description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Right column */}
-        <div className={styles.educationOffer__rightColumn}>
-          {offerData.slice(4).map(({ icon, title, description }, index) => (
-            <div className={styles.educationOffer__panel} key={index + 4}>
-              <div className={styles.educationOffer__titleBlock}>
-                <Svg id={icon} className={styles.educationOffer__icon} />
-                <h3 className={styles.educationOffer__title}>{title}</h3>
-              </div>
-              <p className={styles.educationOffer__description}>
-                {description}
-              </p>
-            </div>
+        <div className={styles.educationOffer__col}>
+          {offerData.map((offer, index) => (
+            <Panel
+              {...offer}
+              index={index}
+              setVisited={setActivePanelIndex}
+              active={activePanelIndex === index}
+            />
           ))}
         </div>
       </div>
-
-      {/* <h2 className="titleSecondaryH2">Application process and       
-           <br />   
-          <span className="titlePrimaryH2">requirements             
-          </span>
-        </h2>  */}
     </section>
   );
 };
