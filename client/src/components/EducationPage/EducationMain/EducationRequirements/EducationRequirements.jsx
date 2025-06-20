@@ -12,36 +12,36 @@ const requirementsData = [
   {
     step: "1",
     title: "Fill the form",
-    // image: ,
-    // webpImage:
+    image: folderImage,
+    webpImage: folderWebpImage,
   },
 
   {
     step: "2",
     title: "Get free consultation ",
-    // image: ,
-    // webpImage:
+    image: relationshipBlackImage,
+    webpImage: relationshipBlackWebpImage,
   },
 
   {
     step: "3",
     title: "Sign an Agreement and make the service fee",
-    // image: ,
-    // webpImage:
+    image: folderImage,
+    webpImage: folderWebpImage,
   },
 
   {
     step: "4",
     title: "Send us the required package of documents",
-    // image: ,
-    // webpImage:
+    image: folderImage,
+    webpImage: folderWebpImage,
   },
 
   {
     step: "5",
     title: "We will take care of the further process and keep you updated",
-    // image: ,
-    // webpImage:
+    image: folderImage,
+    webpImage: folderWebpImage,
   },
 ];
 
@@ -55,16 +55,45 @@ function EducationRequirements() {
       </h2>
 
       <div className={styles.educationRequirements__test}>
-        {requirementsData.map(({ step, title, image, webpImage }) => (
-          <div className={styles.educationRequirements__stepContainer}>
+        {requirementsData.map(({ step, title, image, webpImage }, index) => (
+          <div
+            key={index}
+            className={styles.educationRequirements__stepContainer}
+          >
             <div className={styles.educationRequirements__circle}>
-              <span className={styles.educationRequirements__step}>{step}</span>
+              <div className={styles.educationRequirements__flipInner}>
+                <div className={styles.educationRequirements__front}>
+                  <span className={styles.educationRequirements__step}>
+                    {step}
+                  </span>
+                </div>
+                <div className={styles.educationRequirements__back}>
+                  <ImageWebp
+                    src={image}
+                    srcSet={webpImage}
+                    alt="Step icon"
+                    className={styles.educationRequirements__icon}
+                  />
+                </div>
+              </div>
             </div>
-
             <span className={styles.educationRequirements__title}>{title}</span>
           </div>
         ))}
       </div>
+
+      <ImageWebp
+        src={folderImage}
+        srcSet={folderWebpImage}
+        alt="Step icon"
+        className={styles.educationRequirements__iconTest}
+      />
+      <ImageWebp
+        src={relationshipBlackImage}
+        srcSet={relationshipBlackWebpImage}
+        alt="Step icon"
+        className={styles.educationRequirements__iconTest}
+      />
     </section>
   );
 }
