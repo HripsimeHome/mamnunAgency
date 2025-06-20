@@ -92,4 +92,9 @@
     @include setFont(24px, 500, $color-secondary);
     line-height: 30px;
   }
+  &__iconTest {
+    @include setFont(24px, 500, $color-secondary);
+    width: 100px;
+    height: 100px;
+  }
 }

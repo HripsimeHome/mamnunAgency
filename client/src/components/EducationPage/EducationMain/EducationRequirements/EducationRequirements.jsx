@@ -55,28 +55,45 @@ function EducationRequirements() {
       </h2>
 
       <div className={styles.educationRequirements__test}>
-  {requirementsData.map(({ step, title, image, webpImage }, index) => (
-    <div key={index} className={styles.educationRequirements__stepContainer}>
-      <div className={styles.educationRequirements__circle}>
-        <div className={styles.educationRequirements__flipInner}>
-          <div className={styles.educationRequirements__front}>
-            <span className={styles.educationRequirements__step}>{step}</span>
+        {requirementsData.map(({ step, title, image, webpImage }, index) => (
+          <div
+            key={index}
+            className={styles.educationRequirements__stepContainer}
+          >
+            <div className={styles.educationRequirements__circle}>
+              <div className={styles.educationRequirements__flipInner}>
+                <div className={styles.educationRequirements__front}>
+                  <span className={styles.educationRequirements__step}>
+                    {step}
+                  </span>
+                </div>
+                <div className={styles.educationRequirements__back}>
+                  <ImageWebp
+                    src={image}
+                    srcSet={webpImage}
+                    alt="Step icon"
+                    className={styles.educationRequirements__icon}
+                  />
+                </div>
+              </div>
+            </div>
+            <span className={styles.educationRequirements__title}>{title}</span>
           </div>
-          <div className={styles.educationRequirements__back}>
-            <ImageWebp
-              src={image}
-              srcSet={webpImage}
-              alt="Step icon"
-              className={styles.educationRequirements__icon}
-            />
-          </div>
-        </div>
+        ))}
       </div>
-      <span className={styles.educationRequirements__title}>{title}</span>
-    </div>
-  ))}
-</div>
 
+      <ImageWebp
+        src={folderImage}
+        srcSet={folderWebpImage}
+        alt="Step icon"
+        className={styles.educationRequirements__iconTest}
+      />
+      <ImageWebp
+        src={relationshipBlackImage}
+        srcSet={relationshipBlackWebpImage}
+        alt="Step icon"
+        className={styles.educationRequirements__iconTest}
+      />
     </section>
   );
 }
