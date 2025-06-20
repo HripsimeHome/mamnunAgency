@@ -43,6 +43,14 @@
         color: $color-lightGrey;
       }
     }
+
+    @include mdScreenMedia {
+      padding-top: 50px;
+    }
+
+    @include smScreenMedia {
+      padding-top: 25px;
+    }
   }
 
   &__titleBlock {
