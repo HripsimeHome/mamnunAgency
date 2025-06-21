@@ -47,7 +47,7 @@ const HomeNews = () => {
     <TransitionProvider
       inProp={!!(data && data.length)}
       style={TransitionStyleTypes.height}
-      height={700}
+      height={1400}
       className={`${styles.homeNews} wrapperWhite wrapperPadding`}
     >
       <div className="container">
