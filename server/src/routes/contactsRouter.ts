@@ -1,6 +1,10 @@
 import express from "express";
-import { sendContactMail } from "../controllers/contactController.js";
+import {
+  bookJourney,
+  sendContactMail,
+} from "../controllers/contactController.js";
 
 export const contactRouter = express.Router();
 
 contactRouter.post("/", sendContactMail);
+contactRouter.post("/book", bookJourney);
