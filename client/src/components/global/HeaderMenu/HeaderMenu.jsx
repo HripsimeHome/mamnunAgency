@@ -1,6 +1,6 @@
 import styles from "./HeaderMenu.module.scss";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
@@ -14,13 +14,15 @@ import {
 } from "../../../router/path";
 
 import { logoImage, logoWebpImage } from "../../../assets/images";
-import { burgerIcon, crossIcon } from "../../../assets/svg";
+import {
+  burgerIcon,
+  crossIcon,
+  arrowThickCloseIcon,
+} from "../../../assets/svg";
 
-// Your full menu in order, with 'group' for service submenu items
 const allMenuItems = [
   { text: "Home", link: homePagePath, group: null },
   { text: "About us", link: aboutPagePath, group: null },
-  // services grouped items
   { text: "Travel to Uzbekistan", link: tourismPagePath, group: "services" },
   {
     text: "Study Abroad Consulting",
@@ -32,20 +34,26 @@ const allMenuItems = [
 ];
 
 const HeaderMenu = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleServices = () => setIsServicesOpen((prev) => !prev);
 
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 576;
 
-  // Separate items for desktop menu rendering with order preserved:
-  // Main menu items excluding services
+  const servicesItems = allMenuItems.filter(
+    (item) => item.group === "services"
+  );
+
   const mainMenuItems = allMenuItems.filter(
     (item) => item.group !== "services"
   );
 
-  // Services submenu items
-  const servicesItems = allMenuItems.filter(
-    (item) => item.group === "services"
+  // Check if any services submenu is active
+  const isServicesActive = servicesItems.some(
+    (item) => location.pathname === item.link
   );
 
   return (
@@ -88,34 +96,72 @@ const HeaderMenu = () => {
                     {text}
                   </NavLink>
                 ))
-              : mainMenuItems.map(({ text, link }, i) =>
-                  // When rendering "Contact us" on desktop,
-                  // insert the Services dropdown just before it
-                  text === "Contact us" ? (
-                    <div
-                      key="services-dropdown"
-                      className={styles.headerMenu__dropdown}
-                    >
-                      <span className={styles.headerMenu__menuLink}>
-                        Services
-                      </span>
-                      <div className={styles.headerMenu__dropdownContent}>
-                        {servicesItems.map(({ text, link }, j) => (
-                          <NavLink
-                            key={j}
-                            to={link}
-                            className={({ isActive }) =>
-                              isActive
-                                ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                                : styles.headerMenu__menuLink
-                            }
+              : mainMenuItems.map(({ text, link }, i) => {
+                  if (text === "Contact us") {
+                    return (
+                      <div
+                        key="dropdown-wrapper"
+                        className={styles.headerMenu__servicesWrapper}
+                      >
+                        <div
+                          className={`${styles.headerMenu__dropdown} ${
+                            isServicesActive
+                              ? styles.headerMenu__dropdown_active
+                              : ""
+                          }`}
+                          onClick={toggleServices}
+                        >
+                          <span
+                            className={`${styles.headerMenu__menuLink} ${
+                              isServicesActive
+                                ? styles.servicesWrapper_active
+                                : ""
+                            }`}
                           >
-                            {text}
-                          </NavLink>
-                        ))}
+                            Our Services
+                            <Svg
+                              id={arrowThickCloseIcon}
+                              className={`${styles.headerMenu__arrowIcon} ${
+                                isServicesOpen
+                                  ? styles.headerMenu__arrowIcon_open
+                                  : ""
+                              }`}
+                            />
+                          </span>
+                          {isServicesOpen && (
+                            <div className={styles.headerMenu__dropdownContent}>
+                              {servicesItems.map(({ text, link }, j) => (
+                                <NavLink
+                                  key={j}
+                                  to={link}
+                                  className={({ isActive }) =>
+                                    isActive
+                                      ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                                      : styles.headerMenu__menuLink
+                                  }
+                                >
+                                  {text}
+                                </NavLink>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        <NavLink
+                          to={link}
+                          className={({ isActive }) =>
+                            isActive && !isServicesActive
+                              ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                              : styles.headerMenu__menuLink
+                          }
+                        >
+                          {text}
+                        </NavLink>
                       </div>
-                    </div>
-                  ) : (
+                    );
+                  }
+
+                  return (
                     <NavLink
                       key={i}
                       to={link}
@@ -127,22 +173,8 @@ const HeaderMenu = () => {
                     >
                       {text}
                     </NavLink>
-                  )
-                )}
-            {/* Render Contact us link last */}
-            {!isMobile && (
-              <NavLink
-                to={contactsPagePath}
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                    : styles.headerMenu__menuLink
-                }
-                key="contact-desktop"
-              >
-                Contact us
-              </NavLink>
-            )}
+                  );
+                })}
           </nav>
 
           <button className={styles.headerMenu__btnBurger} onClick={toggleMenu}>
