@@ -6,6 +6,10 @@ import {
   relationshipBlackWebpImage,
   folderImage,
   folderWebpImage,
+  relationshipBlackSize2kImage,
+  relationshipBlackSize2kWebpImage,
+  relationshipBlackSize3kImage,
+  relationshipBlackSize3kWebpImage,
 } from "../../../../assets/images";
 
 const requirementsData = [
@@ -53,7 +57,6 @@ function EducationRequirements() {
         <br />
         <span className="titlePrimaryH2">requirements</span>
       </h2>
-
       <div className={styles.educationRequirements__test}>
         {requirementsData.map(({ step, title, image, webpImage }, index) => (
           <div
@@ -81,16 +84,30 @@ function EducationRequirements() {
           </div>
         ))}
       </div>
-
       <ImageWebp
         src={folderImage}
         srcSet={folderWebpImage}
         alt="Step icon"
         className={styles.educationRequirements__iconTest}
       />
+      1
       <ImageWebp
         src={relationshipBlackImage}
         srcSet={relationshipBlackWebpImage}
+        alt="Step icon"
+        className={styles.educationRequirements__iconTest}
+      />
+      2
+      <ImageWebp
+        src={relationshipBlackSize2kImage}
+        srcSet={relationshipBlackSize2kWebpImage}
+        alt="Step icon"
+        className={styles.educationRequirements__iconTest}
+      />
+      3
+      <ImageWebp
+        src={relationshipBlackSize3kImage}
+        srcSet={relationshipBlackSize3kWebpImage}
         alt="Step icon"
         className={styles.educationRequirements__iconTest}
       />

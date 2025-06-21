@@ -8,6 +8,11 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 import relationshipBlackImage from "./images/icons/relationshipBlack.png";
 import relationshipBlackWebpImage from "./images/icons/relationshipBlack.webp";
 
+import relationshipBlackSize2kImage from "./images/icons/relationshipBlackSize2.png";
+import relationshipBlackSize2kWebpImage from "./images/icons/relationshipBlackSize2.webp";
+import relationshipBlackSize3kImage from "./images/icons/relationshipBlackSize3.png";
+import relationshipBlackSize3kWebpImage from "./images/icons/relationshipBlackSize3.webp";
+
 import folderImage from "./images/icons/folder.png";
 import folderWebpImage from "./images/icons/folder.webp";
 
@@ -184,6 +189,10 @@ export {
   noImageWebp,
   loaderFrameImage,
   loaderFrameWebpImage,
+  relationshipBlackSize2kImage,
+  relationshipBlackSize2kWebpImage,
+  relationshipBlackSize3kImage,
+  relationshipBlackSize3kWebpImage,
 
   // Footer
   humoImage,
