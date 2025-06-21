@@ -70,7 +70,7 @@ const AdminSettings = () => {
           type="password"
           placeholder="Confirm new password"
         />
-        <MainBtn disabled={loading} withBg>
+        <MainBtn className={"textWhite"} disabled={loading} withBg>
           {loading ? "Saving" : "Save"}
         </MainBtn>
       </form>

@@ -81,7 +81,9 @@ const AdminAuthWrapper = ({
           })}
         {renderAdditionalField &&
           renderAdditionalField(formData, onChangeSelect)}
-        <MainBtn className={styles.authWrapper__btn}>{btnTxt}</MainBtn>
+        <MainBtn className={`textWhite ${styles.authWrapper__btn}`}>
+          {btnTxt}
+        </MainBtn>
       </form>
       {additionalContent || null}
       <LoaderPopup show={loading} />

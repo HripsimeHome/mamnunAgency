@@ -168,8 +168,10 @@ const AdminNewsAddEditModal = ({
           </div>
         </div>
         <div className={styles.adminNewsAddEditModal__col}>
-          <MainBtn>Cancel</MainBtn>
-          <MainBtn withBg>Save</MainBtn>
+          <MainBtn className={"textWhite"}>Cancel</MainBtn>
+          <MainBtn className={"textWhite"} withBg>
+            Save
+          </MainBtn>
         </div>
       </form>
     </Modal>
