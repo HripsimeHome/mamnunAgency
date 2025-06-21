@@ -5,6 +5,8 @@ export const crossIcon = "cross";
 export const arrowWhiteIcon = "arrowWhite";
 export const arrowPurpleIcon = "arrowPurple";
 
+export const arrowThickCloseIcon = "arrowThickClose";
+
 export const youtubeIcon = "youtube";
 export const linkedInIcon = "linkedIn";
 export const facebookIcon = "facebook";

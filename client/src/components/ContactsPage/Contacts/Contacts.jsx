@@ -55,6 +55,30 @@ const Contacts = () => {
         </h2>
         <div className={styles.contacts__container}>
           <div className="width60">
+            <br />
+            1,5
+            <ImageWebp
+              src={location1_5Image}
+              srcSet={location1_5WebpImage}
+              alt="Step icon"
+              className={styles.educationRequirements__icon}
+            />
+            <br />
+            2
+            <ImageWebp
+              src={location2Image}
+              srcSet={location2WebpImage}
+              alt="Step icon"
+              className={styles.educationRequirements__icon}
+            />
+            <br />
+            3
+            <ImageWebp
+              src={location3Image}
+              srcSet={location3WebpImage}
+              alt="Step icon"
+              className={styles.educationRequirements__icon}
+            />
             form
             <MainBtn
               //onClick={}
@@ -78,30 +102,6 @@ const Contacts = () => {
               </div>
             ))}
             <SocialIcons />
-            <br />
-            1,5
-            <ImageWebp
-              src={location1_5Image}
-              srcSet={location1_5WebpImage}
-              alt="Step icon"
-              className={styles.educationRequirements__iconTest}
-            />
-            <br />
-            2
-            <ImageWebp
-              src={location2Image}
-              srcSet={location2WebpImage}
-              alt="Step icon"
-              className={styles.educationRequirements__iconTest}
-            />
-            <br />
-            3
-            <ImageWebp
-              src={location3Image}
-              srcSet={location3WebpImage}
-              alt="Step icon"
-              className={styles.educationRequirements__iconTest}
-            />
           </div>
         </div>{" "}
         {/* contacts__container */}
