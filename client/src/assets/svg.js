@@ -11,6 +11,9 @@ export const facebookIcon = "facebook";
 export const instagramIcon = "instagram";
 export const telegramIcon = "telegram";
 
+export const selectArrowIcon = "selectArrow";
+export const arrowThickCloseIcon = "arrowThickClose";
+
 // Home
 export const sliderArrowLeftIcon = "sliderArrowLeft";
 export const sliderArrowRightIcon = "sliderArrowRight";
