@@ -20,7 +20,12 @@ const AccordionItem = ({ defaultOpen = false, ...item }) => {
 
   return (
     <>
-      <div className={`${styles.accordion__header} ${isOpen ? styles.accordion__header_active : ""}`} aria-expanded={isOpen}>
+      <div
+        className={`${styles.accordion__header} ${
+          isOpen ? styles.accordion__header_active : ""
+        }`}
+        aria-expanded={isOpen}
+      >
         <button
           className={styles.accordion__test}
           onClick={() => setIsOpen(!isOpen)}
@@ -34,7 +39,7 @@ const AccordionItem = ({ defaultOpen = false, ...item }) => {
                 className={styles.accordion__icon}
               />
             )}
-            <span  className={styles.accordion__titleTest}>{item.title}</span>
+            <span className={styles.accordion__titleTest}>{item.title}</span>
           </div>
           <Svg
             id={isOpen ? arrowPurpleIcon : arrowWhiteIcon}
@@ -43,10 +48,7 @@ const AccordionItem = ({ defaultOpen = false, ...item }) => {
         </button>
 
         {isOpen && (
-          <div className={styles.accordion__content}>
-            
-            {item.content}
-          </div>
+          <div className={styles.accordion__content}>{item.content}</div>
         )}
       </div>
     </>

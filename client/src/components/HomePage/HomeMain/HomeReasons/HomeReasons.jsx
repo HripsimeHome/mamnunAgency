@@ -10,8 +10,8 @@ import {
   improvementWebpImage,
   strongRelationshipsImage,
   strongRelationshipsWebpImage,
-  transparencyIntegrityImage,
-  transparencyIntegrityWebpImage,
+  integrityImage,
+  integrityWebpImage,
 } from "../../../../assets/images";
 
 export const reasonsData = [
@@ -48,8 +48,8 @@ export const reasonsData = [
   },
 
   {
-    image: transparencyIntegrityImage,
-    webpImage: transparencyIntegrityWebpImage,
+    image: integrityImage,
+    webpImage: integrityWebpImage,
     title: "Transparency & Integrity",
     description:
       "No hidden fees, clear communication, and honest guidance every step of the way.",

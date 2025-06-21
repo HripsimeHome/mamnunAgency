@@ -5,11 +5,33 @@
   padding-top: 100px;
   padding-bottom: 50px;
 
+  @include mdScreenMedia {
+    padding: 25px 0;
+  }
+
+  @include smScreenMedia {
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+
   &__introText {
     @include setFont(24px, 400, $color-secondary);
     line-height: 30px;
     padding-top: 25px;
     padding-bottom: 50px;
+
+    @include mdScreenMedia {
+      font-size: 18px;
+      line-height: 20px;
+      padding-top: 15px;
+      padding-bottom: 25px;
+    }
+
+    @include smScreenMedia {
+      font-size: 14px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
   }
 
   &__container {
@@ -19,6 +41,11 @@
 
     @include mdScreenMedia {
       grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+
+    @include smScreenMedia {
+      gap: 5px;
     }
   }
 
@@ -29,6 +56,10 @@
     border: 1px solid $color-secondary;
     border-radius: 20px;
     padding: 25px;
+
+    @include smScreenMedia {
+      padding: 15px;
+    }
 
     @include smScreenMedia {
       flex-direction: column;
@@ -50,6 +81,7 @@
 
     @include smScreenMedia {
       max-width: 290px;
+      margin-right: 0;
     }
   }
 
@@ -58,21 +90,44 @@
     line-height: 32px;
     //padding-bottom: 60px;
 
+    @include mdScreenMedia {
+      @include setFont(24px, 600, $color-secondary);
+      line-height: 20px;
+    }
+
     @include smScreenMedia {
+      font-size: 20px;
       text-align: center;
+      margin: 5px 0;
     }
   }
 
   &__description {
-    @include setFont(18px, 400, $color-secondary);
+    @include setFont(16px, 400, $color-secondary);
     text-align: justify;
     line-height: 20px;
+
+    @include smScreenMedia {
+      font-size: 14px;
+    }
   }
 
   &__welcomeText {
-    @include setFont(24px, 400, $color-primary);
+    @include setFont(24px, 600, $color-primary);
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    line-height: 30px;
+    padding: 50px 0;
+
+    @include mdScreenMedia {
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
+
+    @include smScreenMedia {
+      @include setFont(18px, 600, $color-primary);
+      line-height: 20px;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
   }
 }
