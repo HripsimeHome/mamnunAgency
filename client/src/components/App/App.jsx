@@ -10,6 +10,7 @@ import Tooltip from "../layout/Tooltip/Tooltip";
 import { useDispatch } from "react-redux";
 import HeaderMenu from "../global/HeaderMenu/HeaderMenu";
 import TodayNewsModal from "../global/TodayNewsModal/TodayNewsModal";
+import { scrollTop } from "../../utils/scrollTop";
 
 function App() {
   const location = useLocation();
@@ -18,7 +19,12 @@ function App() {
 
   useEffect(() => {
     dispatch(checkIsLoggedIn());
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    scrollTop();
+  }, [location.pathname]);
 
   const Wrapper = isAdmin ? AdminWrapper : Fragment;
   return (
