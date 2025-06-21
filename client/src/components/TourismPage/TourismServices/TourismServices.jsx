@@ -2,43 +2,36 @@ import styles from "./TourismServices.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import { arrowLineImage, arrowLineWebpImage } from "../../../assets/images";
-
 import {
-  itinerariesIcon,
-  museumIcon,
-  culinaryIcon,
-  eventIcon,
-  immersionIcon,
-  flightIcon,
-  hotelIcon,
-  transferIcon,
-  visaSupportIcon,
-  onTripSupportIcon,
-  VIPIcon,
-  guidesIcon,
-  travelIcon,
-  feedbackIcon,
-} from "../../../assets/svg";
+  arrowLineImage,
+  arrowLineWebpImage,
+  itinerariesImage,
+  itinerariesWebpImage,
+  museumImage,
+  museumsWebpImage,
+} from "../../../assets/images";
 
 const serviceSections = [
   {
     title: "Travel & Culture",
     items: [
       {
-        icon: itinerariesIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Tailor-Made Itineraries",
         description:
           "Your journey, your pace. We craft fully personalized itineraries based on your interests, travel style, and timeframe.",
       },
       {
-        icon: museumIcon,
+        image: museumImage,
+        webpImage: museumsWebpImage,
         title: "Museum & Attraction Tickets",
         description:
           "Skip the lines and let us handle advance bookings for all major historical and cultural sites across Uzbekistan.",
       },
       {
-        icon: culinaryIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Culinary & Cultural Experiences",
         description: (
           <>
@@ -61,7 +54,8 @@ const serviceSections = [
         ),
       },
       {
-        icon: eventIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Event & Festival Access",
         description: (
           <>
@@ -76,7 +70,8 @@ const serviceSections = [
         ),
       },
       {
-        icon: immersionIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Traditional Immersion",
         description:
           "Experience rare cultural events like Tuy (Uzbek weddings), Kelin Salom (bride greeting ceremony), Qovurdoq feasts, and Beshik Töy (cradle ceremonies). These are deeply local traditions usually closed to outsiders — but with us, you are part of the family",
@@ -87,37 +82,43 @@ const serviceSections = [
     title: "Transport & Logistics",
     items: [
       {
-        icon: flightIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Flight Booking Assistance",
         description:
           "We help you find the best international and domestic flight options that suit your budget and schedule.",
       },
       {
-        icon: hotelIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Hotel Reservations",
         description:
           "From boutique guesthouses to luxury hotels, we secure the best accommodations in every city you visit.",
       },
       {
-        icon: transferIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Private Transfers & Transportation",
         description:
           "Travel comfortably between cities and attractions with private vehicles, trains, or domestic flights — all pre-arranged for your convenience.",
       },
       {
-        icon: visaSupportIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Visa Support & Travel Documents",
         description:
           "We provide visa assistance and official invitation letters, and we will guide you through all travel requirements.",
       },
       {
-        icon: onTripSupportIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "24/7 On-Trip Support",
         description:
           "Wherever you are in Uzbekistan, our local team is available around the clock for anything you need.",
       },
       {
-        icon: VIPIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "VIP assistance at the airport ",
         description:
           "Experience seamless travel with our VIP assistance at the airport, designed to make your journey as comfortable and efficient as possible. For more details on our exclusive services, please visit our dedicated VIP assistance page.",
@@ -128,19 +129,22 @@ const serviceSections = [
     title: "Experiences & Adventure",
     items: [
       {
-        icon: guidesIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Professional Tour Guides",
         description:
           "Discover Uzbekistan through the eyes of experienced, multilingual guides who bring history, culture, and legends to life.",
       },
       {
-        icon: travelIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Adventure & Eco Tours",
         description:
           "Hike the Nurata mountains, ride camels across the Kyzylkum Desert, or spend a night in a traditional yurt under the stars.",
       },
       {
-        icon: feedbackIcon,
+        image: itinerariesImage,
+        webpImage: itinerariesWebpImage,
         title: "Exclusive Travel Tips",
         description:
           "We also offer exclusive travel tips, local secrets, and off-the-beaten-path experiences available only on request. Let us show you the hidden gems of Uzbekistan — places that even many locals don’t know!",
@@ -183,19 +187,25 @@ const TourismServices = () => {
             </div>
 
             <div className={styles.tourismServices__panelContainer}>
-              {section.items.map(({ icon, title, description }, idx) => (
-                <div key={idx} className={styles.tourismServices__panel}>
-                  <div>
-                    <Svg id={icon} className={styles.tourismServices__icon} />
+              {section.items.map(
+                ({ image, webpImage, title, description }, idx) => (
+                  <div key={idx} className={styles.tourismServices__panel}>
+                    <div>
+                      <ImageWebp
+                        src={image}
+                        srcset={webpImage}
+                        className={styles.tourismServices__img}
+                      />
+                    </div>
+                    <div className={styles.tourismServices__content}>
+                      <h4 className={styles.tourismServices__title}>{title}</h4>
+                      <p className={styles.tourismServices__description}>
+                        {description}
+                      </p>
+                    </div>
                   </div>
-                  <div className={styles.tourismServices__content}>
-                    <h4 className={styles.tourismServices__title}>{title}</h4>
-                    <p className={styles.tourismServices__description}>
-                      {description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                )
+              )}
             </div>
           </div>
         ))}

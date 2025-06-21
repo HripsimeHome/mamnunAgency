@@ -70,7 +70,8 @@
     line-height: 25px;
   }
 
-  &__icon {
-    @include svg(78px, 75px);
+  &__img {
+    width: 68px;
+    height: 65px;
   }
 }

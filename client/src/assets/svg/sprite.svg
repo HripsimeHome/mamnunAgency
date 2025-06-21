@@ -9,10 +9,6 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 13" id="arrowPurple">
     <path d="M28 12L14.5 2L0.999999 12" stroke="#B164FF" stroke-width="2" stroke-linecap="round"></path>
   </symbol> 
-
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 11" id="selectArrow">
-    <path d="M23 10L12 2L1 10" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-  </symbol>
   
  
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 7" id="arrowThickClose">
@@ -326,28 +322,8 @@
       <image id="image0_2335_44" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"></image>
     </defs>
   </symbol> 
- 
   
-  <symbol  fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150" id="educationRequirementsBGLines" >
-    <line x1="1" y1="74" x2="44" y2="74" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-    <line x1="1396" y1="74" x2="1439" y2="74" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-    <line x1="196" y1="74" x2="344" y2="74" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-    <line x1="1096" y1="74" x2="1244" y2="74" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-    <line x1="496" y1="74" x2="619" y2="74" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-    <line x1="821" y1="74" x2="944" y2="74" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-  </symbol>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708 136" id="educationRequirementsBGLinesMob">
-    <line x1="186" y1="64" x2="262" y2="64" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-    <line x1="445" y1="64" x2="521" y2="64" stroke="black" stroke-width="2" stroke-linecap="round" stroke-dasharray="25 25"></line>
-  </symbol>
-
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 29" id="educationRequirementsArrowLeft">
-    <path d="M12 1L2 14.5L12 28" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-  </symbol>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 29" id="educationRequirementsArrowRight">
-    <path d="M1 28L11 14.5L1 0.999999" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-  </symbol>
-
+   
  //Tourism  - Services we provide    
  
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 78 75" id="itineraries">
@@ -556,14 +532,7 @@
     </defs>
   </symbol>
   
-
-  <!-- Tourism galery  -->
-  <svg width="0" height="0" class="hidden">
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" id="tourismGallerySliderArrow">
-    <circle cx="40" cy="40" r="39" transform="rotate(-180 40 40)" stroke="white" stroke-width="2"></circle>
-    <path d="M44 26L34 39.5L44 53" stroke="white" stroke-width="2" stroke-linecap="round"></path>
-  </symbol>
-</svg>
+  
 //Education  - Stories 
    
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" id="starStory">
