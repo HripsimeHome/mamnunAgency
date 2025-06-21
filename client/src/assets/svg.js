@@ -77,6 +77,13 @@ export const loansIcon = "loans";
 
 // Education - Stories
 export const starStoryIcon = "starStory";
+export const educationRequirementsBGLinesIcon = "educationRequirementsBGLines";
+export const educationRequirementsBGLinesMobIcon =
+  "educationRequirementsBGLinesMob";
+export const educationRequirementsArrowLeftIcon =
+  "educationRequirementsArrowLeft";
+export const educationRequirementsArrowRightIcon =
+  "educationRequirementsArrowRight";
 
 // Admin Panel
 export const logoutIcon = "logout";

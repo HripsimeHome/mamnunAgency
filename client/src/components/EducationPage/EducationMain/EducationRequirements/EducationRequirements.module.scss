@@ -2,14 +2,62 @@
 @import "../../../../styles/vars";
 
 .educationRequirements {
-  &__test {
-    display: flex;
-    gap: 70px;
-    margin-top: 75px;
+  &__sliderContainer {
+    position: relative;
+    width: 100%;
+  }
 
-    @include mdScreenMedia {
-      justify-content: center;
-      gap: 40px;
+  &__bgLines {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    @include flexCol(space-between);
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:not(&_mob) {
+      aspect-ratio: 1440/150;
+
+      @include lgScreenMedia {
+        display: none;
+      }
+    }
+
+    &_mob {
+      aspect-ratio: 708/136;
+      display: none;
+
+      @include lgScreenMedia {
+        display: flex;
+      }
+    }
+  }
+
+  &__navBtn {
+    @include button();
+    width: 10px;
+    height: 27px;
+    position: relative;
+    z-index: 9;
+    transition: $transition;
+
+    &:hover {
+      transform: scale(1.4);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    @include lgScreenMedia {
+      padding-inline: 10px !important;
     }
   }
 
@@ -21,11 +69,12 @@
     max-width: 233px;
     text-align: center;
     align-items: center;
+    position: relative;
   }
 
   &__circle {
-    width: 150px; // fixed container size to prevent layout shift
-    height: 150px;
+    width: 62%; // fixed container size to prevent layout shift
+    aspect-ratio: 1/1;
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -34,8 +83,8 @@
   }
 
   &__flipInner {
-    width: 100px; // initial smaller circle size
-    height: 100px;
+    width: 66%; // initial smaller circle size
+    aspect-ratio: 1/1;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out, width 0.4s ease, height 0.4s ease;
@@ -48,8 +97,8 @@
   }
 
   &__circle:hover &__flipInner {
-    width: 150px; // scale up to fill container on hover
-    height: 150px;
+    width: 100%; // scale up to fill container on hover
+    aspect-ratio: 1/1;
     transform: rotateY(180deg);
   }
 
@@ -75,6 +124,7 @@
     transform: rotateY(180deg);
     background-color: $color-white;
     padding: 5px;
+    @include flexCol();
     border: none; // already on flipInner
   }
 
@@ -83,14 +133,19 @@
     line-height: 30px;
   }
 
+  &__iconPicture {
+    width: 60%;
+  }
+
   &__icon {
-    width: 72px;
+    width: 100%;
     object-fit: contain;
   }
 
   &__title {
     @include setFont(24px, 500, $color-secondary);
     line-height: 30px;
+    width: 100%;
   }
   &__iconTest {
     @include setFont(24px, 500, $color-secondary);
