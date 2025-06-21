@@ -78,9 +78,18 @@ import tourismHeaderWebpImage from "./images/tourism/header/tourismHeader.webp";
 import tourismBriefImage from "./images/tourism/brief/tourismBrief.jpg";
 import tourismBriefWebpImage from "./images/tourism/brief/tourismBrief.webp";
 
+// Tourism - Services
+
 import arrowLineImage from "./images/tourism/services/arrowLine.png";
 import arrowLineWebpImage from "./images/tourism/services/arrowLine.webp";
 
+import itinerariesImage from "./images/tourism/services/icons/itineraries.png";
+import itinerariesWebpImage from "./images/tourism/services/icons/itineraries.webp";
+
+import museumImage from "./images/tourism/services/icons/museum.png";
+import museumsWebpImage from "./images/tourism/services/icons/museum.webp";
+
+// Tourism - Destinations
 import samarkandImage from "./images/tourism/destinations/samarkand.jpg";
 import samarkandWebpImage from "./images/tourism/destinations/samarkand.webp";
 
@@ -240,8 +249,16 @@ export {
   tourismHeaderWebpImage,
   tourismBriefImage,
   tourismBriefWebpImage,
+
+  // Tourism - Services
   arrowLineImage,
   arrowLineWebpImage,
+  itinerariesImage,
+  itinerariesWebpImage,
+  museumImage,
+  museumsWebpImage,
+
+  // Tourism - Destinations
   samarkandImage,
   samarkandWebpImage,
   bukharaImage,
