@@ -12,6 +12,12 @@ import {
   emailWebpImage,
   locationImage,
   locationWebpImage,
+  location1_5Image,
+  location1_5WebpImage,
+  location2Image,
+  location2WebpImage,
+  location3Image,
+  location3WebpImage,
 } from "../../../assets/images";
 
 const contactInfoData = [
@@ -71,8 +77,31 @@ const Contacts = () => {
                 <span className={styles.contacts__text}>{text}</span>
               </div>
             ))}
-
             <SocialIcons />
+            <br />
+            1,5
+            <ImageWebp
+              src={location1_5Image}
+              srcSet={location1_5WebpImage}
+              alt="Step icon"
+              className={styles.educationRequirements__iconTest}
+            />
+            <br />
+            2
+            <ImageWebp
+              src={location2Image}
+              srcSet={location2WebpImage}
+              alt="Step icon"
+              className={styles.educationRequirements__iconTest}
+            />
+            <br />
+            3
+            <ImageWebp
+              src={location3Image}
+              srcSet={location3WebpImage}
+              alt="Step icon"
+              className={styles.educationRequirements__iconTest}
+            />
           </div>
         </div>{" "}
         {/* contacts__container */}

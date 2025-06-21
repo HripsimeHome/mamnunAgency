@@ -173,6 +173,15 @@ import emailWebpImage from "./images/contacts/icons/email.webp";
 import locationImage from "./images/contacts/icons/location.png";
 import locationWebpImage from "./images/contacts/icons/location.webp";
 
+import location1_5Image from "./images/contacts/icons/location1_5.png";
+import location1_5WebpImage from "./images/contacts/icons/location1_5.webp";
+
+import location2Image from "./images/contacts/icons/location2.png";
+import location2WebpImage from "./images/contacts/icons/location2.webp";
+
+import location3Image from "./images/contacts/icons/location3.png";
+import location3WebpImage from "./images/contacts/icons/location3.webp";
+
 export {
   //General
   logoImage,
@@ -304,4 +313,10 @@ export {
   emailWebpImage,
   locationImage,
   locationWebpImage,
+  location1_5Image,
+  location1_5WebpImage,
+  location2Image,
+  location2WebpImage,
+  location3Image,
+  location3WebpImage,
 };
