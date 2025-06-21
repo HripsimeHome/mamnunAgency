@@ -5,6 +5,17 @@ import logoWebpImage from "./images/logos/logo.webp";
 import logoBlackImage from "./images/logos/logoBlack.png";
 import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 
+import relationshipBlackImage from "./images/icons/relationshipBlack.png";
+import relationshipBlackWebpImage from "./images/icons/relationshipBlack.webp";
+
+import relationshipBlackSize2kImage from "./images/icons/relationshipBlackSize2.png";
+import relationshipBlackSize2kWebpImage from "./images/icons/relationshipBlackSize2.webp";
+import relationshipBlackSize3kImage from "./images/icons/relationshipBlackSize3.png";
+import relationshipBlackSize3kWebpImage from "./images/icons/relationshipBlackSize3.webp";
+
+import folderImage from "./images/icons/folder.png";
+import folderWebpImage from "./images/icons/folder.webp";
+
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
@@ -45,7 +56,6 @@ import transparencyIntegrityImage from "./images/home/icons/reasons/transparency
 import transparencyIntegrityWebpImage from "./images/home/icons/reasons/transparencyIntegrity.webp";
 
 // Home Accordion
-
 import educationImage from "./images/home/icons/accordion/education.png";
 import educationWebpImage from "./images/home/icons/accordion/education.webp";
 
@@ -128,12 +138,13 @@ import gallerySlide9Image from "./images/tourism/gallery/gallerySlide9.jpg";
 import gallerySlide9WebpImage from "./images/tourism/gallery/gallerySlide9.webp";
 
 //Education
-
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
 import educationHeaderWebpImage from "./images/education/header/educationHeader.webp";
 
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
+
+//Education - Application process andg requirements
 
 // Services
 // Services traveller
@@ -193,18 +204,35 @@ import emailWebpImage from "./images/contacts/icons/email.webp";
 import locationImage from "./images/contacts/icons/location.png";
 import locationWebpImage from "./images/contacts/icons/location.webp";
 
+import location1_5Image from "./images/contacts/icons/location1_5.png";
+import location1_5WebpImage from "./images/contacts/icons/location1_5.webp";
+
+import location2Image from "./images/contacts/icons/location2.png";
+import location2WebpImage from "./images/contacts/icons/location2.webp";
+
+import location3Image from "./images/contacts/icons/location3.png";
+import location3WebpImage from "./images/contacts/icons/location3.webp";
+
 export {
   //General
-  noImage,
-  noImageWebp,
-  loaderFrameImage,
-  loaderFrameWebpImage,
   logoImage,
   logoWebpImage,
   logoBlackImage,
   logoBlackWebpImage,
   VIPImage,
   VIPWebpImage,
+  relationshipBlackImage,
+  relationshipBlackWebpImage,
+  folderImage,
+  folderWebpImage,
+  noImage,
+  noImageWebp,
+  loaderFrameImage,
+  loaderFrameWebpImage,
+  relationshipBlackSize2kImage,
+  relationshipBlackSize2kWebpImage,
+  relationshipBlackSize3kImage,
+  relationshipBlackSize3kWebpImage,
 
   // Footer
   humoImage,
@@ -346,4 +374,10 @@ export {
   emailWebpImage,
   locationImage,
   locationWebpImage,
+  location1_5Image,
+  location1_5WebpImage,
+  location2Image,
+  location2WebpImage,
+  location3Image,
+  location3WebpImage,
 };
