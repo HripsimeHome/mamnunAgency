@@ -7,3 +7,4 @@ server/node_modules/
 server/dist
 server/public/news/
 server/public/certificates/
+server/config.env
