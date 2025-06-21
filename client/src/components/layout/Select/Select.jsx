@@ -1,88 +1,78 @@
-import { useDropdownSelect } from "../../../hooks/useDropdownSelect";
-import TransitionProvider from "../../../providers/TransitionProvider";
-import styles from "./Select.module.scss";
+import React, { useEffect, useRef, useState } from "react";
 import Svg from "../Svg/Svg";
-import { arrowSelectIcon } from "../../../assets/svg";
+import { selectArrowIcon } from "../../../assets/svg";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
-function Select({
-  name,
-  valuesArr,
-  className,
-  attributes,
-  disableState,
-  selectedValueProp,
-  onChange,
-}) {
-  const {
-    selectedRef,
-    dropDownOpened,
-    disabled,
-    onToggleDropdowns,
-    onChangeSelectValues,
-    sortedContentArr,
-    selectedValue,
-    btnText,
-  } = useDropdownSelect({
-    selectedValueProp,
-    valuesArr,
-    disableState,
-    name,
-    onChange,
-  });
+import styles from "./Select.module.scss";
+
+const Select = ({ placeholder, options,disabled, onChange,isInvalid, selectedValue }) => {
+  const [dropdownOpened, setDropdownOpened] = useState(false);
+  const selectedValueItem = options.find(
+    (item) => item.value === selectedValue
+  );
+  const selectedRef = useRef();
+  const ref = [selectedRef];
+  const dropdownOpenedRef = useRef(dropdownOpened);
+
+  useEffect(() => {
+    dropdownOpenedRef.current = dropdownOpened;
+  }, [dropdownOpened]);
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      const el = e.target;
+      const isRef = ref.every(
+        (value) => value.current && !value.current.contains(el)
+      );
+
+      if (dropdownOpenedRef.current && isRef) {
+        setDropdownOpened(false);
+      }
+    };
+    document.addEventListener("click", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("click", checkIfClickedOutside);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div
-      title={name && typeof name === "string" ? name : ""}
-      ref={selectedRef}
-      className={`${styles["select"]} ${
-        disabled ? styles["select_disabled"] : ""
-      }`}
-    >
-      <div
-        className={
-          `${styles["select__dropDownBtn"]} ` + `${className ? className : ``} `
-        }
-        onClick={onToggleDropdowns}
+    <div className={styles.select} ref={selectedRef}>
+      <button
+      disabled={disabled}
+        className={`${styles.select__dropdownBtn} ${isInvalid ?  styles.select__dropdownBtn_invalid : ""} ${
+          dropdownOpened ? styles.select__dropdownBtn_opened : ""
+        } ${selectedValueItem ? styles.select__dropdownBtn_selected : ""}`}
+        onClick={() => setDropdownOpened(true)}
+        type="button"
       >
-        <div className={styles["select__dropDownBtnContent"]}>
-          <p className={`${styles["select__selectDropdownBtnText"]} ${!selectedValue ? styles["select__selectDropdownBtnText_placeholder"] : ""}`}>{btnText}</p>
-          {!disabled && (
-            <Svg
-              className={`${styles["select__arrowDownIcon"]} ${
-                dropDownOpened ? styles["select__arrowDownIcon_active"] : ""
-              }`}
-              id={arrowSelectIcon}
-            />
-          )}
-        </div>
-      </div>
+        <span>{selectedValueItem?.name || placeholder}</span>
+        <Svg id={selectArrowIcon} />
+      </button>
       <TransitionProvider
-        inProp={dropDownOpened}
-        style="opacity"
-        duration={100}
-        className={styles["select__dropdownContent"]}
+        inProp={dropdownOpened}
+        style={TransitionStyleTypes.opacity}
+        className={styles.select__dropdownContent}
       >
-        <div
-          className={`${styles["select__dropdownContentItems"]} scrollbarDef`}
-        >
-          {sortedContentArr.map((item, index) => {
-            const itemContent = item.item;
-            const itemValue = item?.value !== undefined ? item?.value : item;
-            return (
-              <div
-                {...attributes}
-                key={index}
-                className={styles["select__dropdownItem"]}
-                onClickCapture={() => onChangeSelectValues(itemValue)}
-              >
-                <span>{itemContent}</span>
-              </div>
-            );
-          })}
-        </div>
+        {options.map((item) => (
+          <button
+            type="button"
+            onClick={() => {
+              onChange(item.value);
+              setDropdownOpened(false);
+            }}
+            key={item.value}
+            className={styles.select__dropdownContentBtn}
+          >
+            {item.name}
+          </button>
+        ))}
       </TransitionProvider>
     </div>
   );
-}
+};
 
 export default Select;
