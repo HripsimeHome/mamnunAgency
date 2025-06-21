@@ -61,7 +61,7 @@ const Contacts = () => {
               src={location1_5Image}
               srcSet={location1_5WebpImage}
               alt="Step icon"
-              className={styles.educationRequirements__icon}
+              className={styles.contacts__icon}
             />
             <br />
             2
@@ -69,7 +69,7 @@ const Contacts = () => {
               src={location2Image}
               srcSet={location2WebpImage}
               alt="Step icon"
-              className={styles.educationRequirements__icon}
+              className={styles.contacts__icon}
             />
             <br />
             3
@@ -77,7 +77,7 @@ const Contacts = () => {
               src={location3Image}
               srcSet={location3WebpImage}
               alt="Step icon"
-              className={styles.educationRequirements__icon}
+              className={styles.contacts__icon}
             />
             form
             <MainBtn
