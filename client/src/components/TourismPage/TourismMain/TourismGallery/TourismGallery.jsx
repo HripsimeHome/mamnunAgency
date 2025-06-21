@@ -84,8 +84,6 @@ const TourismGallery = () => {
         Math.min(galleryImages.length, activeIndex + (activeIndex ? 2 : 3))
       );
 
-  console.log({ tumbnails });
-
   return (
     <section className={`container ${styles.tourismGallery}`}>
       <div className={styles.tourismGallery__gridWrapper}>

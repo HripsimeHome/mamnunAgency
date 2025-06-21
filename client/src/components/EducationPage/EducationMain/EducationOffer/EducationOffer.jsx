@@ -97,7 +97,6 @@ const Panel = ({ index, icon, title, description, setVisited, active }) => {
 
 const EducationOffer = () => {
   const [activePanelIndex, setActivePanelIndex] = useState(0);
-  console.log({ activePanelIndex });
 
   return (
     <section className={`${styles.educationOffer} wrapperWhite`}>
