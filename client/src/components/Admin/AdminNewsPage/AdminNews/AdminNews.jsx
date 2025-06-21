@@ -49,7 +49,7 @@ const AdminNews = () => {
       <h3 className={"titleBlackh3"}>News</h3>
       <MainBtn
         onClick={() => setAddModalOpened(true)}
-        className={styles.adminNews__addbtn}
+        className={`textWhite ${styles.adminNews__addbtn}`}
         withBg
       >
         Add

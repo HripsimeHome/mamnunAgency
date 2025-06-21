@@ -1,5 +1,5 @@
 import styles from "./ServicesBook.module.scss";
-import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
+import ServiceBookForm from "./ServiceBookForm/ServiceBookForm.jsx";
 
 const ServicesBook = () => {
   return (
@@ -14,18 +14,7 @@ const ServicesBook = () => {
               and enjoy the comfort and convenience you deserve!
             </p>
 
-            {/* <button 
-              className={`${styles.servicesBook__formBtn} btnPrimary`}
-            >
-            Send
-            </button> */}
-
-            <MainBtn
-              // onClick={}
-              className={styles.authWrapper__btn}
-            >
-              Send
-            </MainBtn>
+            <ServiceBookForm />
           </div>
         </div>
         {/* formContainer */}

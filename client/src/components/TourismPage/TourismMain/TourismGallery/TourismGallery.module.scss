@@ -1,62 +1,91 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
 .tourismGallery {
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-}
-
-.gridWrapper {
-  display: grid;
-  grid-template-columns: 1190px 48px 200px;
-  grid-template-rows: 696px 48px auto;
-  gap: 0;
-
-  /* First row: main image and right column */
-  .bigImage {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-  }
-
-  .rightColumn {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-
-    .rightImage {
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-    }
-  }
-
-  /* Second row: bottom gallery */
-  .bottomRow {
-    grid-column: 1 / span 3;
-    grid-row: 3 / 4;
+  &__gridWrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 48px;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 48px;
+    width: 100%;
 
-    .bottomImage {
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
+    @include lgScreenMedia {
+      gap: 23px;
+    }
+
+    @include smScreenMedia {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+  }
+  /* First row: main image and right column */
+
+  &__tumbnailBtn {
+    @include button();
+  }
+  &__bigImage {
+    grid-column: span 5 / span 5;
+    grid-row: span 3 / span 3;
+    width: 100%;
+    position: relative;
+
+    @include smScreenMedia {
+      grid-column: span 3 / span 3;
+    }
+
+    img {
+      object-fit: cover;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__tumbnailPicture {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__tumbnailImage {
+    height: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__sliderNavBtn {
+    @include button();
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+
+    & svg {
+      width: 80px;
+      height: 80px;
+
+      @include lgScreenMedia {
+        width: 40px;
+        height: 40px;
       }
+      @include smScreenMedia {
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    &_left {
+      left: 20px;
+    }
+
+    &_right {
+      right: 20px;
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 }

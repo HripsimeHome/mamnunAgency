@@ -1,5 +1,6 @@
-import { CONTACT_FORM_TYPES } from "../constants/ContactFormTypes.js";
+import { BOOKING_FORM_TYPES } from "../constants/BookingFormtypes.js";
 import { errorTypes } from "../constants/errors.js";
+import { IBookingForm } from "../definitions/IBookingForm.js";
 import { IContactForm } from "../definitions/IContactForm.js";
 import { AppError } from "../utils/appError.js";
 import { catchAsync } from "../utils/catchAsync.js";
@@ -25,7 +26,7 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
 
     switch (key) {
       case "needAssistanceAs":
-        return Object.keys(CONTACT_FORM_TYPES).includes(value)
+        return Object.values(BOOKING_FORM_TYPES).includes(value)
           ? null
           : errorTypes.invalidvalue;
       case "email":
@@ -63,5 +64,54 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: "success",
     message: "Contact form submitted successfully",
+  });
+});
+
+export const bookJourney = catchAsync(async (req, res, next) => {
+  const reqData: IBookingForm = {
+    fullName: req.body.fullName,
+    contactNumber: req.body.contactNumber,
+    email: req.body.email,
+    service: req.body.service,
+  };
+  // validation
+
+  const errorObj: {
+    [key in keyof IBookingForm]?: typeof errorTypes.invalidvalue;
+  } = {};
+
+  const validateField = (key: keyof IBookingForm, value: any) => {
+    if (!value) return errorTypes.invalidvalue;
+
+    switch (key) {
+      case "service":
+        return Object.values(BOOKING_FORM_TYPES).includes(value)
+          ? null
+          : errorTypes.invalidvalue;
+      case "email":
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+          ? null
+          : errorTypes.invalidvalue;
+
+      default:
+        return null;
+    }
+  };
+
+  for (const key in reqData) {
+    const typedKey = key as keyof IBookingForm;
+
+    const error = validateField(typedKey, reqData[typedKey]);
+    if (error) errorObj[typedKey] = error;
+  }
+
+  if (Object.values(errorObj).length) {
+    return next(new AppError("please fill all fields", 400, errorObj));
+  }
+
+  await new Email().sendBookingForm(reqData);
+  res.status(200).json({
+    status: "success",
+    message: "Booking form submitted successfully",
   });
 });

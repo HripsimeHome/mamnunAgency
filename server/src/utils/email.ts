@@ -3,6 +3,7 @@ import nodemailer, { TransportOptions } from "nodemailer";
 import pug from "pug";
 import { DIRNAME } from "../constants/Dirname.js";
 import { IContactForm } from "../definitions/IContactForm.js";
+import { IBookingForm } from "../definitions/IBookingForm.js";
 
 interface MyTransportOptions extends TransportOptions {
   host: string;
@@ -74,5 +75,11 @@ export class Email {
       params,
       supportMail
     );
+  }
+  async sendBookingForm(params: IBookingForm) {
+    const supportMail = process.env.SUPPORT_MAIL;
+
+    if (!supportMail) throw new Error("support mail not found in env");
+    await this.send("booking", "New Booking Submission", params, supportMail);
   }
 }

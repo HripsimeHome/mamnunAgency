@@ -16,7 +16,7 @@
     padding: 8px;
   }
 
-  &:not(&_disabled) {
+  &:not(&:disabled) {
     &:hover,
     &:focus,
     &:focus-within {
