@@ -10,6 +10,12 @@
     <path d="M28 12L14.5 2L0.999999 12" stroke="#B164FF" stroke-width="2" stroke-linecap="round"></path>
   </symbol> 
   
+ 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 7" id="arrowThickClose">
+    <path d="M1.51367 1.5L6.75673 5.5L11.9998 1.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+  </symbol>
+ 
+  
  // Footer - Social icons  
  
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="youtube">
