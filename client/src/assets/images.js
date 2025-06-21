@@ -147,6 +147,12 @@ import travelEnthusiastsWebpImage from "./images/services/traveller/travelEnthus
 import wellnessTravelersImage from "./images/services/traveller/wellnessTravelers.jpg";
 import wellnessTravelersWebpImage from "./images/services/traveller/wellnessTravelers.webp";
 
+import checkImage from "./images/education/journey/check.png";
+import checkWebpImage from "./images/education/journey/check.webp";
+
+import crossImage from "./images/education/journey/cross.png";
+import crosskWebpImage from "./images/education/journey/cross.webp";
+
 // Services - Services section
 import servicesHeaderImage from "./images/services/header/servicesHeader.jpg";
 import servicesHeaderWebpImage from "./images/services/header/servicesHeader.webp";
@@ -269,6 +275,12 @@ export {
   storyWebpImage,
   educationHeaderImage,
   educationHeaderWebpImage,
+
+  // Education - Journey
+  checkImage,
+  checkWebpImage,
+  crossImage,
+  crosskWebpImage,
 
   // Services
   servicesHeaderImage,
