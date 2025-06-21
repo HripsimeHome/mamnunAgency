@@ -7,16 +7,37 @@
     padding-top: 50px;
     gap: 28px;
 
-    @include mdScreenMedia {
-      flex-direction: column;
+    @include lgScreenMedia {
+      flex-direction: column-reverse;
     }
+  }
+
+  &__form {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  &__formCol {
+    @include flexCol();
+    gap: 28px;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  &__textArea {
+    height: 180px;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+    flex: 4;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       flex-direction: row;
     }
   }
@@ -27,7 +48,7 @@
     gap: 10px;
     margin-bottom: 25px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       flex-direction: column;
       text-align: center;
     }

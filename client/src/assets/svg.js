@@ -5,13 +5,14 @@ export const crossIcon = "cross";
 export const arrowWhiteIcon = "arrowWhite";
 export const arrowPurpleIcon = "arrowPurple";
 
-export const arrowThickCloseIcon = "arrowThickClose";
-
 export const youtubeIcon = "youtube";
 export const linkedInIcon = "linkedIn";
 export const facebookIcon = "facebook";
 export const instagramIcon = "instagram";
 export const telegramIcon = "telegram";
+
+export const selectArrowIcon = "selectArrow";
+export const arrowThickCloseIcon = "arrowThickClose";
 
 // Home
 export const sliderArrowLeftIcon = "sliderArrowLeft";
@@ -57,6 +58,10 @@ export const currencyIcon = "currency";
 export const languageIcon = "language";
 export const visitIcon = "visit";
 
+// Tourism galery
+
+export const tourismGallerySliderArrowIcon = "tourismGallerySliderArrow";
+
 // Education - WWe offer
 export const languageCoursesIcon = "languageCourses";
 
@@ -73,6 +78,13 @@ export const loansIcon = "loans";
 
 // Education - Stories
 export const starStoryIcon = "starStory";
+export const educationRequirementsBGLinesIcon = "educationRequirementsBGLines";
+export const educationRequirementsBGLinesMobIcon =
+  "educationRequirementsBGLinesMob";
+export const educationRequirementsArrowLeftIcon =
+  "educationRequirementsArrowLeft";
+export const educationRequirementsArrowRightIcon =
+  "educationRequirementsArrowRight";
 
 // Admin Panel
 export const logoutIcon = "logout";

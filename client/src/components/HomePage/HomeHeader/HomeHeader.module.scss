@@ -1,14 +1,23 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.homeHeader{
+.homeHeader {
   position: relative;
   @include flexCol();
-  aspect-ratio: 6/2;  
+  flex-direction: column;
+  aspect-ratio: 6/2;
   text-align: center;
+  padding-bottom: 32px;
 
-   @media (max-width: 1200px) {
+  @media (max-width: 1200px) {
     aspect-ratio: 6/2.5;
+  }
+
+  @include mdScreenMedia {
+    aspect-ratio: 360/300;
+  }
+  @include smScreenMedia {
+    aspect-ratio: 360/500;
   }
 
   &__video {
@@ -19,7 +28,53 @@
     height: 100%;
     object-fit: cover;
     transition: $transition;
-   // z-index: 1;
-    opacity: 1;    
-  } 
+    // z-index: 1;
+    opacity: 1;
+  }
+
+  &__mottoTextContainer {
+    position: relative;
+    flex: 1;
+    width: 100%;
+  }
+  &__mottoTextWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    @include flexCol();
+    z-index: 3;
+  }
+  &__mottoText {
+    @include setFont(65px, 700, $color-white);
+    text-align: center;
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      #fff 49.56%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    @include lgScreenMedia {
+      font-size: 32px;
+    }
+    @include smScreenMedia {
+      font-size: 22px;
+    }
+  }
+
+  &__mottoBtnsWrapper {
+    @include flexCol();
+    position: relative;
+    z-index: 3;
+    gap: 12px;
+
+    @include mdScreenMedia {
+      flex-direction: column;
+    }
+  }
 }

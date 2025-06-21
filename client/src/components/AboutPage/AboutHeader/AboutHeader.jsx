@@ -1,7 +1,24 @@
 import styles from "./AboutHeader.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
-import { logoBlackImage, logoBlackWebpImage } from "../../../assets/images";
+import {
+  logoBlackImage,
+  logoBlackWebpImage,
+  aboutLogoAsset1Image,
+  aboutLogoAsset1WebpImage,
+  aboutLogoAsset2Image,
+  aboutLogoAsset2WebpImage,
+  aboutLogoAsset3Image,
+  aboutLogoAsset3WebpImage,
+  aboutLogoAsset4Image,
+  aboutLogoAsset4WebpImage,
+  aboutLogoAsset5Image,
+  aboutLogoAsset5WebpImage,
+  aboutLogoAsset6Image,
+  aboutLogoAsset6WebpImage,
+  aboutLogoAsset7Image,
+  aboutLogoAsset7WebpImage,
+} from "../../../assets/images";
 
 const AboutHeader = () => {
   return (
@@ -21,13 +38,73 @@ const AboutHeader = () => {
             </p>
           </div>
 
-          <div className={styles.aboutHeader__imageColumn}>
+          <div className={styles.aboutHeader__logoWrapper}>
             <ImageWebp
               src={logoBlackImage}
               srcSet={logoBlackWebpImage}
               alt="MAMNUN Agency"
               className={styles.aboutHeader__logoAnim}
+              pictureClass={styles.aboutHeader__logoAnimPicture}
             />
+            <div className={styles.aboutHeader__assetCol}>
+              <ImageWebp
+                src={aboutLogoAsset1Image}
+                srcSet={aboutLogoAsset1WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+              <ImageWebp
+                src={aboutLogoAsset2Image}
+                srcSet={aboutLogoAsset2WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+            </div>
+
+            <div className={styles.aboutHeader__assetCol}>
+              <ImageWebp
+                src={aboutLogoAsset3Image}
+                srcSet={aboutLogoAsset3WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+              <ImageWebp
+                src={aboutLogoAsset4Image}
+                srcSet={aboutLogoAsset4WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+            </div>
+
+            <div className={styles.aboutHeader__assetCol}>
+              <ImageWebp
+                src={aboutLogoAsset5Image}
+                srcSet={aboutLogoAsset5WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+              <ImageWebp
+                src={aboutLogoAsset6Image}
+                srcSet={aboutLogoAsset6WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+            </div>
+            <div className={styles.aboutHeader__assetCol}>
+              <ImageWebp
+                src={aboutLogoAsset7Image}
+                srcSet={aboutLogoAsset7WebpImage}
+                alt="asset"
+                pictureClass={styles.aboutHeader__assetImgPicture}
+                className={styles.aboutHeader__assetImg}
+              />
+            </div>
           </div>
 
           <div className={styles.aboutHeader__text2}>

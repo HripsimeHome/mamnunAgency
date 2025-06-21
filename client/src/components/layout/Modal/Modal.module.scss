@@ -25,6 +25,19 @@
     border-radius: 15px;
   }
 
+  &__closBtn {
+    @include button();
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    & svg {
+      width: 40px;
+      height: 40px;
+      fill: $color-white;
+    }
+  }
+
   &__title {
     @include setFont(24px, 500, $color-white);
     text-align: center;

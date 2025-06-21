@@ -1,0 +1,19 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.serviceBookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+
+  &__col {
+    @include flexCol();
+    gap: 28px;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

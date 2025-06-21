@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-export const useImageLoader = ( image, webpImg, shouldLoad = true) => {
+export const useImageLoader = (webpImg, shouldLoad = true) => {
   const [loading, setLoading] = useState(shouldLoad);
 
-  const preloadImages = ( image, webpImg) => {
+  const preloadImages = (webpImg) => {
     const img = new Image();
     img.src = webpImg;
     img.onload = () => {
@@ -12,11 +12,11 @@ export const useImageLoader = ( image, webpImg, shouldLoad = true) => {
   };
 
   useEffect(() => {
-    if (!webpImg || !image || !shouldLoad) return;
+    if (!webpImg || !shouldLoad) return;
     setLoading(true);
 
-    preloadImages(webpImg, image);
-    
+    preloadImages(webpImg);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

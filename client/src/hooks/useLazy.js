@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useLazy = (threshold?: number, statement: boolean = true) => {
+export const useLazy = (threshold, statement = true, backState = false) => {
   const [isInView, setIsInView] = useState(false);
   const ref = useRef(null);
-  const onLazyLoad = function (entries: IntersectionObserverEntry[]) {
+  const onLazyLoad = function (entries) {
     const [entry] = entries;
     if (entry.isIntersecting && statement) {
       setIsInView(true);
+    } else if (backState) {
+      setIsInView(false);
     }
   };
 

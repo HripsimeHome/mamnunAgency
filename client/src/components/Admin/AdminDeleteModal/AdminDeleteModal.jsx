@@ -40,8 +40,10 @@ const AdminDeleteModal = ({
       <div className={styles.adminDeleteModal__main}>
         <p className={styles.adminDeleteModal__confirmText}>{confirmText}</p>
         <div className={styles.adminDeleteModal__actions}>
-          <MainBtn onClick={onClose}>Cancel</MainBtn>
-          <MainBtn isNegative onClick={handleDelete}>
+          <MainBtn className={"textWhite"} onClick={onClose}>
+            Cancel
+          </MainBtn>
+          <MainBtn className={"textWhite"} isNegative onClick={handleDelete}>
             Delete
           </MainBtn>
         </div>

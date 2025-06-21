@@ -6,6 +6,8 @@ import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
 import Loader from "../Loader/Loader";
+import Svg from "../Svg/Svg";
+import { crossIcon } from "../../../assets/svg";
 const Modal = ({ show, onClose, title, children, className, loading }) => {
   return (
     <>
@@ -16,6 +18,9 @@ const Modal = ({ show, onClose, title, children, className, loading }) => {
           style={TransitionStyleTypes.opacity}
           className={`${styles.modal} ${className || ""}`}
         >
+          <button className={styles.modal__closBtn} onClick={onClose}>
+            <Svg id={crossIcon} />
+          </button>
           {title && <h5 className={styles.modal__title}>{title}</h5>}
           {children}
           <TransitionProvider

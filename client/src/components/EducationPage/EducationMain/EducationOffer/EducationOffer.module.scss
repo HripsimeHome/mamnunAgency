@@ -13,43 +13,48 @@
     }
   }
 
-  &__leftColumn {
-    max-width: 695px;
+  &__col {
     width: 100%;
     display: flex;
     flex-direction: column;
-    // gap: 32px;
-  }
+    padding-top: 50px;
 
-  &__rightColumn {
-    max-width: 586px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    //gap: 32px;
+    @include lgScreenMedia {
+      padding-top: 25px;
+      gap: 50px;
+    }
+
+    @include smScreenMedia {
+      padding-top: 10px;
+      gap: 25px;
+    }
   }
 
   &__panel {
     display: flex;
     flex-direction: column;
     color: $color-secondary;
-    transition: color 0.3s ease;
-    padding-top: 245px;
+    width: 46%;
 
-    &:hover {
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+
+    &:nth-child(odd) {
+      align-self: flex-start;
+    }
+
+    &:hover,
+    &_active {
       // Ensure child elements inherit this
       .educationOffer__title,
       .educationOffer__description {
-        color: $color-lightGrey;
+        color: $color-secondary;
       }
     }
 
-    @include mdScreenMedia {
-      padding-top: 50px;
-    }
-
-    @include smScreenMedia {
-      padding-top: 25px;
+    @include lgScreenMedia {
+      width: 100%;
     }
   }
 
@@ -57,8 +62,8 @@
     @include flexCol(center, start);
     gap: 15px;
 
-    @include mdScreenMedia {
-      justify-content: start;
+    @include lgScreenMedia {
+      justify-content: flex-start;
     }
   }
 
@@ -67,12 +72,30 @@
   }
 
   &__title {
-    @include setFont(28px, 600, $color-secondary);
+    @include setFont(28px, 600, $color-lightGrey);
     margin-bottom: 30px;
+    transition: $transition;
+
+    @include lgScreenMedia {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    @include smScreenMedia {
+      font-size: 18px;
+    }
   }
 
   &__description {
-    @include setFont(22px, 400, $color-secondary);
+    @include setFont(22px, 400, $color-lightGrey);
     text-align: justify;
+    transition: $transition;
+
+    @include lgScreenMedia {
+      font-size: 16px;
+    }
+
+    @include smScreenMedia {
+      font-size: 14px;
+    }
   }
 }

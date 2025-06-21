@@ -71,6 +71,24 @@ import missionWebpImage from "./images/home/mission.webp";
 import valuesImage from "./images/home/values.jpg";
 import valuesWebpImage from "./images/home/values.webp";
 
+import aboutMapImage from "./images/about/aboutMap.png";
+import aboutMapWebpImage from "./images/about/aboutMap.webp";
+
+import aboutLogoAsset1Image from "./images/about/logoAssets/aboutLoggoAsset1.png";
+import aboutLogoAsset1WebpImage from "./images/about/logoAssets/aboutLoggoAsset1.webp";
+import aboutLogoAsset2Image from "./images/about/logoAssets/aboutLoggoAsset2.png";
+import aboutLogoAsset2WebpImage from "./images/about/logoAssets/aboutLoggoAsset2.webp";
+import aboutLogoAsset3Image from "./images/about/logoAssets/aboutLoggoAsset3.png";
+import aboutLogoAsset3WebpImage from "./images/about/logoAssets/aboutLoggoAsset3.webp";
+import aboutLogoAsset4Image from "./images/about/logoAssets/aboutLoggoAsset4.png";
+import aboutLogoAsset4WebpImage from "./images/about/logoAssets/aboutLoggoAsset4.webp";
+import aboutLogoAsset5Image from "./images/about/logoAssets/aboutLoggoAsset5.png";
+import aboutLogoAsset5WebpImage from "./images/about/logoAssets/aboutLoggoAsset5.webp";
+import aboutLogoAsset6Image from "./images/about/logoAssets/aboutLoggoAsset6.png";
+import aboutLogoAsset6WebpImage from "./images/about/logoAssets/aboutLoggoAsset6.webp";
+import aboutLogoAsset7Image from "./images/about/logoAssets/aboutLoggoAsset7.png";
+import aboutLogoAsset7WebpImage from "./images/about/logoAssets/aboutLoggoAsset7.webp";
+
 //Tourism
 import tourismHeaderImage from "./images/tourism/header/tourismHeader.jpg";
 import tourismHeaderWebpImage from "./images/tourism/header/tourismHeader.webp";
@@ -100,11 +118,24 @@ import chimganImage from "./images/tourism/destinations/chimgan.jpg";
 import chimganWebpImage from "./images/tourism/destinations/chimgan.webp";
 
 //Tourism Gallery
-import previewImage from "./images/tourism/gallery/preview.jpg";
-import previewWebpImage from "./images/tourism/gallery/preview.webp";
-
-import thumbnailImage from "./images/tourism/gallery/thumbnail.jpg";
-import thumbnailwWebpImage from "./images/tourism/gallery/thumbnail.webp";
+import gallerySlide1Image from "./images/tourism/gallery/gallerySlide1.jpg";
+import gallerySlide1WebpImage from "./images/tourism/gallery/gallerySlide1.webp";
+import gallerySlide2Image from "./images/tourism/gallery/gallerySlide2.jpg";
+import gallerySlide2WebpImage from "./images/tourism/gallery/gallerySlide2.webp";
+import gallerySlide3Image from "./images/tourism/gallery/gallerySlide3.jpg";
+import gallerySlide3WebpImage from "./images/tourism/gallery/gallerySlide3.webp";
+import gallerySlide4Image from "./images/tourism/gallery/gallerySlide4.jpg";
+import gallerySlide4WebpImage from "./images/tourism/gallery/gallerySlide4.webp";
+import gallerySlide5Image from "./images/tourism/gallery/gallerySlide5.jpg";
+import gallerySlide5WebpImage from "./images/tourism/gallery/gallerySlide5.webp";
+import gallerySlide6Image from "./images/tourism/gallery/gallerySlide6.jpg";
+import gallerySlide6WebpImage from "./images/tourism/gallery/gallerySlide6.webp";
+import gallerySlide7Image from "./images/tourism/gallery/gallerySlide7.jpg";
+import gallerySlide7WebpImage from "./images/tourism/gallery/gallerySlide7.webp";
+import gallerySlide8Image from "./images/tourism/gallery/gallerySlide8.jpg";
+import gallerySlide8WebpImage from "./images/tourism/gallery/gallerySlide8.webp";
+import gallerySlide9Image from "./images/tourism/gallery/gallerySlide9.jpg";
+import gallerySlide9WebpImage from "./images/tourism/gallery/gallerySlide9.webp";
 
 //Education
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
@@ -234,6 +265,22 @@ export {
   missionWebpImage,
   valuesImage,
   valuesWebpImage,
+  aboutMapImage,
+  aboutMapWebpImage,
+  aboutLogoAsset1Image,
+  aboutLogoAsset1WebpImage,
+  aboutLogoAsset2Image,
+  aboutLogoAsset2WebpImage,
+  aboutLogoAsset3Image,
+  aboutLogoAsset3WebpImage,
+  aboutLogoAsset4Image,
+  aboutLogoAsset4WebpImage,
+  aboutLogoAsset5Image,
+  aboutLogoAsset5WebpImage,
+  aboutLogoAsset6Image,
+  aboutLogoAsset6WebpImage,
+  aboutLogoAsset7Image,
+  aboutLogoAsset7WebpImage,
 
   //Tourism
   tourismHeaderImage,
@@ -256,10 +303,24 @@ export {
   chimganWebpImage,
 
   //Tourism Gallery
-  previewImage,
-  previewWebpImage,
-  thumbnailImage,
-  thumbnailwWebpImage,
+  gallerySlide1Image,
+  gallerySlide1WebpImage,
+  gallerySlide2Image,
+  gallerySlide2WebpImage,
+  gallerySlide3Image,
+  gallerySlide3WebpImage,
+  gallerySlide4Image,
+  gallerySlide4WebpImage,
+  gallerySlide5Image,
+  gallerySlide5WebpImage,
+  gallerySlide6Image,
+  gallerySlide6WebpImage,
+  gallerySlide7Image,
+  gallerySlide7WebpImage,
+  gallerySlide8Image,
+  gallerySlide8WebpImage,
+  gallerySlide9Image,
+  gallerySlide9WebpImage,
 
   //Education
   storyImage,
