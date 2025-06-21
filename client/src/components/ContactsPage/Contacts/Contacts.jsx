@@ -1,5 +1,4 @@
 import styles from "./Contacts.module.scss";
-import { useNavigate } from "react-router-dom";
 import { phone, email, address } from "../../../constants/contacts";
 import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 import SocialIcons from "../../layout/SocialIcons/SocialIcons";
@@ -12,12 +11,6 @@ import {
   emailWebpImage,
   locationImage,
   locationWebpImage,
-  location1_5Image,
-  location1_5WebpImage,
-  location2Image,
-  location2WebpImage,
-  location3Image,
-  location3WebpImage,
 } from "../../../assets/images";
 
 const contactInfoData = [
@@ -44,8 +37,6 @@ const contactInfoData = [
 ];
 
 const Contacts = () => {
-  const navigate = useNavigate();
-
   return (
     <section className={`${styles.contacts} wrapperWhite wrapperPadding`}>
       <div className="container">
@@ -55,30 +46,6 @@ const Contacts = () => {
         </h2>
         <div className={styles.contacts__container}>
           <div className="width60">
-            <br />
-            1,5
-            <ImageWebp
-              src={location1_5Image}
-              srcSet={location1_5WebpImage}
-              alt="Step icon"
-              className={styles.contacts__icon}
-            />
-            <br />
-            2
-            <ImageWebp
-              src={location2Image}
-              srcSet={location2WebpImage}
-              alt="Step icon"
-              className={styles.contacts__icon}
-            />
-            <br />
-            3
-            <ImageWebp
-              src={location3Image}
-              srcSet={location3WebpImage}
-              alt="Step icon"
-              className={styles.contacts__icon}
-            />
             form
             <MainBtn
               //onClick={}
