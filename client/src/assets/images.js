@@ -71,6 +71,14 @@ import missionWebpImage from "./images/home/mission.webp";
 import valuesImage from "./images/home/values.jpg";
 import valuesWebpImage from "./images/home/values.webp";
 
+// About - Slider
+
+import education2Image from "./images/about/icons_new/education2.png";
+import education2WebpImage from "./images/about/icons_new/education2.webp";
+
+import education3Image from "./images/about/icons_new/education3.png";
+import education3WebpImage from "./images/about/icons_new/education3.webp";
+
 import aboutMapImage from "./images/about/aboutMap.png";
 import aboutMapWebpImage from "./images/about/aboutMap.webp";
 
@@ -290,6 +298,12 @@ export {
   aboutLogoAsset6WebpImage,
   aboutLogoAsset7Image,
   aboutLogoAsset7WebpImage,
+
+  // About - Slider
+  education2Image,
+  education2WebpImage,
+  education3Image,
+  education3WebpImage,
 
   //Tourism
   tourismHeaderImage,
