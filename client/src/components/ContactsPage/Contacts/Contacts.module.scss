@@ -15,15 +15,31 @@
   }
 
   &__container {
-    @include flexCol(space-between, start);
-    gap: 28px;
+    // @include flexCol(space-between, start);
+    // gap: 28px;
 
-    @include lgScreenMedia {
-      flex-direction: column-reverse;
+    // @include lgScreenMedia {
+    //   flex-direction: column-reverse;
+    // }
+
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 15px;
+    grid-template-areas:
+      "form info"
+      "form social";
+
+    @include mdScreenMedia {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "info"
+        "form"
+        "social";
     }
   }
 
   &__form {
+    grid-area: form;
     flex: 6;
     display: flex;
     flex-direction: column;
@@ -44,9 +60,16 @@
   }
 
   &__info {
+    grid-area: info;
     display: flex;
     flex-direction: column;
     flex: 4;
+
+    @include mdScreenMedia {
+      flex-direction: row;
+      //flex: 1;
+      gap: 10px;
+    }
 
     @include smScreenMedia {
       flex-direction: column;
@@ -66,6 +89,7 @@
     margin-bottom: 25px;
 
     @include mdScreenMedia {
+      flex: 1;
       gap: 5px;
     }
 
@@ -116,8 +140,14 @@
   }
 
   &__socialIconsPosition {
-    @include smScreenMedia {
+    grid-area: social;
+    @include mdScreenMedia {
       @include flexCol();
+      margin-top: 15px;
+    }
+
+    @include smScreenMedia {
+      margin-top: 5px;
     }
   }
 }

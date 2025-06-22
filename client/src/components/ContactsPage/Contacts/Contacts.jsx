@@ -178,10 +178,10 @@ const Contacts = () => {
                 <span className={styles.contacts__text}>{text}</span>
               </div>
             ))}
+          </div>
 
-            <div className={styles.contacts__socialIconsPosition}>
-              <SocialIcons />
-            </div>
+          <div className={styles.contacts__socialIconsPosition}>
+            <SocialIcons />
           </div>
         </div>
       </div>
