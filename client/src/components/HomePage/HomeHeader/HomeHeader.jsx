@@ -12,27 +12,27 @@ import {
   servicesPagePath,
 } from "../../../router/path";
 
-const mottos = [
-  {
-    title: "Travel Far",
-    button: "Tourism",
-    path: tourismPagePath,
-  },
-  {
-    title: "Learn Deep",
-    button: "Education",
-    path: educationPagePath,
-  },
-  {
-    title: "Experience True Satisfaction",
-    button: "VIP Services",
-    path: servicesPagePath,
-  },
-];
-
 const HomeHeader = () => {
   const navigate = useNavigate();
   const [activeMottoIndex, setActiveMottoIndex] = useState(0);
+
+  const mottos = [
+    {
+      title: "Travel Far",
+      button: "Tourism",
+      path: tourismPagePath,
+    },
+    {
+      title: "Learn Deep",
+      button: "Education",
+      path: educationPagePath,
+    },
+    {
+      title: "Experience True Satisfaction",
+      button: "VIP Services",
+      path: servicesPagePath,
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

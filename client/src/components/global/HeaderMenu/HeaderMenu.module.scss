@@ -17,6 +17,10 @@
     width: 100%;
     max-width: 93px;
     height: auto;
+
+    @include smScreenMedia {
+      max-width: 48px;
+    }
   }
 
   &__menu {

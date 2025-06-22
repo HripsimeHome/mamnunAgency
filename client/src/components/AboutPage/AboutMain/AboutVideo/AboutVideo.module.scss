@@ -5,33 +5,36 @@
   &__videoContainer {
     @include flexCol();
     flex-direction: column;
-    width: 100%;
-  }
-
-  &__video {
+    width: inherit;
     max-width: 70%;
+    margin: 0 auto;
 
     @include mdScreenMedia {
       max-width: 100%;
     }
   }
 
+  &__video {
+    width: inherit;
+  }
+
   &__text {
     @include setFont(18px, 400, $color-white);
-    line-height: 30px;
     text-align: center;
+    line-height: 30px;
     padding-top: 28px;
-    max-width: 70%;
 
     @include mdScreenMedia {
       max-width: 100%;
       font-size: 14px;
       line-height: 20px;
+      padding-top: 15px;
     }
 
     @include smScreenMedia {
       font-size: 12px;
-      text-align: left;
+      text-align: justify;
+      padding-top: 5px;
     }
   }
 }
