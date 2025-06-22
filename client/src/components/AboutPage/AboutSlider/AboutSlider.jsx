@@ -6,9 +6,17 @@ import TransitionProvider, {
 } from "../../../providers/TransitionProvider";
 import { Navigation, Pagination } from "swiper/modules";
 import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import "swiper/css/pagination";
 // import "./sliderDots.scss";
 import Svg from "../../layout/Svg/Svg";
+
+import {
+  education2Image,
+  education2WebpImage,
+  education3Image,
+  education3WebpImage,
+} from "../../../assets/images";
 
 import {
   educationIcon,
@@ -114,13 +122,25 @@ const slideDarta = [
 ];
 
 const AboutSlider = () => {
-  const nextButtonRef = useRef(null);
-  const prevButtonRef = useRef(null);
-  const paginationContainerRef = useRef(null);
-
   return (
     <section className={`${styles.aboutSlider} wrapperWhite`}>
       <div className="container">
+        <br />
+        <br />
+        2
+        <ImageWebp
+          src={education2Image}
+          srcSet={education2WebpImage}
+          className={styles.aboutSlider__testImg}
+        />
+        <br />
+        <br />
+        3
+        <ImageWebp
+          src={education3Image}
+          srcSet={education3WebpImage}
+          className={styles.aboutSlider__testImg}
+        />
         <div className={styles.aboutSlider__slideContainer}>
           {slideDarta.map(({ icon, description }, index) => (
             <div className={styles.aboutSlider__slide} key={index}>
@@ -129,7 +149,7 @@ const AboutSlider = () => {
             </div>
           ))}
         </div>
-        {/* slideContainer */}
+        {/* slide */}
       </div>
     </section>
   );

@@ -60,4 +60,12 @@
       height: 55px;
     }
   }
+
+  &__testImg {
+    height: 75px;
+
+    @include mdScreenMedia {
+      height: 55px;
+    }
+  }
 }
