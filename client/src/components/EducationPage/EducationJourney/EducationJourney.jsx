@@ -2,13 +2,6 @@
 import styles from "./EducationJourney.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
-// import {
-//   checkImage,
-//   checkWebpImage,
-//   crossImage,
-//   crossWebpImage,
-// } from "../../../../assets/images";
-
 const assistData = [
   "Tailoring programs to meet your unique needs",
   "Expertly handling your documentation and applications",

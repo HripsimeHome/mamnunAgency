@@ -120,7 +120,7 @@ const AboutHeader = () => {
         {/* content */}
 
         <div className={styles.aboutHeader__briefContainer}>
-          <div className={styles.aboutHeader__briefBlock}>
+          <div className={`${styles.aboutHeader__briefBlock} width60`}>
             <h2 className="titleSecondaryH2">
               Our&nbsp;
               <span className="titlePrimaryH2">Vision</span>
@@ -134,7 +134,7 @@ const AboutHeader = () => {
             </p>
           </div>
 
-          <div className={styles.aboutHeader__briefBlock}>
+          <div className={`${styles.aboutHeader__briefBlock} width40`}>
             <h2 className="titleSecondaryH2">
               Our&nbsp;
               <span className="titlePrimaryH2">Mission</span>
