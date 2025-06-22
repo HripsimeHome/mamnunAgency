@@ -12,11 +12,7 @@
     max-width: 70%;
 
     @include mdScreenMedia {
-      // max-width: 706px;
-    }
-
-    @include smScreenMedia {
-      //max-width: 320px;
+      max-width: 100%;
     }
   }
 
@@ -25,7 +21,7 @@
     line-height: 30px;
     text-align: center;
     padding-top: 28px;
-    max-width: 1052px;
+    max-width: 70%;
 
     @include mdScreenMedia {
       font-size: 14px;

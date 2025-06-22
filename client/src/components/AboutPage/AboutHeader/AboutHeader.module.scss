@@ -2,7 +2,15 @@
 @import "../../../styles/vars";
 
 .aboutHeader {
-  padding-top: 44px;
+  // padding-top: 44px;
+
+  @include mdScreenMedia {
+    padding-top: 50px;
+  }
+
+  @include smScreenMedia {
+    padding-top: 25px;
+  }
 
   &__content {
     display: grid;
@@ -46,12 +54,12 @@
     grid-area: text1;
     align-self: flex-end;
 
-    @include smScreenMedia {
-      padding-top: 30px;
+    @include mdScreenMedia {
+      //padding-top: 30px;
     }
 
     @include smScreenMedia {
-      padding-top: 25px;
+      //padding-top: 25px;
     }
   }
 
@@ -143,26 +151,30 @@
 
     @include mdScreenMedia {
       flex-direction: column;
+      gap: 25px;
+      padding-top: 50px;
     }
 
     @include smScreenMedia {
-      padding-top: 50px;
+      padding-top: 25px;
     }
   }
 
   &__briefBlock {
-    @include flexCol();
+    display: flex;
+    align-items: center;
     flex-direction: column;
-
-    min-height: 249px;
     @include setFont(18px, 400, $color-secondary);
     background-color: $color-white;
     border: 3px solid $color-secondary;
     border-radius: 25px;
-
     padding: 25px;
     //box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     //margin: 50px 25px;
+
+    @include smScreenMedia {
+      padding: 15px;
+    }
   }
 
   &__description {
@@ -170,6 +182,15 @@
     text-align: justify;
     line-height: 25px;
     padding-top: 50px;
+
+    @include mdScreenMedia {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+    }
   }
 }
 @keyframes assetsAnim1 {
