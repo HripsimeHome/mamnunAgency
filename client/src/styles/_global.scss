@@ -150,6 +150,9 @@ a {
 
 .width40 {
   width: 40%;
+  @include mdScreenMedia {
+    width: 100%;
+  }
 }
 
 .width25 {
