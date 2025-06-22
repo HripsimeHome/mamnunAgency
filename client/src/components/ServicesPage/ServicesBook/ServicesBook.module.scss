@@ -16,8 +16,19 @@
   }
 
   &__formTitle {
-    @include setFont(28px, 600, $color-secondary);
-    margin-bottom: 15px;
+    @include setFont(26px, 600, $color-secondary);
+    margin-bottom: 25px;
     line-height: 30px;
+
+    @include mdScreenMedia {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+
+    @include mdScreenMedia {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
   }
 }

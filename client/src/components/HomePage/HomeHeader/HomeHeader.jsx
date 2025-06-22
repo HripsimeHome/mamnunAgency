@@ -1,26 +1,37 @@
 import styles from "./HomeHeader.module.scss";
-import MainBtn from "../../layout/MainBtn/MainBtn";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import MainBtn from "../../layout/MainBtn/MainBtn";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
+
+import {
+  tourismPagePath,
+  educationPagePath,
+  servicesPagePath,
+} from "../../../router/path";
 
 const mottos = [
   {
     title: "Travel Far",
     button: "Tourism",
+    path: tourismPagePath,
   },
   {
     title: "Learn Deep",
     button: "Education",
+    path: educationPagePath,
   },
   {
     title: "Experience True Satisfaction",
     button: "VIP Services",
+    path: servicesPagePath,
   },
 ];
 
 const HomeHeader = () => {
+  const navigate = useNavigate();
   const [activeMottoIndex, setActiveMottoIndex] = useState(0);
 
   useEffect(() => {
@@ -60,6 +71,7 @@ const HomeHeader = () => {
             active={index === activeMottoIndex}
             className={"textWhite"}
             key={index}
+            onClick={() => navigate(motto.path)}
           >
             {motto.button}
           </MainBtn>

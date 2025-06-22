@@ -13,7 +13,11 @@
 
   @include mdScreenMedia {
     font-size: 14px;
-    padding: 8px;
+    padding: 10px 15px;
+  }
+
+  @include smScreenMedia {
+    padding: 20px 10px;
   }
 
   &:not(&:disabled) {
