@@ -2,7 +2,15 @@
 @import "../../../../styles/vars";
 
 .tourismPackages {
-  padding-top: 200px;
+  padding-top: 100px;
+
+  @include mdScreenMedia {
+    padding-top: 50px;
+  }
+
+  // @include smScreenMedia {
+  //   padding-top: 25px;
+  // }
 
   &__tabTitleContainer {
     display: flex;
@@ -37,6 +45,16 @@
     @include setFont(18px, 400, $color-white);
     line-height: 30px;
     padding-top: 25px;
+
+    @include mdScreenMedia {
+      font-size: 16px;
+      line-height: 20px;
+      padding-top: 15px;
+    }
+
+    @include mdScreenMedia {
+      padding-top: 5px;
+    }
   }
 
   &__titleBlock {

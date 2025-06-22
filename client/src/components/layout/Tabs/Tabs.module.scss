@@ -9,6 +9,10 @@
     border-bottom: 2px solid $color-white;
     margin-top: 50px;
     padding-bottom: 25px;
+
+    @include mdScreenMedia {
+      margin-top: 25px;
+    }
   }
 
   &__active {
