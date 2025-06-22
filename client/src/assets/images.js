@@ -19,6 +19,9 @@ import folderWebpImage from "./images/icons/folder.webp";
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
+import supportBlackImage from "./images/icons/supportBlack.png";
+import supportBlackWebpImage from "./images/icons/supportBlack.webp";
+
 import noImage from "./images/common/noImage.png";
 import noImageWebp from "./images/common/noImage.webp";
 
@@ -56,11 +59,11 @@ import integrityImage from "./images/home/icons/reasons/integrity.png";
 import integrityWebpImage from "./images/home/icons/reasons/integrity.webp";
 
 // Home Accordion
-import educationImage from "./images/home/icons/accordion/education.png";
-import educationWebpImage from "./images/home/icons/accordion/education.webp";
+import careersImage from "./images/home/icons/accordion/careers.png";
+import careersWebpImage from "./images/home/icons/accordion/careers.webp";
 
-import travelImage from "./images/home/icons/accordion/travel.png";
-import travelebpImage from "./images/home/icons/accordion/travel.webp";
+import travelTourismImage from "./images/home/icons/accordion/travelTourism.png";
+import travelTourismWebpImage from "./images/home/icons/accordion/travelTourism.webp";
 
 import newsImage from "./images/home/news/news.jpg";
 
@@ -73,11 +76,41 @@ import valuesWebpImage from "./images/home/values.webp";
 
 // About - Slider
 
-import education2Image from "./images/about/icons_new/education2.png";
-import education2WebpImage from "./images/about/icons_new/education2.webp";
+import educationImage from "./images/about/icons/education.png";
+import educationWebpImage from "./images/about/icons/education.webp";
 
-import education3Image from "./images/about/icons_new/education3.png";
-import education3WebpImage from "./images/about/icons_new/education3.webp";
+import opportunitiesImage from "./images/about/icons/opportunities.png";
+import opportunitiesnWebpImage from "./images/about/icons/opportunities.webp";
+
+import scholarshipsImage from "./images/about/icons/scholarships.png";
+import scholarshipsWebpImage from "./images/about/icons/scholarships.webp";
+
+import servicesImage from "./images/about/icons/services.png";
+import servicessWebpImage from "./images/about/icons/services.webp";
+
+import travelImage from "./images/about/icons/travel.png";
+import travelWebpImage from "./images/about/icons/travel.webp";
+
+import transportationImage from "./images/about/icons/transportation.png";
+import transportationWebpImage from "./images/about/icons/transportation.webp";
+
+import culturalDifferencesImage from "./images/about/icons/culturalDifferences.png";
+import culturalDifferencesWebpImage from "./images/about/icons/culturalDifferences.webp";
+
+import consultationImage from "./images/about/icons/consultation.png";
+import consultationWebpImage from "./images/about/icons/consultation.webp";
+
+import relationshipsImage from "./images/about/icons/relationships.png";
+import relationshipsWebpImage from "./images/about/icons/relationships.webp";
+
+import feedbackImage from "./images/about/icons/feedback.png";
+import feedbackWebpImage from "./images/about/icons/feedback.webp";
+
+import trustImage from "./images/about/icons/trust.png";
+import trustIWebpImage from "./images/about/icons/trust.webp";
+
+import partnerImage from "./images/about/icons/partner.png";
+import partnerWebpImage from "./images/about/icons/partner.webp";
 
 import aboutMapImage from "./images/about/aboutMap.png";
 import aboutMapWebpImage from "./images/about/aboutMap.webp";
@@ -235,6 +268,8 @@ export {
   logoBlackWebpImage,
   VIPImage,
   VIPWebpImage,
+  supportBlackImage,
+  supportBlackWebpImage,
   relationshipBlackImage,
   relationshipBlackWebpImage,
   folderImage,
@@ -272,10 +307,10 @@ export {
   newsImage,
 
   //  Home Accordion
-  educationImage,
-  educationWebpImage,
-  travelImage,
-  travelebpImage,
+  careersImage,
+  careersWebpImage,
+  travelTourismImage,
+  travelTourismWebpImage,
 
   // About
   missionImage,
@@ -300,10 +335,30 @@ export {
   aboutLogoAsset7WebpImage,
 
   // About - Slider
-  education2Image,
-  education2WebpImage,
-  education3Image,
-  education3WebpImage,
+  educationImage,
+  educationWebpImage,
+  opportunitiesImage,
+  opportunitiesnWebpImage,
+  scholarshipsImage,
+  scholarshipsWebpImage,
+  servicesImage,
+  servicessWebpImage,
+  travelImage,
+  travelWebpImage,
+  transportationImage,
+  transportationWebpImage,
+  culturalDifferencesImage,
+  culturalDifferencesWebpImage,
+  consultationImage,
+  consultationWebpImage,
+  relationshipsImage,
+  relationshipsWebpImage,
+  feedbackImage,
+  feedbackWebpImage,
+  trustImage,
+  trustIWebpImage,
+  partnerImage,
+  partnerWebpImage,
 
   //Tourism
   tourismHeaderImage,
