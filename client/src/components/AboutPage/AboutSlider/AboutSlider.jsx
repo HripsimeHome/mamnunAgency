@@ -1,4 +1,13 @@
 import styles from "./AboutSlider.module.scss";
+import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { Navigation, Pagination } from "swiper/modules";
+import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import "swiper/css/pagination";
+// import "./sliderDots.scss";
 import Svg from "../../layout/Svg/Svg";
 
 import {
@@ -105,6 +114,10 @@ const slideDarta = [
 ];
 
 const AboutSlider = () => {
+  const nextButtonRef = useRef(null);
+  const prevButtonRef = useRef(null);
+  const paginationContainerRef = useRef(null);
+
   return (
     <section className={`${styles.aboutSlider} wrapperWhite`}>
       <div className="container">
@@ -116,7 +129,7 @@ const AboutSlider = () => {
             </div>
           ))}
         </div>
-        {/* slide */}
+        {/* slideContainer */}
       </div>
     </section>
   );
