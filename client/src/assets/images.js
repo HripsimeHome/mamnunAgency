@@ -20,8 +20,11 @@ import eventsWhiteWebpImage from "./images/icons/eventsWhite.webp";
 import folderImage from "./images/icons/folder.png";
 import folderWebpImage from "./images/icons/folder.webp";
 
-import VIPImage from "./images/icons/VIP.png";
-import VIPWebpImage from "./images/icons/VIP.webp";
+import VIPBlackImage from "./images/icons/VIPBlack.png";
+import VIPBlackWebpImage from "./images/icons/VIPBlack.webp";
+
+import VIPWhiteImage from "./images/icons/VIPWhite.png";
+import VIPWhiteWebpImage from "./images/icons/VIPWhite.webp";
 
 import tourImage from "./images/icons/tour.png";
 import tourWebpImage from "./images/icons/tour.webp";
@@ -68,12 +71,18 @@ import strongRelationshipsWebpImage from "./images/home/icons/reasons/strongRela
 import integrityImage from "./images/home/icons/reasons/integrity.png";
 import integrityWebpImage from "./images/home/icons/reasons/integrity.webp";
 
-// Home Accordion
-import careersImage from "./images/home/icons/accordion/careers.png";
-import careersWebpImage from "./images/home/icons/accordion/careers.webp";
+// Home AccordioncareersWhiteImage, careersWhiteWebpImage
+import careersWhiteImage from "./images/home/icons/accordion/careersWhite.png";
+import careersWhiteWebpImage from "./images/home/icons/accordion/careersWhite.webp";
 
-import travelTourismImage from "./images/home/icons/accordion/travelTourism.png";
-import travelTourismWebpImage from "./images/home/icons/accordion/travelTourism.webp";
+import careersBlackImage from "./images/home/icons/accordion/careersBlack.png";
+import careersBlackWebpImage from "./images/home/icons/accordion/careersBlack.webp";
+
+import travelTourismWhiteImage from "./images/home/icons/accordion/travelTourismWhite.png";
+import travelTourismWhitekWebpImage from "./images/home/icons/accordion/travelTourismWhite.webp";
+
+import travelTourismBlackImage from "./images/home/icons/accordion/travelTourismBlack.png";
+import travelTourismBlackWebpImage from "./images/home/icons/accordion/travelTourismBlack.webp";
 
 import newsImage from "./images/home/news/news.jpg";
 
@@ -97,9 +106,6 @@ import scholarshipsWebpImage from "./images/about/icons/scholarships.webp";
 
 import servicesImage from "./images/about/icons/services.png";
 import servicessWebpImage from "./images/about/icons/services.webp";
-
-import travelImage from "./images/about/icons/travel.png";
-import travelWebpImage from "./images/about/icons/travel.webp";
 
 import transportationImage from "./images/about/icons/transportation.png";
 import transportationWebpImage from "./images/about/icons/transportation.webp";
@@ -348,8 +354,10 @@ export {
   logoWebpImage,
   logoBlackImage,
   logoBlackWebpImage,
-  VIPImage,
-  VIPWebpImage,
+  VIPBlackImage,
+  VIPBlackWebpImage,
+  VIPWhiteImage,
+  VIPWhiteWebpImage,
   supportBlackImage,
   supportBlackWebpImage,
   relationshipBlackImage,
@@ -395,10 +403,14 @@ export {
   newsImage,
 
   // Home Accordion
-  careersImage,
-  careersWebpImage,
-  travelTourismImage,
-  travelTourismWebpImage,
+  careersWhiteImage,
+  careersWhiteWebpImage,
+  careersBlackImage,
+  careersBlackWebpImage,
+  travelTourismWhiteImage,
+  travelTourismWhitekWebpImage,
+  travelTourismBlackImage,
+  travelTourismBlackWebpImage,
 
   // About
   missionImage,
@@ -431,8 +443,6 @@ export {
   scholarshipsWebpImage,
   servicesImage,
   servicessWebpImage,
-  travelImage,
-  travelWebpImage,
   transportationImage,
   transportationWebpImage,
   culturalDifferencesImage,

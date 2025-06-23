@@ -20,10 +20,10 @@ import {
   scholarshipsWebpImage,
   servicesImage,
   servicessWebpImage,
-  travelImage,
-  travelWebpImage,
-  VIPImage,
-  VIPWebpImage,
+  tourImage,
+  tourWebpImage,
+  VIPBlackImage,
+  VIPBlackWebpImage,
   transportationImage,
   transportationWebpImage,
   supportBlackImage,
@@ -76,16 +76,16 @@ const slideData = [
   },
 
   {
-    imaage: travelImage,
-    webpImage: travelWebpImage,
+    imaage: tourImage,
+    webpImage: tourWebpImage,
     alt: "",
     description:
       "In addition to our educational services, we offer customized travel packages designed to create unique and memorable experiences for our clients.",
   },
 
   {
-    imaage: VIPImage,
-    webpImage: VIPWebpImage,
+    imaage: VIPBlackImage,
+    webpImage: VIPBlackWebpImage,
     alt: "",
     description:
       "Enjoy our VIP passenger ground handling services, which include Fast Track assistance at airports, allowing you to bypass long lines and enjoy a stress-free travel experience.",

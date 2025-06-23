@@ -24,8 +24,8 @@ import {
   visaSUpportWebpImage,
   onTripSupportImage,
   onTripSupportWebpImage,
-  VIPImage,
-  VIPWebpImage,
+  VIPBlackImage,
+  VIPBlackWebpImage,
   guidesImage,
   guidesWebpImage,
   tourImage,
@@ -140,8 +140,8 @@ const serviceSections = [
           "Wherever you are in Uzbekistan, our local team is available around the clock for anything you need.",
       },
       {
-        image: VIPImage,
-        webpImage: VIPWebpImage,
+        image: VIPBlackImage,
+        webpImage: VIPBlackWebpImage,
         title: "VIP assistance at the airport ",
         description:
           "Experience seamless travel with our VIP assistance at the airport, designed to make your journey as comfortable and efficient as possible. For more details on our exclusive services, please visit our dedicated VIP assistance page.",
