@@ -11,13 +11,34 @@
     padding-bottom: 25px;
 
     @include mdScreenMedia {
+      gap: 25px;
       margin-top: 25px;
+      padding-bottom: 20px;
+    }
+
+    @include smScreenMedia {
+      padding-bottom: 15px;
+      flex-direction: columnl;
+    }
+  }
+
+  &__tabTitle {
+    @include setFont(24px, 600, $color-white);
+
+    @include mdScreenMedia {
+      font-size: 18px;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
   &__active {
     position: relative;
-    @include setFont(24px, 600, $color-white);
+
+    color: $color-white;
     transition: color 0.9s ease, border-color 09.3s ease;
     padding-bottom: 6px;
 
@@ -36,7 +57,7 @@
   }
 
   &__inActive {
-    @include setFont(24px, 600, $color-grey);
+    color: $color-grey;
 
     &:hover {
       color: $color-white;
@@ -56,6 +77,12 @@
     @include mdScreenMedia {
       flex-direction: column;
       gap: 10px;
+      padding: 20px 0;
+    }
+
+    @include smScreenMedia {
+      gap: 5px;
+      padding: 10px 0;
     }
   }
 
@@ -69,6 +96,7 @@
     flex: 1 1 auto;
     max-width: 854px;
     display: flex;
+    align-items: center;
     gap: 15px;
 
     @include mdScreenMedia {
@@ -78,14 +106,25 @@
   }
 
   &__img {
-    // width: 39px;
     height: 40px;
+
+    @include mdScreenMedia {
+      height: 30px;
+    }
   }
 
   &__title {
     @include setFont(24px, 500, $color-white);
-    margin-bottom: 30px;
     line-height: 30px;
+
+    @include mdScreenMedia {
+      font-size: 20px;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__description {
@@ -98,6 +137,12 @@
     @include mdScreenMedia {
       max-width: 100%;
       width: 100%;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include mdScreenMedia {
+      font-size: 14px;
     }
   }
 }

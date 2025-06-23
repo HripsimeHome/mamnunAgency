@@ -12,7 +12,8 @@ const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
         {tabHeaders.map((header, index) => (
           <span
             key={index}
-            className={`            
+            className={` 
+              ${styles.tabs__tabTitle}           
               ${
                 index === activeTabIndex
                   ? styles.tabs__active
