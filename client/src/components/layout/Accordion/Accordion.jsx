@@ -15,8 +15,19 @@ const Accordion = ({ accordionItems = [], className, ...rest }) => {
   );
 };
 
-const AccordionItem = ({ defaultOpen = false, ...item }) => {
+const AccordionItem = ({
+  defaultOpen = false,
+  image,
+  webpImage,
+  activeImage,
+  activeWebpImage,
+  title,
+  content,
+}) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  const displayImage = isOpen ? activeImage || image : image;
+  const displayWebp = isOpen ? activeWebpImage || webpImage : webpImage;
 
   return (
     <>
@@ -27,19 +38,19 @@ const AccordionItem = ({ defaultOpen = false, ...item }) => {
         aria-expanded={isOpen}
       >
         <button
-          className={styles.accordion__test}
+          className={styles.accordion__btn}
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className={styles.accordion__titlePosition}>
-            {item.image && (
+            {displayImage && (
               <ImageWebp
-                src={item.image}
-                srcSet={item.webpImage}
-                alt={item.title}
+                src={displayImage}
+                srcSet={displayWebp}
+                alt={title}
                 className={styles.accordion__icon}
               />
             )}
-            <span className={styles.accordion__titleTest}>{item.title}</span>
+            <span className={styles.accordion__title}>{title}</span>
           </div>
           <Svg
             id={isOpen ? arrowPurpleIcon : arrowWhiteIcon}
@@ -47,9 +58,7 @@ const AccordionItem = ({ defaultOpen = false, ...item }) => {
           />
         </button>
 
-        {isOpen && (
-          <div className={styles.accordion__content}>{item.content}</div>
-        )}
+        {isOpen && <div className={styles.accordion__content}>{content}</div>}
       </div>
     </>
   );
