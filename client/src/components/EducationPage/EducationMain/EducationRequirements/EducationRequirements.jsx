@@ -1,16 +1,23 @@
 import styles from "./EducationRequirements.module.scss";
 import ImageWebp from "../../../layout/ImageWebp/ImageWebp";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import {
-  relationshipBlackImage,
-  relationshipBlackWebpImage,
-  folderImage,
-  folderWebpImage,
-} from "../../../../assets/images";
 import { Navigation } from "swiper/modules";
 import { useEffect, useRef } from "react";
 import Svg from "../../../layout/Svg/Svg";
+
+import {
+  formBlackImage,
+  formBlackkWebpImage,
+  supportBlackImage,
+  supportBlackWebpImage,
+  relationshipBlackImage,
+  relationshipBlackWebpImage,
+  agreementImage,
+  agreementWebpImage,
+  documentsBLackImage,
+  documentsBLackWebpImage,
+} from "../../../../assets/images";
+
 import {
   educationRequirementsArrowLeftIcon,
   educationRequirementsArrowRightIcon,
@@ -22,36 +29,36 @@ const requirementsData = [
   {
     step: "1",
     title: "Fill the form",
-    image: folderImage,
-    webpImage: folderWebpImage,
+    image: formBlackImage,
+    webpImage: formBlackkWebpImage,
   },
 
   {
     step: "2",
     title: "Get free consultation ",
-    image: relationshipBlackImage,
-    webpImage: relationshipBlackWebpImage,
+    image: supportBlackImage,
+    webpImage: supportBlackWebpImage,
   },
 
   {
     step: "3",
     title: "Sign an Agreement and make the service fee",
-    image: folderImage,
-    webpImage: folderWebpImage,
+    image: agreementImage,
+    webpImage: agreementWebpImage,
   },
 
   {
     step: "4",
     title: "Send us the required package of documents",
-    image: folderImage,
-    webpImage: folderWebpImage,
+    image: documentsBLackImage,
+    webpImage: documentsBLackWebpImage,
   },
 
   {
     step: "5",
     title: "We will take care of the further process and keep you updated",
-    image: folderImage,
-    webpImage: folderWebpImage,
+    image: relationshipBlackImage,
+    webpImage: relationshipBlackWebpImage,
   },
 ];
 

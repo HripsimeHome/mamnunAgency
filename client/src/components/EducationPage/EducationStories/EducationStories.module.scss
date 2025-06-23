@@ -4,29 +4,41 @@
 .educationStories {
   &__slideContainer {
     display: flex;
+    gap: 50px;
     margin: 50px 0;
 
+    @include mdScreenMedia {
+      gap: 25px;
+      margin: 25px 0;
+    }
+
     @include smScreenMedia {
-      flex-direction: column;
+      margin: 15px 0;
     }
   }
 
   &__slide {
-    max-width: 778px;
-    //width: 100%;
     @include setFont(18px, 400, $color-secondary);
     line-height: 25px;
     background-color: $color-white;
     border: 1px solid $color-secondary;
     border-radius: 25px;
     box-shadow: 6px 6px 23px 0 rgba(0, 0, 0, 0.25);
-    margin: 50px 25px;
   }
 
   &__slideDescription {
     @include setFont(18px, 400, $color-secondary);
     line-height: 25px;
     padding: 25px;
+
+    @include mdScreenMedia {
+      line-height: 20px;
+      padding: 15px;
+    }
+
+    @include smScreenMedia {
+      font-size: 14px;
+    }
   }
 
   &__slideLine {
@@ -42,6 +54,10 @@
   &__storyContainer {
     @include flexCol(space-between, center);
     padding: 25px;
+
+    @include smScreenMedia {
+      padding: 15px;
+    }
   }
 
   &__storyBLock {
@@ -57,16 +73,40 @@
 
   &__studientName {
     @include setFont(18px, 500, $color-secondary);
+    line-height: 25px;
+
+    @include smScreenMedia {
+      font-size: 14px;
+    }
+
+    @include smScreenMedia {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   &__storyTitle {
     @include setFont(18px, 400, $color-secondary);
+    line-height: 25px;
+
+    @include mdScreenMedia {
+      font-size: 12px;
+    }
+
+    @include smScreenMedia {
+      font-size: 10px;
+      line-height: 15px;
+    }
   }
 
   &__storyImg {
     max-width: 70px;
-    height: auto;
+    width: 100%;
     border-radius: 50px;
+
+    @include smScreenMedia {
+      max-width: 50px;
+    }
   }
 
   &__starBlock {
@@ -75,6 +115,18 @@
 
   &__starIcon {
     @include svg(30px, 30px);
+    width: 30px;
+    height: 30px;
     margin-left: 5px;
+
+    @include mdScreenMedia {
+      width: 30px;
+      height: 30px;
+    }
+
+    @include smScreenMedia {
+      width: 14px;
+      height: 14px;
+    }
   }
 }
