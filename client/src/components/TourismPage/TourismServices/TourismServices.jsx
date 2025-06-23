@@ -1,6 +1,5 @@
 import styles from "./TourismServices.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
-import Svg from "../../layout/Svg/Svg";
 
 import {
   arrowLineImage,
@@ -9,6 +8,30 @@ import {
   itinerariesWebpImage,
   museumImage,
   museumsWebpImage,
+  culinaryImage,
+  culinaryWebpImage,
+  evetsBlackImage,
+  evetsBlackWebpImage,
+  immersionImage,
+  immersionWebpImage,
+  flightImage,
+  flightWebpImage,
+  hotelImage,
+  hotelWebpImage,
+  transferImage,
+  transferWebpImage,
+  visaSUpportImage,
+  visaSUpportWebpImage,
+  onTripSupportImage,
+  onTripSupportWebpImage,
+  VIPImage,
+  VIPWebpImage,
+  guidesImage,
+  guidesWebpImage,
+  tourImage,
+  tourWebpImage,
+  feedbackImage,
+  feedbackWebpImage,
 } from "../../../assets/images";
 
 const serviceSections = [
@@ -30,8 +53,8 @@ const serviceSections = [
           "Skip the lines and let us handle advance bookings for all major historical and cultural sites across Uzbekistan.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: culinaryImage,
+        webpImage: culinaryWebpImage,
         title: "Culinary & Cultural Experiences",
         description: (
           <>
@@ -54,8 +77,8 @@ const serviceSections = [
         ),
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: evetsBlackImage,
+        webpImage: evetsBlackWebpImage,
         title: "Event & Festival Access",
         description: (
           <>
@@ -70,8 +93,8 @@ const serviceSections = [
         ),
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: immersionImage,
+        webpImage: immersionWebpImage,
         title: "Traditional Immersion",
         description:
           "Experience rare cultural events like Tuy (Uzbek weddings), Kelin Salom (bride greeting ceremony), Qovurdoq feasts, and Beshik Töy (cradle ceremonies). These are deeply local traditions usually closed to outsiders — but with us, you are part of the family",
@@ -82,43 +105,43 @@ const serviceSections = [
     title: "Transport & Logistics",
     items: [
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: flightImage,
+        webpImage: flightWebpImage,
         title: "Flight Booking Assistance",
         description:
           "We help you find the best international and domestic flight options that suit your budget and schedule.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: hotelImage,
+        webpImage: hotelWebpImage,
         title: "Hotel Reservations",
         description:
           "From boutique guesthouses to luxury hotels, we secure the best accommodations in every city you visit.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: transferImage,
+        webpImage: transferWebpImage,
         title: "Private Transfers & Transportation",
         description:
           "Travel comfortably between cities and attractions with private vehicles, trains, or domestic flights — all pre-arranged for your convenience.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: visaSUpportImage,
+        webpImage: visaSUpportWebpImage,
         title: "Visa Support & Travel Documents",
         description:
           "We provide visa assistance and official invitation letters, and we will guide you through all travel requirements.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: onTripSupportImage,
+        webpImage: onTripSupportWebpImage,
         title: "24/7 On-Trip Support",
         description:
           "Wherever you are in Uzbekistan, our local team is available around the clock for anything you need.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: VIPImage,
+        webpImage: VIPWebpImage,
         title: "VIP assistance at the airport ",
         description:
           "Experience seamless travel with our VIP assistance at the airport, designed to make your journey as comfortable and efficient as possible. For more details on our exclusive services, please visit our dedicated VIP assistance page.",
@@ -129,22 +152,22 @@ const serviceSections = [
     title: "Experiences & Adventure",
     items: [
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: guidesImage,
+        webpImage: guidesWebpImage,
         title: "Professional Tour Guides",
         description:
           "Discover Uzbekistan through the eyes of experienced, multilingual guides who bring history, culture, and legends to life.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: tourImage,
+        webpImage: tourWebpImage,
         title: "Adventure & Eco Tours",
         description:
           "Hike the Nurata mountains, ride camels across the Kyzylkum Desert, or spend a night in a traditional yurt under the stars.",
       },
       {
-        image: itinerariesImage,
-        webpImage: itinerariesWebpImage,
+        image: feedbackImage,
+        webpImage: feedbackWebpImage,
         title: "Exclusive Travel Tips",
         description:
           "We also offer exclusive travel tips, local secrets, and off-the-beaten-path experiences available only on request. Let us show you the hidden gems of Uzbekistan — places that even many locals don’t know!",
