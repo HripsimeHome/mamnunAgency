@@ -17,8 +17,14 @@ import evetsBlackWebpImage from "./images/icons/evetsBlack.webp";
 import eventsWhiteImage from "./images/icons/eventsWhite.png";
 import eventsWhiteWebpImage from "./images/icons/eventsWhite.webp";
 
-import folderImage from "./images/icons/folder.png";
-import folderWebpImage from "./images/icons/folder.webp";
+import formBlackImage from "./images/education/requirements/icons/formBlack.png";
+import formBlackkWebpImage from "./images/education/requirements/icons/formBlack.webp";
+
+import agreementImage from "./images/education/requirements/icons/agreement.png";
+import agreementWebpImage from "./images/education/requirements/icons/agreement.webp";
+
+import documentsBLackImage from "./images/education/requirements/icons/documentsBLack.png";
+import documentsBLackWebpImage from "./images/education/requirements/icons/documentsBLack.webp";
 
 import VIPBlackImage from "./images/icons/VIPBlack.png";
 import VIPBlackWebpImage from "./images/icons/VIPBlack.webp";
@@ -368,8 +374,12 @@ export {
   evetsBlackWebpImage,
   eventsWhiteImage,
   eventsWhiteWebpImage,
-  folderImage,
-  folderWebpImage,
+  formBlackImage,
+  formBlackkWebpImage,
+  agreementImage,
+  agreementWebpImage,
+  documentsBLackImage,
+  documentsBLackWebpImage,
   feedbackImage,
   feedbackWebpImage,
   tourImage,
