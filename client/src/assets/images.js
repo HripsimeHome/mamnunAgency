@@ -23,6 +23,12 @@ import folderWebpImage from "./images/icons/folder.webp";
 import VIPImage from "./images/icons/VIP.png";
 import VIPWebpImage from "./images/icons/VIP.webp";
 
+import tourImage from "./images/icons/tour.png";
+import tourWebpImage from "./images/icons/tour.webp";
+
+import feedbackImage from "./images/about/icons/feedback.png";
+import feedbackWebpImage from "./images/about/icons/feedback.webp";
+
 import supportBlackImage from "./images/icons/supportBlack.png";
 import supportBlackWebpImage from "./images/icons/supportBlack.webp";
 
@@ -107,9 +113,6 @@ import consultationWebpImage from "./images/about/icons/consultation.webp";
 import relationshipsImage from "./images/about/icons/relationships.png";
 import relationshipsWebpImage from "./images/about/icons/relationships.webp";
 
-import feedbackImage from "./images/about/icons/feedback.png";
-import feedbackWebpImage from "./images/about/icons/feedback.webp";
-
 import trustImage from "./images/about/icons/trust.png";
 import trustIWebpImage from "./images/about/icons/trust.webp";
 
@@ -151,6 +154,30 @@ import itinerariesWebpImage from "./images/tourism/services/icons/itineraries.we
 
 import museumImage from "./images/tourism/services/icons/museum.png";
 import museumsWebpImage from "./images/tourism/services/icons/museum.webp";
+
+import culinaryImage from "./images/tourism/services/icons/culinary.png";
+import culinaryWebpImage from "./images/tourism/services/icons/culinary.webp";
+
+import immersionImage from "./images/tourism/services/icons/immersion.png";
+import immersionWebpImage from "./images/tourism/services/icons/immersion.webp";
+
+import flightImage from "./images/tourism/services/icons/flight.png";
+import flightWebpImage from "./images/tourism/services/icons/flight.webp";
+
+import hotelImage from "./images/tourism/services/icons/hotel.png";
+import hotelWebpImage from "./images/tourism/services/icons/hotel.webp";
+
+import transferImage from "./images/tourism/services/icons/transfer.png";
+import transferWebpImage from "./images/tourism/services/icons/transfer.webp";
+
+import visaSUpportImage from "./images/tourism/services/icons/visaSUpport.png";
+import visaSUpportWebpImage from "./images/tourism/services/icons/visaSUpport.webp";
+
+import onTripSupportImage from "./images/tourism/services/icons/onTripSupport.png";
+import onTripSupportWebpImage from "./images/tourism/services/icons/onTripSupport.webp";
+
+import guidesImage from "./images/tourism/services/icons/guides.png";
+import guidesWebpImage from "./images/tourism/services/icons/guides.webp";
 
 // Tourism - Destinations
 import samarkandImage from "./images/tourism/destinations/samarkand.jpg";
@@ -335,6 +362,10 @@ export {
   eventsWhiteWebpImage,
   folderImage,
   folderWebpImage,
+  feedbackImage,
+  feedbackWebpImage,
+  tourImage,
+  tourWebpImage,
   noImage,
   noImageWebp,
   loaderFrameImage,
@@ -410,8 +441,6 @@ export {
   consultationWebpImage,
   relationshipsImage,
   relationshipsWebpImage,
-  feedbackImage,
-  feedbackWebpImage,
   trustImage,
   trustIWebpImage,
   partnerImage,
@@ -430,6 +459,24 @@ export {
   itinerariesWebpImage,
   museumImage,
   museumsWebpImage,
+
+  // Tourism - Services
+  culinaryImage,
+  culinaryWebpImage,
+  immersionImage,
+  immersionWebpImage,
+  flightImage,
+  flightWebpImage,
+  hotelImage,
+  hotelWebpImage,
+  transferImage,
+  transferWebpImage,
+  visaSUpportImage,
+  visaSUpportWebpImage,
+  onTripSupportImage,
+  onTripSupportWebpImage,
+  guidesImage,
+  guidesWebpImage,
 
   // Tourism - Destinations
   samarkandImage,
