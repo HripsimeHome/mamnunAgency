@@ -196,6 +196,35 @@ import storyWebpImage from "./images/education/stories/story.webp";
 
 //Education - Application process andg requirements
 
+//Education - Scholarships
+
+import meritBasedImage from "./images/education/scholarships/icons/meritBased.png";
+import meritBasedWebpImage from "./images/education/scholarships/icons/meritBased.webp";
+
+import needBasedImage from "./images/education/scholarships/icons/needBased.png";
+import needBasedWebpImage from "./images/education/scholarships/icons/needBased.webp";
+
+import specificScholarshipsImage from "./images/education/scholarships/icons/specificScholarships.png";
+import specificScholarshipsWebpImage from "./images/education/scholarships/icons/specificScholarships.webp";
+
+import diversityScholarshipsImage from "./images/education/scholarships/icons/diversityScholarships.png";
+import diversityScholarshipsWebpImage from "./images/education/scholarships/icons/diversityScholarships.webp";
+
+import internationalScholarshipsImage from "./images/education/scholarships/icons/internationalScholarships.png";
+import internationalScholarshipsWebpImage from "./images/education/scholarships/icons/internationalScholarships.webp";
+
+import governmentGrantsImage from "./images/education/scholarships/icons/governmentGrants.png";
+import governmentGrantsWebpImage from "./images/education/scholarships/icons/governmentGrants.webp";
+
+import grantsImage from "./images/education/scholarships/icons/grants.png";
+import grantsWebpImage from "./images/education/scholarships/icons/grants.webp";
+
+import workStudyImage from "./images/education/scholarships/icons/workStudy.png";
+import workStudyWebpImage from "./images/education/scholarships/icons/workStudy.webp";
+
+import loansImage from "./images/education/scholarships/icons/loans.png";
+import loansWebpImage from "./images/education/scholarships/icons/loans.webp";
+
 // Services
 // Services traveller
 import businessTravelersImage from "./images/services/traveller/businessTravelers.jpg";
@@ -413,6 +442,26 @@ export {
   storyWebpImage,
   educationHeaderImage,
   educationHeaderWebpImage,
+
+  //Education - Scholarships
+  meritBasedImage,
+  meritBasedWebpImage,
+  needBasedImage,
+  needBasedWebpImage,
+  specificScholarshipsImage,
+  specificScholarshipsWebpImage,
+  diversityScholarshipsImage,
+  diversityScholarshipsWebpImage,
+  internationalScholarshipsImage,
+  internationalScholarshipsWebpImage,
+  governmentGrantsImage,
+  governmentGrantsWebpImage,
+  grantsImage,
+  grantsWebpImage,
+  workStudyImage,
+  workStudyWebpImage,
+  loansImage,
+  loansWebpImage,
 
   // Education - Journey
   checkImage,
