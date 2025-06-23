@@ -8,10 +8,14 @@ import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 import relationshipBlackImage from "./images/icons/relationshipBlack.png";
 import relationshipBlackWebpImage from "./images/icons/relationshipBlack.webp";
 
-import relationshipBlackSize2kImage from "./images/icons/relationshipBlackSize2.png";
-import relationshipBlackSize2kWebpImage from "./images/icons/relationshipBlackSize2.webp";
-import relationshipBlackSize3kImage from "./images/icons/relationshipBlackSize3.png";
-import relationshipBlackSize3kWebpImage from "./images/icons/relationshipBlackSize3.webp";
+import relationshipWhiteImage from "./images/icons/relationshipWhite.png";
+import relationshipWhiteWebpImage from "./images/icons/relationshipWhite.webp";
+
+import evetsBlackImage from "./images/icons/evetsBlack.png";
+import evetsBlackWebpImage from "./images/icons/evetsBlack.webp";
+
+import eventsWhiteImage from "./images/icons/eventsWhite.png";
+import eventsWhiteWebpImage from "./images/icons/eventsWhite.webp";
 
 import folderImage from "./images/icons/folder.png";
 import folderWebpImage from "./images/icons/folder.webp";
@@ -187,6 +191,28 @@ import gallerySlide8WebpImage from "./images/tourism/gallery/gallerySlide8.webp"
 import gallerySlide9Image from "./images/tourism/gallery/gallerySlide9.jpg";
 import gallerySlide9WebpImage from "./images/tourism/gallery/gallerySlide9.webp";
 
+//Tourism Packeages
+import classicTourImage from "./images/tourism/packages/icons/classicTour.png";
+import classicTourWebpImage from "./images/tourism/packages/icons/classicTour.webp";
+
+import explorerImage from "./images/tourism/packages/icons/explorer.png";
+import explorerWebpImage from "./images/tourism/packages/icons/explorer.webp";
+
+import customToursImage from "./images/tourism/packages/icons/customTours.png";
+import customToursWebpImage from "./images/tourism/packages/icons/customTours.webp";
+
+import dressModestlyTourImage from "./images/tourism/packages/icons/dressModestly.png";
+import dressModestlyWebpImage from "./images/tourism/packages/icons/dressModestly.webp";
+
+import currencyImage from "./images/tourism/packages/icons/currency.png";
+import currencyWebpImage from "./images/tourism/packages/icons/currency.webp";
+
+import languageImage from "./images/tourism/packages/icons/language.png";
+import languageWebpImage from "./images/tourism/packages/icons/language.webp";
+
+import visitImage from "./images/tourism/packages/icons/visit.png";
+import visitWebpImage from "./images/tourism/packages/icons/visit.webp";
+
 //Education
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
 import educationHeaderWebpImage from "./images/education/header/educationHeader.webp";
@@ -194,7 +220,7 @@ import educationHeaderWebpImage from "./images/education/header/educationHeader.
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
 
-//Education - Application process andg requirements
+//Education - Application process and requirements
 
 //Education - Scholarships
 
@@ -301,16 +327,18 @@ export {
   supportBlackWebpImage,
   relationshipBlackImage,
   relationshipBlackWebpImage,
+  relationshipWhiteImage,
+  relationshipWhiteWebpImage,
+  evetsBlackImage,
+  evetsBlackWebpImage,
+  eventsWhiteImage,
+  eventsWhiteWebpImage,
   folderImage,
   folderWebpImage,
   noImage,
   noImageWebp,
   loaderFrameImage,
   loaderFrameWebpImage,
-  relationshipBlackSize2kImage,
-  relationshipBlackSize2kWebpImage,
-  relationshipBlackSize3kImage,
-  relationshipBlackSize3kWebpImage,
 
   // Footer
   humoImage,
@@ -335,7 +363,7 @@ export {
   integrityWebpImage,
   newsImage,
 
-  //  Home Accordion
+  // Home Accordion
   careersImage,
   careersWebpImage,
   travelTourismImage,
@@ -436,6 +464,22 @@ export {
   gallerySlide8WebpImage,
   gallerySlide9Image,
   gallerySlide9WebpImage,
+
+  //Tourism Packeages
+  classicTourImage,
+  classicTourWebpImage,
+  explorerImage,
+  explorerWebpImage,
+  customToursImage,
+  customToursWebpImage,
+  dressModestlyTourImage,
+  dressModestlyWebpImage,
+  currencyImage,
+  currencyWebpImage,
+  languageImage,
+  languageWebpImage,
+  visitImage,
+  visitWebpImage,
 
   //Education
   storyImage,

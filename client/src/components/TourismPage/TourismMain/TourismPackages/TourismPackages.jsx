@@ -2,16 +2,25 @@ import styles from "./TourismPackages.module.scss";
 import Tabs from "../../../layout/Tabs/Tabs";
 
 import {
-  classicTourIcon,
-  explorerIcon,
-  customToursIcon,
-  themedExperiencesIcon,
-  dressModestlyIcon,
-  localEtiquetteIcon,
-  currencyIcon,
-  languageIcon,
-  visitIcon,
-} from "../../../../assets/svg";
+  classicTourImage,
+  classicTourWebpImage,
+  explorerImage,
+  explorerWebpImage,
+  customToursImage,
+  customToursWebpImage,
+  eventsWhiteImage,
+  eventsWhiteWebpImage,
+  dressModestlyTourImage,
+  dressModestlyWebpImage,
+  relationshipWhiteImage,
+  relationshipWhiteWebpImage,
+  currencyImage,
+  currencyWebpImage,
+  languageImage,
+  languageWebpImage,
+  visitImage,
+  visitWebpImage,
+} from "../../../../assets/images";
 
 const tabHeaders = [
   "Travel Packages and Itineraries",
@@ -21,25 +30,29 @@ const tabHeaders = [
 const tabContentGroups = [
   [
     {
-      icon: classicTourIcon,
+      image: classicTourImage,
+      webpImage: classicTourWebpImage,
       title: "Classic Uzbekistan Tour:",
       description:
         "A 7-10 day itinerary covering Tashkent, Samarkand, Bukhara, and Khiva.",
     },
     {
-      icon: explorerIcon,
+      image: explorerImage,
+      webpImage: explorerWebpImage,
       title: "Silk Road Explorer:",
       description:
         "Dive deep into history with a focus on ancient trade routes, archaeology, and cultural landmarks.",
     },
     {
-      icon: customToursIcon,
+      image: customToursImage,
+      webpImage: customToursWebpImage,
       title: "Custom Tours:",
       description:
         "Tell us your interests, and we will build a personalized itinerary just for you.",
     },
     {
-      icon: themedExperiencesIcon,
+      image: eventsWhiteImage,
+      webpImage: eventsWhiteWebpImage,
       title: "Themed Experiences:",
       description:
         "Culinary tours, photography trips, architectural highlights, or eco-adventures – perfect for niche travelers.",
@@ -48,31 +61,36 @@ const tabContentGroups = [
 
   [
     {
-      icon: dressModestlyIcon,
+      image: dressModestlyTourImage,
+      webpImage: dressModestlyWebpImage,
       title: "Dress Modestly:",
       description:
         "While Uzbekistan is a secular country, modest dress is appreciated, especially when visiting religious sites.",
     },
     {
-      icon: localEtiquetteIcon,
+      image: relationshipWhiteImage,
+      webpImage: relationshipWhiteWebpImage,
       title: "Local Etiquette:",
       description:
         "Greetings are important – a firm handshake (between men), along with a smile and polite conversation, goes a long way.",
     },
     {
-      icon: currencyIcon,
+      image: currencyImage,
+      webpImage: currencyWebpImage,
       title: "Currency:",
       description:
         "The Uzbek Som (UZS) is the local currency. Credit cards are increasingly accepted in cities, but cash is still king in smaller towns.",
     },
     {
-      icon: languageIcon,
+      image: languageImage,
+      webpImage: languageWebpImage,
       title: "Language:",
       description:
         "Uzbek is the official language, but Russian is widely spoken. English is growing in popularity, especially among younger locals and those in the tourism industry.",
     },
     {
-      icon: visitIcon,
+      image: visitImage,
+      webpImage: visitWebpImage,
       title: "Best Time to Visit:",
       description:
         "Spring (April to June) and autumn (September to early November) offer pleasant weather and vibrant landscapes.",
