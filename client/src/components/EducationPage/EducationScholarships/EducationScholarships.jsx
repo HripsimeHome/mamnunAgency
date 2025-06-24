@@ -134,6 +134,7 @@ const EducationScholarships = () => {
             funding sources, and criteria for awarding financial support. If you
             wish to get ore detailed information, feel free to contact us to
           </p>
+          <br />
 
           <MainBtn
             onClick={() => navigate(contactsPagePath)}

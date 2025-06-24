@@ -9,7 +9,6 @@ import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import "swiper/css/pagination";
 // import "./sliderDots.scss";
-import Svg from "../../layout/Svg/Svg";
 
 import {
   educationImage,
@@ -44,7 +43,7 @@ import {
 
 const slideData = [
   {
-    imaage: educationImage,
+    image: educationImage,
     webpImage: educationWebpImage,
     alt: "Education and travel",
     description:
@@ -52,7 +51,7 @@ const slideData = [
   },
 
   {
-    imaage: opportunitiesImage,
+    image: opportunitiesImage,
     webpImage: opportunitiesnWebpImage,
     alt: "",
     description:
@@ -60,7 +59,7 @@ const slideData = [
   },
 
   {
-    imaage: scholarshipsImage,
+    image: scholarshipsImage,
     webpImage: scholarshipsWebpImage,
     alt: "",
     description:
@@ -68,7 +67,7 @@ const slideData = [
   },
 
   {
-    imaage: servicesImage,
+    image: servicesImage,
     webpImage: servicessWebpImage,
     alt: "",
     description:
@@ -76,7 +75,7 @@ const slideData = [
   },
 
   {
-    imaage: tourImage,
+    image: tourImage,
     webpImage: tourWebpImage,
     alt: "",
     description:
@@ -84,7 +83,7 @@ const slideData = [
   },
 
   {
-    imaage: VIPBlackImage,
+    image: VIPBlackImage,
     webpImage: VIPBlackWebpImage,
     alt: "",
     description:
@@ -92,7 +91,7 @@ const slideData = [
   },
 
   {
-    imaage: transportationImage,
+    image: transportationImage,
     webpImage: transportationWebpImage,
     alt: "",
     description:
@@ -100,7 +99,7 @@ const slideData = [
   },
 
   {
-    imaage: supportBlackImage,
+    image: supportBlackImage,
     webpImage: supportBlackWebpImage,
     alt: "",
     description:
@@ -108,49 +107,49 @@ const slideData = [
   },
 
   {
-    imaage: culturalDifferencesImage,
+    image: culturalDifferencesImage,
     webpImage: culturalDifferencesWebpImage,
-    alt: "",
+    alt: "Cultural differences and customs",
     description:
       "We offer valuable information about cultural differences and local customs, helping you adapt and thrive in new environments.",
   },
 
   {
-    imaage: consultationImage,
+    image: consultationImage,
     webpImage: consultationWebpImage,
-    alt: "",
+    alt: "Consultation and travel support",
     description:
       "From the initial consultation to your arrival at your destination, we provide continuous support, ensuring you feel confident and well-prepared throughout your journey.",
   },
 
   {
-    imaage: relationshipsImage,
+    image: relationshipsImage,
     webpImage: relationshipsWebpImage,
-    alt: "",
+    alt: "Student and family relationships",
     description:
       "We prioritize maintaining strong relationships with our students and their families, ensuring open communication and support throughout the entire process.",
   },
 
   {
-    imaage: feedbackImage,
+    image: feedbackImage,
     webpImage: feedbackWebpImage,
-    alt: "",
+    alt: "Partner and customer feedback",
     description:
       "We are focused on achieving results and regularly seek feedback from both our partners and customers, allowing us to continuously improve our services and meet your needs effectively.",
   },
 
   {
-    imaage: trustImage,
+    image: trustImage,
     webpImage: trustIWebpImage,
-    alt: "",
+    alt: "Tansparency and trust",
     description:
       "We believe in transparency. You can trust that there are no hidden fees, information, or surprises—everything is clearly communicated to ensure your peace of mind.",
   },
 
   {
-    imaage: partnerImage,
+    image: partnerImage,
     webpImage: partnerWebpImage,
-    alt: "",
+    alt: "Trusted education and travel partner",
     description:
       "Choose MAMNUN as your trusted partner in education and travel, and let us help you turn your dreams into reality—ensuring your satisfaction every step of the way!",
   },
@@ -160,19 +159,17 @@ const AboutSlider = () => {
   return (
     <section className={`${styles.aboutSlider} wrapperWhite`}>
       <div className={`container ${styles.aboutSlider__grid}`}>
-        {slideData.map((item, index) => (
+        {slideData.map(({ image, webpImage, alt, description }, index) => (
           <div className={styles.aboutSlider__slide} key={index}>
             <div className={styles.aboutSlider__imgWrapper}>
               <ImageWebp
-                src={item.image}
-                srcSet={item.webpImage}
-                alt="icon"
+                src={image}
+                srcSet={webpImage}
+                alt={alt}
                 className={styles.aboutSlider__img}
               />
             </div>
-            <p className={styles.aboutSlider__description}>
-              {item.description}
-            </p>
+            <p className={styles.aboutSlider__description}>{description}</p>
           </div>
         ))}
       </div>
