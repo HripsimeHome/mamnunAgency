@@ -107,17 +107,18 @@
     margin-bottom: 10px;
   }
 
-  .gridContainer {    
+  .gridContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
 
-   @include mdScreenMedia {
-    grid-template-columns: repeat(2, 1fr);
-   }
+    @include mdScreenMedia {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
 
-   @include smScreenMedia {
-    grid-template-columns: repeat(1, 1fr);
-   }
+    @include smScreenMedia {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

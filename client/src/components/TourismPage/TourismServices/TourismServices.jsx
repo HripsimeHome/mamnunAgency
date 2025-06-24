@@ -216,7 +216,7 @@ const TourismServices = () => {
                     <div>
                       <ImageWebp
                         src={image}
-                        srcSet={webpImage}
+                        srcset={webpImage}
                         className={styles.tourismServices__img}
                       />
                     </div>
