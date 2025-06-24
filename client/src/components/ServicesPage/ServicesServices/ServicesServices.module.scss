@@ -98,6 +98,9 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
+    //height: 100%;
     //padding: 25px;
   }
 
@@ -171,7 +174,7 @@
     height: 100%;
     object-fit: cover;
     transition: $transition;
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
     border-radius: 20px;
 

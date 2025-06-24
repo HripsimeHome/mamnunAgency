@@ -19,7 +19,7 @@ import { Fragment } from "react";
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} wrapperWhite`}>
+    <footer className={`${styles.footer} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.footer__container}>
           <div className={styles.footer__logoBlock}>

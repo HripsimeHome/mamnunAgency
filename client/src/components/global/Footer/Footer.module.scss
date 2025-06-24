@@ -2,24 +2,25 @@
 @import "../../../styles/vars";
 
 .footer {
-  border-top: 2px solid $color-secondary;
   color: $color-secondary;
+  border-top: 2px solid $color-secondary;
+  margin-top: auto;
   padding-top: 100px;
   padding-bottom: 50px;
-  margin-top: auto;
 
   &__container {
-    gap: 20px;
-
     display: grid;
     grid-template-columns: repeat(5, auto);
+    gap: 20px;
 
     @include lgScreenMedia {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include smScreenMedia {
       grid-template-columns: 1fr;
       justify-items: center;
+      gap: 10px;
     }
   }
 
@@ -43,6 +44,7 @@
     }
     @include smScreenMedia {
       order: unset !important;
+      text-align: center;
     }
 
     &:nth-child(1) {
@@ -83,21 +85,25 @@
     }
   }
 
-  &__logoImgPosition {
-    // @include mdScreenMedia {
-    //   justify-content: center;
-    // }
-  }
-
   &__logoImg {
     max-width: 178px;
     width: 100%;
     margin-bottom: 25px;
+
+    @include smScreenMedia {
+      margin-bottom: 5px;
+    }
   }
 
   &__menuTitle {
     @include setFont(24px, 600, $color-secondary);
     margin-bottom: 15px;
+
+    @include smScreenMedia {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 16px;
+    }
   }
 
   &__menu {
@@ -109,6 +115,12 @@
     @include setFont(18px, 400, $color-secondary);
     line-height: 20px;
     margin-bottom: 15px;
+
+    @include smScreenMedia {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 5px;
+    }
 
     &:hover {
       color: $color-primary;
@@ -130,6 +142,14 @@
     gap: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__sociaBlock {
@@ -149,6 +169,12 @@
     gap: 10px;
   }
 
+  &__paymentsImg {
+    @include lgScreenMedia {
+      height: 22px;
+    }
+  }
+
   // Copyright
 
   &__bottom {
@@ -158,12 +184,16 @@
 
     justify-content: space-between;
     align-items: center;
-
     gap: 50px;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__col {
-    flex: 1; // makes all 3 columns equal width
+    flex: 1;
     text-align: center;
 
     @include xlScreenMedia {
@@ -173,7 +203,7 @@
     }
 
     &:nth-child(2) {
-      flex: 2; // give the middle column more width
+      flex: 2;
     }
 
     &:last-child {
@@ -186,8 +216,16 @@
     text-align: center;
     line-height: 30px;
 
+    a:hover {
+      color: $color-grey;
+    }
+
     @include xlScreenMedia {
       text-align: left;
+    }
+    @include smScreenMedia {
+      font-size: 12px;
+      line-height: 20px;
     }
   }
 
@@ -195,16 +233,17 @@
     @include flexCol(end, center);
     gap: 25px;
 
-    // @include smScreenMedia {
-    // justify-content: space-between;
-    // }
+    @include smScreenMedia {
+      justify-content: space-between;
+      //line-height: 16px;
+    }
 
     a {
       @include setFont(20px, 400, $color-secondary);
+      text-decoration: none;
 
       &:hover {
-        color: $color-secondary;
-        text-decoration: underline;
+        color: $color-grey;
       }
     }
   }
