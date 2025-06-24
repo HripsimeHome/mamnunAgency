@@ -6,62 +6,58 @@ import {
   linkedInIcon,
   facebookIcon,
   instagramIcon,
-  telegramIcon, 
-} from "../../../assets/svg"; 
- 
+  telegramIcon,
+} from "../../../assets/svg";
+
 const socialIconsData = [
   {
-    icon: youtubeIcon,       
-    alt: "YouTube",    
+    icon: youtubeIcon,
+    alt: "YouTube",
     title: "",
-    link: "https://youtube.com/@mamnunagency?si=nbS2rhZMimU_iyJP", 
-  }, 
+    link: "https://youtube.com/@mamnunagency?si=nbS2rhZMimU_iyJP",
+  },
 
   {
-    icon: linkedInIcon,       
-    alt: "LinkedIn",     
-    link: "https://www.linkedin.com/posts/mamnun-agency_internationaleducation-travel-educationagency-activity-7296309658208653315--Gdi?utm_source=share&utm_medium=member_android&rcm=ACoAAECGuLcBS5-TA8HIIsE57k1Lm_2ly88mfZM", 
-  }, 
+    icon: linkedInIcon,
+    alt: "LinkedIn",
+    link: "https://www.linkedin.com/posts/mamnun-agency_internationaleducation-travel-educationagency-activity-7296309658208653315--Gdi?utm_source=share&utm_medium=member_android&rcm=ACoAAECGuLcBS5-TA8HIIsE57k1Lm_2ly88mfZM",
+  },
 
   {
-    icon: facebookIcon,       
+    icon: facebookIcon,
     alt: "Facebook",
-    link: "https://www.facebook.com/profile.php?id=61572399132304",     
-  }, 
+    link: "https://www.facebook.com/profile.php?id=61572399132304",
+  },
 
   {
-    icon: instagramIcon,       
+    icon: instagramIcon,
     alt: "Instagram",
-    link: "https://www.instagram.com/mamnunagency?igsh=bzk0dGt4anhqbTlw",     
-  }, 
+    link: "https://www.instagram.com/mamnunagency?igsh=bzk0dGt4anhqbTlw",
+  },
 
   {
-    icon: telegramIcon,       
+    icon: telegramIcon,
     alt: "Telegram",
-    link: "https://t.me/mamnuneducation",     
-  }, 
-]
+    link: "https://t.me/mamnuneducation",
+  },
+];
 
-function SocialIcons() {
+function SocialIcons({ className }) {
   return (
-    <div className={styles.socialIcons}>     
+    <div className={`${styles.socialIcons} ${className || ""}`}>
       {socialIconsData.map(({ icon, alt, link }, index) => (
-      <a 
-        key={index} 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        aria-label={alt}
-      >
-      <Svg 
-        id={icon}             
-        alt={alt}                
-        className={styles.socialIcons__icon} 
-      />
-      </a>
-    ))}
-  </div>
-  )
+        <a
+          key={index}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={alt}
+        >
+          <Svg id={icon} alt={alt} className={styles.socialIcons__icon} />
+        </a>
+      ))}
+    </div>
+  );
 }
 
 export default SocialIcons;

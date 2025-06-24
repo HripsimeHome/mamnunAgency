@@ -74,4 +74,15 @@
     width: 68px;
     height: 65px;
   }
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .div3 {
+    grid-column: span 2 / span 2;
+  }
 }

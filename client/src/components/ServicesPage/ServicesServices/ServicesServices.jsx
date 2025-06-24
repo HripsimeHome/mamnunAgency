@@ -108,7 +108,7 @@ const ServicesServices = () => {
 
                     <div className={styles.servicesServices__cardBackTextBlock}>
                       <p className={styles.servicesServices__cardBackText}>
-                        {backDescription}
+                        {backDescription}123132132132123
                       </p>
 
                       <MainBtn

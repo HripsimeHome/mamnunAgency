@@ -32,15 +32,13 @@ const AccordionItem = ({
   return (
     <>
       <div
+        onClick={() => setIsOpen(!isOpen)}
         className={`${styles.accordion__header} ${
           isOpen ? styles.accordion__header_active : ""
         }`}
         aria-expanded={isOpen}
       >
-        <button
-          className={styles.accordion__btn}
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <div className={styles.accordion__btn}>
           <div className={styles.accordion__titlePosition}>
             {displayImage && (
               <ImageWebp
@@ -52,11 +50,8 @@ const AccordionItem = ({
             )}
             <span className={styles.accordion__title}>{title}</span>
           </div>
-          <Svg
-            id={isOpen ? arrowPurpleIcon : arrowWhiteIcon}
-            className={styles.accordion__toggleIcon}
-          />
-        </button>
+          <Svg id={arrowWhiteIcon} className={styles.accordion__toggleIcon} />
+        </div>
 
         {isOpen && <div className={styles.accordion__content}>{content}</div>}
       </div>

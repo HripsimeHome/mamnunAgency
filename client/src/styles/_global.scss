@@ -14,7 +14,7 @@ body {
   color: $color-secondary;
   background-color: $color-white;
 
-  // Body Scrollbar
+  //  Scrollbar
   &::-webkit-scrollbar {
     width: 12px;
   }
@@ -53,7 +53,7 @@ a {
 }
 
 #root {
-  // min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

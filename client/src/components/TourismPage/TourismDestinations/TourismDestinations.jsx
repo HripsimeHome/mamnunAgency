@@ -150,6 +150,7 @@ const TourismDestinations = () => {
                   src={img}
                   srcSet={webpImg}
                   alt={alt}
+                  pictureClass={styles.tourismDestinations__picture}
                   className={styles.tourismDestinations__img}
                 />
 

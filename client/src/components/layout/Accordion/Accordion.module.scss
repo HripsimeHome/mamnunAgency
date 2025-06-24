@@ -67,6 +67,13 @@
     width: 27px;
     height: 10px;
     flex-shrink: 0;
+    stroke: $color-white;
+    transition: $transition;
+  }
+
+  &__header_active &__toggleIcon {
+    stroke: $color-primary;
+    transform: rotate(180deg);
   }
 }
 
