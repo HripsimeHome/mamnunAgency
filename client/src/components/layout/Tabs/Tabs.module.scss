@@ -18,7 +18,8 @@
 
     @include smScreenMedia {
       padding-bottom: 15px;
-      // flex-direction: column;
+      flex-direction: column;
+      gap: 15px;
     }
   }
 

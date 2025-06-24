@@ -148,15 +148,18 @@
     display: flex;
     gap: 48px;
     padding-top: 100px;
+    padding-bottom: 100px;
 
     @include mdScreenMedia {
       flex-direction: column;
       gap: 25px;
       padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     @include smScreenMedia {
       padding-top: 25px;
+      padding-bottom: 25px;
     }
   }
 
@@ -169,8 +172,9 @@
     border: 3px solid $color-secondary;
     border-radius: 25px;
     padding: 25px;
-    //box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     //margin: 50px 25px;
+
+    box-shadow: 8px 8px 45px 0 rgba(0, 0, 0, 0.25);
 
     @include smScreenMedia {
       padding: 15px;
