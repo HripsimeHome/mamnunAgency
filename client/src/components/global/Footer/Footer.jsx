@@ -29,10 +29,9 @@ const Footer = () => {
                 srcSet={logoBlackWebpImage}
                 alt="Logo"
                 className={styles.footer__logoImg}
-                //pictureClass={styles.footer__logoImgPosition}
               />
-              MAMNUN Agency
             </Link>
+            MAMNUN Agency
           </div>
 
           {footerMenuItems.map((menu, index) => (

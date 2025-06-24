@@ -26,7 +26,7 @@
 
   &__logoBlock {
     text-align: center;
-    // margin-right: 30px;
+    max-width: 174px;
 
     @include lgScreenMedia {
       order: 4;

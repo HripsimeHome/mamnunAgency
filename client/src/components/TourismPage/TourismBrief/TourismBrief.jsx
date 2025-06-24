@@ -36,8 +36,11 @@ const TourismBrief = () => {
           <div className={styles.tourismBrief__text2}>
             <p>
               We also believe that the true magic of Uzbekistan lies in its
-              people. That’s why our tours offer meaningful integration with
-              locals — from hands-on experiences with artisans in their
+              people. That’s why our tours offer&nbsp;
+              <span className="textPrimary">
+                meaningful integration with locals
+              </span>
+              &nbsp; — from hands-on experiences with artisans in their
               workshops, to home-cooked meals with Uzbek families, to
               participating in traditional celebrations and customs. These
               moments create real connections and lifelong memories.
