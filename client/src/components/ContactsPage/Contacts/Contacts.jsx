@@ -181,7 +181,7 @@ const Contacts = () => {
           </div>
 
           <div className={styles.contacts__socialIconsPosition}>
-            <SocialIcons />
+            <SocialIcons className={styles.contacts__socialIcons} />
           </div>
         </div>
       </div>

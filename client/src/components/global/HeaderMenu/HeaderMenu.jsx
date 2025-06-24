@@ -55,6 +55,7 @@ const HeaderMenu = () => {
   const isServicesActive = servicesItems.some(
     (item) => location.pathname === item.link
   );
+  console.log({ isServicesActive });
 
   return (
     <div className={styles.headerMenu}>
@@ -105,7 +106,7 @@ const HeaderMenu = () => {
                       >
                         <div
                           className={`${styles.headerMenu__dropdown} ${
-                            isServicesActive
+                            isServicesOpen
                               ? styles.headerMenu__dropdown_active
                               : ""
                           }`}
@@ -114,7 +115,7 @@ const HeaderMenu = () => {
                           <span
                             className={`${styles.headerMenu__menuLink} ${
                               isServicesActive
-                                ? styles.servicesWrapper_active
+                                ? styles.headerMenu__menuLink_active
                                 : ""
                             }`}
                           >
@@ -128,23 +129,21 @@ const HeaderMenu = () => {
                               }`}
                             />
                           </span>
-                          {isServicesOpen && (
-                            <div className={styles.headerMenu__dropdownContent}>
-                              {servicesItems.map(({ text, link }, j) => (
-                                <NavLink
-                                  key={j}
-                                  to={link}
-                                  className={({ isActive }) =>
-                                    isActive
-                                      ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                                      : styles.headerMenu__menuLink
-                                  }
-                                >
-                                  {text}
-                                </NavLink>
-                              ))}
-                            </div>
-                          )}
+                          <div className={styles.headerMenu__dropdownContent}>
+                            {servicesItems.map(({ text, link }, j) => (
+                              <NavLink
+                                key={j}
+                                to={link}
+                                className={({ isActive }) =>
+                                  isActive
+                                    ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                                    : styles.headerMenu__menuLink
+                                }
+                              >
+                                {text}
+                              </NavLink>
+                            ))}
+                          </div>
                         </div>
 
                         <NavLink

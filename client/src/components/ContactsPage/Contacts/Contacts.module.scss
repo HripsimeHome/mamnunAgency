@@ -5,7 +5,7 @@
   &__sectionTtitle {
     margin-bottom: 50px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       margin-bottom: 25px;
     }
 
@@ -29,7 +29,7 @@
       "form info"
       "form social";
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       grid-template-columns: 1fr;
       grid-template-areas:
         "info"
@@ -65,10 +65,10 @@
     flex-direction: column;
     flex: 4;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       flex-direction: row;
-      //flex: 1;
       gap: 10px;
+      justify-content: space-between;
     }
 
     @include smScreenMedia {
@@ -88,7 +88,7 @@
     gap: 10px;
     margin-bottom: 25px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       flex: 1;
       gap: 5px;
     }
@@ -107,7 +107,7 @@
     height: 40px;
     margin-right: 10px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       height: 25px;
     }
   }
@@ -116,11 +116,11 @@
     @include setFont(24px, 500, $color-secondary);
     line-height: 20px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 18px;
     }
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 16px;
     }
   }
@@ -129,7 +129,7 @@
     @include setFont(18px, 400, $color-secondary);
     line-height: 30px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 16px;
       line-height: 20px;
     }
@@ -141,7 +141,7 @@
 
   &__socialIconsPosition {
     grid-area: social;
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       @include flexCol();
       margin-top: 15px;
     }
@@ -149,5 +149,9 @@
     @include smScreenMedia {
       margin-top: 5px;
     }
+  }
+
+  &__socialIcons {
+    gap: 25px;
   }
 }
