@@ -126,7 +126,7 @@ const EducationScholarships = () => {
 
         <Tabs tabHeaders={tabHeaders} tabContentGroups={tabContentGroups} />
 
-        <div className={styles.educationScholarships__test}>
+        <div className={styles.educationScholarships__contentContainer}>
           <p className={styles.educationScholarships__text}>
             It is important to note that the availability and types of
             scholarships and financial aid can vary significantly from

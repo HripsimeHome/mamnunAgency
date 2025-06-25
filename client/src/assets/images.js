@@ -17,8 +17,14 @@ import evetsBlackWebpImage from "./images/icons/evetsBlack.webp";
 import eventsWhiteImage from "./images/icons/eventsWhite.png";
 import eventsWhiteWebpImage from "./images/icons/eventsWhite.webp";
 
+import partnersBlackImage from "./images/icons/partnersBlack.png";
+import partnersBlackWebpImage from "./images/icons/partnersBlack.webp";
+
+import partnersWhiteImage from "./images/icons/partnersWhite.png";
+import partnersWhiteWebpImage from "./images/icons/partnersWhite.webp";
+
 import formBlackImage from "./images/education/requirements/icons/formBlack.png";
-import formBlackkWebpImage from "./images/education/requirements/icons/formBlack.webp";
+import formBlackWebpImage from "./images/education/requirements/icons/formBlack.webp";
 
 import agreementImage from "./images/education/requirements/icons/agreement.png";
 import agreementWebpImage from "./images/education/requirements/icons/agreement.webp";
@@ -127,9 +133,6 @@ import relationshipsWebpImage from "./images/about/icons/relationships.webp";
 
 import trustImage from "./images/about/icons/trust.png";
 import trustIWebpImage from "./images/about/icons/trust.webp";
-
-import partnerImage from "./images/about/icons/partner.png";
-import partnerWebpImage from "./images/about/icons/partner.webp";
 
 import aboutMapImage from "./images/about/aboutMap.png";
 import aboutMapWebpImage from "./images/about/aboutMap.webp";
@@ -290,6 +293,38 @@ import workStudyWebpImage from "./images/education/scholarships/icons/workStudy.
 import loansImage from "./images/education/scholarships/icons/loans.png";
 import loansWebpImage from "./images/education/scholarships/icons/loans.webp";
 
+// Education - Services
+
+import CVPreparationBLackImage from "./images/education/services/icons/CVPreparationBLack.png";
+import CVPreparationBLackWebpImage from "./images/education/services/icons/CVPreparationBLack.webp";
+
+import CVPreparationWhiteImage from "./images/education/services/icons/CVPreparationWhite.png";
+import CVPreparationWhiteWebpImage from "./images/education/services/icons/CVPreparationWhite.webp";
+
+import motivationalLetterBlackImage from "./images/education/services/icons/motivationalLetterBlack.png";
+import motivationalLetterBlackWebpImage from "./images/education/services/icons/motivationalLetterBlack.webp";
+
+import motivationalLetterWhitemage from "./images/education/services/icons/motivationalLetterWhite.png";
+import motivationalLetterWhitekWebpImage from "./images/education/services/icons/motivationalLetterWhite.webp";
+
+import notarialBLackImage from "./images/education/services/icons/notarialBLack.png";
+import notarialBLackWebpImage from "./images/education/services/icons/notarialBLack.webp";
+
+import notarialWhiteImage from "./images/education/services/icons/notarialWhite.png";
+import notarialWhitekWebpImage from "./images/education/services/icons/notarialWhite.webp";
+
+import docDeliveryBlackImage from "./images/education/services/icons/docDeliveryBlack.png";
+import docDeliveryBlackWebpImage from "./images/education/services/icons/docDeliveryBlack.webp";
+
+import docDeliveryWhiteImage from "./images/education/services/icons/docDeliveryWhite.png";
+import docDeliveryWhiteWebpImage from "./images/education/services/icons/docDeliveryWhite.webp";
+
+import ticketIssuanceWhiteImage from "./images/education/services/icons/ticketIssuanceWhite.png";
+import ticketIssuanceWhiteWebpImage from "./images/education/services/icons/ticketIssuanceWhite.webp";
+
+import ticketIssuanceBLackImage from "./images/education/services/icons/ticketIssuanceBLack.png";
+import ticketIssuanceBLackWebpImage from "./images/education/services/icons/ticketIssuanceBLack.webp";
+
 // Services
 // Services traveller
 import businessTravelersImage from "./images/services/traveller/businessTravelers.jpg";
@@ -374,8 +409,12 @@ export {
   evetsBlackWebpImage,
   eventsWhiteImage,
   eventsWhiteWebpImage,
+  partnersWhiteImage,
+  partnersWhiteWebpImage,
+  partnersBlackImage,
+  partnersBlackWebpImage,
   formBlackImage,
-  formBlackkWebpImage,
+  formBlackWebpImage,
   agreementImage,
   agreementWebpImage,
   documentsBLackImage,
@@ -463,8 +502,6 @@ export {
   relationshipsWebpImage,
   trustImage,
   trustIWebpImage,
-  partnerImage,
-  partnerWebpImage,
 
   //Tourism
   tourismHeaderImage,
@@ -583,6 +620,28 @@ export {
   // Services
   servicesHeaderImage,
   servicesHeaderWebpImage,
+
+  // Education - Services
+  CVPreparationBLackImage,
+  CVPreparationBLackWebpImage,
+  CVPreparationWhiteImage,
+  CVPreparationWhiteWebpImage,
+  motivationalLetterBlackImage,
+  motivationalLetterBlackWebpImage,
+  motivationalLetterWhitemage,
+  motivationalLetterWhitekWebpImage,
+  notarialBLackImage,
+  notarialBLackWebpImage,
+  notarialWhiteImage,
+  notarialWhitekWebpImage,
+  docDeliveryBlackImage,
+  docDeliveryBlackWebpImage,
+  docDeliveryWhiteImage,
+  docDeliveryWhiteWebpImage,
+  ticketIssuanceWhiteImage,
+  ticketIssuanceWhiteWebpImage,
+  ticketIssuanceBLackImage,
+  ticketIssuanceBLackWebpImage,
 
   //Services traveller
   businessTravelersImage,

@@ -7,7 +7,7 @@ import Svg from "../../../layout/Svg/Svg";
 
 import {
   formBlackImage,
-  formBlackkWebpImage,
+  formBlackWebpImage,
   supportBlackImage,
   supportBlackWebpImage,
   relationshipBlackImage,
@@ -30,7 +30,7 @@ const requirementsData = [
     step: "1",
     title: "Fill the form",
     image: formBlackImage,
-    webpImage: formBlackkWebpImage,
+    webpImage: formBlackWebpImage,
   },
 
   {

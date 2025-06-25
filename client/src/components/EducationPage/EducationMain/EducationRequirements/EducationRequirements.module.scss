@@ -73,7 +73,7 @@
   }
 
   &__circle {
-    width: 62%; // fixed container size to prevent layout shift
+    width: 62%;
     aspect-ratio: 1/1;
     perspective: 1000px;
     display: flex;
@@ -97,7 +97,7 @@
   }
 
   &__circle:hover &__flipInner {
-    width: 100%; // scale up to fill container on hover
+    width: 100%;
     aspect-ratio: 1/1;
     transform: rotateY(180deg);
     border: 5px solid $color-secondary;
@@ -118,7 +118,7 @@
 
   &__front {
     z-index: 2;
-    border: none; // already on flipInner
+    border: none;
   }
 
   &__back {
@@ -126,7 +126,7 @@
     background-color: $color-white;
     padding: 5px;
     @include flexCol();
-    border: none; // already on flipInner
+    border: none;
   }
 
   &__step {
@@ -161,11 +161,5 @@
     @include mdScreenMedia {
       font-size: 16px;
     }
-  }
-
-  &__iconTest {
-    @include setFont(24px, 500, $color-secondary);
-    width: 100px;
-    height: 100px;
   }
 }
