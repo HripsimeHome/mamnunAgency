@@ -86,13 +86,22 @@
   }
 
   &__logoImg {
-    max-width: 178px;
+    max-width: 150px;
     width: 100%;
     margin-bottom: 25px;
 
+    @include lgScreenMedia {
+      max-width: 100px;
+    }
+
     @include smScreenMedia {
+      max-width: 70px;
       margin-bottom: 5px;
     }
+  }
+
+  &__logoImgPosition {
+    justify-content: center;
   }
 
   &__menuTitle {
@@ -156,6 +165,25 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include smScreenMedia {
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+
+  &__sociaBlockTItle {
+    @include setFont(20px, 600, $color-secondary);
+    line-height: 16px;
+
+    @include lgScreenMedia {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+    }
   }
 
   &__paymentsBLock {
@@ -207,7 +235,7 @@
     }
 
     &:last-child {
-      text-align: right;
+      //text-align: right;
     }
   }
 
@@ -232,10 +260,10 @@
   &__privacyBlock {
     @include flexCol(end, center);
     gap: 25px;
+    line-height: 16px;
 
     @include smScreenMedia {
       justify-content: space-between;
-      //line-height: 16px;
     }
 
     a {
@@ -244,6 +272,9 @@
 
       &:hover {
         color: $color-grey;
+      }
+      @include smScreenMedia {
+        font-size: 12px;
       }
     }
   }

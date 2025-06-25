@@ -2,18 +2,39 @@
 @import "../../../styles/vars";
 
 .aboutFooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
   &__textBlock {
     @include flexCol();
     flex-direction: column;
     gap: 25px;
     text-align: center;
+
+    @include lgScreenMedia {
+      gap: 15px;
+    }
+
+    @include smScreenMedia {
+      gap: 10px;
+    }
   }
 
-  &__companyBlock {
-    display: flex;
-    flex-direction: column;
+  &__img {
+    max-width: 60%;
+    width: 100%;
+
+    @include lgScreenMedia {
+      max-width: 270px;
+    }
+
+    @include smScreenMedia {
+      max-width: 115px;
+    }
   }
-  &__companyName {
-    @include setFont(40px, 800, $color-secondary);
+  &__imgPosition {
+    display: flex;
+    justify-content: center;
   }
 }

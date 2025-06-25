@@ -5,6 +5,9 @@ import logoWebpImage from "./images/logos/logo.webp";
 import logoBlackImage from "./images/logos/logoBlack.png";
 import logoBlackWebpImage from "./images/logos/logoBlack.webp";
 
+import companyLabelImage from "./images/common/companyLabel.png";
+import companyLabelWebpImage from "./images/common/companyLabel.webp";
+
 import relationshipBlackImage from "./images/icons/relationshipBlack.png";
 import relationshipBlackWebpImage from "./images/icons/relationshipBlack.webp";
 
@@ -395,6 +398,8 @@ export {
   logoWebpImage,
   logoBlackImage,
   logoBlackWebpImage,
+  companyLabelImage,
+  companyLabelWebpImage,
   VIPBlackImage,
   VIPBlackWebpImage,
   VIPWhiteImage,
