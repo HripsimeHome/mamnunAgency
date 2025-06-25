@@ -103,17 +103,22 @@ const accordionItems = [
   },
 ];
 
+const leftItems = accordionItems.filter((_, index) => index % 2 === 0);
+const rightItems = accordionItems.filter((_, index) => index % 2 === 1);
+
 const EducationFAQ = () => {
   return (
     <section className={`${styles.educationFAQ} wrapperBlack wrapperPadding`}>
       <div className="container">
         <h1 className="titlePrimaryH2">FAQ</h1>
-        <>
-          <Accordion
-            accordionItems={accordionItems}
-            className={styles.aboutFAQ__accordionContainer}
-          />
-        </>
+        <div className={styles.educationFAQ__columns}>
+          <div className={styles.educationFAQ__column}>
+            <Accordion accordionItems={leftItems} />
+          </div>
+          <div className={styles.educationFAQ__column}>
+            <Accordion accordionItems={rightItems} />
+          </div>
+        </div>
       </div>
     </section>
   );

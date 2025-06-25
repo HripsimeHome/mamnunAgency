@@ -29,6 +29,7 @@ const Footer = () => {
                 srcSet={logoBlackWebpImage}
                 alt="Logo"
                 className={styles.footer__logoImg}
+                pictureClass={styles.footer__logoImgPosition}
               />
             </Link>
             MAMNUN Agency
@@ -77,7 +78,9 @@ const Footer = () => {
         {/* menuContainer */}
         <div className={styles.footer__info}>
           <div className={styles.footer__sociaBlock}>
-            <h4>Our social media channels:</h4>
+            <h4 className={styles.footer__sociaBlockTItle}>
+              Our social media channels:
+            </h4>
 
             <SocialIcons />
           </div>{" "}

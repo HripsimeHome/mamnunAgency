@@ -9,11 +9,12 @@
   margin-top: 50px;
 
   &__header {
-    @include flexCol(space-between, center);
+    @include flexCol(space-between, start);
     flex-direction: column;
     width: 100%;
     @include setFont(35px, 400, $color-white);
     text-align: left;
+    line-height: 40px;
     background: transparent;
     border: 2px solid $color-white;
     border-radius: 25px;
@@ -30,9 +31,7 @@
   }
 
   &__btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexCol(space-between, start);
     width: 100%;
     @include button();
   }
@@ -49,10 +48,24 @@
 
   &__icon {
     width: 40px;
+
+    @include smScreenMedia {
+      width: 30px;
+    }
   }
 
   &__title {
     color: var(--textColor);
+    @include setFont(35px, 400, var(--textColor));
+
+    @include lgScreenMedia {
+      font-size: 20px;
+    }
+
+    @include smScreenMedia {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   &__content {
