@@ -42,6 +42,36 @@ body {
   }
 }
 
+.thinScrollbar {
+  // Body Scrollbar
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #1c1b1b;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 2px;
+  }
+
+  &::-moz-scrollbar {
+    width: 4px;
+  }
+
+  &::-moz-scrollbar-track {
+    background: #1c1b1b;
+  }
+
+  &::-moz-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 5px;
+  }
+}
+
 a {
   color: $color-primary;
   text-decoration: none;

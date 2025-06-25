@@ -24,7 +24,9 @@ const HomeNewsModal = ({ show, onClose, image, title, description, date }) => {
 
           <div className={styles.homeNewsModal__info}>
             <h4 className={styles.homeNewsModal__title}>{title}</h4>
-            <p className={styles.homeNewsModal__description}>{description}</p>
+            <p className={`${styles.homeNewsModal__description} thinScrollbar`}>
+              {description}
+            </p>
             <p className={styles.homeNewsModal__date}>{formatDate(date)}</p>
           </div>
         </div>
