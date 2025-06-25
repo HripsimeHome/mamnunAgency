@@ -37,8 +37,8 @@ import {
   feedbackWebpImage,
   trustImage,
   trustIWebpImage,
-  partnerImage,
-  partnerWebpImage,
+  partnersWhiteImage,
+  partnersWhiteWebpImage,
 } from "../../../assets/images";
 
 const slideData = [
@@ -147,8 +147,8 @@ const slideData = [
   },
 
   {
-    image: partnerImage,
-    webpImage: partnerWebpImage,
+    image: partnersWhiteImage,
+    webpImage: partnersWhiteWebpImage,
     alt: "Trusted education and travel partner",
     description:
       "Choose MAMNUN as your trusted partner in education and travel, and let us help you turn your dreams into reality—ensuring your satisfaction every step of the way!",

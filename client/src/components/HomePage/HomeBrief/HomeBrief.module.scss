@@ -37,5 +37,13 @@
     width: 100%;
     height: auto;
     border-radius: 25px;
+
+    @include lgScreenMedia {
+      border-radius: 20px;
+    }
+
+    @include smScreenMedia {
+      border-radius: 15px;
+    }
   }
 }

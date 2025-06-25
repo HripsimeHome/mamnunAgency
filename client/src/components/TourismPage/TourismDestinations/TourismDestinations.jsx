@@ -133,6 +133,7 @@ const TourismDestinations = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           Popular Destinations and Attractions&nbsp;
+          <br />
           <span className="titlePrimaryH2">in Uzbekistan</span>
         </h2>
         <p className={styles.tourismDestinations__introText}>
@@ -154,7 +155,7 @@ const TourismDestinations = () => {
                   className={styles.tourismDestinations__img}
                 />
 
-                <div className={styles.tourismDestinations__cardTest}>
+                <div className={styles.tourismDestinations__cardContent}>
                   <h4 className={styles.tourismDestinations__title}>{title}</h4>
                   <p className={styles.tourismDestinations__description}>
                     {description}
