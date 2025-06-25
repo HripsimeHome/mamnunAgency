@@ -55,7 +55,7 @@ const HomeBrief = () => {
             onClick={() => navigate(aboutPagePath)}
             className={styles.homeBrief__btn}
           >
-            Learn more
+            Who We Are
           </MainBtn>
         </div>
       </div>

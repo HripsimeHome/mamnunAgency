@@ -10,7 +10,7 @@ const ServicesBook = () => {
             <p className={styles.servicesBook__formTitle}>
               Experience seamless travel with our reliable services
               worldwide.&nbsp;
-              <span className="textPurple">Book your journey today</span>
+              <span className="textPrimary">Book your journey today</span>
               and enjoy the comfort and convenience you deserve!
             </p>
 
