@@ -1,13 +1,14 @@
+import React from "react";
 import { animated, useTransition } from "react-spring";
 
 export const TransitionStyleTypes = {
-  import: "import",
   opacity: "opacity",
-  height: "height",
-  rotateX: "rotateX",
-  left: "left",
   right: "right",
-  translateX: "translateX",
+  left: "left",
+  top: "top",
+  bottom: "bottom",
+  zoomIn: "zoomIn",
+  height: "height",
 };
 
 const TransitionProvider = ({
@@ -15,63 +16,65 @@ const TransitionProvider = ({
   inProp,
   className,
   duration,
-  height,
+  delay,
   children,
-  top,
+  isPicture,
+  height,
 }) => {
-  const transDuration = duration ? duration : 300;
-
+  const transDuration = duration ? duration : 500;
   const styles = {
-    opacity: {
+    [TransitionStyleTypes.opacity]: {
       from: { opacity: 0 },
       enter: { opacity: 1 },
       leave: { opacity: 0 },
     },
+    [TransitionStyleTypes.right]: {
+      from: { opacity: 0, translateX: "60px" },
+      enter: { opacity: 1, translateX: "0%" },
+      leave: { opacity: 0, translateX: "60px" },
+    },
+    [TransitionStyleTypes.left]: {
+      from: { opacity: 0, translateX: "-60px" },
+      enter: { opacity: 1, translateX: "0%" },
+      leave: { opacity: 0, translateX: "-60px" },
+    },
+    [TransitionStyleTypes.top]: {
+      from: { opacity: 0, translateY: "-60px" },
+      enter: { opacity: 1, translateY: "0%" },
+      leave: { opacity: 0, translateY: "-60px" },
+    },
+    [TransitionStyleTypes.bottom]: {
+      from: { opacity: 0, translateY: "60px" },
+      enter: { opacity: 1, translateY: "0%" },
+      leave: { opacity: 0, translateY: "60px" },
+    },
+    [TransitionStyleTypes.zoomIn]: {
+      from: { opacity: 0, scale: "0" },
+      enter: { opacity: 1, scale: "1" },
+      leave: { opacity: 0, scale: "0" },
+    },
     height: {
       from: { maxHeight: "0px" },
-      enter: { maxHeight: `${height}px` || "165px" },
+      enter: { maxHeight: height ? `${height}px` : "165px" },
       leave: { maxHeight: "0px" },
-    },
-    rotateX: {
-      from: { transform: "rotateX(90deg)" },
-      enter: { transform: "rotateX(0deg)" },
-      leave: { transform: "rotateX(90deg)" },
-    },
-
-    left: {
-      from: { transform: "translateX(100%)", opacity: 0 },
-      enter: { transform: "translateX(0%)", opacity: 1 },
-      leave: { transform: "translateX(-100%)", opacity: 0 },
-    },
-    right: {
-      from: { right: "-450px" },
-      enter: { right: "0" },
-      leave: { right: "-450px" },
-    },
-    top: {
-      from: { top: "-50px" },
-      enter: { top: top || "70px" },
-      leave: { top: "-50px" },
-    },
-    translateX: {
-      from: { translateX: "100%" },
-      enter: { translateX: "0%" },
-      leave: { translateX: "100%" },
     },
   };
 
   const transition = useTransition(inProp, {
     ...styles[style],
+    trail: delay || 0,
     config: { duration: transDuration },
   });
+
+  const Wrapper = isPicture ? animated.picture : animated.div;
 
   return (
     <>
       {transition((style, item) =>
         item ? (
-          <animated.div style={style} className={className ? className : ""}>
+          <Wrapper style={style} className={className ? className : ""}>
             {children}
-          </animated.div>
+          </Wrapper>
         ) : (
           ""
         )
