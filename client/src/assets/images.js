@@ -218,6 +218,22 @@ import emailWebpImage from "./images/contacts/icons/email.webp";
 
 import locationImage from "./images/contacts/icons/location.png";
 import locationWebpImage from "./images/contacts/icons/location.webp";
+import educationOfferIcon1Image from "./images/education/offer/educationOfferIcon1.png";
+import educationOfferIcon1WebpImage from "./images/education/offer/educationOfferIcon1.webp";
+import educationOfferIcon2Image from "./images/education/offer/educationOfferIcon2.png";
+import educationOfferIcon2WebpImage from "./images/education/offer/educationOfferIcon2.webp";
+import educationOfferIcon3Image from "./images/education/offer/educationOfferIcon3.png";
+import educationOfferIcon3WebpImage from "./images/education/offer/educationOfferIcon3.webp";
+import educationOfferIcon4Image from "./images/education/offer/educationOfferIcon4.png";
+import educationOfferIcon4WebpImage from "./images/education/offer/educationOfferIcon4.webp";
+import educationOfferIcon5Image from "./images/education/offer/educationOfferIcon5.png";
+import educationOfferIcon5WebpImage from "./images/education/offer/educationOfferIcon5.webp";
+import educationOfferIcon6Image from "./images/education/offer/educationOfferIcon6.png";
+import educationOfferIcon6WebpImage from "./images/education/offer/educationOfferIcon6.webp";
+import educationOfferIcon7Image from "./images/education/offer/educationOfferIcon7.png";
+import educationOfferIcon7WebpImage from "./images/education/offer/educationOfferIcon7.webp";
+import educationOfferIcon8Image from "./images/education/offer/educationOfferIcon8.png";
+import educationOfferIcon8WebpImage from "./images/education/offer/educationOfferIcon8.webp";
 
 export {
   //General
@@ -350,6 +366,24 @@ export {
   checkWebpImage,
   crossImage,
   crosskWebpImage,
+
+  // Education Offer
+  educationOfferIcon1Image,
+  educationOfferIcon1WebpImage,
+  educationOfferIcon2Image,
+  educationOfferIcon2WebpImage,
+  educationOfferIcon3Image,
+  educationOfferIcon3WebpImage,
+  educationOfferIcon4Image,
+  educationOfferIcon4WebpImage,
+  educationOfferIcon5Image,
+  educationOfferIcon5WebpImage,
+  educationOfferIcon6Image,
+  educationOfferIcon6WebpImage,
+  educationOfferIcon7Image,
+  educationOfferIcon7WebpImage,
+  educationOfferIcon8Image,
+  educationOfferIcon8WebpImage,
 
   // Services
   servicesHeaderImage,
