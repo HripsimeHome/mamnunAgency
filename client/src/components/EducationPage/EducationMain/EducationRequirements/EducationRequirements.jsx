@@ -63,7 +63,7 @@ function EducationRequirements() {
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
-  const { ref, isInView } = useLazy(0, 4);
+  const { ref, isInView } = useLazy(0.4);
 
   useEffect(() => {
     if (
