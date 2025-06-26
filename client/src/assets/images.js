@@ -71,6 +71,7 @@ import visaImage from "./images/footer/cards/visa.png";
 import mvisaWebpImage from "./images/footer/cards/visa.webp";
 
 // Home
+import homeVideoPosterImage from "./images/home/homeVideoPoster.jpg";
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
 import expertiseWebpImage from "./images/home/icons/reasons/expertise.webp";
 
@@ -460,6 +461,7 @@ export {
   mvisaWebpImage,
 
   // Home
+  homeVideoPosterImage,
   expertiseImage,
   expertiseWebpImage,
   personalizedApproachImage,
