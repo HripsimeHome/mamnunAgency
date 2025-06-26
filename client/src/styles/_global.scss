@@ -156,7 +156,7 @@ a {
 .wrapperPadding {
   padding: 100px 0;
 
-  @include mdScreenMedia {
+  @include xlScreenMedia {
     padding: 50px 0;
   }
 
