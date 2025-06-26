@@ -64,5 +64,9 @@
   &__btn {
     align-self: flex-end;
     max-width: 586px;
+
+    @include lgScreenMedia {
+      align-self: center;
+    }
   }
 }

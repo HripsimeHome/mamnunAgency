@@ -4,9 +4,13 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
   width: 100%;
-  margin-top: 50px;
+  // margin-top: 50px;
+
+  @include mdScreenMedia {
+    gap: 0;
+  }
 
   &__header {
     @include flexCol(space-between, start);
@@ -19,7 +23,7 @@
     border: 2px solid $color-white;
     border-radius: 25px;
     cursor: pointer;
-    //margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 25px;
     transition: $transition;
     --textColor: #{$color-white};
@@ -27,6 +31,14 @@
     &_active {
       background-color: $color-white;
       --textColor: #{$color-secondary};
+    }
+
+    @include lgScreenMedia {
+      margin-bottom: 10px;
+    }
+
+    @include smScreenMedia {
+      margin-bottom: 5px;
     }
   }
 
