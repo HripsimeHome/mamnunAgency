@@ -70,6 +70,20 @@ a {
   color: $color-red;
 }
 
+.textMain {
+  @include setFont(20px, 400, $color-secondary);
+  text-align: justify;
+  line-height: 30px;
+
+  @include xlScreenMedia {
+    font-size: 16px;
+  }
+
+  @include smScreenMedia {
+    font-size: 14px;
+  }
+}
+
 // Titles
 .titlePrimaryH1 {
   @include setFont(125px, 600, $color-primary);
@@ -91,20 +105,20 @@ a {
 .titlePrimaryH2,
 .titleSecondaryH2,
 .titleWhiteH2 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 40px;
 
-  @include mdScreenMedia {
+  @include xlScreenMedia {
     font-size: 32px;
-    font-weight: 600;
-    line-height: 40px;
+    font-weight: 500;
+    line-height: 30px;
   }
 
   @include smScreenMedia {
     font-size: 24px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 20px;
   }
 }
 
@@ -172,22 +186,13 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 
-  /*
-  @include xlScreenMedia {
-    max-width: 960px;
-  }
-
-  @include lgScreenMedia {
-    max-width: 820px;
-  }
-
   @include mdScreenMedia {
-    max-width: 640px;
-  }*/
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   @include smScreenMedia {
-    //max-width: 360px;
-    //padding-left: 16px;
-    // padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
