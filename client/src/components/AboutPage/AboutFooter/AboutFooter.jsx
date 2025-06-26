@@ -13,7 +13,7 @@ const AboutFooter = () => {
 
           <div className={styles.aboutFooter__companyBlock}>
             <h3 className={styles.aboutFooter__companyName}>MAMNUN Agency</h3>
-            <spasn>Reviews</spasn>
+            <span>Reviews</span>
           </div>
         </div>
       </div>
