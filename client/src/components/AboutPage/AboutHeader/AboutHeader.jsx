@@ -29,7 +29,7 @@ const AboutHeader = () => {
             <h2 className={styles.aboutHeader__title}>
               MAMNUN is not just an education consultancy agency
             </h2>
-            <p>
+            <p className="textMain">
               We are also a premier travel agency dedicated to providing unique
               travel packages and exceptional services. Our expertise extends
               beyond education, as we offer VIP passenger ground handling with
@@ -108,7 +108,7 @@ const AboutHeader = () => {
           </div>
 
           <div className={styles.aboutHeader__text2}>
-            <p>
+            <p className="textMain">
               Whether you are seeking educational opportunities or planning your
               next adventure, MAMNUN is here to cater to all your travel needs,
               including ground transportation across the globe. Experience the
