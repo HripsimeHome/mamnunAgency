@@ -3,7 +3,7 @@
  //General
  
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 13" id="arrowWhite">
-    <path d="M1 1L14.5 11L28 1" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M1 1L14.5 11L28 1" stroke-width="2" stroke-linecap="round"></path>
   </symbol>  
  
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 13" id="arrowPurple">
