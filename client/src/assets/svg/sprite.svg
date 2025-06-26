@@ -608,5 +608,15 @@
     <path d="M94.1004 74.0004H74.0004M74.0004 74.0004H53.9004M74.0004 74.0004V53.9004M74.0004 74.0004V94.1004" stroke="#8C52FF" stroke-width="13" stroke-linecap="round"></path>
     <path d="M40.5 15.9634C50.3548 10.2627 61.7966 7 74 7C111.003 7 141 36.9969 141 74C141 111.003 111.003 141 74 141C36.9969 141 7 111.003 7 74C7 61.7966 10.2627 50.3548 15.9634 40.5" stroke="#8C52FF" stroke-width="13" stroke-linecap="round"></path>
   </symbol>
-
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" id="thinCross">
+    <g clip-path="url(#clip0_2943_184)">
+      <line x1="0.373122" y1="-0.330566" x2="23.0005" y2="22.2969" stroke="black" stroke-linecap="round"></line>
+      <line x1="-0.330078" y1="22.2973" x2="22.2973" y2="-0.330129" stroke="black" stroke-linecap="round"></line>
+    </g>
+    <defs>
+      <clipPath id="clip0_2943_184">
+        <rect width="23" height="23" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
 </svg>

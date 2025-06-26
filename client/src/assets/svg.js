@@ -1,6 +1,7 @@
 // General
 export const burgerIcon = "burger";
 export const crossIcon = "cross";
+export const thinCrossIcon = "thinCross";
 
 export const arrowWhiteIcon = "arrowWhite";
 export const arrowPurpleIcon = "arrowPurple";
