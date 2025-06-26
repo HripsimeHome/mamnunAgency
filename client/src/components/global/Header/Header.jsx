@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import { useState } from "react";
 
-const Header = ({ image, webpImage, alt, title, subtitle }) => {
+const Header = ({ image, webpImage, alt, title, subtitle, imgPosition }) => {
   const [loading, setLoading] = useState(true);
   return (
     <header className={styles.header}>
@@ -10,9 +10,11 @@ const Header = ({ image, webpImage, alt, title, subtitle }) => {
         src={image}
         srcSet={webpImage}
         alt={alt}
+        style={{ objectPosition: imgPosition || "center" }}
         onLoad={() => setLoading(false)}
         className={`
           ${styles.header__img}
+ 
           ${loading ? styles.header__img_inactive : ""}         
         `}
       />

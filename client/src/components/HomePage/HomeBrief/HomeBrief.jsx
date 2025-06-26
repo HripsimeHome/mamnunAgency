@@ -18,7 +18,7 @@ const HomeBrief = () => {
     <section className="wrapperWhite wrapperPadding">
       <div className={`${styles.homeBrief} container`}>
         <div className={styles.homeBrief__column}>
-          <p className={styles.homeBrief__text}>
+          <p className="textMain">
             We are a proud family-owned company dedicated to delivering
             exceptional education and travel services customized just for you.
             Our mission is to empower students to achieve their academic and
@@ -37,7 +37,7 @@ const HomeBrief = () => {
         </div>
 
         <div className={styles.homeBrief__column}>
-          <p className={styles.homeBrief__text}>
+          <p className="textMain">
             Our commitment to quality and transparency means you can trust us to
             guide you through the process with clarity and confidence. Your
             satisfaction is our top priority, and we are here to help you turn
@@ -55,7 +55,7 @@ const HomeBrief = () => {
             onClick={() => navigate(aboutPagePath)}
             className={styles.homeBrief__btn}
           >
-            Learn more
+            Who We Are
           </MainBtn>
         </div>
       </div>

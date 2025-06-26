@@ -13,13 +13,28 @@
     margin-top: 50px;
     // max-width: 1440px;
     // width: 100%;
+    overflow-x: hidden;
+
+    @include lgScreenMedia {
+      gap: 15px;
+      margin-top: 25px;
+    }
+    @include smScreenMedia {
+      gap: 5px;
+      margin-top: 15px;
+    }
   }
 
   &__card {
-    min-height: 350px; // ?
     perspective: 1000px;
     position: relative;
-    aspect-ratio: 6/2;
+    overflow: hidden;
+    transition: $transition;
+    max-height: 20vw;
+
+    &:hover {
+      max-height: 100vh;
+    }
   }
 
   &__cardInner {
@@ -28,10 +43,13 @@
     height: 100%;
     transition: transform 2s;
     transform-style: preserve-3d;
+    height: 100%;
+    max-height: 20vw;
   }
 
   &__card:hover &__cardInner {
     transform: rotateY(180deg);
+    max-height: 100vh;
   }
 
   &__cardFront,
@@ -40,18 +58,24 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    // @include flexCol();
     @include setFont(20px, 400, $color-secondary);
     background-color: #f0f0f0;
+    // box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.25);
   }
 
   &__cardFront {
     @include flexCol(end, center);
     background-color: $color-darkGrey;
     border-radius: 20px;
+    height: 100%;
 
-    @media (max-width: 1200px) {
+    @include xlScreenMedia {
       aspect-ratio: 6/2.5;
+    }
+
+    @include smScreenMedia {
+      justify-content: center;
+      border-radius: 10px;
     }
 
     &:hover {
@@ -59,7 +83,7 @@
     }
 
     &_reversed {
-      justify-content: start;
+      justify-content: center;
     }
 
     @include smScreenMedia {
@@ -102,6 +126,9 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 25px;
+    position: relative;
+    z-index: 2;
+    height: 100%;
   }
 
   &__cardBackTitle {

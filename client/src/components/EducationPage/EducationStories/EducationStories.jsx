@@ -1,4 +1,13 @@
 import styles from "./EducationStories.module.scss";
+import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { Navigation, Pagination } from "swiper/modules";
+import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import "swiper/css/pagination";
+// import "./sliderDots.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
@@ -108,7 +117,11 @@ const EducationStories = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           Success stories of the&nbsp;
-          <span className="titlePrimaryH2">students placed abroad</span>
+          <span className="titlePrimaryH2">
+            students
+            <br />
+            placed abroad
+          </span>
         </h2>
 
         <div className={styles.educationStories__slideContainer}>

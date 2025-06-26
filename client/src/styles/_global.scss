@@ -14,7 +14,7 @@ body {
   color: $color-secondary;
   background-color: $color-white;
 
-  // Body Scrollbar
+  //  Scrollbar
   &::-webkit-scrollbar {
     width: 12px;
   }
@@ -73,17 +73,11 @@ body {
 }
 
 a {
-  color: $color-primary;
   text-decoration: none;
-
-  &:hover {
-    color: $color-lightPrimary;
-    // text-decoration: underline
-  }
 }
 
 #root {
-  // min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -94,7 +88,7 @@ a {
 
 // Text
 
-.textPurple {
+.textPrimary {
   color: $color-primary;
 }
 
@@ -104,6 +98,20 @@ a {
 
 .textRed {
   color: $color-red;
+}
+
+.textMain {
+  @include setFont(20px, 400, $color-secondary);
+  text-align: justify;
+  line-height: 30px;
+
+  @include xlScreenMedia {
+    font-size: 16px;
+  }
+
+  @include smScreenMedia {
+    font-size: 14px;
+  }
 }
 
 // Titles
@@ -127,20 +135,20 @@ a {
 .titlePrimaryH2,
 .titleSecondaryH2,
 .titleWhiteH2 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 40px;
 
-  @include mdScreenMedia {
+  @include xlScreenMedia {
     font-size: 32px;
-    font-weight: 600;
-    line-height: 40px;
+    font-weight: 500;
+    line-height: 30px;
   }
 
   @include smScreenMedia {
     font-size: 24px;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 20px;
   }
 }
 
@@ -180,6 +188,9 @@ a {
 
 .width40 {
   width: 40%;
+  @include mdScreenMedia {
+    width: 100%;
+  }
 }
 
 .width25 {
@@ -189,8 +200,8 @@ a {
 .wrapperPadding {
   padding: 100px 0;
 
-  @include mdScreenMedia {
-    padding: 25px 0;
+  @include xlScreenMedia {
+    padding: 50px 0;
   }
 
   @include smScreenMedia {
@@ -205,22 +216,13 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 
-  /*
-  @include xlScreenMedia {
-    max-width: 960px;
-  }
-
-  @include lgScreenMedia {
-    max-width: 820px;
-  }
-
   @include mdScreenMedia {
-    max-width: 640px;
-  }*/
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   @include smScreenMedia {
-    //max-width: 360px;
-    //padding-left: 16px;
-    // padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

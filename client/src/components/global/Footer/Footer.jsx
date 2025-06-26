@@ -19,7 +19,7 @@ import { Fragment } from "react";
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} wrapperWhite`}>
+    <footer className={`${styles.footer} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.footer__container}>
           <div className={styles.footer__logoBlock}>
@@ -29,60 +29,58 @@ const Footer = () => {
                 srcSet={logoBlackWebpImage}
                 alt="Logo"
                 className={styles.footer__logoImg}
-                //pictureClass={styles.footer__logoImgPosition}
+                pictureClass={styles.footer__logoImgPosition}
               />
-              MAMNUN Agency
             </Link>
+            MAMNUN Agency
           </div>
 
-          <div className={styles.footer__menuContainer}>
-            {footerMenuItems.map((menu, index) => (
-              <div key={index}>
-                <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
-                <nav className={styles.footer__menu}>
-                  {menu.items.map((item, i) => {
-                    const LinkTag = item.isOutLink ? "a" : NavLink;
+          {footerMenuItems.map((menu, index) => (
+            <div key={index} className={styles.footer__menuItem}>
+              <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
+              <nav className={styles.footer__menu}>
+                {menu.items.map((item, i) => {
+                  const LinkTag = item.isOutLink ? "a" : NavLink;
 
-                    return (
-                      <Fragment key={i}>
-                        {item.link ? (
-                          <LinkTag
-                            {...(item.isOutLink
-                              ? { href: item.link }
-                              : { to: item.link })}
-                            to={item.link}
-                            target={item.target ? item.target : "_self"}
-                            rel={
-                              item.target === "_blank"
-                                ? "noreferrer"
-                                : undefined
-                            }
-                            className={
-                              item.isOutLink
-                                ? styles.footer__menuLink
-                                : ({ isActive }) =>
-                                    isActive
-                                      ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
-                                      : styles.footer__menuLink
-                            }
-                          >
-                            {item.text}
-                          </LinkTag>
-                        ) : (
-                          <span>{item.text}</span>
-                        )}
-                      </Fragment>
-                    );
-                  })}
-                </nav>
-              </div>
-            ))}
-          </div>
+                  return (
+                    <Fragment key={i}>
+                      {item.link ? (
+                        <LinkTag
+                          {...(item.isOutLink
+                            ? { href: item.link }
+                            : { to: item.link })}
+                          to={item.link}
+                          target={item.target ? item.target : "_self"}
+                          rel={
+                            item.target === "_blank" ? "noreferrer" : undefined
+                          }
+                          className={
+                            item.isOutLink
+                              ? styles.footer__menuLink
+                              : ({ isActive }) =>
+                                  isActive
+                                    ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
+                                    : styles.footer__menuLink
+                          }
+                        >
+                          {item.text}
+                        </LinkTag>
+                      ) : (
+                        <span>{item.text}</span>
+                      )}
+                    </Fragment>
+                  );
+                })}
+              </nav>
+            </div>
+          ))}
         </div>
         {/* menuContainer */}
         <div className={styles.footer__info}>
           <div className={styles.footer__sociaBlock}>
-            <h4>Our social media channels:</h4>
+            <h4 className={styles.footer__sociaBlockTItle}>
+              Our social media channels:
+            </h4>
 
             <SocialIcons />
           </div>{" "}

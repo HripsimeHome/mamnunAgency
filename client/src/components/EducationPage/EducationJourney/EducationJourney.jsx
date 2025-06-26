@@ -2,13 +2,6 @@
 import styles from "./EducationJourney.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
-// import {
-//   checkImage,
-//   checkWebpImage,
-//   crossImage,
-//   crossWebpImage,
-// } from "../../../../assets/images";
-
 const assistData = [
   "Tailoring programs to meet your unique needs",
   "Expertly handling your documentation and applications",
@@ -40,7 +33,9 @@ const EducationJourney = () => {
 
         <div className={styles.educationJourney__journeyContainer}>
           <div className={styles.educationJourney__journeyColumn}>
-            <h3 className="titlePrimaryH3">How We Assist You:</h3>
+            <h3 className={`${styles.educationJourney__title} titlePrimaryH3 `}>
+              How We Assist You:
+            </h3>
             <ul
               className={`
                 ${styles.educationJourney__journeyList}
@@ -54,7 +49,9 @@ const EducationJourney = () => {
           </div>
 
           <div className={styles.educationJourney__journeyColumn}>
-            <h3 className="titleSecondaryH3">What We Do not Do:</h3>
+            <h3 className={`${styles.educationJourney__title} titlePrimaryH3 `}>
+              What We Do not Do:
+            </h3>
             <ul
               className={`
                 ${styles.educationJourney__journeyList}

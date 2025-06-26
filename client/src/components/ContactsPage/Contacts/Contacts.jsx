@@ -99,7 +99,7 @@ const Contacts = () => {
   return (
     <section className={`${styles.contacts} wrapperWhite wrapperPadding`}>
       <div className="container">
-        <h2 className="titlePrimaryH2">
+        <h2 className={`${styles.contacts__sectionTtitle} titlePrimaryH2`}>
           Write&nbsp;
           <span className="titleSecondaryH2">to us</span>
         </h2>
@@ -178,7 +178,10 @@ const Contacts = () => {
                 <span className={styles.contacts__text}>{text}</span>
               </div>
             ))}
-            <SocialIcons />
+          </div>
+
+          <div className={styles.contacts__socialIconsPosition}>
+            <SocialIcons className={styles.contacts__socialIcons} />
           </div>
         </div>
       </div>

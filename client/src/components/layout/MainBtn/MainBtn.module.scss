@@ -9,7 +9,7 @@
   padding: 12px;
   border-radius: 30px;
   transition: $transition;
-  @include setFont(18px, 600, $color-secondary);
+  @include setFont(18px, 700, $color-secondary);
   display: block;
 
   &:not(&:disabled) &:hover {
@@ -24,6 +24,7 @@
     background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
   }
 
+  &:hover,
   &:active,
   &:focus-visible,
   &_active {
@@ -49,5 +50,13 @@
 
   &_withWhite {
     color: $color-white;
+  }
+
+  @include xlScreenMedia {
+    font-size: 16px;
+  }
+
+  @include smScreenMedia {
+    font-size: 14px;
   }
 }

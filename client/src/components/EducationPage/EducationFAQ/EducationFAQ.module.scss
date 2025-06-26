@@ -1,7 +1,19 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-
 .educationFAQ {
+  &__columns {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 
+    @include mdScreenMedia {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__column {
+    flex: 1;
+  }
 }

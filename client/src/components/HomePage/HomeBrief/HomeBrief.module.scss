@@ -12,6 +12,14 @@
     grid-template-columns: 1fr;
   }
 
+  @include xlScreenMedia {
+    row-gap: 25px;
+  }
+
+  @include smScreenMedia {
+    row-gap: 5px;
+  }
+
   &__column {
     display: flex;
     flex-direction: column;
@@ -19,22 +27,18 @@
     gap: 25px;
   }
 
-  &__text {
-    @include setFont(20px, 400, $color-secondary);
-    text-align: justify;
-    line-height: 30px;
-
-    @include mdScreenMedia {
-      font-size: 30px;
-    }
-    @include smScreenMedia {
-      font-size: 14px;
-    }
-  }
-
   &__missionImg,
   &__valuesImg {
     width: 100%;
     height: auto;
+    border-radius: 25px;
+
+    @include lgScreenMedia {
+      border-radius: 20px;
+    }
+
+    @include smScreenMedia {
+      border-radius: 15px;
+    }
   }
 }

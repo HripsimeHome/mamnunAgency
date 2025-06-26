@@ -117,13 +117,16 @@ const accordionItems = [
 const EducationStudying = () => {
   return (
     <section
-      className={`${styles.educationStudying} wrapperBlack wrapperPadding`}
+      className={`${styles.educationStudying} wrapperWhite wrapperPadding`}
     >
       <div className="container">
         <h2 className="titleSecondaryH2">
-          Pros and Cons of studying in
-          <br />
-          <span className="titlePrimaryH2">Uzbekistan</span>
+          Pros and Cons of studying{" "}
+          <span className="titlePrimaryH2">
+            in
+            <br />
+            Uzbekistan
+          </span>
         </h2>
         <>
           <Accordion

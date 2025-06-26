@@ -12,7 +12,7 @@ const TourismBrief = () => {
       <div className="container">
         <div className={styles.tourismBrief__content}>
           <div className={styles.tourismBrief__text1}>
-            <p>
+            <p className="textMain">
               Our travel services to Uzbekistan are designed to offer a seamless
               and unforgettable experience. From customized private tours and
               group packages to hotel bookings, local guides, and
@@ -34,10 +34,13 @@ const TourismBrief = () => {
           </div>
 
           <div className={styles.tourismBrief__text2}>
-            <p>
+            <p className="textMain">
               We also believe that the true magic of Uzbekistan lies in its
-              people. That’s why our tours offer meaningful integration with
-              locals — from hands-on experiences with artisans in their
+              people. That’s why our tours offer&nbsp;
+              <span className="textPrimary">
+                meaningful integration with locals
+              </span>
+              &nbsp; — from hands-on experiences with artisans in their
               workshops, to home-cooked meals with Uzbek families, to
               participating in traditional celebrations and customs. These
               moments create real connections and lifelong memories.

@@ -1,27 +1,38 @@
 import styles from "./HomeHeader.module.scss";
-import MainBtn from "../../layout/MainBtn/MainBtn";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import MainBtn from "../../layout/MainBtn/MainBtn";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
 
-const mottos = [
-  {
-    title: "Travel Far",
-    button: "Tourism",
-  },
-  {
-    title: "Learn Deep",
-    button: "Education",
-  },
-  {
-    title: "Experience True Satisfaction",
-    button: "VIP Services",
-  },
-];
+import {
+  tourismPagePath,
+  educationPagePath,
+  servicesPagePath,
+} from "../../../router/path";
 
 const HomeHeader = () => {
+  const navigate = useNavigate();
   const [activeMottoIndex, setActiveMottoIndex] = useState(0);
+
+  const mottos = [
+    {
+      title: "Travel Far",
+      button: "Tourism",
+      path: tourismPagePath,
+    },
+    {
+      title: "Learn Deep",
+      button: "Education",
+      path: educationPagePath,
+    },
+    {
+      title: "Experience True Satisfaction",
+      button: "VIP Services",
+      path: servicesPagePath,
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,12 +46,12 @@ const HomeHeader = () => {
   }, []);
   return (
     <section className={styles.homeHeader}>
-      {/* {process.env.NODE_ENV !== "development" && ( */}
-      <video autoPlay muted loop className={styles.homeHeader__video}>
-        Your browser does not support the video tag.
-        <source src="/videos/home/home.mp4" type="video/mp4" />
-      </video>
-      {/* )} */}
+      {process.env.NODE_ENV !== "development" && (
+        <video autoPlay muted loop className={styles.homeHeader__video}>
+          Your browser does not support the video tag.
+          <source src="/videos/home/home.mp4" type="video/mp4" />
+        </video>
+      )}
 
       <div className={styles.homeHeader__mottoTextContainer}>
         {mottos.map((motto, index) => (
@@ -60,6 +71,7 @@ const HomeHeader = () => {
             active={index === activeMottoIndex}
             className={"textWhite"}
             key={index}
+            onClick={() => navigate(motto.path)}
           >
             {motto.button}
           </MainBtn>

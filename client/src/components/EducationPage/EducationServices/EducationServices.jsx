@@ -1,53 +1,102 @@
 import styles from "./EducationServices.module.scss";
 import { Link } from "react-router-dom";
 import Accordion from "../../layout/Accordion/Accordion";
-
 import { contactsPagePath } from "../../../router/path";
 
-import { meritBasedIcon } from "../../../assets/svg";
+import {
+  CVPreparationBLackImage,
+  CVPreparationBLackWebpImage,
+  CVPreparationWhiteImage,
+  CVPreparationWhiteWebpImage,
+  motivationalLetterBlackImage,
+  motivationalLetterBlackWebpImage,
+  motivationalLetterWhitemage,
+  motivationalLetterWhitekWebpImage,
+  notarialBLackImage,
+  notarialBLackWebpImage,
+  notarialWhiteImage,
+  notarialWhitekWebpImage,
+  docDeliveryBlackImage,
+  docDeliveryBlackWebpImage,
+  docDeliveryWhiteImage,
+  docDeliveryWhiteWebpImage,
+  ticketIssuanceWhiteImage,
+  ticketIssuanceWhiteWebpImage,
+  ticketIssuanceBLackImage,
+  ticketIssuanceBLackWebpImage,
+  partnersWhiteImage,
+  partnersWhiteWebpImage,
+  partnersBlackWebpImage,
+  partnersBlackImage,
+  VIPBlackImage,
+  VIPBlackWebpImage,
+  VIPWhiteImage,
+  VIPWhiteWebpImage,
+} from "../../../assets/images";
 
 const accordionItems = [
   {
-    icon: meritBasedIcon,
+    image: CVPreparationWhiteImage,
+    webpImage: CVPreparationWhiteWebpImage,
+    activeImage: CVPreparationBLackImage,
+    activeWebpImage: CVPreparationBLackWebpImage,
     title: "CV Preparation",
     content:
       "Tailored to highlight your skills and experience for your chosen program.",
   },
 
   {
-    icon: meritBasedIcon,
+    image: motivationalLetterWhitemage,
+    webpImage: motivationalLetterWhitekWebpImage,
+    activeImage: motivationalLetterBlackImage,
+    activeWebpImage: motivationalLetterBlackWebpImage,
     title: "Motivational Letter Writing",
     content:
       "Customized to suit the specific requirements of your program and university.",
   },
 
   {
-    icon: meritBasedIcon,
+    image: notarialWhiteImage,
+    webpImage: notarialWhitekWebpImage,
+    activeImage: notarialBLackImage,
+    activeWebpImage: notarialBLackWebpImage,
     title: "Notarial Translation",
     content: "Certified translations of your documents for official use.",
   },
 
   {
-    icon: meritBasedIcon,
+    image: docDeliveryWhiteImage,
+    webpImage: docDeliveryWhiteWebpImage,
+    activeImage: docDeliveryBlackImage,
+    activeWebpImage: docDeliveryBlackWebpImage,
     title: "Documentation Delivery",
     content: "Efficient and secure delivery of your important documents.",
   },
 
   {
-    icon: meritBasedIcon,
     title: "Insurance Coverage",
+    image: partnersWhiteImage,
+    webpImage: partnersWhiteWebpImage,
+    activeImage: partnersBlackImage,
+    activeWebpImage: partnersBlackWebpImage,
     content:
       "Comprehensive insurance options for your travel and study abroad experience.",
   },
 
   {
-    icon: meritBasedIcon,
+    image: ticketIssuanceWhiteImage,
+    webpImage: ticketIssuanceWhiteWebpImage,
+    activeImage: ticketIssuanceBLackImage,
+    activeWebpImage: ticketIssuanceBLackWebpImage,
     title: "Air Ticket Issuance",
     content: "Assistance with booking your flight to your study destination.",
   },
 
   {
-    icon: meritBasedIcon,
+    image: VIPWhiteImage,
+    webpImage: VIPWhiteWebpImage,
+    activeImage: VIPBlackImage,
+    activeWebpImage: VIPBlackWebpImage,
     title: "VIP Assistance",
     content:
       "Personalized support to ensure a smooth and comfortable arrival at your final destination.",
@@ -56,7 +105,9 @@ const accordionItems = [
 
 const EducationServices = () => {
   return (
-    <section className={`${styles.educationServices} wrapperBlack wrapperPadding`}>
+    <section
+      className={`${styles.educationServices} wrapperBlack wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleWhiteH2">
           Additional&nbsp;
@@ -64,11 +115,13 @@ const EducationServices = () => {
           <br />
           <span className="titleWhiteH2">(Available for an Extra Fee)</span>
         </h2>
-         <>
-           <Accordion 
-            accordionItems={accordionItems}          
-          />
-         </>
+        <p className="textWhite">
+          We offer a range of additional services to support your journey
+          abroad. These services are available at an extra cost:
+        </p>
+        <>
+          <Accordion accordionItems={accordionItems} />
+        </>
 
         <p className={styles.educationServices__text}>
           For more details or to request any of these services, please

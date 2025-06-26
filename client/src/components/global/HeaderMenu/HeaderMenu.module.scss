@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   background-color: $color-secondary;
   transition: $transition;
 
@@ -17,6 +17,10 @@
     width: 100%;
     max-width: 93px;
     height: auto;
+
+    @include smScreenMedia {
+      max-width: 48px;
+    }
   }
 
   &__menu {
@@ -57,7 +61,8 @@
     display: inline-block;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &_active {
       color: $color-white;
 
       &::after {
@@ -104,21 +109,6 @@
     gap: 8px;
     cursor: pointer;
     position: relative;
-
-    // Simulated border ONLY when .servicesWrapper_active class is present
-    &.servicesWrapper_active > .headerMenu__menuLink {
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        height: 2px;
-        background-color: $color-lightPrimary;
-        border-radius: 2px;
-      }
-    }
   }
 
   &__arrowIcon {
@@ -135,6 +125,7 @@
 
   &__dropdown {
     position: relative;
+    cursor: pointer;
 
     &:hover .headerMenu__dropdownContent {
       display: flex;
@@ -142,7 +133,6 @@
   }
 
   &__dropdownContent {
-    display: none;
     position: absolute;
     top: 30px;
     left: -25px;
@@ -174,6 +164,10 @@
     @include mdScreenMedia {
       // optional responsive changes
     }
+  }
+
+  &__dropdown:not(.headerMenu__dropdown_active) .headerMenu__dropdownContent {
+    display: none;
   }
 
   &__btnBurger {

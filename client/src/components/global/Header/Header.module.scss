@@ -5,12 +5,15 @@
   position: relative;
   @include flexCol();
   aspect-ratio: 6/2;
-  //background-color: rgb(0 0 0 / 35%);
   text-align: center;
   background-color: $color-darkGrey;
 
-  @media (max-width: 1200px) {
+  @include xlScreenMedia {
     aspect-ratio: 6/2.5;
+  }
+
+  @include smScreenMedia {
+    //aspect-ratio: 6/4;
   }
 
   &__img {
@@ -29,15 +32,12 @@
     }
   }
 
-  @include smScreenMedia {
-    //aspect-ratio: 6/4;
-  }
-
   &__textContainer {
     @include flexCol();
     flex-direction: column;
     position: relative;
     z-index: 2;
+    padding-bottom: 10px;
   }
 
   &__title {
@@ -51,20 +51,22 @@
 
     @include smScreenMedia {
       font-size: 24px;
+      margin-bottom: 5px;
     }
   }
 
   &__subtitle {
     @include setFont(23px, 400, $color-white);
     line-height: 30px;
-    padding: 0 30px;
+    //padding: 0 30px;
 
     @include mdScreenMedia {
-     font-size: 14px;
+      font-size: 18px;
     }
 
-     @include smScreenMedia {
-      font-size: 24px;
+    @include smScreenMedia {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }

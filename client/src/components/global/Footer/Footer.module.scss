@@ -2,51 +2,115 @@
 @import "../../../styles/vars";
 
 .footer {
-  border-top: 2px solid $color-secondary;
   color: $color-secondary;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  border-top: 2px solid $color-secondary;
+  margin-top: auto;
 
   &__container {
-    @include flexCol(space-between, start);
-    gap: 85px;
-  }
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
 
-  &__menuContainer {
-    display: flex;
-    justify-self: center;
-    width: 100%;
-    gap: 85px;
+    @include lgScreenMedia {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-    // @include lgScreenMedia {
-    //   gap: 40px;
-    // }
+    @include smScreenMedia {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 10px;
+    }
   }
 
   &__logoBlock {
     text-align: center;
-    // margin-right: 30px;
+    max-width: 174px;
 
-    // @include mdScreenMedia {
-
-    // }
+    @include lgScreenMedia {
+      order: 4;
+    }
+    @include smScreenMedia {
+      order: unset;
+    }
   }
 
-  &__logoImgPosition {
-    // @include mdScreenMedia {
-    //   justify-content: center;
-    // }
+  &__menuItem {
+    max-width: 330px;
+
+    @include lgScreenMedia {
+      max-width: unset;
+    }
+    @include smScreenMedia {
+      order: unset !important;
+      text-align: center;
+    }
+
+    &:nth-child(1) {
+      @include lgScreenMedia {
+        order: 4;
+      }
+    }
+    &:nth-child(2) {
+      @include lgScreenMedia {
+        order: 1;
+      }
+    }
+    &:nth-child(3) {
+      @include lgScreenMedia {
+        order: 2;
+      }
+    }
+    &:nth-child(4) {
+      @include lgScreenMedia {
+        order: 3;
+      }
+    }
+    &:nth-child(1) {
+      @include lgScreenMedia {
+        order: 4;
+      }
+    }
+
+    &:last-child {
+      @include lgScreenMedia {
+        grid-column: span 2 / span 2;
+        order: 5;
+      }
+
+      @include smScreenMedia {
+        grid-column: unset;
+      }
+    }
   }
 
   &__logoImg {
-    max-width: 178px;
+    max-width: 150px;
     width: 100%;
     margin-bottom: 25px;
+
+    @include lgScreenMedia {
+      max-width: 100px;
+    }
+
+    @include smScreenMedia {
+      max-width: 70px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__logoImgPosition {
+    justify-content: center;
   }
 
   &__menuTitle {
     @include setFont(24px, 600, $color-secondary);
     margin-bottom: 15px;
+
+    @include smScreenMedia {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 16px;
+    }
   }
 
   &__menu {
@@ -58,6 +122,12 @@
     @include setFont(18px, 400, $color-secondary);
     line-height: 20px;
     margin-bottom: 15px;
+
+    @include smScreenMedia {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 5px;
+    }
 
     &:hover {
       color: $color-primary;
@@ -79,12 +149,39 @@
     gap: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__sociaBlock {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include smScreenMedia {
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+
+  &__sociaBlockTItle {
+    @include setFont(20px, 600, $color-secondary);
+    line-height: 16px;
+
+    @include lgScreenMedia {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+    }
   }
 
   &__paymentsBLock {
@@ -98,6 +195,12 @@
     gap: 10px;
   }
 
+  &__paymentsImg {
+    @include lgScreenMedia {
+      height: 22px;
+    }
+  }
+
   // Copyright
 
   &__bottom {
@@ -107,24 +210,30 @@
 
     justify-content: space-between;
     align-items: center;
-
     gap: 50px;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__col {
-    flex: 1; // makes all 3 columns equal width
+    flex: 1;
     text-align: center;
 
-    &:first-child {
-      text-align: left;
+    @include xlScreenMedia {
+      &:first-child {
+        display: none;
+      }
     }
 
     &:nth-child(2) {
-      flex: 2; // give the middle column more width
+      flex: 2;
     }
 
     &:last-child {
-      text-align: right;
+      //text-align: right;
     }
   }
 
@@ -132,22 +241,38 @@
     @include setFont(20px, 400, $color-secondary);
     text-align: center;
     line-height: 30px;
+
+    a:hover {
+      color: $color-grey;
+    }
+
+    @include xlScreenMedia {
+      text-align: left;
+    }
+    @include smScreenMedia {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 
   &__privacyBlock {
     @include flexCol(end, center);
     gap: 25px;
+    line-height: 16px;
 
-    // @include smScreenMedia {
-    // justify-content: space-between;
-    // }
+    @include smScreenMedia {
+      justify-content: space-between;
+    }
 
     a {
       @include setFont(20px, 400, $color-secondary);
+      text-decoration: none;
 
       &:hover {
-        color: $color-secondary;
-        text-decoration: underline;
+        color: $color-grey;
+      }
+      @include smScreenMedia {
+        font-size: 12px;
       }
     }
   }

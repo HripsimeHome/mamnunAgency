@@ -1,4 +1,10 @@
 import styles from "./AboutFooter.module.scss";
+import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+
+import {
+  companyLabelImage,
+  companyLabelWebpImage,
+} from ".././../../assets/images";
 
 const AboutFooter = () => {
   return (
@@ -11,9 +17,16 @@ const AboutFooter = () => {
             if you have any other questions or need further assistance!
           </h2>
 
-          <div className={styles.aboutFooter__companyBlock}>
-            <h3 className={styles.aboutFooter__companyName}>MAMNUN Agency</h3>
-            <span>Reviews</span>
+          <div>
+            <a href="#" target="_blank">
+              <ImageWebp
+                src={companyLabelImage}
+                srcSet={companyLabelWebpImage}
+                alt="MAMNUN Agency"
+                className={styles.aboutFooter__img}
+                pictureClass={styles.aboutFooter__imgPosition}
+              />
+            </a>
           </div>
         </div>
       </div>

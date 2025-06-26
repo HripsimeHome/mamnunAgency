@@ -9,11 +9,37 @@
     border-bottom: 2px solid $color-white;
     margin-top: 50px;
     padding-bottom: 25px;
+
+    @include mdScreenMedia {
+      gap: 25px;
+      margin-top: 25px;
+      padding-bottom: 20px;
+    }
+
+    @include smScreenMedia {
+      padding-bottom: 15px;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
-  &__active {
-    position: relative;
+  &__tabTitle {
     @include setFont(24px, 600, $color-white);
+
+    @include mdScreenMedia {
+      font-size: 18px;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &_active {
+    width: fit-content;
+    position: relative;
+    color: $color-white;
     transition: color 0.9s ease, border-color 09.3s ease;
     padding-bottom: 6px;
 
@@ -31,8 +57,8 @@
     }
   }
 
-  &__inActive {
-    @include setFont(24px, 600, $color-grey);
+  &_inActive {
+    color: $color-grey;
 
     &:hover {
       color: $color-white;
@@ -47,11 +73,16 @@
     border-bottom: 2px solid $color-white;
     padding: 25px 0;
     gap: 30px;
-    flex-wrap: wrap;
 
     @include mdScreenMedia {
       flex-direction: column;
       gap: 10px;
+      padding: 20px 0;
+    }
+
+    @include smScreenMedia {
+      gap: 5px;
+      padding: 10px 0;
     }
   }
 
@@ -62,38 +93,56 @@
   }
 
   &__titleBlock {
-    flex: 1 1 auto;
-    max-width: 854px;
+    //flex: 1 1 auto;
     display: flex;
+    align-items: center;
+    flex: 6;
     gap: 15px;
 
     @include mdScreenMedia {
-      max-width: 100%;
-      width: 100%;
+      // max-width: 100%;
+      // width: 100%;
+      flex: 1;
     }
   }
 
-  &__icon {
-    width: 39px;
+  &__img {
     height: 40px;
+
+    @include mdScreenMedia {
+      height: 30px;
+    }
   }
 
   &__title {
     @include setFont(24px, 500, $color-white);
-    margin-bottom: 30px;
     line-height: 30px;
+
+    @include mdScreenMedia {
+      font-size: 20px;
+    }
+
+    @include smScreenMedia {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__description {
-    flex: 1 1 auto;
-    max-width: 586px;
+    // flex: 1 1 auto;
+    flex: 4;
     @include setFont(18px, 400, $color-white);
     text-align: justify;
     line-height: 30px;
 
     @include mdScreenMedia {
-      max-width: 100%;
-      width: 100%;
+      //flex: 1;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include mdScreenMedia {
+      font-size: 14px;
     }
   }
 }
