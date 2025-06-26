@@ -59,16 +59,25 @@ const serviceSections = [
         description: (
           <>
             Experience the soul of Uzbekistan through its rich traditions and
-            everyday rituals. From folk performances to artisan workshops, our
-            tours offer authentic insights into the culture’s creative heart.
+            everyday rituals. From 
+            <span className="textPrimary">folk performances</span> to 
+            <span className="textPrimary">artisan workshops.</span> our tours
+            offer authentic insights into the culture’s creative heart.
             <br />
-            Witness the making of ancient Samarkand silk paper,
-            observe miniature painting and silk carpet weaving, and take part in
-            timeless culinary customs
+            Witness the 
+            <span className="textPrimary">
+              making of ancient Samarkand silk paper
+            </span>
+            , observe <span className="textPrimary">miniature painting</span>{" "}
+            and 
+            <span className="textPrimary">silk carpet weaving</span>, and take
+            part in timeless culinary customs
             <br />
-            like baking bread and samsa in a tandoor. You may even get a taste
-            of sumalak, a sacred springtime dish prepared overnight with love
-            and storytelling.
+            like <span className="textPrimary">baking bread</span> and 
+            <span className="textPrimary">samsa in a tandoor</span>. You may
+            even get a taste of <span className="textPrimary">sumalak</span>, a
+            sacred springtime dish prepared overnight with love and
+            storytelling.
             <br />
             Whether you are learning, tasting, or simply observing — these
             moments connect you deeply with the spirit of the land and its
@@ -82,13 +91,16 @@ const serviceSections = [
         title: "Event & Festival Access",
         description: (
           <>
-            Celebrate Navruz, the spring New Year, with music, dance,
-            traditional games, and festive dishes like sumalak prepared in large
-            community gatherings. Throughout the year, enjoy access to seasonal
-            events such as melon fairs, craft festivals, and harvest
-            celebrations that reflect the country’s deep agricultural and
-            artistic roots. Get insider access to local festivals, and unique
-            seasonal experiences you won't find in guidebooks.
+            Celebrate <span className="textPrimary">Navruz</span>, the spring
+            New Year, with music, dance, traditional games, and festive dishes
+            like sumalak prepared in large community gatherings. Throughout the
+            year, enjoy access to{" "}
+            <span className="textPrimary">seasonal events</span> such as{" "}
+            <span className="textPrimary">melon fairs, craft festivals</span>,
+            and <span className="textPrimary">harvest celebrations</span> that
+            reflect the country’s deep agricultural and artistic roots. Get
+            insider access to local festivals, and unique seasonal experiences
+            you won't find in guidebooks.
           </>
         ),
       },
@@ -169,8 +181,14 @@ const serviceSections = [
         image: feedbackImage,
         webpImage: feedbackWebpImage,
         title: "Exclusive Travel Tips",
-        description:
-          "We also offer exclusive travel tips, local secrets, and off-the-beaten-path experiences available only on request. Let us show you the hidden gems of Uzbekistan — places that even many locals don’t know!",
+        description: (
+          <>
+            We also offer exclusive travel tips, local secrets, and
+            off-the-beaten-path experiences available only on{" "}
+            <span className="textPrimary">request</span>. Let us show you the
+            hidden gems of Uzbekistan — places that even many locals don’t know!
+          </>
+        ),
       },
     ],
   },

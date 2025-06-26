@@ -129,7 +129,9 @@ const destinationsData = [
 
 const TourismDestinations = () => {
   return (
-    <section className={`${styles.tourismDestinations} wrapperWhite`}>
+    <section
+      className={`${styles.tourismDestinations} wrapperWhite wrapperPadding`}
+    >
       <div className="container">
         <h2 className="titleSecondaryH2">
           Popular Destinations and Attractions&nbsp;
