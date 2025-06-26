@@ -12,23 +12,10 @@
     // line-height: 24px;
   }
 
-  main {
-    // @include setDistance(120,padding-top)
-  }
-
   h1 {
     @include setFont(30px, 600, $color-secondary);
     text-align: center;
     margin-bottom: 45px;
-
-    //  @include hylgScreenMedia {
-    //   margin-top: 25px;
-    //   margin-bottom: 40px;
-    // }
-    // @include xxlScreenMedia {
-    //    margin-top: 20px;
-    //   margin-bottom: 40px;
-    // }
 
     @include lgScreenMedia {
       // margin-bottom: 35px;
