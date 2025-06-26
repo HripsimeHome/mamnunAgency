@@ -120,19 +120,22 @@
   &__briefContainer {
     display: flex;
     gap: 48px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 200px;
+
+    @include lgScreenMedia {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
 
     @include mdScreenMedia {
       flex-direction: column;
       gap: 25px;
-      padding-top: 50px;
-      padding-bottom: 50px;
     }
 
     @include smScreenMedia {
-      padding-top: 25px;
-      padding-bottom: 25px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 

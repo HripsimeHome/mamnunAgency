@@ -41,17 +41,16 @@
   }
 
   &__title {
-    @include setFont(96px, 600, $color-lightPrimary);
+    @include setFont(46px, 600, $color-lightPrimary);
     margin-bottom: 25px;
 
-    @include mdScreenMedia {
-      font-size: 32px;
-      //margin-bottom: 12px;
+    @include lgScreenMedia {
+      font-size: 36px;
     }
 
     @include smScreenMedia {
       font-size: 24px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
 
