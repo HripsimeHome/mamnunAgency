@@ -30,6 +30,10 @@
   &__arrowLine {
     width: 100%;
 
+    @include smScreenMedia {
+      height: 10px;
+    }
+
     &_reversed {
       transform: rotateY(180deg);
     }
@@ -47,6 +51,10 @@
       line-height: 30px;
     }
 
+    @include lgScreenMedia {
+      font-size: 18px;
+    }
+
     @include smScreenMedia {
       font-size: 16px;
       line-height: 20px;
@@ -62,6 +70,18 @@
     flex-direction: column;
     gap: 25px;
     margin-bottom: 25px;
+
+    @include lgScreenMedia {
+      gap: 20px;
+    }
+
+    @include mdScreenMedia {
+      gap: 10px;
+    }
+
+    @include smScreenMedia {
+      gap: 5px;
+    }
   }
 
   &__panel {
@@ -86,13 +106,13 @@
   }
 
   &__title {
-    @include setFont(20px, 600, $color-secondary);
-    line-height: 40px;
-    padding-bottom: 20px;
+    @include setFont(20px, 600, $color-primary);
+    line-height: 25px;
+    padding-bottom: 5px;
 
     @include lgScreenMedia {
       font-size: 18px;
-      line-height: 40px;
+      line-height: 20px;
     }
   }
 
