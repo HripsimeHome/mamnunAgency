@@ -105,24 +105,25 @@ a {
 .titlePrimaryH2,
 .titleSecondaryH2,
 .titleWhiteH2 {
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 40px;
+  @include setFont(40px, 600, $color-primary);
+  line-height: 47px;
 
   @include xlScreenMedia {
     font-size: 32px;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 35px;
   }
 
   @include smScreenMedia {
     font-size: 24px;
     font-weight: 600;
+    line-height: 30px;
   }
 }
 
 .titlePrimaryH3 {
   @include setFont(32px, 600, $color-primary);
+  line-height: 37px;
 
   @include xlScreenMedia {
     font-size: 28px;
@@ -131,7 +132,6 @@ a {
 
   @include lgScreenMedia {
     font-size: 24px;
-    line-height: 30px;
   }
 
   @include smScreenMedia {

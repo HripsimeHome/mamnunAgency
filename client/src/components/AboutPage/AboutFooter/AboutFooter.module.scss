@@ -2,14 +2,21 @@
 @import "../../../styles/vars";
 
 .aboutFooter {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include lgScreenMedia {
+    max-width: 90%;
+  }
+
+  @include smScreenMedia {
+    max-width: 100%;
+  }
 
   &__textBlock {
     @include flexCol();
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     text-align: center;
 
     @include lgScreenMedia {
@@ -21,12 +28,30 @@
     }
   }
 
+  &__text {
+    @include setFont(40px, 600, $color-secondary);
+    line-height: 47px;
+
+    @include xlScreenMedia {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include smScreenMedia {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
   &__img {
     max-width: 60%;
     width: 100%;
 
     @include lgScreenMedia {
       max-width: 270px;
+    }
+    @include mdScreenMedia {
+      max-width: 229px;
     }
 
     @include smScreenMedia {

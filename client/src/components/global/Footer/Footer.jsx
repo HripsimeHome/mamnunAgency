@@ -87,7 +87,7 @@ const Footer = () => {
               Our social media channels:
             </h4>
 
-            <SocialIcons />
+            <SocialIcons className={styles.footer__socialIcons} />
           </div>{" "}
           {/* socialMedia */}
           <div className={styles.footer__feedback}>
