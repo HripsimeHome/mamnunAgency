@@ -105,7 +105,8 @@ a {
 .titlePrimaryH2,
 .titleSecondaryH2,
 .titleWhiteH2 {
-  @include setFont(40px, 600, $color-primary);
+  font-size: 40px;
+  font-weight: 600;
   line-height: 47px;
 
   @include xlScreenMedia {
