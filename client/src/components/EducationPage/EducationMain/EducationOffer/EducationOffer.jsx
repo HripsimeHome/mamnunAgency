@@ -108,7 +108,7 @@ const Panel = ({ index, icon, title, description, setVisited, active }) => {
   return (
     <div
       className={`${styles.educationOffer__panel} ${
-        active ? styles.educationOffer__panel_active : ""
+        !active ? styles.educationOffer__panel_passive : ""
       }`}
       ref={ref}
     >
