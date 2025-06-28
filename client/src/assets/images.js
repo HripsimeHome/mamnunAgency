@@ -70,6 +70,8 @@ import mastercardWebpImage from "./images/footer/cards/mastercard.webp";
 import visaImage from "./images/footer/cards/visa.png";
 import mvisaWebpImage from "./images/footer/cards/visa.webp";
 
+// Accordion
+
 // Home
 import homeVideoPosterImage from "./images/home/homeVideoPoster.jpg";
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
@@ -477,6 +479,10 @@ import educationOfferIcon7Image from "./images/education/offer/educationOfferIco
 import educationOfferIcon7WebpImage from "./images/education/offer/educationOfferIcon7.webp";
 import educationOfferIcon8Image from "./images/education/offer/educationOfferIcon8.png";
 import educationOfferIcon8WebpImage from "./images/education/offer/educationOfferIcon8.webp";
+import accordionMinusImage from "./images/accordion/accordionMinus.png";
+import accordionMinusWebpImage from "./images/accordion/accordionMinus.webp";
+import accordionPlusImage from "./images/accordion/accordionPlus.png";
+import accordionPlusWebpImage from "./images/accordion/accordionPlus.webp";
 
 export {
   //General
@@ -528,6 +534,12 @@ export {
   mastercardWebpImage,
   visaImage,
   mvisaWebpImage,
+
+  // Accordion
+  accordionMinusImage,
+  accordionMinusWebpImage,
+  accordionPlusImage,
+  accordionPlusWebpImage,
 
   // Home
   homeVideoPosterImage,

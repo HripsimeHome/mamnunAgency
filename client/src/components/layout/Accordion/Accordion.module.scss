@@ -3,11 +3,77 @@
 
 .accordion {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  // margin-top: 50px;
+  gap: 50px;
 
+  @include lgScreenMedia {
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include smScreenMedia {
+    gap: 5px;
+  }
+
+  &:has(&__col_6Col) {
+    padding-top: 80px;
+    gap: 80px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    gap: 25px;
+    width: 100%;
+    position: relative;
+
+    @include lgScreenMedia {
+      gap: 10px;
+    }
+
+    @include smScreenMedia {
+      gap: 5px;
+    }
+
+    &_sm {
+      gap: 15px;
+    }
+
+    &_6Col {
+      flex: 4;
+      max-width: 48%;
+      @include lgScreenMedia {
+        max-width: unset;
+      }
+    }
+
+    &_4Col {
+      max-width: 40%;
+
+      @include lgScreenMedia {
+        max-width: unset;
+      }
+    }
+  }
+
+  &__bgImg {
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    width: 100px;
+    z-index: 0;
+
+    @include xxlScreenMedia {
+      left: -20px;
+    }
+
+    @include smScreenMedia {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   @include mdScreenMedia {
     gap: 0;
   }
@@ -19,27 +85,43 @@
     @include setFont(35px, 400, $color-white);
     text-align: left;
     line-height: 40px;
-    background: transparent;
-    border: 2px solid $color-white;
     border-radius: 25px;
     cursor: pointer;
-    margin-bottom: 25px;
+    position: relative;
+
     padding: 25px;
     transition: $transition;
-    --textColor: #{$color-white};
+
+    &:not(.accordion__header_inverse) {
+      --textColor: #{$color-white};
+      --bgColor: #{$color-secondary};
+    }
+
+    &:not(.accordion__header_inverse).accordion__header_active {
+      background-color: $color-white;
+      --textColor: #{$color-secondary};
+      --bgColor: #{$color-white};
+    }
+
+    &.accordion__header_inverse {
+      --textColor: #{$color-secondary};
+      --bgColor: #{$color-white};
+    }
+
+    &.accordion__header_inverse.accordion__header_active {
+      background-color: $color-secondary;
+      --textColor: #{$color-white};
+      --bgColor: #{$color-secondary};
+    }
 
     &_active {
       background-color: $color-white;
       --textColor: #{$color-secondary};
+      --bgColor: #{$color-white};
     }
 
-    @include lgScreenMedia {
-      margin-bottom: 10px;
-    }
-
-    @include smScreenMedia {
-      margin-bottom: 5px;
-    }
+    border: 2px solid var(--textColor);
+    background-color: var(--bgColor);
   }
 
   &__btn {
@@ -81,7 +163,7 @@
   }
 
   &__content {
-    @include setFont(18px, 400, $color-secondary);
+    @include setFont(18px, 400, var(--textColor));
     line-height: 30px;
     border-radius: 25px;
     // margin-top: 25px;
@@ -92,8 +174,9 @@
     width: 27px;
     height: 10px;
     flex-shrink: 0;
-    stroke: $color-white;
+    stroke: var(--textColor);
     transition: $transition;
+    margin-top: 15px;
   }
 
   &__header_active &__toggleIcon {
