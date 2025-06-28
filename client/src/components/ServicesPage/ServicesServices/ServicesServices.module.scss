@@ -12,7 +12,7 @@
     gap: 50px;
     margin-top: 50px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       gap: 16px;
     }
 
@@ -26,11 +26,11 @@
     perspective: 1000px;
     position: relative;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       aspect-ratio: 346 / 288;
     }
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       aspect-ratio: 320 / 263;
     }
   }
@@ -58,7 +58,7 @@
     background-color: #f0f0f0;
     padding: 25px;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       padding: 15px;
     }
 
@@ -76,11 +76,11 @@
     // @media (max-width: 1200px) {
     //   aspect-ratio: 6/2.5;
     // }
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       padding: 15px;
     }
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       padding: 10px;
     }
 
@@ -109,7 +109,7 @@
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 24px;
       line-height: 20px;
     }
@@ -139,7 +139,10 @@
 
   &__cardTitleBlock {
     position: relative;
-    margin-bottom: -97px;
+
+    @include lgScreenMedia {
+      margin-bottom: -97px;
+    }
   }
 
   &__cardStep {
@@ -147,6 +150,11 @@
     position: relative;
     @include setFont(200px, 400, #f0f0f0);
     line-height: 140px;
+    letter-spacing: -2px;
+
+    @include mdScreenMedia {
+      font-size: 165px;
+    }
   }
 
   &__cardBackTitle {
@@ -157,7 +165,7 @@
     line-height: 30px;
     transform: translateY(-50%);
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 24px;
       line-height: 20px;
       top: 10px;
@@ -181,6 +189,9 @@
     @include flexCol();
     flex-direction: column;
     flex: 1;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
   }
 
   &__cardBackText {
@@ -188,6 +199,7 @@
     line-height: 30px;
     margin-bottom: 25px;
     flex: 1;
+    overflow: auto;
 
     @include lgScreenMedia {
       font-size: 16px;
