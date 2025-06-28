@@ -203,10 +203,12 @@ const EducationStudyingAbroad = () => {
         <>
           <Accordion
             accordionItems={accordionItems}
-            className={styles.educationStudyingAbroad__accordionContainer}
+            by6And4Col={true}
+            by2Col={true}
+            // className={styles.educationStudying__accordionContainer}
           />
         </>
-        <p className={styles.educationStudyingAbroad__text}>
+        <p className="paragraphWhite">
           At MAMNUN, we are here to guide you through these considerations,
           ensuring you have all the information you need to make the best
           decision for your future. Let us help you navigate your educational

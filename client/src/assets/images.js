@@ -330,8 +330,8 @@ import challengesWhiteWebpImage from "./images/education/studying/icons/challeng
 import teacherBlackImage from "./images/education/studying/icons/teacherBlack.png";
 import teacherBlackWebpImage from "./images/education/studying/icons/teacherBlack.webp";
 
-import teacherWhiteImage from "./images/education/studying/icons/teacherBlack.png";
-import teacherWhiteWebpImage from "./images/education/studying/icons/teacherBlack.webp";
+import teacherWhiteImage from "./images/education/studying/icons/teacherWhite.png";
+import teacherWhiteWebpImage from "./images/education/studying/icons/teacherWhite.webp";
 
 //Education - studying abroad
 
