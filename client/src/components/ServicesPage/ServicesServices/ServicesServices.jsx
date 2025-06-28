@@ -181,14 +181,13 @@ const ServicesServices = () => {
                     </div>
 
                     <div className={styles.servicesServices__cardBackTextBlock}>
-                      <p className={styles.servicesServices__cardBackText}>
+                      <p
+                        className={`thinScrollbar ${styles.servicesServices__cardBackText}`}
+                      >
                         {backDescription}
                       </p>
 
-                      <MainBtn
-                        onClick={() => onSelect(index)}
-                        className={styles.authWrapper__btn}
-                      >
+                      <MainBtn onClick={() => onSelect(index)}>
                         Learn more
                       </MainBtn>
                     </div>
