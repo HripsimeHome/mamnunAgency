@@ -100,14 +100,13 @@
     }
 
     @include lgScreenMedia {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
       padding: 15px;
     }
 
-    @include lgScreenMedia {
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto auto;
+    @include smScreenMedia {
       gap: 5px;
-      padding: 15px;
     }
   }
 

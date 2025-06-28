@@ -1,36 +1,47 @@
 import styles from "./EducationStudying.module.scss";
 import Accordion from "../../layout/Accordion/Accordion";
 
-import { educationImage, educationWebpImage } from "../../../assets/images";
+import {
+  educationImage,
+  educationWebpImage,
+  accessibilityBLack1Image,
+  accessibilityBLack1WebpImage,
+  accessibilityWhite1Image,
+  accessibilityWhite1WebpImage,
+  accessibilityBLack1_5Image,
+  accessibilityBLack1_5WebpImage,
+  accessibilityWhite1_5Image,
+  accessibilityWhite1_5WebpImage,
+} from "../../../assets/images";
 
 const accordionItems = [
   // Плюсы
   {
-    image: educationImage,
-    webpImage: educationWebpImage,
+    image: accessibilityBLack1Image,
+    webpImage: accessibilityBLack1WebpImage,
     // activeImage: educationImage,
     // activeWebpImage: educationWebpImage,
-    title: "Accessibility",
+    title: "Accessibility black 1",
     content:
       "Education is compulsory and free for 11 years for locals, ensuring that a significant portion of the population has access to basic education.",
   },
 
   {
-    image: educationImage,
-    webpImage: educationWebpImage,
+    image: accessibilityBLack1_5Image,
+    webpImage: accessibilityBLack1_5WebpImage,
     // activeImage: educationImage,
     // activeWebpImage: educationWebpImage,
-    title: "Curriculum Reform",
+    title: "Curriculum Reform black 1.5",
     content:
       "Recent reforms are making strides to modernize the curriculum by incorporating new subjects and teaching methods, aligning with global educational standards, and these initiatives are in the early stages of implementation, promising exciting developments for the future of education in Uzbekistan.",
   },
 
   {
-    image: educationImage,
-    webpImage: educationWebpImage,
+    image: accessibilityWhite1Image,
+    webpImage: accessibilityWhite1WebpImage,
     // activeImage: educationImage,
     // activeWebpImage: educationWebpImage,
-    title: "Technological Integration",
+    title: "Technological Integration white 1",
     content:
       "Efforts are underway to introduce computer technology into educational institutions, enhancing teaching methods and resources. While these initiatives are still in the early stages, they hold great promise for transforming the learning experience in Uzbekistan.",
   },
@@ -43,11 +54,11 @@ const accordionItems = [
   // },
 
   {
-    image: educationImage,
-    webpImage: educationWebpImage,
+    image: accessibilityWhite1_5Image,
+    webpImage: accessibilityWhite1_5WebpImage,
     // activeImage: educationImage,
     // activeWebpImage: educationWebpImage,
-    title: "Cultural Familiarity",
+    title: "Cultural Familiarity white 1.5",
     content:
       "Studying in your home country allows you to remain close to family and friends, providing a support system during your educational journey",
   },
@@ -117,7 +128,7 @@ const accordionItems = [
 const EducationStudying = () => {
   return (
     <section
-      className={`${styles.educationStudying} wrapperWhite wrapperPadding`}
+      className={`${styles.educationStudying} wrapperBlack wrapperPadding`}
     >
       <div className="container">
         <h2 className="titleSecondaryH2">
