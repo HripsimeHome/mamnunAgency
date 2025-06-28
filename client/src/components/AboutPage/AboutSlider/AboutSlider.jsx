@@ -1,15 +1,9 @@
 import styles from "./AboutSlider.module.scss";
-import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import TransitionProvider, {
-  TransitionStyleTypes,
-} from "../../../providers/TransitionProvider";
-import { Navigation, Pagination } from "swiper/modules";
-import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import { Navigation, Autoplay } from "swiper/modules";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import "swiper/css/pagination";
-// import "./sliderDots.scss";
-
+import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
 import {
   educationImage,
   educationWebpImage,
@@ -40,6 +34,8 @@ import {
   partnersWhiteImage,
   partnersWhiteWebpImage,
 } from "../../../assets/images";
+import { useRef } from "react";
+import Svg from "../../layout/Svg/Svg";
 
 const slideData = [
   {
@@ -155,24 +151,105 @@ const slideData = [
   },
 ];
 
+// Reusable slider component
+const CustomSlider = ({
+  slideData,
+  navigation,
+  autoplay,
+  className = "",
+  reverse = false,
+}) => {
+  const nextButtonRef = useRef(null);
+  const prevButtonRef = useRef(null);
+
+  const slicedData = reverse
+    ? slideData.slice(slideData.length / 2)
+    : slideData.slice(0, slideData.length / 2);
+  return (
+    <div
+      className={`container ${styles.aboutSlider__sliderWrapper} ${className}`}
+    >
+      <Swiper
+        slidesPerView={1}
+        className={styles.aboutSlider__slider}
+        spaceBetween={0}
+        loop={true}
+        modules={[Navigation, Autoplay]}
+        onBeforeInit={(swiper) => {
+          if (typeof swiper.params.navigation === "object") {
+            swiper.params.navigation.nextEl = nextButtonRef.current;
+            swiper.params.navigation.prevEl = prevButtonRef.current;
+          }
+        }}
+        navigation={{
+          nextEl: nextButtonRef.current,
+          prevEl: prevButtonRef.current,
+        }}
+        autoplay={autoplay}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 14,
+          },
+        }}
+      >
+        {slicedData.map(({ image, webpImage, alt, description }, index) => (
+          <SwiperSlide key={index}>
+            <div className={styles.aboutSlider__slide}>
+              <div className={styles.aboutSlider__imgWrapper}>
+                <ImageWebp
+                  src={image}
+                  srcSet={webpImage}
+                  alt={alt}
+                  className={styles.aboutSlider__img}
+                />
+              </div>
+              <p className={styles.aboutSlider__description}>{description}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+        <button
+          ref={prevButtonRef}
+          className={`${styles.aboutSlider__navBtn} ${styles.aboutSlider__navBtn_left}`}
+        >
+          <Svg id={sliderArrowLeftIcon} />
+        </button>
+        <button
+          ref={nextButtonRef}
+          className={`${styles.aboutSlider__navBtn} ${styles.aboutSlider__navBtn_right}`}
+        >
+          <Svg id={sliderArrowRightIcon} />
+        </button>
+      </Swiper>
+    </div>
+  );
+};
+
 const AboutSlider = () => {
   return (
     <section className={`${styles.aboutSlider} wrapperWhite`}>
-      <div className={`container ${styles.aboutSlider__grid}`}>
-        {slideData.map(({ image, webpImage, alt, description }, index) => (
-          <div className={styles.aboutSlider__slide} key={index}>
-            <div className={styles.aboutSlider__imgWrapper}>
-              <ImageWebp
-                src={image}
-                srcSet={webpImage}
-                alt={alt}
-                className={styles.aboutSlider__img}
-              />
-            </div>
-            <p className={styles.aboutSlider__description}>{description}</p>
-          </div>
-        ))}
-      </div>
+      {/* First slider: auto-slide right (default) */}
+      <CustomSlider
+        slideData={slideData}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        className={styles.aboutSlider__first}
+        reverse={false}
+      />
+      {/* Second slider: auto-slide left */}
+      <CustomSlider
+        slideData={slideData}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        }}
+        className={styles.aboutSlider__second}
+        reverse={true}
+      />
     </section>
   );
 };

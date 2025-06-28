@@ -11,6 +11,7 @@ import {
   educationPagePath,
   servicesPagePath,
 } from "../../../router/path";
+import { homeVideoPosterImage } from "../../../assets/images";
 
 const HomeHeader = () => {
   const navigate = useNavigate();
@@ -38,20 +39,30 @@ const HomeHeader = () => {
     const interval = setInterval(() => {
       setActiveMottoIndex((prev) => {
         if (prev === mottos.length - 1) {
-          clearInterval(interval);
-          return prev;
+          return 0;
         } else return prev + 1;
       });
     }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <section className={styles.homeHeader}>
-      {process.env.NODE_ENV !== "development" && (
-        <video autoPlay muted loop className={styles.homeHeader__video}>
-          Your browser does not support the video tag.
-          <source src="/videos/home/home.mp4" type="video/mp4" />
-        </video>
-      )}
+      {/* {process.env.NODE_ENV !== "development" && ( */}
+      <video
+        autoPlay
+        muted
+        loop
+        className={styles.homeHeader__video}
+        poster={homeVideoPosterImage}
+      >
+        Your browser does not support the video tag.
+        <source src="/videos/home/home.mp4" type="video/mp4" />
+      </video>
+      {/* )} */}
 
       <div className={styles.homeHeader__mottoTextContainer}>
         {mottos.map((motto, index) => (

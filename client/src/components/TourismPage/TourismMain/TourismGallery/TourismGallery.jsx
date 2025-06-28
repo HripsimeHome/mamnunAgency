@@ -23,7 +23,7 @@ import {
 } from "../../../../assets/images";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Svg from "../../../layout/Svg/Svg";
 import { tourismGallerySliderArrowIcon } from "../../../../assets/svg";
 
@@ -72,7 +72,14 @@ const TourismGallery = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const isMobile = window.innerWidth < 576;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
+
+  // Update isMobile on window resize
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 576);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const tumbnails = !isMobile
     ? galleryImages

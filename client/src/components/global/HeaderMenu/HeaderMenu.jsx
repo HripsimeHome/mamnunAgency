@@ -91,7 +91,11 @@ const HeaderMenu = () => {
                   <NavLink
                     key={index}
                     to={link}
-                    className={styles.headerMenu__menuLink}
+                    className={({ isActive }) =>
+                      isActive
+                        ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                        : styles.headerMenu__menuLink
+                    }
                     onClick={toggleMenu}
                   >
                     {text}

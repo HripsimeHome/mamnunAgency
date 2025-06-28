@@ -24,6 +24,10 @@ import {
   educationRequirementsBGLinesIcon,
   educationRequirementsBGLinesMobIcon,
 } from "../../../../assets/svg";
+import { useLazy } from "../../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../../providers/TransitionProvider";
 
 const requirementsData = [
   {
@@ -66,6 +70,7 @@ function EducationRequirements() {
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
+  const { ref, isInView } = useLazy(0.4);
 
   useEffect(() => {
     if (
@@ -81,7 +86,7 @@ function EducationRequirements() {
     }
   }, []);
   return (
-    <section className={styles.educationRequirements}>
+    <section className={styles.educationRequirements} ref={ref}>
       <h2 className="titleSecondaryH2">
         Application process and&nbsp;
         <br />
@@ -108,7 +113,12 @@ function EducationRequirements() {
         >
           {requirementsData.map(({ step, title, image, webpImage }, index) => (
             <SwiperSlide key={index}>
-              <div className={styles.educationRequirements__stepContainer}>
+              <TransitionProvider
+                inProp={isInView}
+                style={TransitionStyleTypes.zoomIn}
+                delay={100 * index}
+                className={styles.educationRequirements__stepContainer}
+              >
                 <div className={styles.educationRequirements__circle}>
                   <div className={styles.educationRequirements__flipInner}>
                     <div className={styles.educationRequirements__front}>
@@ -130,7 +140,7 @@ function EducationRequirements() {
                 <span className={styles.educationRequirements__title}>
                   {title}
                 </span>
-              </div>
+              </TransitionProvider>
             </SwiperSlide>
           ))}
           <div className={styles.educationRequirements__bgLines}>
