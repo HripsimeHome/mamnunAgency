@@ -333,6 +333,74 @@ import teacherBlackWebpImage from "./images/education/studying/icons/teacherBlac
 import teacherWhiteImage from "./images/education/studying/icons/teacherBlack.png";
 import teacherWhiteWebpImage from "./images/education/studying/icons/teacherBlack.webp";
 
+//Education - studying abroad
+
+import worldBlackImage from "./images/education/studying/iconsAbroad/worldBlack.png";
+import worldBlackWebpImage from "./images/education/studying/iconsAbroad/worldBlack.webp";
+
+import worldWhiteImage from "./images/education/studying/iconsAbroad/worldWhite.png";
+import worldWhitekWebpImage from "./images/education/studying/iconsAbroad/worldWhite.webp";
+
+import languageSkillsBLackImage from "./images/education/studying/iconsAbroad/languageSkillsBLack.png";
+import languageSkillsBLackWebpImage from "./images/education/studying/iconsAbroad/languageSkillsBLack.webp";
+
+import languageSkillsWhiteImage from "./images/education/studying/iconsAbroad/languageSkillsWhite.png";
+import languageSkillsWhiteWebpImage from "./images/education/studying/iconsAbroad/languageSkillsWhite.webp";
+
+import growthBLackImage from "./images/education/studying/iconsAbroad/growthBLack.png";
+import growthBLackWebpImage from "./images/education/studying/iconsAbroad/growthBLack.webp";
+
+import growthWhiteImage from "./images/education/studying/iconsAbroad/growthWhite.png";
+import growthWhitekWebpImage from "./images/education/studying/iconsAbroad/growthWhite.webp";
+
+import networkingBlackImage from "./images/education/studying/iconsAbroad/networkingBlack.png";
+import networkingBlackWebpImage from "./images/education/studying/iconsAbroad/networkingBlack.webp";
+
+import networkingWhiteImage from "./images/education/studying/iconsAbroad/networkingWhite.png";
+import networkingWhiteWebpImage from "./images/education/studying/iconsAbroad/networkingWhite.webp";
+
+import careerBLackImage from "./images/education/studying/iconsAbroad/careerBLack.png";
+import careerBLackWebpImage from "./images/education/studying/iconsAbroad/careerBLack.webp";
+
+import careerWhiteImage from "./images/education/studying/iconsAbroad/careerWhite.png";
+import careerWhiteWebpImage from "./images/education/studying/iconsAbroad/careerWhite.webp";
+
+import homesicknessBlackImage from "./images/education/studying/iconsAbroad/homesicknessBlack.png";
+import homesicknessBlackWebpImage from "./images/education/studying/iconsAbroad/homesicknessBlack.webp";
+
+import homesicknessWhiteImage from "./images/education/studying/iconsAbroad/homesicknessWhite.png";
+import homesicknessWhiteWebpImage from "./images/education/studying/iconsAbroad/homesicknessWhite.webp";
+
+import barriersBlackImage from "./images/education/studying/iconsAbroad/barriersBlack.png";
+import barriersBlackWebpImage from "./images/education/studying/iconsAbroad/barriersBlack.webp";
+
+import barriersWhiteImage from "./images/education/studying/iconsAbroad/barriersWhite.png";
+import barriersWhitekWebpImage from "./images/education/studying/iconsAbroad/barriersWhite.webp";
+
+import adjustmentBlackImage from "./images/education/studying/iconsAbroad/adjustmentBlack.png";
+import adjustmentBlackeWebpImage from "./images/education/studying/iconsAbroad/adjustmentBlack.webp";
+
+import adjustmentWhiteImage from "./images/education/studying/iconsAbroad/adjustmentWhite.png";
+import adjustmentWhiteWebpImage from "./images/education/studying/iconsAbroad/adjustmentWhite.webp";
+
+import pressureBlackImage from "./images/education/studying/iconsAbroad/pressureBlack.png";
+import pressureBlackWebpImage from "./images/education/studying/iconsAbroad/pressureBlack.webp";
+
+import pressureWhiteImage from "./images/education/studying/iconsAbroad/pressureWhite.png";
+import pressureWhiteWebpImage from "./images/education/studying/iconsAbroad/pressureWhite.webp";
+
+import issuesBlackImage from "./images/education/studying/iconsAbroad/issuesBlack.png";
+import issuesBlackeWebpImage from "./images/education/studying/iconsAbroad/issuesBlack.webp";
+
+import issuesWhiteImage from "./images/education/studying/iconsAbroad/issuesWhite.png";
+import issuesWhiteWebpImage from "./images/education/studying/iconsAbroad/issuesWhite.webp";
+
+import accessBlackImage from "./images/education/studying/iconsAbroad/accessBlack.png";
+import accessBlackeWebpImage from "./images/education/studying/iconsAbroad/accessBlack.webp";
+
+import accessWhiteImage from "./images/education/studying/iconsAbroad/accessWhite.png";
+import accessWhiteWebpImage from "./images/education/studying/iconsAbroad/accessWhite.webp";
+
 // Education - Stories
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
@@ -740,6 +808,52 @@ export {
   teacherBlackWebpImage,
   teacherWhiteImage,
   teacherWhiteWebpImage,
+
+  //Education - studying abroad
+  worldBlackImage,
+  worldBlackWebpImage,
+  worldWhiteImage,
+  worldWhitekWebpImage,
+  languageSkillsBLackImage,
+  languageSkillsBLackWebpImage,
+  languageSkillsWhiteImage,
+  languageSkillsWhiteWebpImage,
+  growthBLackImage,
+  growthBLackWebpImage,
+  growthWhiteImage,
+  growthWhitekWebpImage,
+  networkingBlackImage,
+  networkingBlackWebpImage,
+  networkingWhiteImage,
+  networkingWhiteWebpImage,
+  careerBLackImage,
+  careerBLackWebpImage,
+  careerWhiteImage,
+  careerWhiteWebpImage,
+  homesicknessBlackImage,
+  homesicknessBlackWebpImage,
+  homesicknessWhiteImage,
+  homesicknessWhiteWebpImage,
+  barriersBlackImage,
+  barriersBlackWebpImage,
+  barriersWhiteImage,
+  barriersWhitekWebpImage,
+  adjustmentBlackImage,
+  adjustmentBlackeWebpImage,
+  adjustmentWhiteImage,
+  adjustmentWhiteWebpImage,
+  pressureBlackImage,
+  pressureBlackWebpImage,
+  pressureWhiteImage,
+  pressureWhiteWebpImage,
+  issuesBlackImage,
+  issuesBlackeWebpImage,
+  issuesWhiteImage,
+  issuesWhiteWebpImage,
+  accessBlackImage,
+  accessBlackeWebpImage,
+  accessWhiteImage,
+  accessWhiteWebpImage,
 
   //Education - Scholarships
   meritBasedImage,
