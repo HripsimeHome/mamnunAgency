@@ -13,6 +13,10 @@ import {
   integrityImage,
   integrityWebpImage,
 } from "../../../../assets/images";
+import { useLazy } from "../../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../../providers/TransitionProvider";
 
 export const reasonsData = [
   {
@@ -57,8 +61,9 @@ export const reasonsData = [
 ];
 
 const HomeReasons = () => {
+  const { ref, isInView } = useLazy(0.4);
   return (
-    <section className={styles.homeReasons}>
+    <section ref={ref} className={styles.homeReasons}>
       <h2 className="titleWhiteH2">
         Reasons to&nbsp;
         <span className="titlePrimaryH2">Choouse Us</span>
@@ -66,7 +71,13 @@ const HomeReasons = () => {
 
       <div className={styles.homeReasons__cardContainer}>
         {reasonsData.map(({ image, webpImage, title, description }, index) => (
-          <div key={index} className={styles.homeReasons__card}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.bottom}
+            delay={100 * index}
+            key={index}
+            className={styles.homeReasons__card}
+          >
             <ImageWebp
               src={image}
               srcSet={webpImage}
@@ -75,7 +86,7 @@ const HomeReasons = () => {
             />
             <h4 className={styles.homeReasons__title}>{title}</h4>
             <p className={styles.homeReasons__description}>{description}</p>
-          </div>
+          </TransitionProvider>
         ))}
         {/* card */}
       </div>

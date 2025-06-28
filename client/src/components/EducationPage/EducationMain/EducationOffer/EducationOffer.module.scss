@@ -45,11 +45,15 @@
     }
 
     &:hover,
-    &_active {
+    &_passive {
       // Ensure child elements inherit this
       .educationOffer__title,
       .educationOffer__description {
         color: $color-lightGrey;
+      }
+      .educationOffer__icon {
+        filter: saturate(0);
+        opacity: 0.5;
       }
     }
 
@@ -68,11 +72,14 @@
   }
 
   &__icon {
-    @include svg(40px, 40px);
+    width: 40px;
+
+    transition: $transition;
+    opacity: 1;
   }
 
   &__title {
-    @include setFont(28px, 600, $color-lightGrey);
+    @include setFont(28px, 600, $color-secondary);
     margin-bottom: 30px;
     transition: $transition;
 
