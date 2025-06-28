@@ -3,14 +3,68 @@ import styles from "./Accordion.module.scss";
 import ImageWebp from "../ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import { arrowWhiteIcon, arrowPurpleIcon } from "../../../assets/svg";
+import { arrowWhiteIcon } from "../../../assets/svg";
+import {
+  accordionMinusImage,
+  accordionMinusWebpImage,
+  accordionPlusImage,
+  accordionPlusWebpImage,
+} from "../../../assets/images";
 
-const Accordion = ({ accordionItems = [], className, ...rest }) => {
+const Accordion = ({
+  accordionItems = [],
+  className,
+  inverse,
+  by2Col,
+  by6And4Col,
+  ...rest
+}) => {
+  const firstColData = accordionItems.slice(
+    0,
+    Math.ceil(accordionItems.length / 2)
+  );
+  const secColData = accordionItems.slice(Math.ceil(accordionItems.length / 2));
+
+  const isDoubleCol = by2Col || by6And4Col;
+
   return (
     <div className={`${styles.accordion} ${className || ""}`} {...rest}>
-      {accordionItems.map((item, index) => (
-        <AccordionItem key={index} {...item} />
-      ))}
+      <div
+        className={`${styles.accordion__col} ${
+          isDoubleCol ? styles.accordion__col_sm : ""
+        } ${by6And4Col ? styles.accordion__col_6Col : ""}`}
+      >
+        {by6And4Col && (
+          <ImageWebp
+            src={accordionPlusImage}
+            srcSet={accordionPlusWebpImage}
+            alt="plus"
+            className={styles.accordion__bgImg}
+          />
+        )}
+        {(isDoubleCol ? firstColData : accordionItems).map((item, index) => (
+          <AccordionItem key={index} {...item} inverse={inverse} />
+        ))}
+      </div>
+      {isDoubleCol && (
+        <div
+          className={`${styles.accordion__col} ${
+            isDoubleCol ? styles.accordion__col_sm : ""
+          } ${by6And4Col ? styles.accordion__col_4Col : ""}`}
+        >
+          {by6And4Col && (
+            <ImageWebp
+              src={accordionMinusImage}
+              srcSet={accordionMinusWebpImage}
+              alt="minus"
+              className={styles.accordion__bgImg}
+            />
+          )}
+          {secColData.map((item, index) => (
+            <AccordionItem key={index} {...item} inverse={inverse} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
@@ -23,19 +77,27 @@ const AccordionItem = ({
   activeWebpImage,
   title,
   content,
+  inverse,
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
-  const displayImage = isOpen ? activeImage || image : image;
+  const displayImage = !inverse
+    ? isOpen
+      ? activeImage || image
+      : image
+    : isOpen
+    ? image
+    : activeImage || image;
   const displayWebp = isOpen ? activeWebpImage || webpImage : webpImage;
 
   return (
     <>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className={`${styles.accordion__header} ${
-          isOpen ? styles.accordion__header_active : ""
-        }`}
+        className={`${styles.accordion__header} 
+        ${isOpen ? styles.accordion__header_active : ""}  
+        ${inverse ? styles.accordion__header_inverse : ""}
+        `}
         aria-expanded={isOpen}
       >
         <div className={styles.accordion__btn}>

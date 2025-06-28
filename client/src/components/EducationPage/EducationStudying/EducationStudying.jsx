@@ -165,7 +165,7 @@ const accordionItems = [
 const EducationStudying = () => {
   return (
     <section
-      className={`${styles.educationStudying} wrapperBlack wrapperPadding`}
+      className={`${styles.educationStudying} wrapperWhite wrapperPadding`}
     >
       <div className="container">
         <h2 className="titleSecondaryH2">
@@ -179,6 +179,9 @@ const EducationStudying = () => {
         <>
           <Accordion
             accordionItems={accordionItems}
+            by6And4Col={true}
+            // by2Col={true}
+            inverse
             className={styles.educationStudying__accordionContainer}
           />
         </>
