@@ -2,16 +2,6 @@
 @import "../../../styles/vars";
 
 .aboutHeader {
-  // padding-top: 44px;
-
-  @include mdScreenMedia {
-    padding-top: 50px;
-  }
-
-  @include smScreenMedia {
-    padding-top: 25px;
-  }
-
   &__content {
     display: grid;
     grid-template-columns: 8fr 5fr;
@@ -33,11 +23,15 @@
 
   &__title {
     @include setFont(34px, 600, $color-primary);
-
     text-align: left;
     margin-bottom: 25px;
+    padding-top: 100px;
 
-    @include smScreenMedia {
+    @include xxlScreenMedia {
+      padding-top: 50px;
+    }
+
+    @include lgScreenMedia {
       font-size: 24px;
       line-height: 30px;
       margin-bottom: 15px;
@@ -47,39 +41,18 @@
       font-size: 18px;
       line-height: 20px;
       margin-bottom: 10px;
+      padding-top: 25px;
     }
   }
 
   &__text1 {
     grid-area: text1;
     align-self: flex-end;
-
-    @include mdScreenMedia {
-      //padding-top: 30px;
-    }
-
-    @include smScreenMedia {
-      //padding-top: 25px;
-    }
   }
 
   &__text2 {
     grid-area: text2;
     align-self: flex-start;
-  }
-
-  &__text1,
-  &__text2 {
-    @include setFont(23px, 400, $color-secondary);
-    line-height: 30px;
-
-    @include mdScreenMedia {
-      font-size: 16px;
-    }
-    @include smScreenMedia {
-      font-size: 14px;
-      line-height: 20px;
-    }
   }
 
   &__logoWrapper {
@@ -147,19 +120,22 @@
   &__briefContainer {
     display: flex;
     gap: 48px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 200px;
+
+    @include lgScreenMedia {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
 
     @include mdScreenMedia {
       flex-direction: column;
       gap: 25px;
-      padding-top: 50px;
-      padding-bottom: 50px;
     }
 
     @include smScreenMedia {
-      padding-top: 25px;
-      padding-bottom: 25px;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 
@@ -172,7 +148,6 @@
     border: 3px solid $color-secondary;
     border-radius: 25px;
     padding: 25px;
-    //margin: 50px 25px;
 
     box-shadow: 8px 8px 45px 0 rgba(0, 0, 0, 0.25);
 
@@ -197,6 +172,7 @@
     }
   }
 }
+
 @keyframes assetsAnim1 {
   from {
     transform: translateX(-50%) rotate(0deg);

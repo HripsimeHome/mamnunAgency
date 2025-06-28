@@ -151,6 +151,10 @@
     margin-bottom: 50px;
 
     @include smScreenMedia {
+      gap: 10px;
+    }
+
+    @include smScreenMedia {
       flex-direction: column;
       align-items: center;
       gap: 10px;
@@ -184,10 +188,42 @@
     }
   }
 
+  &__socialIcons {
+    gap: 10px;
+
+    &__icon {
+      @include svg(14px, 14px);
+    }
+  }
+
+  &__img {
+    max-width: 183px;
+    width: 100%;
+
+    @include mdScreenMedia {
+      max-width: 90px;
+    }
+  }
+
+  &__imgPosition {
+    display: flex;
+    margin-top: 15px;
+
+    @include smScreenMedia {
+      justify-content: center;
+      margin-top: 5px;
+    }
+  }
+
   &__paymentsBLock {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include smScreenMedia {
+      align-items: center;
+      gap: 5px;
+    }
   }
 
   &__paymentsCard {
@@ -247,11 +283,13 @@
     }
 
     @include xlScreenMedia {
+      font-size: 16px;
+      line-height: 20px;
       text-align: left;
     }
     @include smScreenMedia {
       font-size: 12px;
-      line-height: 20px;
+      text-align: center;
     }
   }
 

@@ -227,23 +227,19 @@ const TourismServices = () => {
               />
             </div>
 
-            <div className={styles.tourismServices__panelContainer}>
+            <div className={styles.tourismServices__cardsContainer}>
               {section.items.map(
                 ({ image, webpImage, title, description }, idx) => (
-                  <div key={idx} className={styles.tourismServices__panel}>
-                    <div>
-                      <ImageWebp
-                        src={image}
-                        srcset={webpImage}
-                        className={styles.tourismServices__img}
-                      />
+                  <div key={idx} className={styles.tourismServices__card}>
+                    <div className={styles.tourismServices__cardImage}>
+                      <ImageWebp src={image} srcSet={webpImage} alt={title} />
                     </div>
-                    <div className={styles.tourismServices__content}>
-                      <h4 className={styles.tourismServices__title}>{title}</h4>
-                      <p className={styles.tourismServices__description}>
-                        {description}
-                      </p>
-                    </div>
+                    <h4 className={styles.tourismServices__cardTitle}>
+                      {title}
+                    </h4>
+                    <p className={styles.tourismServices__cardDescription}>
+                      {description}
+                    </p>
                   </div>
                 )
               )}

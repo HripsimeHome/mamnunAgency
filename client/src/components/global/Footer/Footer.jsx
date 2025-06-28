@@ -5,6 +5,11 @@ import SocialIcons from "../../layout/SocialIcons/SocialIcons";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 import {
+  companyLabelImage,
+  companyLabelWebpImage,
+} from ".././../../assets/images";
+
+import {
   homePagePath,
   privacyPolicyPagePath,
   cookiePolicyPagePath,
@@ -82,12 +87,20 @@ const Footer = () => {
               Our social media channels:
             </h4>
 
-            <SocialIcons />
+            <SocialIcons className={styles.footer__socialIcons} />
           </div>{" "}
           {/* socialMedia */}
           <div className={styles.footer__feedback}>
             <h4>Leave Your feedback Trustpilot</h4>
-            <h5>MAMNUN Agency</h5>
+            <a href="#" target="_blank">
+              <ImageWebp
+                src={companyLabelImage}
+                srcSet={companyLabelWebpImage}
+                alt="MAMNUN Agency"
+                className={styles.footer__img}
+                pictureClass={styles.footer__imgPosition}
+              />
+            </a>
           </div>{" "}
           {/* feedback */}
           <div className={styles.footer__paymentsBLock}>
