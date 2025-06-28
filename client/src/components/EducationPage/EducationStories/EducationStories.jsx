@@ -10,7 +10,6 @@ import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
 import { storyImage, storyWebpImage } from "../../../assets/images";
-
 import { starStoryIcon } from "../../../assets/svg";
 
 const storyData = [
