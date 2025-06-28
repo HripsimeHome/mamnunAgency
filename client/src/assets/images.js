@@ -392,7 +392,28 @@ import emailWebpImage from "./images/contacts/icons/email.webp";
 import locationImage from "./images/contacts/icons/location.png";
 import locationWebpImage from "./images/contacts/icons/location.webp";
 
+import accessibilityBLack1Image from "./images/education/studying/icons/accessibilityBLack1.png";
+import accessibilityBLack1WebpImage from "./images/education/studying/icons/accessibilityBLack1.webp";
+
+import accessibilityWhite1Image from "./images/education/studying/icons/accessibilityWhite1.png";
+import accessibilityWhite1WebpImage from "./images/education/studying/icons/accessibilityWhite1.webp";
+
+import accessibilityBLack1_5Image from "./images/education/studying/icons/accessibilityBLack1_5.png";
+import accessibilityBLack1_5WebpImage from "./images/education/studying/icons/accessibilityBLack1_5.webp";
+
+import accessibilityWhite1_5Image from "./images/education/studying/icons/accessibilityWhite1_5.png";
+import accessibilityWhite1_5WebpImage from "./images/education/studying/icons/accessibilityWhite1_5.webp";
+
 export {
+  accessibilityBLack1Image,
+  accessibilityBLack1WebpImage,
+  accessibilityWhite1Image,
+  accessibilityWhite1WebpImage,
+  accessibilityBLack1_5Image,
+  accessibilityBLack1_5WebpImage,
+  accessibilityWhite1_5Image,
+  accessibilityWhite1_5WebpImage,
+
   //General
   logoImage,
   logoWebpImage,
