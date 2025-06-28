@@ -190,9 +190,15 @@
 
   &__socialIcons {
     gap: 10px;
+  }
 
-    &__icon {
-      @include svg(14px, 14px);
+  &__socialIconsItem {
+    @include lgScreenMedia {
+      width: 14px;
+    }
+
+    @include smScreenMedia {
+      width: 44px;
     }
   }
 

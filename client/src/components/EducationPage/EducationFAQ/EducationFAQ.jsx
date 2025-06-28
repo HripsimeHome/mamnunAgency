@@ -95,12 +95,6 @@ const accordionItems = [
     content:
       "Teacher training programs enhance your teaching skills, introduce innovative strategies, and provide professional development opportunities, making you a more effective educator.",
   },
-
-  {
-    title: "16. How can I get in touch with MAMNUN for more information?",
-    content:
-      "You can contact us through our website, where you can fill out an inquiry form or reach out via email or phone. We are here to provide you with the information and support you need for your educational journey.",
-  },
 ];
 
 const leftItems = accordionItems.filter((_, index) => index % 2 === 0);

@@ -9,11 +9,10 @@ function CookiePolicy() {
         <h1>Cookies Policy for MAMNUN Agency</h1>
         <p>
           This Cookies Policy outlines the principles for the use of cookies and
-          similar technologies on the website&nbsp;
-          <Link to={homePagePath}>www.mamnunagency.com,</Link>
-          &nbsp; operated by MG Elektro LLC, registered at Farobiy Street 229,
-          100174 Tashkent, Uzbekistan, ИНН: 202399407. You can contact the
-          company via email at{" "}
+          similar technologies on the website{" "}
+          <Link to={homePagePath}>www.mamnunagency.com,</Link> operated by MG
+          Elektro LLC, registered at Farobiy Street 229, 100174 Tashkent,
+          Uzbekistan, ИНН: 202399407. You can contact the company via email at{" "}
           <a href="mailto:info@mamnunagency.com">info@mamnunagency.com</a> or by
           phone at +998949181305.
         </p>

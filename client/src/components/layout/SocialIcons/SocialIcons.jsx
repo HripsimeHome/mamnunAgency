@@ -42,7 +42,7 @@ const socialIconsData = [
   },
 ];
 
-function SocialIcons({ className }) {
+function SocialIcons({ className, iconClass }) {
   return (
     <div className={`${styles.socialIcons} ${className || ""}`}>
       {socialIconsData.map(({ icon, alt, link }, index) => (
@@ -53,7 +53,11 @@ function SocialIcons({ className }) {
           rel="noopener noreferrer"
           aria-label={alt}
         >
-          <Svg id={icon} alt={alt} className={styles.socialIcons__icon} />
+          <Svg
+            id={icon}
+            alt={alt}
+            className={`${styles.socialIcons__icon} ${iconClass || ""}`}
+          />
         </a>
       ))}
     </div>

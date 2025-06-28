@@ -180,9 +180,7 @@ const Contacts = () => {
             ))}
           </div>
 
-          <div className={styles.contacts__socialIconsPosition}>
-            <SocialIcons className={styles.contacts__socialIcons} />
-          </div>
+          <SocialIcons className={styles.contacts__socialIcons} />
         </div>
       </div>
     </section>
