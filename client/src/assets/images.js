@@ -262,6 +262,75 @@ import visitWebpImage from "./images/tourism/packages/icons/visit.webp";
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
 import educationHeaderWebpImage from "./images/education/header/educationHeader.webp";
 
+//Education - studying
+
+import accessibilityBLackImage from "./images/education/studying/icons/accessibilityBLack.png";
+import accessibilityBLackWebpImage from "./images/education/studying/icons/accessibilityBLack.webp";
+
+import accessibilityWhiteImage from "./images/education/studying/icons/accessibilityWhite.png";
+import accessibilityWhiteWebpImage from "./images/education/studying/icons/accessibilityWhite.webp";
+
+import reformBlackImage from "./images/education/studying/icons/reformBlack.png";
+import reformBlackWebpImage from "./images/education/studying/icons/reformBlack.webp";
+
+import reformWhiteImage from "./images/education/studying/icons/reformWhite.png";
+import reformWhiteWebpImage from "./images/education/studying/icons/reformWhite.webp";
+
+import integrationBlackImage from "./images/education/studying/icons/integrationBlack.png";
+import integrationBlackWebpImage from "./images/education/studying/icons/integrationBlack.webp";
+
+import integrationWhiteImage from "./images/education/studying/icons/integrationWhite.png";
+import integrationWhiteWebpImage from "./images/education/studying/icons/integrationWhite.webp";
+
+import moralBlackImage from "./images/education/studying/icons/moralBlack.png";
+import moralBlackeWebpImage from "./images/education/studying/icons/moralBlack.webp";
+
+import moralWhiteImage from "./images/education/studying/icons/moralWhite.png";
+import moralWhiteWebpImage from "./images/education/studying/icons/moralWhite.webp";
+
+import familliarityBLackImage from "./images/education/studying/icons/familliarityBLack.png";
+import familliarityBLackWebpImage from "./images/education/studying/icons/familliarityBLack.webp";
+
+import familliarityWhiteImage from "./images/education/studying/icons/familliarityWhite.png";
+import familliarityWhiteWebpImage from "./images/education/studying/icons/familliarityWhite.webp";
+
+import skillsBlackImage from "./images/education/studying/icons/skillsBlack.png";
+import skillsBlackWebpImage from "./images/education/studying/icons/skillsBlack.webp";
+
+import skillsWhiteImage from "./images/education/studying/icons/skillsWhite.png";
+import skillsWhiteeWebpImage from "./images/education/studying/icons/skillsWhite.webp";
+
+import lackBlackImage from "./images/education/studying/icons/lackBlack.png";
+import lackBlackWebpImage from "./images/education/studying/icons/lackBlack.webp";
+
+import lackWhiteImage from "./images/education/studying/icons/lackWhite.png";
+import lackWhitekWebpImage from "./images/education/studying/icons/lackWhite.webp";
+
+import boringBLackImage from "./images/education/studying/icons/boringBLack.png";
+import boringBLackWebpImage from "./images/education/studying/icons/boringBLack.webp";
+
+import boringWhiteImage from "./images/education/studying/icons/boringWhite.png";
+import boringWhiteWebpImage from "./images/education/studying/icons/boringWhite.webp";
+
+import rigidBLackImage from "./images/education/studying/icons/rigidBLack.png";
+import rigidBLackWebpImage from "./images/education/studying/icons/rigidBLack.webp";
+
+import rigidWhiteImage from "./images/education/studying/icons/rigidWhite.png";
+import rigidWhiteWebpImage from "./images/education/studying/icons/rigidWhite.webp";
+
+import challengesBlackImage from "./images/education/studying/icons/challengesBlack.png";
+import challengesBlackWebpImage from "./images/education/studying/icons/challengesBlack.webp";
+
+import challengesWhiteImage from "./images/education/studying/icons/challengesWhite.png";
+import challengesWhiteWebpImage from "./images/education/studying/icons/challengesWhite.webp";
+
+import teacherBlackImage from "./images/education/studying/icons/teacherBlack.png";
+import teacherBlackWebpImage from "./images/education/studying/icons/teacherBlack.webp";
+
+import teacherWhiteImage from "./images/education/studying/icons/teacherBlack.png";
+import teacherWhiteWebpImage from "./images/education/studying/icons/teacherBlack.webp";
+
+// Education - Stories
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
 
@@ -392,28 +461,7 @@ import emailWebpImage from "./images/contacts/icons/email.webp";
 import locationImage from "./images/contacts/icons/location.png";
 import locationWebpImage from "./images/contacts/icons/location.webp";
 
-import accessibilityBLack1Image from "./images/education/studying/icons/accessibilityBLack1.png";
-import accessibilityBLack1WebpImage from "./images/education/studying/icons/accessibilityBLack1.webp";
-
-import accessibilityWhite1Image from "./images/education/studying/icons/accessibilityWhite1.png";
-import accessibilityWhite1WebpImage from "./images/education/studying/icons/accessibilityWhite1.webp";
-
-import accessibilityBLack1_5Image from "./images/education/studying/icons/accessibilityBLack1_5.png";
-import accessibilityBLack1_5WebpImage from "./images/education/studying/icons/accessibilityBLack1_5.webp";
-
-import accessibilityWhite1_5Image from "./images/education/studying/icons/accessibilityWhite1_5.png";
-import accessibilityWhite1_5WebpImage from "./images/education/studying/icons/accessibilityWhite1_5.webp";
-
 export {
-  accessibilityBLack1Image,
-  accessibilityBLack1WebpImage,
-  accessibilityWhite1Image,
-  accessibilityWhite1WebpImage,
-  accessibilityBLack1_5Image,
-  accessibilityBLack1_5WebpImage,
-  accessibilityWhite1_5Image,
-  accessibilityWhite1_5WebpImage,
-
   //General
   logoImage,
   logoWebpImage,
@@ -616,6 +664,52 @@ export {
   storyWebpImage,
   educationHeaderImage,
   educationHeaderWebpImage,
+
+  //Education - studying
+  accessibilityBLackImage,
+  accessibilityBLackWebpImage,
+  accessibilityWhiteImage,
+  accessibilityWhiteWebpImage,
+  reformBlackImage,
+  reformBlackWebpImage,
+  reformWhiteImage,
+  reformWhiteWebpImage,
+  integrationBlackImage,
+  integrationBlackWebpImage,
+  integrationWhiteImage,
+  integrationWhiteWebpImage,
+  moralBlackImage,
+  moralBlackeWebpImage,
+  moralWhiteImage,
+  moralWhiteWebpImage,
+  familliarityBLackImage,
+  familliarityBLackWebpImage,
+  familliarityWhiteImage,
+  familliarityWhiteWebpImage,
+  skillsBlackImage,
+  skillsBlackWebpImage,
+  skillsWhiteImage,
+  skillsWhiteeWebpImage,
+  lackBlackImage,
+  lackBlackWebpImage,
+  lackWhiteImage,
+  lackWhitekWebpImage,
+  boringBLackImage,
+  boringBLackWebpImage,
+  boringWhiteImage,
+  boringWhiteWebpImage,
+  rigidBLackImage,
+  rigidBLackWebpImage,
+  rigidWhiteImage,
+  rigidWhiteWebpImage,
+  challengesBlackImage,
+  challengesBlackWebpImage,
+  challengesWhiteImage,
+  challengesWhiteWebpImage,
+  teacherBlackImage,
+  teacherBlackWebpImage,
+  teacherWhiteImage,
+  teacherWhiteWebpImage,
 
   //Education - Scholarships
   meritBasedImage,
