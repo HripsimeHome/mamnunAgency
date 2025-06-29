@@ -116,7 +116,7 @@ const ServicesTraveller = () => {
           Every Traveler&nbsp;
           <span className="titlePrimaryH2">is Unique</span>
         </h2>
-        <p className={styles.servicesTraveller__text}>
+        <p className="ptLg pbXlg">
           We customize our services to perfectly align with your individual
           needs.
         </p>
