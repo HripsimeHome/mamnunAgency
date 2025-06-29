@@ -34,6 +34,12 @@
       @include lgScreenMedia {
         display: flex;
       }
+
+      @include mdScreenMedia {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: unset;
+      }
     }
   }
 
@@ -80,12 +86,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    min-width: 60px;
   }
 
   &__flipInner {
     width: 66%; // initial smaller circle size
     aspect-ratio: 1/1;
-    position: relative;
+    position: relative; // Ensure parent is relative
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out, width 0.4s ease, height 0.4s ease;
     border-radius: 50%;
@@ -94,39 +101,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    will-change: transform;
+
+    @include smScreenMedia {
+      border-width: 3px;
+    }
   }
 
   &__circle:hover &__flipInner {
     width: 100%;
     aspect-ratio: 1/1;
-    transform: rotateY(180deg);
-    border: 5px solid $color-secondary;
+    transform: rotateY(-180deg);
+    border-color: $color-secondary;
   }
 
   &__front,
   &__back {
-    position: absolute;
+    top: 0; // <-- Add this line
+    left: 0; // <-- Add this line
     width: 100%;
     height: 100%;
+    position: absolute;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
     border-radius: 50%;
     @include flexCol();
     justify-content: center;
     align-items: center;
     background-color: $color-white;
+    will-change: transform;
+    transform-style: preserve-3d;
   }
 
   &__front {
     z-index: 2;
     border: none;
+    z-index: 0;
   }
 
   &__back {
     transform: rotateY(180deg);
-    background-color: $color-white;
     padding: 5px;
     @include flexCol();
     border: none;
+    z-index: 3;
   }
 
   &__step {
@@ -141,11 +160,15 @@
 
   &__iconPicture {
     width: 60%;
+    min-width: 26px;
   }
 
   &__icon {
     width: 100%;
     object-fit: contain;
+    display: block;
+    transform: translateZ(2px);
+    perspective: inherit;
   }
 
   &__title {
@@ -159,7 +182,7 @@
     }
 
     @include mdScreenMedia {
-      font-size: 16px;
+      display: none;
     }
   }
 }
