@@ -1,6 +1,5 @@
 // src/components/pages/EducationJourney/EducationJourney.jsx
 import styles from "./EducationJourney.module.scss";
-import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 const assistData = [
   "Tailoring programs to meet your unique needs",

@@ -13,10 +13,6 @@
     aspect-ratio: 6/2.5;
   }
 
-  @include smScreenMedia {
-    //aspect-ratio: 6/4;
-  }
-
   &__img {
     position: absolute;
     left: 0;
