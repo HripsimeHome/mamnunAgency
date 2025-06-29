@@ -238,6 +238,42 @@ a {
   }
 }
 
+.ptLg {
+  padding-top: 25px;
+
+  @include lgScreenMedia {
+    padding-top: 15px;
+  }
+
+  @include smScreenMedia {
+    padding-top: 10px;
+  }
+}
+
+.pbLg {
+  padding-bottom: 25px;
+
+  @include lgScreenMedia {
+    padding-bottom: 15px;
+  }
+
+  @include smScreenMedia {
+    padding-bottom: 10px;
+  }
+}
+
+.pbXlg {
+  padding-bottom: 50px;
+
+  @include lgScreenMedia {
+    padding-bottom: 25px;
+  }
+
+  @include smScreenMedia {
+    padding-bottom: 15px;
+  }
+}
+
 .container {
   max-width: 1480px;
   width: 100%;

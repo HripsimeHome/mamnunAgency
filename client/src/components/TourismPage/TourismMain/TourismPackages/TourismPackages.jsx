@@ -106,12 +106,12 @@ const TourismPackages = () => {
           Travel packages + Cultural&nbsp;
           <span className="titlePrimaryH2">tips and recommendations</span>
         </h2>
-        <p className={styles.tourismPackages__text}>
+        <p className="paragraphWhite ptLg pbXlg">
           We offer a range of thoughtfully crafted travel packages tailored to
           your interests and travel style. Choose from:
         </p>
         <Tabs tabHeaders={tabHeaders} tabContentGroups={tabContentGroups} />
-        <p className={styles.tourismPackages__text}>
+        <p className="paragraphWhite ptLg">
           Each package includes accommodations, transportation, expert guides,
           entrance fees, and 24/7 support.
         </p>

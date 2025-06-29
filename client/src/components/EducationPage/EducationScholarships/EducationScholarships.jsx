@@ -118,7 +118,7 @@ const EducationScholarships = () => {
           Scholarships and&nbsp;
           <span className="titlePrimaryH2">Financial Aid</span>
         </h2>
-        <p className={styles.educationScholarships__text}>
+        <p className="paragraphWhite ptLg">
           Universities worldwide offer a variety of scholarships and financial
           aid options to support students in their academic pursuits. Let’s look
           through the
@@ -127,7 +127,7 @@ const EducationScholarships = () => {
         <Tabs tabHeaders={tabHeaders} tabContentGroups={tabContentGroups} />
 
         <div className={styles.educationScholarships__contentContainer}>
-          <p className={styles.educationScholarships__text}>
+          <p className="paragraphWhite ptLg">
             It is important to note that the availability and types of
             scholarships and financial aid can vary significantly from
             university to university. Each institution has its own policies,
