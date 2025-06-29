@@ -112,12 +112,11 @@
   }
 
   &__storyImg {
-    max-width: 70px;
-    width: 100%;
+    width: 70px;
     border-radius: 50px;
 
     @include smScreenMedia {
-      max-width: 50px;
+      width: 50px;
     }
   }
 
