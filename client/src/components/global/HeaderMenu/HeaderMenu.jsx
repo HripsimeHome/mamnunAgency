@@ -39,11 +39,7 @@ const HeaderMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const dropdownRef = useRef(null);
-  useClickOutSide(
-    [dropdownRef],
-    () => setIsServicesOpen(false),
-    isServicesOpen
-  );
+  useClickOutSide([dropdownRef], () => setIsServicesOpen(false));
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleServices = () => setIsServicesOpen((prev) => !prev);

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useClickOutSide = (refs, onCloseState, state) => {
+export const useClickOutSide = (refs, onCloseState) => {
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
       const el = e.target;
@@ -8,7 +8,7 @@ export const useClickOutSide = (refs, onCloseState, state) => {
         (value) => value.current && !value.current.contains(el)
       );
 
-      if (state && isRef) {
+      if (isRef) {
         onCloseState();
       }
     };
