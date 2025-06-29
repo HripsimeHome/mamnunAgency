@@ -10,6 +10,7 @@
       "text1 animation"
       "text2 animation";
     text-align: justify;
+    overflow: hidden;
 
     @include xlScreenMedia {
       grid-template-columns: 1fr;

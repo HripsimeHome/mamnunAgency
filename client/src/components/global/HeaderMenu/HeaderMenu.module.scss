@@ -149,6 +149,7 @@
       @include setFont(16px, 400, $color-white);
       white-space: nowrap;
       padding: 15px 25px;
+      width: 100%;
 
       &:not(:last-child) {
         border-bottom: 1px solid $color-white;

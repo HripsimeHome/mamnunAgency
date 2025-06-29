@@ -136,22 +136,17 @@ const cards = [
       "We offer a comprehensive range of transfer services designed to meet your travel needs, no matter where you are in the world.",
 
     arrival: `Enjoy convenient and reliable transportation to and from the airport, ensuring you arrive on time and stress-free.`,
+    arrivalTitle: "Airport Transfers",
     departure:
       "Experience luxury and comfort with our private car services, perfect for business meetings, special events, or leisurely travel.",
+    departureTitle: "Private Car Services",
     transit:
       "For those needing flexible transportation, our disposal services allow you to hire a vehicle and driver for a set period, giving you the freedom to explore at your own pace.",
+    transitTitle: "Disposal (hourly) Transfer",
+    options: `Booking your transfer is easy and straightforward. Simply fill out our online request form with your travel details, or contact us via email. Provide us with your itinerary, including pickup and drop-off locations, dates, and any special requirements, and we will respond promptly with a precise quotation tailored to your needs.`,
 
-    benefits: [
-      [
-        "Booking Process and Options",
-        `Booking your transfer is easy and straightforward. Simply fill out our online request form with your travel details, or contact us via email. Provide us with your itinerary, including pickup and drop-off locations, dates, and any special requirements, and we will respond promptly with a precise quotation tailored to your needs.`,
-      ],
-      [
-        "Safety and Comfort Features",
-        `Your safety and comfort are our top priorities. All our vehicles are regularly maintained and equipped with the latest safety features. Our professional drivers are trained to provide a secure and pleasant journey, ensuring you can relax and enjoy the ride.`,
-      ],
-    ],
-
+    features: `Your safety and comfort are our top priorities. All our vehicles are regularly maintained and equipped with the latest safety features. Our professional drivers are trained to provide a secure and pleasant journey, ensuring you can relax and enjoy the ride.`,
+    faqsTitle: ["FAQs Related to", " Transfer Services"],
     faqs: [
       [
         "1. How do I book a transfer?",
