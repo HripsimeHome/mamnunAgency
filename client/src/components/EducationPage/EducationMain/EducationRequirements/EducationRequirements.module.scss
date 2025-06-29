@@ -94,6 +94,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include smScreenMedia {
+      border: 3px solid #575757;
+    }
   }
 
   &__circle:hover &__flipInner {
@@ -101,6 +105,10 @@
     aspect-ratio: 1/1;
     transform: rotateY(180deg);
     border: 5px solid $color-secondary;
+
+    @include smScreenMedia {
+      border: 3px solid $color-secondary;
+    }
   }
 
   &__front,
@@ -134,7 +142,7 @@
     line-height: 30px;
 
     @include smScreenMedia {
-      font-size: 34px;
+      font-size: 24px;
       line-height: 20px;
     }
   }
@@ -153,12 +161,12 @@
     line-height: 30px;
     width: 100%;
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 18px;
       line-height: 20px;
     }
 
-    @include mdScreenMedia {
+    @include smScreenMedia {
       font-size: 16px;
     }
   }
