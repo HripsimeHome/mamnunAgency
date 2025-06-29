@@ -124,15 +124,15 @@ const HeaderMenu = () => {
                             }`}
                           >
                             Our Services
-                            <Svg
-                              id={arrowThickCloseIcon}
-                              className={`${styles.headerMenu__arrowIcon} ${
-                                isServicesOpen
-                                  ? styles.headerMenu__arrowIcon_open
-                                  : ""
-                              }`}
-                            />
                           </span>
+                          <Svg
+                            id={arrowThickCloseIcon}
+                            className={`${styles.headerMenu__arrowIcon} ${
+                              isServicesOpen
+                                ? styles.headerMenu__arrowIcon_open
+                                : ""
+                            }`}
+                          />
                           <div className={styles.headerMenu__dropdownContent}>
                             {servicesItems.map(({ text, link }, j) => (
                               <NavLink
