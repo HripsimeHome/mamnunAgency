@@ -104,7 +104,7 @@ const EducationFAQ = () => {
   return (
     <section className={`${styles.educationFAQ} wrapperBlack wrapperPadding`}>
       <div className="container">
-        <h1 className="titlePrimaryH2">FAQ</h1>
+        <h1 className="titlePrimaryH2 pbXlg">FAQ</h1>
         <div className={styles.educationFAQ__columns}>
           <div className={styles.educationFAQ__column}>
             <Accordion accordionItems={leftItems} />

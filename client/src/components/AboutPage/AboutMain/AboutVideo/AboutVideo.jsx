@@ -25,7 +25,7 @@ const AboutVideo = () => {
             Your browser does not support the video tag.
           </video>
 
-          <p className={styles.aboutVideo__text}>
+          <p className="paragraphWhite ptLg">
             We are also a premier travel agency dedicated to providing unique
             travel packages and exceptional services. Our expertise extends
             beyond education, as we offer VIP passenger ground handling with

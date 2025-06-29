@@ -118,7 +118,7 @@ const EducationScholarships = () => {
           Scholarships and&nbsp;
           <span className="titlePrimaryH2">Financial Aid</span>
         </h2>
-        <p className="paragraphWhite ptLg">
+        <p className="paragraphWhite ptLg pbXlg">
           Universities worldwide offer a variety of scholarships and financial
           aid options to support students in their academic pursuits. Let’s look
           through the
