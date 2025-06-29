@@ -146,7 +146,7 @@ const cards = [
     options: `Booking your transfer is easy and straightforward. Simply fill out our online request form with your travel details, or contact us via email. Provide us with your itinerary, including pickup and drop-off locations, dates, and any special requirements, and we will respond promptly with a precise quotation tailored to your needs.`,
 
     features: `Your safety and comfort are our top priorities. All our vehicles are regularly maintained and equipped with the latest safety features. Our professional drivers are trained to provide a secure and pleasant journey, ensuring you can relax and enjoy the ride.`,
-
+    faqsTitle: ["FAQs Related to", " Transfer Services"],
     faqs: [
       [
         "1. How do I book a transfer?",

@@ -139,8 +139,17 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
             )}
             <div className={styles.servicesServicesModal__paragraphBlock}>
               <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
-                FAQs Related to{" "}
-                <span className="textPrimary">{service.title}</span>
+                {service.faqsTitle ? (
+                  <>
+                    {service.faqsTitle[0]}{" "}
+                    <span className="textPrimary">{service.faqsTitle[1]}</span>
+                  </>
+                ) : (
+                  <>
+                    FAQs Related to{" "}
+                    <span className="textPrimary">{service.title}</span>
+                  </>
+                )}
               </h4>
               <div className={styles.servicesServicesModal__paragraphBlockList}>
                 {service.faqs.map(([question, answer], index) => (
