@@ -66,7 +66,7 @@ const AboutFAQ = () => {
   return (
     <section className="wrapperBlack">
       <div className="container">
-        <h2 className="titlePrimaryH2">FAQ</h2>
+        <h2 className="titlePrimaryH2 pbXlg">FAQ</h2>
         <>
           <Accordion accordionItems={accordionItems} />
         </>

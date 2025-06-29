@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 50px;
 
-  @include mdScreenMedia {
+  @include lgScreenMedia {
     padding: 50px 0;
     gap: 16px;
   }
