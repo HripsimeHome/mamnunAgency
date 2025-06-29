@@ -1,12 +1,5 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-
-.educationServices{  
- 
-  &__text {
-    @include setFont(20px, 400, $color-white)
-  }
-
+.educationServices {
 }
-

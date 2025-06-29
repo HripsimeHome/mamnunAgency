@@ -208,7 +208,7 @@ const EducationStudyingAbroad = () => {
             // className={styles.educationStudying__accordionContainer}
           />
         </>
-        <p className="paragraphWhite">
+        <p className="paragraphWhite ptLg">
           At MAMNUN, we are here to guide you through these considerations,
           ensuring you have all the information you need to make the best
           decision for your future. Let us help you navigate your educational

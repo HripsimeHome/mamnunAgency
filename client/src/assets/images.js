@@ -265,6 +265,12 @@ import visitWebpImage from "./images/tourism/packages/icons/visit.webp";
 import educationHeaderImage from "./images/education/header/educationHeader.jpg";
 import educationHeaderWebpImage from "./images/education/header/educationHeader.webp";
 
+//Education - Accordion
+import accordionMinusImage from "./images/accordion/accordionMinus.png";
+import accordionMinusWebpImage from "./images/accordion/accordionMinus.webp";
+import accordionPlusImage from "./images/accordion/accordionPlus.png";
+import accordionPlusWebpImage from "./images/accordion/accordionPlus.webp";
+
 //Education - studying
 
 import accessibilityBLackImage from "./images/education/studying/icons/accessibilityBLack.png";
@@ -547,10 +553,6 @@ import educationOfferIcon7Image from "./images/education/offer/educationOfferIco
 import educationOfferIcon7WebpImage from "./images/education/offer/educationOfferIcon7.webp";
 import educationOfferIcon8Image from "./images/education/offer/educationOfferIcon8.png";
 import educationOfferIcon8WebpImage from "./images/education/offer/educationOfferIcon8.webp";
-import accordionMinusImage from "./images/accordion/accordionMinus.png";
-import accordionMinusWebpImage from "./images/accordion/accordionMinus.webp";
-import accordionPlusImage from "./images/accordion/accordionPlus.png";
-import accordionPlusWebpImage from "./images/accordion/accordionPlus.webp";
 
 export {
   //General
@@ -602,12 +604,6 @@ export {
   mastercardWebpImage,
   visaImage,
   mvisaWebpImage,
-
-  // Accordion
-  accordionMinusImage,
-  accordionMinusWebpImage,
-  accordionPlusImage,
-  accordionPlusWebpImage,
 
   // Home
   homeVideoPosterImage,
@@ -762,6 +758,12 @@ export {
   storyWebpImage,
   educationHeaderImage,
   educationHeaderWebpImage,
+
+  // Education - Accordion
+  accordionMinusImage,
+  accordionMinusWebpImage,
+  accordionPlusImage,
+  accordionPlusWebpImage,
 
   //Education - studying
   accessibilityBLackImage,

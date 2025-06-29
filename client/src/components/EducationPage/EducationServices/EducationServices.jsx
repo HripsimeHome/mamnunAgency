@@ -115,7 +115,7 @@ const EducationServices = () => {
           <br />
           <span className="titleWhiteH2">(Available for an Extra Fee)</span>
         </h2>
-        <p className="textWhite">
+        <p className="paragraphWhite ptLg pbXlg">
           We offer a range of additional services to support your journey
           abroad. These services are available at an extra cost:
         </p>
@@ -123,7 +123,7 @@ const EducationServices = () => {
           <Accordion accordionItems={accordionItems} />
         </>
 
-        <p className={styles.educationServices__text}>
+        <p className="paragraphWhite ptLg">
           For more details or to request any of these services, please
           <Link to={contactsPagePath}>&nbsp;contact us&nbsp;</Link>
           directly.
