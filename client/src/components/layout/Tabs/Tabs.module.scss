@@ -91,7 +91,6 @@
   }
 
   &__titleBlock {
-    //flex: 1 1 auto;
     display: flex;
     align-items: center;
     flex: 6;
@@ -125,14 +124,12 @@
   }
 
   &__description {
-    // flex: 1 1 auto;
     flex: 4;
     @include setFont(18px, 400, $color-white);
     text-align: justify;
     line-height: 30px;
 
     @include lgScreenMedia {
-      //flex: 1;
       font-size: 16px;
       line-height: 20px;
     }

@@ -144,10 +144,6 @@
       @include flexCol();
     }
 
-    @include smScreenMedia {
-      //margin-top: 15px;
-    }
-
     @include xsmScreenMedia {
       gap: 15px;
     }

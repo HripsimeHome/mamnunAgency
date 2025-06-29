@@ -8,10 +8,6 @@
     padding-top: 50px;
   }
 
-  // @include smScreenMedia {
-  //   padding-top: 25px;
-  // }
-
   &__tabTitleContainer {
     display: flex;
     width: 100%;
@@ -40,7 +36,6 @@
   }
 
   &__icon {
-    //@include svg(40px, 40px);
     width: 39px;
     height: 40px;
   }
