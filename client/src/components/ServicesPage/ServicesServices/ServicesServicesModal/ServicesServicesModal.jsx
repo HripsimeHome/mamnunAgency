@@ -57,7 +57,7 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
             <div className={styles.servicesServicesModal__paragraphBlock}>
               <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
                 Benefits of using{" "}
-                <span className="textPurple">{service.title}</span>
+                <span className="textPrimary">{service.title}</span>
               </h4>
               <div className={styles.servicesServicesModal__paragraphBlockList}>
                 {service.benefits.map(([title, text], index) => (
@@ -73,7 +73,7 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
             <div className={styles.servicesServicesModal__paragraphBlock}>
               <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
                 Pricing and booking{" "}
-                <span className="textPurple">information</span>
+                <span className="textPrimary">information</span>
               </h4>
               <div className={styles.servicesServicesModal__paragraphBlockList}>
                 <p className={styles.servicesServicesModal__paragraphBlockText}>
@@ -84,7 +84,7 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
             <div className={styles.servicesServicesModal__paragraphBlock}>
               <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
                 FAQs Related to{" "}
-                <span className="textPurple">{service.title}</span>
+                <span className="textPrimary">{service.title}</span>
               </h4>
               <div className={styles.servicesServicesModal__paragraphBlockList}>
                 {service.faqs.map(([question, answer], index) => (
