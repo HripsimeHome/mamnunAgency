@@ -61,15 +61,20 @@ export const reasonsData = [
 ];
 
 const HomeReasons = () => {
-  const { ref, isInView } = useLazy(0.4);
+  const { ref, isInView } = useLazy(0.6);
   return (
-    <section ref={ref} className={styles.homeReasons}>
+    <section className={styles.homeReasons}>
       <h2 className="titleWhiteH2">
         Reasons to&nbsp;
         <span className="titlePrimaryH2">Choouse Us</span>
       </h2>
 
-      <div className={styles.homeReasons__cardContainer}>
+      <div
+        ref={ref}
+        className={`${styles.homeReasons__cardContainer} ${
+          isInView ? styles.homeReasons__cardContainer_active : ""
+        }`}
+      >
         {reasonsData.map(({ image, webpImage, title, description }, index) => (
           <TransitionProvider
             inProp={isInView}

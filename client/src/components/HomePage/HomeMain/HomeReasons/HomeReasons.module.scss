@@ -16,16 +16,24 @@
     position: relative;
     @include flexCol();
     flex-direction: column;
+    min-height: 600px;
     gap: 50px;
+    transition: $transition;
 
     @include xxlScreenMedia {
       max-width: 500px;
       margin-inline: auto;
-      @include bgWebp(
-        "../../../../assets/images/home/reasons/homereasonsLinebgMob.png",
-        "../../../../assets/images/home/reasons/homereasonsLinebgMob.webp"
-      );
+      background: none;
       aspect-ratio: unset;
+    }
+
+    &_active {
+      @include xxlScreenMedia {
+        @include bgWebp(
+          "../../../../assets/images/home/reasons/homereasonsLinebgMob.png",
+          "../../../../assets/images/home/reasons/homereasonsLinebgMob.webp"
+        );
+      }
     }
 
     @include xxlScreenMedia {
