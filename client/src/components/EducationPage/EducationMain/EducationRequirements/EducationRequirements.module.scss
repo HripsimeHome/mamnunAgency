@@ -108,7 +108,7 @@
     }
   }
 
-  &__circle:hover &__flipInner {
+  &__stepContainer:hover &__flipInner {
     width: 100%;
     aspect-ratio: 1/1;
     transform: rotateY(-180deg);
@@ -175,6 +175,7 @@
     @include setFont(24px, 500, #575757);
     line-height: 30px;
     width: 100%;
+    transition: $transition;
 
     @include mdScreenMedia {
       font-size: 18px;
@@ -184,5 +185,9 @@
     @include mdScreenMedia {
       display: none;
     }
+  }
+
+  &__stepContainer:hover &__title {
+    color: $color-secondary;
   }
 }
