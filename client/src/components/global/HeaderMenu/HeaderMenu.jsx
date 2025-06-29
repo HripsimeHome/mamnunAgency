@@ -1,5 +1,5 @@
 import styles from "./HeaderMenu.module.scss";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
@@ -19,6 +19,7 @@ import {
   crossIcon,
   arrowThickCloseIcon,
 } from "../../../assets/svg";
+import { useClickOutSide } from "../../../hooks/useClickOutside";
 
 const allMenuItems = [
   { text: "Home", link: homePagePath, group: null },
@@ -37,6 +38,8 @@ const HeaderMenu = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  useClickOutSide([dropdownRef], () => setIsServicesOpen(false));
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleServices = () => setIsServicesOpen((prev) => !prev);
@@ -115,6 +118,7 @@ const HeaderMenu = () => {
                               : ""
                           }`}
                           onClick={toggleServices}
+                          ref={dropdownRef}
                         >
                           <span
                             className={`${styles.headerMenu__menuLink} ${
@@ -124,15 +128,15 @@ const HeaderMenu = () => {
                             }`}
                           >
                             Our Services
-                            <Svg
-                              id={arrowThickCloseIcon}
-                              className={`${styles.headerMenu__arrowIcon} ${
-                                isServicesOpen
-                                  ? styles.headerMenu__arrowIcon_open
-                                  : ""
-                              }`}
-                            />
                           </span>
+                          <Svg
+                            id={arrowThickCloseIcon}
+                            className={`${styles.headerMenu__arrowIcon} ${
+                              isServicesOpen
+                                ? styles.headerMenu__arrowIcon_open
+                                : ""
+                            }`}
+                          />
                           <div className={styles.headerMenu__dropdownContent}>
                             {servicesItems.map(({ text, link }, j) => (
                               <NavLink

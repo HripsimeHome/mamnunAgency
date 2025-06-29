@@ -8,6 +8,7 @@
   aspect-ratio: 6/2;
   text-align: center;
   padding-bottom: 32px;
+  overflow: hidden;
 
   @media (max-width: 1200px) {
     aspect-ratio: 6/2.5;

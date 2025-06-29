@@ -121,6 +121,7 @@
     padding: 8px;
     text-align: center;
     vertical-align: top;
+    white-space: nowrap;
     @include setFont(24px, 600);
 
     @include lgScreenMedia {

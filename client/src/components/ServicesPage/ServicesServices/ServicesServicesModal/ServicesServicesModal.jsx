@@ -28,63 +28,128 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
             >
               <Svg id={thinCrossIcon} />
             </button>
-            <div className={styles.servicesServicesModal__table}>
-              <div className={styles.servicesServicesModal__row}>
-                <p className={styles.servicesServicesModal__cellHeader}>
-                  Arrival
-                </p>
-                <div className={styles.servicesServicesModal__cell}>
-                  {service.arrival}
+            {service.arrival && service.departure && service.transit && (
+              <div className={styles.servicesServicesModal__table}>
+                <div className={styles.servicesServicesModal__row}>
+                  <p className={styles.servicesServicesModal__cellHeader}>
+                    {service.arrivalTitle || "Arrival"}
+                  </p>
+                  <div className={styles.servicesServicesModal__cell}>
+                    {service.arrival}
+                  </div>
+                </div>
+                <div className={styles.servicesServicesModal__row}>
+                  <p className={styles.servicesServicesModal__cellHeader}>
+                    {service.departureTitle || "Departure"}
+                  </p>
+                  <div className={styles.servicesServicesModal__cell}>
+                    {service.departure}
+                  </div>
+                </div>
+                <div className={styles.servicesServicesModal__row}>
+                  <p className={styles.servicesServicesModal__cellHeader}>
+                    {service.transitTitle || "Transit / Connection"}
+                  </p>
+                  <div className={styles.servicesServicesModal__cell}>
+                    {service.transit}
+                  </div>
                 </div>
               </div>
-              <div className={styles.servicesServicesModal__row}>
-                <p className={styles.servicesServicesModal__cellHeader}>
-                  Departure
-                </p>
-                <div className={styles.servicesServicesModal__cell}>
-                  {service.departure}
+            )}
+            {service.benefits && (
+              <div className={styles.servicesServicesModal__paragraphBlock}>
+                <h4
+                  className={styles.servicesServicesModal__paragraphBlockTitle}
+                >
+                  Benefits of using{" "}
+                  <span className="textPrimary">{service.title}</span>
+                </h4>
+                <div
+                  className={styles.servicesServicesModal__paragraphBlockList}
+                >
+                  {service.benefits.map(([title, text], index) => (
+                    <p
+                      key={index}
+                      className={
+                        styles.servicesServicesModal__paragraphBlockText
+                      }
+                    >
+                      <span style={{ fontWeight: 600 }}>{title}:</span> {text}
+                    </p>
+                  ))}
                 </div>
               </div>
-              <div className={styles.servicesServicesModal__row}>
-                <p className={styles.servicesServicesModal__cellHeader}>
-                  Transit / Connection
-                </p>
-                <div className={styles.servicesServicesModal__cell}>
-                  {service.transit}
-                </div>
-              </div>
-            </div>
-            <div className={styles.servicesServicesModal__paragraphBlock}>
-              <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
-                Benefits of using{" "}
-                <span className="textPrimary">{service.title}</span>
-              </h4>
-              <div className={styles.servicesServicesModal__paragraphBlockList}>
-                {service.benefits.map(([title, text], index) => (
+            )}
+            {service.pricing && (
+              <div className={styles.servicesServicesModal__paragraphBlock}>
+                <h4
+                  className={styles.servicesServicesModal__paragraphBlockTitle}
+                >
+                  Pricing and booking{" "}
+                  <span className="textPrimary">information</span>
+                </h4>
+                <div
+                  className={styles.servicesServicesModal__paragraphBlockList}
+                >
                   <p
-                    key={index}
                     className={styles.servicesServicesModal__paragraphBlockText}
                   >
-                    <span style={{ fontWeight: 600 }}>{title}:</span> {text}
+                    {service.pricing}
                   </p>
-                ))}
+                </div>
               </div>
-            </div>
+            )}
+            {service.options && (
+              <div className={styles.servicesServicesModal__paragraphBlock}>
+                <h4
+                  className={styles.servicesServicesModal__paragraphBlockTitle}
+                >
+                  Booking Process and{" "}
+                  <span className="textPrimary">Options</span>
+                </h4>
+                <div
+                  className={styles.servicesServicesModal__paragraphBlockList}
+                >
+                  <p
+                    className={styles.servicesServicesModal__paragraphBlockText}
+                  >
+                    {service.options}
+                  </p>
+                </div>
+              </div>
+            )}
+            {service.features && (
+              <div className={styles.servicesServicesModal__paragraphBlock}>
+                <h4
+                  className={styles.servicesServicesModal__paragraphBlockTitle}
+                >
+                  Safety and{" "}
+                  <span className="textPrimary">Comfort Features</span>
+                </h4>
+                <div
+                  className={styles.servicesServicesModal__paragraphBlockList}
+                >
+                  <p
+                    className={styles.servicesServicesModal__paragraphBlockText}
+                  >
+                    {service.pricing}
+                  </p>
+                </div>
+              </div>
+            )}
             <div className={styles.servicesServicesModal__paragraphBlock}>
               <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
-                Pricing and booking{" "}
-                <span className="textPrimary">information</span>
-              </h4>
-              <div className={styles.servicesServicesModal__paragraphBlockList}>
-                <p className={styles.servicesServicesModal__paragraphBlockText}>
-                  {service.pricing}
-                </p>
-              </div>
-            </div>
-            <div className={styles.servicesServicesModal__paragraphBlock}>
-              <h4 className={styles.servicesServicesModal__paragraphBlockTitle}>
-                FAQs Related to{" "}
-                <span className="textPrimary">{service.title}</span>
+                {service.faqsTitle ? (
+                  <>
+                    {service.faqsTitle[0]}{" "}
+                    <span className="textPrimary">{service.faqsTitle[1]}</span>
+                  </>
+                ) : (
+                  <>
+                    FAQs Related to{" "}
+                    <span className="textPrimary">{service.title}</span>
+                  </>
+                )}
               </h4>
               <div className={styles.servicesServicesModal__paragraphBlockList}>
                 {service.faqs.map(([question, answer], index) => (
