@@ -67,15 +67,13 @@ const HomeNews = () => {
               renderBullet: (index, className) =>
                 `<span class="${className}">${index + 1}</span>`,
             }}
-            onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation === "object") {
-                swiper.params.navigation.nextEl = nextButtonRef.current;
-                swiper.params.navigation.prevEl = prevButtonRef.current;
-              }
-            }}
-            navigation={{
-              nextEl: nextButtonRef.current,
-              prevEl: prevButtonRef.current,
+            onSwiper={(swiper) => {
+              // Update navigation elements after refs are set
+              swiper.params.navigation.nextEl = nextButtonRef.current;
+              swiper.params.navigation.prevEl = prevButtonRef.current;
+              swiper.navigation.destroy();
+              swiper.navigation.init();
+              swiper.navigation.update();
             }}
             breakpoints={{
               576: {
