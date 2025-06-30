@@ -8,7 +8,7 @@ import TransitionProvider from "../../../../providers/TransitionProvider";
 
 const AboutMap = () => {
   const videoRef = useRef(null);
-  const { isInView, ref } = useLazy();
+  const { isInView, ref } = useLazy(0.4);
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
