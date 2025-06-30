@@ -30,6 +30,10 @@
     position: relative;
 
     @include lgScreenMedia {
+      gap: 15px;
+    }
+
+    @include mdScreenMedia {
       gap: 10px;
     }
 
@@ -161,11 +165,16 @@
 
   &__title {
     color: var(--textColor);
-    @include setFont(20px, 600, var(--textColor));
-    line-height: 40px;
+    @include setFont(20px, 500, var(--textColor));
+    line-height: 30px;
+
+    @include lgScreenMedia {
+      line-height: 25px;
+    }
 
     @include smScreenMedia {
-      font-size: 15px;
+      font-size: 16px;
+      // font-weight: 600;
       line-height: 20px;
     }
   }
@@ -176,6 +185,16 @@
     border-radius: 25px;
     // margin-top: 25px;
     animation: fadeIn 0.3s ease-in-out;
+
+    @include lgScreenMedia {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @include smScreenMedia {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__toggleIcon {
