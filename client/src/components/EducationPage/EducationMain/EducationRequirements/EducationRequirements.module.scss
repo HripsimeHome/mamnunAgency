@@ -29,6 +29,7 @@
 
     &_mob {
       aspect-ratio: 708/110;
+      display: none;
 
       @include lgScreenMedia {
         display: flex;
