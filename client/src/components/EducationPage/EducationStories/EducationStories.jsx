@@ -9,8 +9,12 @@ import "swiper/css/pagination";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import { storyImage, storyWebpImage } from "../../../assets/images";
-import { starStoryIcon } from "../../../assets/svg";
+import {
+  educationStoriesStarImage,
+  educationStoriesStarWebpImage,
+  storyImage,
+  storyWebpImage,
+} from "../../../assets/images";
 
 const storyData = [
   {
@@ -139,24 +143,18 @@ const EducationStories = () => {
             autoplay
             modules={[Navigation, Pagination, Autoplay]}
             pagination={{
-              el: paginationContainerRef.current,
-
               clickable: true,
               renderBullet: (index, className) =>
                 `<span class="${className}">${index + 1}</span>`,
             }}
-            onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation === "object") {
-                swiper.params.navigation.nextEl = nextButtonRef.current;
-                swiper.params.navigation.prevEl = prevButtonRef.current;
-              }
-              if (typeof swiper.params.pagination === "object") {
-                swiper.params.pagination.el = paginationContainerRef.current;
-              }
-            }}
-            navigation={{
-              nextEl: nextButtonRef.current,
-              prevEl: prevButtonRef.current,
+            onSwiper={(swiper) => {
+              // Update navigation elements after refs are set
+              swiper.params.navigation.nextEl = nextButtonRef.current;
+              swiper.params.navigation.prevEl = prevButtonRef.current;
+              swiper.navigation.destroy();
+              swiper.navigation.init();
+              swiper.navigation.update();
+              swiper.params.pagination.el = paginationContainerRef.current;
             }}
             breakpoints={{
               576: {
@@ -207,9 +205,10 @@ const EducationStories = () => {
 
                       <div className={styles.educationStories__starBlock}>
                         {Array.from({ length: 5 }, (_, index) => (
-                          <Svg
+                          <ImageWebp
                             key={index}
-                            id={starStoryIcon}
+                            src={educationStoriesStarImage}
+                            srcSet={educationStoriesStarWebpImage}
                             className={styles.educationStories__starIcon}
                           />
                         ))}

@@ -268,6 +268,10 @@ import accordionMinusImage from "./images/accordion/accordionMinus.png";
 import accordionMinusWebpImage from "./images/accordion/accordionMinus.webp";
 import accordionPlusImage from "./images/accordion/accordionPlus.png";
 import accordionPlusWebpImage from "./images/accordion/accordionPlus.webp";
+import accordionMinusLightImage from "./images/accordion/accordionMinusLight.png";
+import accordionMinusLightWebpImage from "./images/accordion/accordionMinusLight.webp";
+import accordionPlusLightImage from "./images/accordion/accordionPlusLight.png";
+import accordionPlusLightWebpImage from "./images/accordion/accordionPlusLight.webp";
 
 //Education - studying
 import accessibilityBLackImage from "./images/education/studying/icons/accessibilityBLack.png";
@@ -547,6 +551,8 @@ import educationOfferIcon7Image from "./images/education/offer/educationOfferIco
 import educationOfferIcon7WebpImage from "./images/education/offer/educationOfferIcon7.webp";
 import educationOfferIcon8Image from "./images/education/offer/educationOfferIcon8.png";
 import educationOfferIcon8WebpImage from "./images/education/offer/educationOfferIcon8.webp";
+import educationStoriesStarImage from "./images/education/stories/educationStoriesStar.png";
+import educationStoriesStarWebpImage from "./images/education/stories/educationStoriesStar.webp";
 
 export {
   //General
@@ -758,6 +764,10 @@ export {
   accordionMinusWebpImage,
   accordionPlusImage,
   accordionPlusWebpImage,
+  accordionMinusLightImage,
+  accordionMinusLightWebpImage,
+  accordionPlusLightImage,
+  accordionPlusLightWebpImage,
 
   //Education - studying
   accessibilityBLackImage,
@@ -894,6 +904,8 @@ export {
   educationOfferIcon7WebpImage,
   educationOfferIcon8Image,
   educationOfferIcon8WebpImage,
+  educationStoriesStarImage,
+  educationStoriesStarWebpImage,
 
   // Services
   servicesHeaderImage,

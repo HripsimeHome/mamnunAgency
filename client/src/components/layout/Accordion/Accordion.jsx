@@ -6,8 +6,12 @@ import Svg from "../../layout/Svg/Svg";
 import { arrowWhiteIcon } from "../../../assets/svg";
 import {
   accordionMinusImage,
+  accordionMinusLightImage,
+  accordionMinusLightWebpImage,
   accordionMinusWebpImage,
   accordionPlusImage,
+  accordionPlusLightImage,
+  accordionPlusLightWebpImage,
   accordionPlusWebpImage,
 } from "../../../assets/images";
 
@@ -36,8 +40,10 @@ const Accordion = ({
       >
         {by6And4Col && (
           <ImageWebp
-            src={accordionPlusImage}
-            srcSet={accordionPlusWebpImage}
+            src={!inverse ? accordionPlusLightImage : accordionPlusImage}
+            srcSet={
+              !inverse ? accordionPlusLightWebpImage : accordionPlusWebpImage
+            }
             alt="plus"
             className={styles.accordion__bgImg}
           />
@@ -54,8 +60,12 @@ const Accordion = ({
         >
           {by6And4Col && (
             <ImageWebp
-              src={accordionMinusImage}
-              srcSet={accordionMinusWebpImage}
+              src={!inverse ? accordionMinusLightImage : accordionMinusImage}
+              srcSet={
+                !inverse
+                  ? accordionMinusLightWebpImage
+                  : accordionMinusWebpImage
+              }
               alt="minus"
               className={styles.accordion__bgImg}
             />

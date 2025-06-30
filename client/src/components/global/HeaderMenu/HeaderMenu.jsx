@@ -58,7 +58,6 @@ const HeaderMenu = () => {
   const isServicesActive = servicesItems.some(
     (item) => location.pathname === item.link
   );
-  console.log({ isServicesActive });
 
   return (
     <div className={styles.headerMenu}>
