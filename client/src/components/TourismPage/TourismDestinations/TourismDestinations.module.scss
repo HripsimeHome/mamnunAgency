@@ -125,7 +125,7 @@
     }
 
     @include smScreenMedia {
-      @include setFont(18px, 600, $color-primary);
+      font-size: 18px;
       line-height: 20px;
       padding-top: 15px;
     }
