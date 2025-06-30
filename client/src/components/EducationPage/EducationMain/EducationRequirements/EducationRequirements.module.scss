@@ -28,8 +28,7 @@
     }
 
     &_mob {
-      aspect-ratio: 708/136;
-      display: none;
+      aspect-ratio: 708/110;
 
       @include lgScreenMedia {
         display: flex;
@@ -37,8 +36,6 @@
 
       @include mdScreenMedia {
         width: 100%;
-        height: 100%;
-        aspect-ratio: unset;
       }
     }
   }
@@ -182,8 +179,16 @@
       line-height: 20px;
     }
 
-    @include mdScreenMedia {
-      display: none;
+    &_next {
+      @include mdScreenMedia {
+        width: 220px;
+      }
+    }
+
+    &:not(&_next) {
+      @include mdScreenMedia {
+        display: none;
+      }
     }
   }
 

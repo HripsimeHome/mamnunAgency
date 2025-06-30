@@ -113,34 +113,44 @@ function EducationRequirements() {
         >
           {requirementsData.map(({ step, title, image, webpImage }, index) => (
             <SwiperSlide key={index}>
-              <TransitionProvider
-                inProp={isInView}
-                style={TransitionStyleTypes.zoomIn}
-                delay={100 * index}
-                className={styles.educationRequirements__stepContainer}
-              >
-                <div className={styles.educationRequirements__circle}>
-                  <div className={styles.educationRequirements__flipInner}>
-                    <div className={styles.educationRequirements__front}>
-                      <span className={styles.educationRequirements__step}>
-                        {step}
-                      </span>
-                    </div>
-                    <div className={styles.educationRequirements__back}>
-                      <ImageWebp
-                        src={image}
-                        srcSet={webpImage}
-                        alt="Step icon"
-                        className={styles.educationRequirements__icon}
-                        pictureClass={styles.educationRequirements__iconPicture}
-                      />
+              {({ isNext }) => (
+                <TransitionProvider
+                  inProp={isInView}
+                  style={TransitionStyleTypes.zoomIn}
+                  delay={100 * index}
+                  className={styles.educationRequirements__stepContainer}
+                >
+                  <div className={styles.educationRequirements__circle}>
+                    <div className={styles.educationRequirements__flipInner}>
+                      <div className={styles.educationRequirements__front}>
+                        <span className={styles.educationRequirements__step}>
+                          {step}
+                        </span>
+                      </div>
+                      <div className={styles.educationRequirements__back}>
+                        <ImageWebp
+                          src={image}
+                          srcSet={webpImage}
+                          alt="Step icon"
+                          className={styles.educationRequirements__icon}
+                          pictureClass={
+                            styles.educationRequirements__iconPicture
+                          }
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <span className={styles.educationRequirements__title}>
-                  {title}
-                </span>
-              </TransitionProvider>
+                  <span
+                    className={
+                      isNext
+                        ? `${styles.educationRequirements__title} ${styles.educationRequirements__title_next}`
+                        : styles.educationRequirements__title
+                    }
+                  >
+                    {title}
+                  </span>
+                </TransitionProvider>
+              )}
             </SwiperSlide>
           ))}
           <div className={styles.educationRequirements__bgLines}>
