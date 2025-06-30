@@ -270,6 +270,10 @@ import accordionMinusImage from "./images/accordion/accordionMinus.png";
 import accordionMinusWebpImage from "./images/accordion/accordionMinus.webp";
 import accordionPlusImage from "./images/accordion/accordionPlus.png";
 import accordionPlusWebpImage from "./images/accordion/accordionPlus.webp";
+import accordionMinusLightImage from "./images/accordion/accordionMinusLight.png";
+import accordionMinusLightWebpImage from "./images/accordion/accordionMinusLight.webp";
+import accordionPlusLightImage from "./images/accordion/accordionPlusLight.png";
+import accordionPlusLightWebpImage from "./images/accordion/accordionPlusLight.webp";
 
 //Education - studying
 
@@ -766,6 +770,10 @@ export {
   accordionMinusWebpImage,
   accordionPlusImage,
   accordionPlusWebpImage,
+  accordionMinusLightImage,
+  accordionMinusLightWebpImage,
+  accordionPlusLightImage,
+  accordionPlusLightWebpImage,
 
   //Education - studying
   accessibilityBLackImage,
