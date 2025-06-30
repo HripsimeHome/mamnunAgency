@@ -24,7 +24,7 @@
   &__tabTitle {
     @include setFont(24px, 600, $color-white);
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       font-size: 18px;
     }
 

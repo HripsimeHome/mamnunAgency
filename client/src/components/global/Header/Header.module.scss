@@ -52,17 +52,24 @@
   }
 
   &__subtitle {
+    max-width: 1100px;
     @include setFont(23px, 400, $color-white);
     line-height: 30px;
     //padding: 0 30px;
 
+    @include lgScreenMedia {
+      max-width: 808px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     @include mdScreenMedia {
-      font-size: 18px;
+      max-width: 708px;
     }
 
     @include smScreenMedia {
+      max-width: 320px;
       font-size: 14px;
-      line-height: 20px;
     }
   }
 }
