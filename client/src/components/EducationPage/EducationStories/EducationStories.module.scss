@@ -150,7 +150,7 @@
     }
 
     @include smScreenMedia {
-      padding-inline: 0px;
+      padding-inline: 0px !important;
     }
   }
 
@@ -166,4 +166,8 @@
   &__pagination {
     @include flexCol(space-around);
   }
+}
+
+:global(.swiper-pagination) {
+  padding-inline: 30px;
 }
