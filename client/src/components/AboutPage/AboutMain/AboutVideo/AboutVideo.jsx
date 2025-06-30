@@ -20,7 +20,7 @@ const AboutVideo = () => {
     <section ref={ref} className={`${styles.aboutVideo}`}>
       <div className="container">
         <div className={styles.aboutVideo__videoContainer}>
-          <video ref={videoRef} className={styles.aboutVideo__video} loop muted>
+          <video ref={videoRef} className={styles.aboutVideo__video} loop>
             <source src="/videos/about/about.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
