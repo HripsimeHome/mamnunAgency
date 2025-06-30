@@ -140,7 +140,7 @@ const EducationStories = () => {
             spaceBetween={20}
             centeredSlides={false}
             loop
-            autoplay
+            // autoplay
             modules={[Navigation, Pagination, Autoplay]}
             pagination={{
               clickable: true,
@@ -164,8 +164,15 @@ const EducationStories = () => {
                 slidesOffsetAfter: 20,
                 centeredSlides: false,
               },
+              1024: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+                slidesOffsetBefore: 20,
+                slidesOffsetAfter: 20,
+                centeredSlides: false,
+              },
               1440: {
-                slidesPerView: 2.5,
+                slidesPerView: 2.1,
                 spaceBetween: 83,
                 slidesOffsetBefore: 0,
                 slidesOffsetAfter: 0,

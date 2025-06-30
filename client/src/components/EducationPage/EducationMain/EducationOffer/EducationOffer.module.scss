@@ -4,6 +4,14 @@
 .educationOffer {
   padding-bottom: 100px;
 
+  @include lgScreenMedia {
+    padding-bottom: 50px;
+  }
+
+  @include smScreenMedia {
+    padding-bottom: 25px;
+  }
+
   &__container {
     display: flex;
     gap: 159px;
@@ -63,31 +71,37 @@
   }
 
   &__titleBlock {
-    @include flexCol(center, start);
+    @include flexCol;
     gap: 15px;
 
     @include lgScreenMedia {
       justify-content: flex-start;
     }
+
+    @include smScreenMedia {
+      gap: 10px;
+    }
   }
 
   &__icon {
     width: 40px;
-
     transition: $transition;
     filter: saturate(0);
     opacity: 0.5;
+
+    @include lgScreenMedia {
+      width: 30px;
+    }
   }
 
   &__title {
     @include setFont(28px, 600, $color-lightGrey);
-    margin-bottom: 30px;
     transition: $transition;
 
     @include lgScreenMedia {
       font-size: 20px;
-      margin-bottom: 10px;
     }
+
     @include smScreenMedia {
       font-size: 18px;
     }
@@ -96,14 +110,22 @@
   &__description {
     @include setFont(22px, 400, $color-lightGrey);
     text-align: justify;
+    line-height: 30px;
     transition: $transition;
+    margin-top: 25px;
 
     @include lgScreenMedia {
       font-size: 16px;
+      margin-top: 10px;
+    }
+
+    @include mdScreenMedia {
+      line-height: 20px;
     }
 
     @include smScreenMedia {
       font-size: 14px;
+      margin-top: 5px;
     }
   }
 }

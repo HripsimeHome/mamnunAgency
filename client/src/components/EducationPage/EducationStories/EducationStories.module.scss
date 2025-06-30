@@ -26,7 +26,7 @@
     border: 1px solid $color-secondary;
     border-radius: 25px;
     box-shadow: 6px 6px 23px 0 rgba(0, 0, 0, 0.25);
-    height: 100%;
+    height: calc(100% - 60px);
     display: flex;
     flex-direction: column;
   }
@@ -36,7 +36,6 @@
     line-height: 25px;
     padding: 25px;
     flex: 1;
-
     @include mdScreenMedia {
       line-height: 20px;
       padding: 15px;
@@ -60,7 +59,7 @@
   &__storyContainer {
     @include flexCol(space-between, center);
     padding: 25px;
-
+    min-height: 128px;
     @include smScreenMedia {
       padding: 15px;
     }

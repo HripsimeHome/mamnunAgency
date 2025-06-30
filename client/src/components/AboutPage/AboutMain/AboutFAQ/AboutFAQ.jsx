@@ -68,7 +68,7 @@ const AboutFAQ = () => {
       <div className="container">
         <h2 className="titlePrimaryH2 pbXlg">FAQ</h2>
         <>
-          <Accordion accordionItems={accordionItems} />
+          <Accordion by2Col={true} accordionItems={accordionItems} />
         </>
       </div>
     </section>
