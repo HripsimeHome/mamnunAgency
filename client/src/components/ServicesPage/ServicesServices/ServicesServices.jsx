@@ -177,9 +177,8 @@ const cards = [
     webpImage: railwayStationsWebpImage,
     backDescription:
       "Our Meet and Greet service at railway stations provides a seamless and luxurious travel experience for passengers arriving or departing by train. Our professional staff will be waiting for you at the station, ready to assist with your luggage and guide you through the station's facilities. Whether you are traveling for business or leisure, our dedicated service ensures a smooth transition from the train to your next destination.",
-    // arrival: ``,
-    // departure: "",
-    //transit: "",
+
+    benefitsTitle: ["Benefits", ""],
 
     benefits: [
       [
@@ -203,7 +202,8 @@ const cards = [
         `Relax knowing that you have professional support throughout your journey.`,
       ],
     ],
-    // pricing: "",
+    faqsTitle: ["FAQs", ""],
+
     faqs: [
       [
         "1. How do I book the Meet and Greet service?",
