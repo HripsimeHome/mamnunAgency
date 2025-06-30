@@ -78,7 +78,6 @@ export const workStudyIcon = "workStudy";
 export const loansIcon = "loans";
 
 // Education - Stories
-export const starStoryIcon = "starStory";
 export const educationRequirementsBGLinesIcon = "educationRequirementsBGLines";
 export const educationRequirementsBGLinesMobIcon =
   "educationRequirementsBGLinesMob";

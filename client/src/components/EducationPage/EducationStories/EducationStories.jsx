@@ -9,8 +9,12 @@ import "swiper/css/pagination";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import { storyImage, storyWebpImage } from "../../../assets/images";
-import { starStoryIcon } from "../../../assets/svg";
+import {
+  educationStoriesStarImage,
+  educationStoriesStarWebpImage,
+  storyImage,
+  storyWebpImage,
+} from "../../../assets/images";
 
 const storyData = [
   {
@@ -211,9 +215,10 @@ const EducationStories = () => {
 
                       <div className={styles.educationStories__starBlock}>
                         {Array.from({ length: 5 }, (_, index) => (
-                          <Svg
+                          <ImageWebp
                             key={index}
-                            id={starStoryIcon}
+                            src={educationStoriesStarImage}
+                            srcSet={educationStoriesStarWebpImage}
                             className={styles.educationStories__starIcon}
                           />
                         ))}

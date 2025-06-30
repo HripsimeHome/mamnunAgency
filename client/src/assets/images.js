@@ -553,6 +553,8 @@ import educationOfferIcon7Image from "./images/education/offer/educationOfferIco
 import educationOfferIcon7WebpImage from "./images/education/offer/educationOfferIcon7.webp";
 import educationOfferIcon8Image from "./images/education/offer/educationOfferIcon8.png";
 import educationOfferIcon8WebpImage from "./images/education/offer/educationOfferIcon8.webp";
+import educationStoriesStarImage from "./images/education/stories/educationStoriesStar.png";
+import educationStoriesStarWebpImage from "./images/education/stories/educationStoriesStar.webp";
 
 export {
   //General
@@ -900,6 +902,8 @@ export {
   educationOfferIcon7WebpImage,
   educationOfferIcon8Image,
   educationOfferIcon8WebpImage,
+  educationStoriesStarImage,
+  educationStoriesStarWebpImage,
 
   // Services
   servicesHeaderImage,
