@@ -115,7 +115,6 @@
   }
 
   &__starIcon {
-    @include svg(30px, 30px);
     width: 30px;
     height: 30px;
     margin-left: 5px;
@@ -141,7 +140,7 @@
     }
 
     @include smScreenMedia {
-      padding-inline: 0px;
+      padding-inline: 0px !important;
     }
   }
 
@@ -157,4 +156,8 @@
   &__pagination {
     @include flexCol(space-around);
   }
+}
+
+:global(.swiper-pagination) {
+  padding-inline: 30px;
 }

@@ -61,8 +61,19 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
                 <h4
                   className={styles.servicesServicesModal__paragraphBlockTitle}
                 >
-                  Benefits of using{" "}
-                  <span className="textPrimary">{service.title}</span>
+                  {service.benefitsTitle ? (
+                    <>
+                      {service.benefitsTitle[0]}{" "}
+                      <span className="textPrimary">
+                        {service.benefitsTitle[1]}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      Benefits of using{" "}
+                      <span className="textPrimary">{service.title}</span>
+                    </>
+                  )}
                 </h4>
                 <div
                   className={styles.servicesServicesModal__paragraphBlockList}
@@ -132,7 +143,7 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
                   <p
                     className={styles.servicesServicesModal__paragraphBlockText}
                   >
-                    {service.pricing}
+                    {service.features}
                   </p>
                 </div>
               </div>
