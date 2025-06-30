@@ -77,6 +77,10 @@
     @include lgScreenMedia {
       justify-content: flex-start;
     }
+
+    @include smScreenMedia {
+      gap: 10px;
+    }
   }
 
   &__icon {
