@@ -71,8 +71,12 @@
 
     @include lgScreenMedia {
       flex-direction: row;
-      gap: 10px;
+      gap: 20px;
       justify-content: space-between;
+    }
+
+    @include mdScreenMedia {
+      gap: 15px;
     }
 
     @include smScreenMedia {
@@ -126,12 +130,8 @@
     line-height: 30px;
 
     @include lgScreenMedia {
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    @include smScreenMedia {
       font-size: 14px;
+      line-height: 20px;
     }
   }
 
