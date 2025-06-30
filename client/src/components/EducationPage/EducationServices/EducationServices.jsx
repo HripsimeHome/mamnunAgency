@@ -124,9 +124,14 @@ const EducationServices = () => {
         </>
 
         <p className="paragraphWhite ptLg">
-          For more details or to request any of these services, please
-          <Link to={contactsPagePath}>&nbsp;contact us&nbsp;</Link>
-          directly.
+          For more details or to request any of these services, please&nbsp;
+          <Link
+            to={contactsPagePath}
+            className={styles.educationServices__link}
+          >
+            contact us
+          </Link>
+          &nbsp;directly.
         </p>
       </div>
     </section>
