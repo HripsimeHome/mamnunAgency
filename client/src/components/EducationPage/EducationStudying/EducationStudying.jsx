@@ -170,11 +170,7 @@ const EducationStudying = () => {
       <div className="container">
         <h2 className="titleSecondaryH2 pbXlg">
           Pros and Cons of studying{" "}
-          <span className="titlePrimaryH2">
-            in
-            <br />
-            Uzbekistan
-          </span>
+          <span className="titlePrimaryH2">in Uzbekistan</span>
         </h2>
         <>
           <Accordion

@@ -135,10 +135,9 @@ const TourismDestinations = () => {
       <div className="container">
         <h2 className="titleSecondaryH2">
           Popular Destinations and Attractions&nbsp;
-          <br />
           <span className="titlePrimaryH2">in Uzbekistan</span>
         </h2>
-        <p className={styles.tourismDestinations__introText}>
+        <p className="paragraphBlack ptLg pbLg">
           We also offer exclusive travel tips, local secrets, and
           off-the-beaten-path experiences available only on request. Let us show
           you the hidden gems of Uzbekistan — places that even many locals don’t

@@ -2,6 +2,19 @@
 @import "../../../styles/vars";
 
 .educationJourney {
+  &__titlePosition {
+    max-width: 50%;
+    margin: 0 auto;
+
+    @include lgScreenMedia {
+      max-width: 80%;
+    }
+
+    @include smScreenMedia {
+      max-width: 100%;
+    }
+  }
+
   &__journeyContainer {
     display: flex;
     gap: 40px;

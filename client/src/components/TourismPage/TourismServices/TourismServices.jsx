@@ -71,9 +71,8 @@ const serviceSections = [
             , observe <span className="textPrimary">miniature painting</span>{" "}
             and 
             <span className="textPrimary">silk carpet weaving</span>, and take
-            part in timeless culinary customs
-            <br />
-            like <span className="textPrimary">baking bread</span> and 
+            part in timeless culinary customs like 
+            <span className="textPrimary">baking bread</span> and 
             <span className="textPrimary">samsa in a tandoor</span>. You may
             even get a taste of <span className="textPrimary">sumalak</span>, a
             sacred springtime dish prepared overnight with love and
