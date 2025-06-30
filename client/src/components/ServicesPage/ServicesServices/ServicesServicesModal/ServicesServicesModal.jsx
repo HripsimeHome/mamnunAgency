@@ -132,7 +132,7 @@ const ServicesServicesModal = ({ show, onClose, service }) => {
                   <p
                     className={styles.servicesServicesModal__paragraphBlockText}
                   >
-                    {service.pricing}
+                    {service.features}
                   </p>
                 </div>
               </div>
