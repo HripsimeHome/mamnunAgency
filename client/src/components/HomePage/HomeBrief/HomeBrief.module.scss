@@ -8,12 +8,13 @@
   row-gap: 40px;
   width: 100%;
 
-  @include mdScreenMedia {
-    grid-template-columns: 1fr;
+  @include lgScreenMedia {
+    row-gap: 25px;
+    column-gap: 25px;
   }
 
-  @include xlScreenMedia {
-    row-gap: 25px;
+  @include mdScreenMedia {
+    grid-template-columns: 1fr;
   }
 
   @include smScreenMedia {
@@ -25,6 +26,10 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 25px;
+
+    @include smScreenMedia {
+      row-gap: 5px;
+    }
   }
 
   &__missionImg,
