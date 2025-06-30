@@ -122,21 +122,16 @@
     display: flex;
     gap: 48px;
     padding-top: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 
-    @include lgScreenMedia {
-      padding-top: 100px;
-      padding-bottom: 100px;
+    @include xlScreenMedia {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     @include mdScreenMedia {
       flex-direction: column;
       gap: 25px;
-    }
-
-    @include smScreenMedia {
-      padding-top: 50px;
-      padding-bottom: 50px;
     }
   }
 

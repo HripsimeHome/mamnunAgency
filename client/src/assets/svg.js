@@ -60,7 +60,6 @@ export const languageIcon = "language";
 export const visitIcon = "visit";
 
 // Tourism galery
-
 export const tourismGallerySliderArrowIcon = "tourismGallerySliderArrow";
 
 // Education - WWe offer

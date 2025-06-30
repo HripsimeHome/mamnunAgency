@@ -195,7 +195,7 @@ const EducationStudyingAbroad = () => {
       className={`${styles.educationStudyingAbroad} wrapperBlack wrapperPadding`}
     >
       <div className="container">
-        <h2 className="titleWhiteH2">
+        <h2 className="titleWhiteH2 pbXlg">
           Pros and Cons of studying&nbsp;
           <span className="titlePrimaryH2">abroad</span>
         </h2>
@@ -205,7 +205,6 @@ const EducationStudyingAbroad = () => {
             accordionItems={accordionItems}
             by6And4Col={true}
             by2Col={true}
-            // className={styles.educationStudying__accordionContainer}
           />
         </>
         <p className="paragraphWhite ptLg">

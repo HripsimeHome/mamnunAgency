@@ -5,15 +5,9 @@
   &__slideContainer {
     display: flex;
     gap: 50px;
-    padding: 50px 0;
 
     @include mdScreenMedia {
       gap: 25px;
-      margin: 25px 0;
-    }
-
-    @include smScreenMedia {
-      margin: 15px 0;
     }
   }
 
@@ -103,10 +97,6 @@
 
     @include mdScreenMedia {
       font-size: 12px;
-    }
-
-    @include smScreenMedia {
-      font-size: 10px;
       line-height: 15px;
     }
   }

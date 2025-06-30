@@ -168,19 +168,14 @@ const EducationStudying = () => {
       className={`${styles.educationStudying} wrapperWhite wrapperPadding`}
     >
       <div className="container">
-        <h2 className="titleSecondaryH2">
+        <h2 className="titleSecondaryH2 pbXlg">
           Pros and Cons of studying{" "}
-          <span className="titlePrimaryH2">
-            in
-            <br />
-            Uzbekistan
-          </span>
+          <span className="titlePrimaryH2">in Uzbekistan</span>
         </h2>
         <>
           <Accordion
             accordionItems={accordionItems}
             by6And4Col={true}
-            // by2Col={true}
             inverse
             className={styles.educationStudying__accordionContainer}
           />

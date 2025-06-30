@@ -1,12 +1,10 @@
-//import { ReactElement } from "react";
-//import { Navigate } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import TourismPage from "../pages/TourismPage";
 import EducationPage from "../pages/EducationPage";
 import ServicesPage from "../pages/ServicesPage";
 import ContactsPage from "../pages/ContactsPage";
-import ImprintPage  from "../pages/ImprintPage";
+import ImprintPage from "../pages/ImprintPage";
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
 import CookiePolicyPage from "../pages/CookiePolicyPage";
 import ErrorPage from "../pages/ErrorPage";
@@ -20,7 +18,6 @@ import AdminCertificatesPage from "../pages/Admin/AdminCertificatesPage";
 import AdminSettingsPage from "../pages/Admin/AdminSettingsPage";
 
 // Paths
-
 export const homePagePath = "/";
 export const aboutPagePath = "/about";
 export const tourismPagePath = "/tourism";
@@ -45,7 +42,6 @@ export const adminCertificatesPagePath = adminPagePath + "/certificates";
 export const adminSettingsPagePath = adminPagePath + "/settings";
 
 // Routes
-
 export const routes = [
   {
     path: homePagePath,

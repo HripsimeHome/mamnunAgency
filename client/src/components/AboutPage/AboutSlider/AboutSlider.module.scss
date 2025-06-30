@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 50px;
 
-  @include mdScreenMedia {
+  @include lgScreenMedia {
     padding: 50px 0;
     gap: 16px;
   }
@@ -33,7 +33,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    // box-shadow: 8px 8px 45px 0 rgba(0, 0, 0, 0.25);
     height: 100%;
     max-width: 340px;
     margin-inline: auto;

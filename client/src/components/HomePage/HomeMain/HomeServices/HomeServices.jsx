@@ -50,7 +50,7 @@ const accordionItems = [
 const HomeServices = () => {
   return (
     <section>
-      <h2 className="titleWhiteH2">
+      <h2 className="titleWhiteH2 pbXlg">
         Overview of&nbsp;
         <span className="titlePrimaryH2">Our Services</span>
       </h2>

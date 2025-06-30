@@ -1,6 +1,5 @@
 // src/components/pages/EducationJourney/EducationJourney.jsx
 import styles from "./EducationJourney.module.scss";
-import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 const assistData = [
   "Tailoring programs to meet your unique needs",
@@ -24,10 +23,10 @@ const EducationJourney = () => {
       className={`${styles.educationJourney} wrapperWhite wrapperPadding`}
     >
       <div className="container">
-        <h2 className="titleSecondaryH2 center">
-          Unlock Your Global Education
-          <br />
-          Journey&nbsp;
+        <h2
+          className={`${styles.educationJourney__titlePosition} titleSecondaryH2 center`}
+        >
+          Unlock Your Global Education Journey{" "}
           <span className="titlePrimaryH2">with Us!</span>
         </h2>
 

@@ -70,8 +70,6 @@ import mastercardWebpImage from "./images/footer/cards/mastercard.webp";
 import visaImage from "./images/footer/cards/visa.png";
 import mvisaWebpImage from "./images/footer/cards/visa.webp";
 
-// Accordion
-
 // Home
 import homeVideoPosterImage from "./images/home/homeVideoPoster.jpg";
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
@@ -89,7 +87,7 @@ import strongRelationshipsWebpImage from "./images/home/icons/reasons/strongRela
 import integrityImage from "./images/home/icons/reasons/integrity.png";
 import integrityWebpImage from "./images/home/icons/reasons/integrity.webp";
 
-// Home AccordioncareersWhiteImage, careersWhiteWebpImage
+// Home Accordion
 import careersWhiteImage from "./images/home/icons/accordion/careersWhite.png";
 import careersWhiteWebpImage from "./images/home/icons/accordion/careersWhite.webp";
 
@@ -276,7 +274,6 @@ import accordionPlusLightImage from "./images/accordion/accordionPlusLight.png";
 import accordionPlusLightWebpImage from "./images/accordion/accordionPlusLight.webp";
 
 //Education - studying
-
 import accessibilityBLackImage from "./images/education/studying/icons/accessibilityBLack.png";
 import accessibilityBLackWebpImage from "./images/education/studying/icons/accessibilityBLack.webp";
 
@@ -415,8 +412,6 @@ import accessWhiteWebpImage from "./images/education/studying/iconsAbroad/access
 import storyImage from "./images/education/stories/story.jpg";
 import storyWebpImage from "./images/education/stories/story.webp";
 
-//Education - Application process and requirements
-
 //Education - Scholarships
 
 import meritBasedImage from "./images/education/scholarships/icons/meritBased.png";
@@ -478,7 +473,6 @@ import ticketIssuanceWhiteWebpImage from "./images/education/services/icons/tick
 import ticketIssuanceBLackImage from "./images/education/services/icons/ticketIssuanceBLack.png";
 import ticketIssuanceBLackWebpImage from "./images/education/services/icons/ticketIssuanceBLack.webp";
 
-// Services
 // Services traveller
 import businessTravelersImage from "./images/services/traveller/businessTravelers.jpg";
 import businessTravelersWebpImage from "./images/services/traveller/businessTravelers.webp";

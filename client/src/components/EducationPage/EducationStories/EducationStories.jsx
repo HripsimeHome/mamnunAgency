@@ -128,13 +128,9 @@ const EducationStories = () => {
       className={`${styles.educationStories} wrapperWhite wrapperPadding`}
     >
       <div>
-        <h2 className="titleSecondaryH2 container">
+        <h2 className="container titleSecondaryH2 pbXlg">
           Success stories of the&nbsp;
-          <span className="titlePrimaryH2">
-            students
-            <br />
-            placed abroad
-          </span>
+          <span className="titlePrimaryH2">students placed abroad</span>
         </h2>
 
         <div className={styles.educationStories__slideContainer}>
