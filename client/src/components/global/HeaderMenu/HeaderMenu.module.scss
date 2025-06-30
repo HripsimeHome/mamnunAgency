@@ -6,8 +6,19 @@
   top: 0;
   left: 0;
   z-index: 4;
+  min-height: 155px;
+  display: flex;
+  align-items: center;
   background-color: $color-secondary;
   transition: $transition;
+
+  @include lgScreenMedia {
+    min-height: 100px;
+  }
+
+  @include smScreenMedia {
+    min-height: 80px;
+  }
 
   &__container {
     @include flexCol(space-between, center);
@@ -57,7 +68,7 @@
   &__menuLink {
     @include setFont(18px, 500, $color-white);
     position: relative;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     display: inline-block;
     cursor: pointer;
 
