@@ -84,6 +84,7 @@ const cards = [
       "Our professional team will greet you at the terminal entrance with a nameboard and guide you through the check-in process, handling your baggage for added convenience. Business / first-class passengers will be escorted to the exclusive VIP lounge to relax before their flight. For economy class passengers, we can arrange access to the VIP lounge for an additional fee. When it is time to board, our staff will ensure you are taken to the gate promptly, making your departure experience as smooth and enjoyable as possible.",
     transit:
       "For travelers with connecting flights, our Meet and Assist Fast Track service provides a streamlined transit experience. Upon arrival, our dedicated team will meet you at curbside and guide you through the connection process. You will benefit from expedited security checks and assistance with your baggage, ensuring a hassle-free transition. Enjoy access to the VIP lounge, where you can relax and recharge during your layover. When it’s time for your next flight, our staff will escort you to the boarding gate, ensuring you make your connection with ease and comfort.",
+    benefitsTitle: ["Benefits of Using", "MAAS"],
     benefits: [
       [
         "Hassle-Free Experience:",
@@ -106,6 +107,7 @@ const cards = [
     ],
     pricing:
       "Our MAAS services are competitively priced and vary by airport. For detailed pricing and to book your service, please fill the request form on our website or contact our customer service team. Early booking is recommended to secure your preferred time and service.",
+    faqsTitle: ["FAQs Related to", "Meet and Greet Services"],
 
     faqs: [
       [
