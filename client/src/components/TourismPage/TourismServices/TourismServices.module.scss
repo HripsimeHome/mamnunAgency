@@ -4,7 +4,24 @@
 .tourismServices {
   &__titleBlock {
     @include flexCol(space-between, center);
+    margin-top: 100px;
     margin-bottom: 25px;
+
+    @include lgScreenMedia {
+      margin-top: 50px;
+    }
+    @include mdScreenMedia {
+      margin-top: 25px;
+    }
+
+    @include smScreenMedia {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    &_first {
+      margin-top: 0;
+    }
 
     &_reversed {
       flex-direction: row-reverse;

@@ -200,7 +200,7 @@ const TourismServices = () => {
       className={`${styles.tourismServices} wrapperBlack wrapperPadding`}
     >
       <div className="container">
-        <h2 className="titleWhiteH2">
+        <h2 className="titleWhiteH2 pbXlg">
           Services&nbsp;
           <span className="titlePrimaryH2">we provide</span>
         </h2>
@@ -208,9 +208,14 @@ const TourismServices = () => {
         {serviceSections.map((section, index) => (
           <div key={index}>
             <div
-              className={`${styles.tourismServices__titleBlock} ${
-                !(index % 2) ? styles.tourismServices__titleBlock_reversed : ""
-              }`}
+              className={`
+                ${styles.tourismServices__titleBlock} 
+                ${
+                  !(index % 2)
+                    ? styles.tourismServices__titleBlock_reversed
+                    : ""
+                } 
+                ${index === 0 ? styles.tourismServices__titleBlock_first : ""}`}
             >
               <h3 className={styles.tourismServices__sectionTitle}>
                 {section.title}
