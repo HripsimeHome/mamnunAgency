@@ -4,8 +4,8 @@ import "swiper/css/autoplay";
 
 import styles from "./HomeSertificates.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { setImagePath } from "../../../utils/files";
-import { getCertificatesList } from "../../../store/slices/certificatesSlice";
+import { setImagePath } from "../../../../utils/files";
+import { getCertificatesList } from "../../../../store/slices/certificatesSlice";
 import { Autoplay } from "swiper/modules";
 
 const HomeSertificates = () => {

@@ -47,6 +47,7 @@
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 30px;
 
     @include xlScreenMedia {
       font-size: 20px;
@@ -68,6 +69,7 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    line-height: 25px;
 
     @include xlScreenMedia {
       font-size: 16px;
@@ -134,7 +136,7 @@
     }
 
     &_active {
-      background: $color-primary;
+      background: #73cf11;
 
       & svg {
         fill: $color-white;

@@ -65,7 +65,7 @@ const AdminLoginWrapper = () => {
       setError={setLoginError}
       fields={fields}
       submitAction={onSubmit}
-      title={"Login to the Administrative Panel"}
+      title={"Administration Panel"}
       btnTxt="Log in"
       errorTexts={errors}
       renderAdditionalField={(formData, onChange) => (

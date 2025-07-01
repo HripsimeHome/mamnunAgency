@@ -2,18 +2,21 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./HomeNews.module.scss";
 import TransitionProvider, {
   TransitionStyleTypes,
-} from "../../../providers/TransitionProvider";
-import NewsBlogItem from "../../global/NewsBlogItem/NewsBlogItem";
+} from "../../../../providers/TransitionProvider";
+import NewsBlogItem from "../../../global/NewsBlogItem/NewsBlogItem";
 import { useEffect, useRef, useState } from "react";
-import { getNewsList } from "../../../store/slices/newsSlice";
+import { getNewsList } from "../../../../store/slices/newsSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import Svg from "../../layout/Svg/Svg";
-import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import Svg from "../../../layout/Svg/Svg";
+import {
+  sliderArrowLeftIcon,
+  sliderArrowRightIcon,
+} from "../../../../assets/svg";
 import "swiper/css/pagination";
 import "./sliderDots.scss";
 import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
-import { newsImage } from "../../../assets/images";
+import { newsImage } from "../../../../assets/images";
 
 const dummyData = Array.from({ length: 5 }, (_, i) => ({
   id: i + 1,
@@ -32,7 +35,9 @@ const HomeNews = () => {
   const [selectedNewsId, setSelectedNewsId] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
 
-  const data = dummyData;
+  const data = news;
+
+  //const data = dummyData;
   useEffect(() => {
     dispatch(getNewsList(1));
     // eslint-disable-next-line react-hooks/exhaustive-deps

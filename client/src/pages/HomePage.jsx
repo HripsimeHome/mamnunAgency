@@ -1,9 +1,7 @@
 import HomeHeader from "../components/HomePage/HomeHeader/HomeHeader";
 import HomeBrief from "../components/HomePage/HomeBrief/HomeBrief";
 import HomeMain from "../components/HomePage/HomeMain/HomeMain";
-import HomeNews from "../components/HomePage/HomeNews/HomeNews";
-
-import HomeSertificates from "../components/HomePage/HomeSertificates/HomeSertificates";
+import HomeAdminContentPage from "../components/HomePage/HomeAdminContent/HomeAdminContent";
 
 const HomePage = () => {
   return (
@@ -11,8 +9,7 @@ const HomePage = () => {
       <HomeHeader />
       <HomeBrief />
       <HomeMain />
-      <HomeNews />
-      <HomeSertificates />
+      <HomeAdminContentPage />
     </>
   );
 };

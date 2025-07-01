@@ -3,7 +3,7 @@ import styles from "./AdminNews.module.scss";
 import MainBtn from "../../../layout/MainBtn/MainBtn";
 import PaginationStyled from "../../../layout/PaginationStyled/PaginationStyled";
 import { useDispatch, useSelector } from "react-redux";
-import { getNewsList } from "../../../../store/slices/newsSlice";
+import { deleteNews, getNewsList } from "../../../../store/slices/newsSlice";
 import NewsBlogItem from "../../../global/NewsBlogItem/NewsBlogItem";
 import DataLoader from "../../../layout/DataLoader/DataLoader";
 import { ADMIN_NEWS_PAGE_SIZE } from "../../../../constants/pagination";
