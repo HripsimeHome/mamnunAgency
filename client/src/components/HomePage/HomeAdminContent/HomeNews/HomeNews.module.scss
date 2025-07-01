@@ -40,12 +40,14 @@
 
   &__slide {
     margin-inline: auto;
+    height: 100%;
   }
   &__sliderNavBtn {
     @include button();
     position: relative;
     z-index: 15;
     padding-block: 6px;
+    transition: $transition;
 
     &:first-child {
       padding-right: 16px;
@@ -53,6 +55,10 @@
 
     &:last-child {
       padding-left: 16px;
+    }
+
+    &:disabled {
+      opacity: 0.2;
     }
 
     & svg {

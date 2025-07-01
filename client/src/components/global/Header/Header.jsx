@@ -1,11 +1,16 @@
 import styles from "./Header.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import { useState } from "react";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const Header = ({ image, webpImage, alt, title, subtitle, imgPosition }) => {
   const [loading, setLoading] = useState(true);
+  const { ref, isInView } = useLazy();
   return (
-    <header className={styles.header}>
+    <header ref={ref} className={styles.header}>
       <ImageWebp
         src={image}
         srcSet={webpImage}
@@ -19,10 +24,14 @@ const Header = ({ image, webpImage, alt, title, subtitle, imgPosition }) => {
         `}
       />
       <div className="container">
-        <div className={styles.header__textContainer}>
+        <TransitionProvider
+          inProp={isInView}
+          style={TransitionStyleTypes.bottom}
+          className={styles.header__textContainer}
+        >
           <h1 className={styles.header__title}>{title}</h1>
           <h3 className={styles.header__subtitle}>{subtitle}</h3>
-        </div>
+        </TransitionProvider>
       </div>
     </header>
   );

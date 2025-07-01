@@ -16,7 +16,8 @@ import {
 import "swiper/css/pagination";
 import "./sliderDots.scss";
 import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
-import { newsImage } from "../../../../assets/images";
+import { newsImage } from "../../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
 
 const dummyData = Array.from({ length: 5 }, (_, i) => ({
   id: i + 1,
@@ -34,10 +35,8 @@ const HomeNews = () => {
   const paginationContainerRef = useRef(null);
   const [selectedNewsId, setSelectedNewsId] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
-
+  const { isInView, ref } = useLazy();
   const data = news;
-
-  //const data = dummyData;
   useEffect(() => {
     dispatch(getNewsList(1));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,19 +48,23 @@ const HomeNews = () => {
       : null;
 
   return (
-    <TransitionProvider
-      inProp={!!(data && data.length)}
-      style={TransitionStyleTypes.height}
-      height={1400}
-      className={`${styles.homeNews} wrapperWhite wrapperPadding`}
-    >
-      <div className="container">
+    <div ref={ref} className={`${styles.homeNews} wrapperWhite`}>
+      <TransitionProvider
+        inProp={!!(data && data.length)}
+        style={TransitionStyleTypes.height}
+        height={1400}
+        className="container"
+      >
         <h2 className="titleSecondaryH2">
           News&nbsp;
           <span className="titlePrimaryH2">Blog</span>
         </h2>
 
-        <div className={styles.homeNews__slideContainer}>
+        <TransitionProvider
+          inProp={isInView}
+          style={TransitionStyleTypes.zoomIn}
+          className={styles.homeNews__slideContainer}
+        >
           <Swiper
             slidesPerView={1}
             className={styles.homeNews__slider}
@@ -128,8 +131,8 @@ const HomeNews = () => {
               </button>
             </div>
           </Swiper>
-        </div>
-      </div>
+        </TransitionProvider>
+      </TransitionProvider>
       {selectedItem && (
         <HomeNewsModal
           show={modalOpened}
@@ -137,7 +140,7 @@ const HomeNews = () => {
           {...selectedItem}
         />
       )}
-    </TransitionProvider>
+    </div>
   );
 };
 

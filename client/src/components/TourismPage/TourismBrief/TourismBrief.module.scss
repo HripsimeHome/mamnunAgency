@@ -2,6 +2,8 @@
 @import "../../../styles/vars";
 
 .tourismBrief {
+  min-height: 400px;
+
   &__content {
     display: grid;
     grid-template-columns: 6fr 4fr;

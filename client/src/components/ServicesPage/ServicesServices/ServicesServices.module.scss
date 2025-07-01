@@ -11,6 +11,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     margin-top: 50px;
+    min-height: 400px;
 
     @include lgScreenMedia {
       gap: 16px;

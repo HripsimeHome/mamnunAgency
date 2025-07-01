@@ -3,6 +3,7 @@
 
 .aboutHeader {
   &__content {
+    min-height: 400px;
     display: grid;
     grid-template-columns: 8fr 5fr;
     gap: 15px 50px;
@@ -122,6 +123,7 @@
     display: flex;
     gap: 48px;
     padding-top: 100px;
+    min-height: 400px;
 
     @include xlScreenMedia {
       padding-top: 50px;

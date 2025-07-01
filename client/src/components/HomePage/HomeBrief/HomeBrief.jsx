@@ -11,13 +11,22 @@ import {
 } from "../../../assets/images";
 
 import { aboutPagePath } from "../../../router/path";
+import { useLazy } from "../../../hooks/useLazy.js";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider.jsx";
 
 const HomeBrief = () => {
   const navigate = useNavigate();
+  const { isInView, ref } = useLazy(0.4);
   return (
-    <section className="wrapperWhite wrapperPadding">
+    <section ref={ref} className="wrapperWhite wrapperPadding">
       <div className={`${styles.homeBrief} container`}>
-        <div className={styles.homeBrief__column}>
+        <TransitionProvider
+          inProp={isInView}
+          style={TransitionStyleTypes.right}
+          className={styles.homeBrief__column}
+        >
           <p className="textMain">
             We are a proud family-owned company dedicated to delivering
             exceptional education and travel services customized just for you.
@@ -34,9 +43,13 @@ const HomeBrief = () => {
             alt="MAMNUN Agency"
             className={styles.homeBrief__missionImg}
           />
-        </div>
+        </TransitionProvider>
 
-        <div className={styles.homeBrief__column}>
+        <TransitionProvider
+          inProp={isInView}
+          style={TransitionStyleTypes.left}
+          className={styles.homeBrief__column}
+        >
           <p className="textMain">
             Our commitment to quality and transparency means you can trust us to
             guide you through the process with clarity and confidence. Your
@@ -57,7 +70,7 @@ const HomeBrief = () => {
           >
             Who We Are
           </MainBtn>
-        </div>
+        </TransitionProvider>
       </div>
     </section>
   );
