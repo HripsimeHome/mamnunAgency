@@ -103,7 +103,9 @@ export const footerMenuItems = [
         text: (
           <>
             <span className="mediumText">Email:</span>{" "}
-            <a href={`mailto:${email}`}>{email}</a>
+            <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
+              {email}
+            </a>
           </>
         ),
         isOutLink: true,

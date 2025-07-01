@@ -59,7 +59,11 @@ const contactInfoData = [
     image: emailImage,
     webpImage: emailWebpImage,
     title: "Email:",
-    text: <a href={`mailto:${email}`}>{email}</a>,
+    text: (
+      <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
+        {email}
+      </a>
+    ),
   },
 
   {
