@@ -133,6 +133,10 @@
       font-size: 14px;
       line-height: 20px;
     }
+
+    & a {
+      color: $color-secondary;
+    }
   }
 
   &__socialIcons {

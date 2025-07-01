@@ -6,7 +6,7 @@ import {
   imprintPagePath,
 } from "../router/path";
 
-import { phone, email, address } from "./contacts";
+import { phones, email, address } from "./contacts";
 
 import {
   uzcardImage,
@@ -18,6 +18,7 @@ import {
   visaImage,
   mvisaWebpImage,
 } from "../assets/images";
+import { Fragment } from "react";
 
 //  Footer menu
 export const footerMenuItems = [
@@ -91,18 +92,36 @@ export const footerMenuItems = [
       },
 
       {
-        text: `Address: ${address}`,
+        text: (
+          <>
+            <span className="mediumText">Address:</span> ${address}
+          </>
+        ),
       },
 
       {
-        text: `Email: ${email}`,
-        link: `mailto:${email}`,
+        text: (
+          <>
+            <span className="mediumText">Email:</span>{" "}
+            <a href={`mailto:${email}`}>{email}</a>
+          </>
+        ),
         isOutLink: true,
       },
 
       {
-        text: `Phone: ${phone}`,
-        link: `tel:${phone}`,
+        text: (
+          <>
+            <span className="mediumText">Phone:</span>{" "}
+            {phones.map((phone, index) => (
+              <Fragment key={index}>
+                <a href={`tel:${phone}`}>{phone}</a>
+                {index < phones.length - 1 && <span>, </span>}
+              </Fragment>
+            ))}
+          </>
+        ),
+        //link: `tel:${phone}`,
         //isOutLink: true,
       },
     ],
