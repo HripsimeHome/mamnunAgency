@@ -1,12 +1,12 @@
 import HomeNews from "./HomeNews/HomeNews";
-import HomeSertificates from "./HomeSertificates/HomeSertificates";
+import HomeCertificates from "./HomeCertificates/HomeCertificates";
 
 const HomeAdminContent = () => {
   return (
     <section className="wrapperWhite wrapperPadding">
       <div className="container">
         <HomeNews />
-        <HomeSertificates />
+        <HomeCertificates />
       </div>
     </section>
   );

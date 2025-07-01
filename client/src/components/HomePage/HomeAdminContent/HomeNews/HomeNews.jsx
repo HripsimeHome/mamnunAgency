@@ -16,8 +16,8 @@ import {
 import "swiper/css/pagination";
 import "./sliderDots.scss";
 import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
-import { newsImage } from "../../../assets/images";
-import { useLazy } from "../../../hooks/useLazy";
+import { newsImage } from "../../../../assets/images";
+import { useLazy } from "../../../../hooks/useLazy";
 
 const dummyData = Array.from({ length: 5 }, (_, i) => ({
   id: i + 1,
