@@ -40,6 +40,7 @@
 
   &__slide {
     margin-inline: auto;
+    height: 100%;
   }
   &__sliderNavBtn {
     @include button();
