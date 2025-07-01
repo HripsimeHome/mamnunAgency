@@ -6,15 +6,11 @@
   top: 0;
   left: 0;
   z-index: 10;
-  min-height: 100px;
+  min-height: 150px;
   display: flex;
   align-items: center;
   background-color: $color-secondary;
   transition: $transition;
-
-  @include lgScreenMedia {
-    min-height: 100px;
-  }
 
   @include smScreenMedia {
     min-height: 80px;
