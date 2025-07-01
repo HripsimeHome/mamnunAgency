@@ -12,10 +12,12 @@ import {
   servicesPagePath,
 } from "../../../router/path";
 import { homeVideoPosterImage } from "../../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
 
 const HomeHeader = () => {
   const navigate = useNavigate();
   const [activeMottoIndex, setActiveMottoIndex] = useState(0);
+  const { ref, isInView } = useLazy(0.6);
 
   const mottos = [
     {
@@ -50,7 +52,7 @@ const HomeHeader = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <section className={styles.homeHeader}>
+    <section ref={ref} className={styles.homeHeader}>
       {process.env.NODE_ENV !== "development" && (
         <video
           autoPlay
@@ -76,7 +78,11 @@ const HomeHeader = () => {
           </TransitionProvider>
         ))}
       </div>
-      <div className={`container ${styles.homeHeader__mottoBtnsWrapper}`}>
+      <TransitionProvider
+        inProp={isInView}
+        style={TransitionStyleTypes.bottom}
+        className={`container ${styles.homeHeader__mottoBtnsWrapper}`}
+      >
         {mottos.map((motto, index) => (
           <MainBtn
             active={index === activeMottoIndex}
@@ -87,7 +93,7 @@ const HomeHeader = () => {
             {motto.button}
           </MainBtn>
         ))}
-      </div>
+      </TransitionProvider>
     </section>
   );
 };
