@@ -143,8 +143,14 @@
     line-height: 140px;
     letter-spacing: -2px;
 
-    @include mdScreenMedia {
+    @include xlScreenMedia {
+      line-height: 80px;
+      font-size: 140px;
+    }
+
+    @include lgScreenMedia {
       font-size: 165px;
+      line-height: 140px;
     }
   }
 
@@ -160,6 +166,10 @@
       font-size: 24px;
       line-height: 20px;
       top: 10px;
+    }
+
+    @include mdScreenMedia {
+      font-size: 20px;
     }
 
     @include smScreenMedia {
