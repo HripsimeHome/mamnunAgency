@@ -14,7 +14,7 @@ body {
   color: $color-secondary;
   background-color: $color-white;
 
-  //  Scrollbar
+  //  Body Scrollbar
   &::-webkit-scrollbar {
     width: 12px;
   }
@@ -42,8 +42,9 @@ body {
   }
 }
 
+// Scrollbar
+
 .thinScrollbar {
-  // Body Scrollbar
   &::-webkit-scrollbar {
     width: 4px;
   }

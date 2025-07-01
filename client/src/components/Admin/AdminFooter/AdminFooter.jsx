@@ -9,10 +9,14 @@ const AdminFooter = () => {
         !token ? styles.adminFooter_light : ""
       }`}
     >
-      <div className={styles.adminFooter__copirightBlock}>
+      <div className={styles.adminFooter__copyrightBlock}>
         <h6 className={styles.adminFooter__copyrightTxt}>
           © Copyright {new Date().getFullYear()}{" "}
-          <a target="_blank" rel="noreferrer" href="https://realitybulgaria.pl">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.mamnunagency.com"
+          >
             MAMNUN Agency.
           </a>
           <span>&nbsp;All rights reserved.</span>

@@ -3,6 +3,8 @@ import { lsProps } from "../../utils/lsProps";
 
 export const isProduction = process.env.NODE_ENV === "production";
 export const baseUrl = "/api/v1";
+//export const proxy = isProduction ? "" : "http://localhost:5000";
+
 export const proxy = isProduction
   ? ""
   : "https://cjw00spz-5000.euw.devtunnels.ms";

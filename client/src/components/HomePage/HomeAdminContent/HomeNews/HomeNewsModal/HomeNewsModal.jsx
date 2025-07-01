@@ -1,8 +1,8 @@
-import Modal from "../../../layout/Modal/Modal";
+import Modal from "../../../../layout/Modal/Modal";
 import styles from "./HomeNewsModal.module.scss";
-import { setImagePath } from "../../../../utils/files";
-import { noImage } from "../../../../assets/images";
-import { formatDate } from "../../../../utils/formatDate";
+import { setImagePath } from "../../../../../utils/files";
+import { noImage } from "../../../../../assets/images";
+import { formatDate } from "../../../../../utils/formatDate";
 
 const HomeNewsModal = ({ show, onClose, image, title, description, date }) => {
   return (

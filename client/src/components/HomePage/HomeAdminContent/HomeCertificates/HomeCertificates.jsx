@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/autoplay";
 
-import styles from "./HomeSertificates.module.scss";
+import styles from "./HomeCertificates.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { setImagePath } from "../../../utils/files";
-import { getCertificatesList } from "../../../store/slices/certificatesSlice";
+import { setImagePath } from "../../../../utils/files";
+import { getCertificatesList } from "../../../../store/slices/certificatesSlice";
 import { Autoplay } from "swiper/modules";
 
-const HomeSertificates = () => {
+const HomeCertificates = () => {
   const dispatch = useDispatch();
   const certificates = useSelector((state) => state.certificates.data);
 
@@ -19,12 +19,12 @@ const HomeSertificates = () => {
 
   if (!certificates || !certificates.length) return null;
   return (
-    <div className={`${styles.homeSertificates} container`}>
-      <div className={styles.homeSertificates__overlay}></div>
+    <div className={`${styles.homeCertificates} container`}>
+      <div className={styles.homeCertificates__overlay}></div>
       <Swiper
         slidesPerView={3}
         modules={[Autoplay]}
-        className={styles.homeSertificates__slider}
+        className={styles.homeCertificates__slider}
         spaceBetween={20}
         loop={true}
         autoplay={{
@@ -47,7 +47,7 @@ const HomeSertificates = () => {
                 src={setImagePath(item.image)}
                 key={index}
                 alt="certificate"
-                className={styles.homeSertificates__slideImg}
+                className={styles.homeCertificates__slideImg}
                 crossOrigin="anonimus"
               />
             </SwiperSlide>
@@ -57,4 +57,4 @@ const HomeSertificates = () => {
   );
 };
 
-export default HomeSertificates;
+export default HomeCertificates;
