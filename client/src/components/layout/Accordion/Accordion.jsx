@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Accordion.module.scss";
 import ImageWebp from "../ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
@@ -28,11 +28,28 @@ const Accordion = ({
   ...rest
 }) => {
   const { ref, isInView } = useLazy();
-  const firstColData = accordionItems.slice(
-    0,
-    Math.ceil(accordionItems.length / 2)
-  );
-  const secColData = accordionItems.slice(Math.ceil(accordionItems.length / 2));
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth > 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  let firstColData = [];
+  let secColData = [];
+  if (by2Col && isDesktop) {
+    // For by2Col, display 1st item in first col, 2nd in second col, 3rd in first, 4th in second, etc.
+    firstColData = accordionItems.filter((_, idx) => idx % 2 === 0);
+    secColData = accordionItems.filter((_, idx) => idx % 2 === 1);
+  } else {
+    // Default: split in half
+    firstColData = accordionItems.slice(
+      0,
+      Math.ceil(accordionItems.length / 2)
+    );
+    secColData = accordionItems.slice(Math.ceil(accordionItems.length / 2));
+  }
 
   const isDoubleCol = by2Col || by6And4Col;
 
@@ -124,11 +141,12 @@ const AccordionItem = ({
   const displayWebp = isOpen ? activeWebpImage || webpImage : webpImage;
 
   return (
-    <>
-      <TransitionProvider
-        inProp={isInView}
-        style={TransitionStyleTypes.bottom}
-        delay={index * 100}
+    <TransitionProvider
+      inProp={isInView}
+      style={TransitionStyleTypes.bottom}
+      delay={index * 100}
+    >
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className={`${styles.accordion__header} 
         ${isOpen ? styles.accordion__header_active : ""}  
@@ -152,8 +170,8 @@ const AccordionItem = ({
         </div>
 
         {isOpen && <div className={styles.accordion__content}>{content}</div>}
-      </TransitionProvider>
-    </>
+      </button>
+    </TransitionProvider>
   );
 };
 
