@@ -275,7 +275,9 @@
     }
 
     &:last-child {
-      //text-align: right;
+      @include smScreenMedia {
+        width: 100%;
+      }
     }
   }
 
@@ -311,6 +313,7 @@
     a {
       @include setFont(20px, 400, $color-secondary);
       text-decoration: none;
+      white-space: nowrap;
 
       &:hover {
         color: $color-grey;
