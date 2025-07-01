@@ -14,6 +14,10 @@ import {
 } from "../../../assets/images";
 import { useState } from "react";
 import ServicesServicesModal from "./ServicesServicesModal/ServicesServicesModal.jsx";
+import { useLazy } from "../../../hooks/useLazy.js";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider.jsx";
 
 const cards = [
   {
@@ -232,7 +236,7 @@ const cards = [
 const ServicesServices = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const [selectedServiceIndex, setSelectedServiceIndex] = useState(null);
-
+  const { isInView, ref } = useLazy(0.5);
   const selectedService = cards[selectedServiceIndex || 0];
 
   const onSelect = (index) => {
@@ -250,13 +254,22 @@ const ServicesServices = () => {
           <span className="titlePrimaryH2">Services</span>
         </h2>
 
-        <div className={styles.servicesServices__cardContainer}>
+        <div ref={ref} className={styles.servicesServices__cardContainer}>
           {cards.map(
             (
               { title, stepNumber, image, webpImage, backDescription },
               index
             ) => (
-              <div key={index} className={styles.servicesServices__card}>
+              <TransitionProvider
+                inProp={isInView}
+                style={
+                  !(index % 2)
+                    ? TransitionStyleTypes.left
+                    : TransitionStyleTypes.right
+                }
+                key={index}
+                className={styles.servicesServices__card}
+              >
                 <div className={styles.servicesServices__cardInner}>
                   <div
                     key={index}
@@ -305,7 +318,7 @@ const ServicesServices = () => {
                   </div>
                   {/* Back */}
                 </div>
-              </div>
+              </TransitionProvider>
             )
           )}
           {/* Card */}

@@ -5,13 +5,25 @@ import {
   tourismBriefImage,
   tourismBriefWebpImage,
 } from "../../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const TourismBrief = () => {
+  const { ref, isInView } = useLazy(0.5);
   return (
-    <section className={`${styles.tourismBrief} wrapperWhite wrapperPadding`}>
+    <section
+      ref={ref}
+      className={`${styles.tourismBrief} wrapperWhite wrapperPadding`}
+    >
       <div className="container">
         <div className={styles.tourismBrief__content}>
-          <div className={styles.tourismBrief__text1}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.bottom}
+            className={styles.tourismBrief__text1}
+          >
             <p className="textMain">
               Our travel services to Uzbekistan are designed to offer a seamless
               and unforgettable experience. From customized private tours and
@@ -22,18 +34,27 @@ const TourismBrief = () => {
               your first inquiry to your safe return home, we are with you every
               step of the way.
             </p>
-          </div>
+          </TransitionProvider>
 
-          <div className={styles.tourismBrief__imageColumn}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.right}
+            className={styles.tourismBrief__imageColumn}
+          >
             <ImageWebp
               src={tourismBriefImage}
               srcSet={tourismBriefWebpImage}
               alt="MAMNUN Agency"
               className={styles.tourismBrief__briefImg}
             />
-          </div>
+          </TransitionProvider>
 
-          <div className={styles.tourismBrief__text2}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.bottom}
+            delay={100}
+            className={styles.tourismBrief__text2}
+          >
             <p className="textMain">
               We also believe that the true magic of Uzbekistan lies in its
               people. That’s why our tours offer&nbsp;
@@ -45,7 +66,7 @@ const TourismBrief = () => {
               participating in traditional celebrations and customs. These
               moments create real connections and lifelong memories.
             </p>
-          </div>
+          </TransitionProvider>
         </div>
       </div>
     </section>

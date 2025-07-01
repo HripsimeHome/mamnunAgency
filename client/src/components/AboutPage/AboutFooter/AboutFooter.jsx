@@ -5,12 +5,24 @@ import {
   companyLabelImage,
   companyLabelWebpImage,
 } from ".././../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const AboutFooter = () => {
+  const { ref, isInView } = useLazy(0.4);
   return (
-    <section className={`${styles.aboutFooter} wrapperWhite wrapperPadding`}>
+    <section
+      ref={ref}
+      className={`${styles.aboutFooter} wrapperWhite wrapperPadding`}
+    >
       <div className="container">
-        <div className={styles.aboutFooter__textBlock}>
+        <TransitionProvider
+          inProp={isInView}
+          style={TransitionStyleTypes.bottom}
+          className={styles.aboutFooter__textBlock}
+        >
           <h2 className={styles.aboutFooter__text}>
             Feel free to&nbsp;
             <span className="textPrimary">reach out&nbsp;</span>
@@ -28,7 +40,7 @@ const AboutFooter = () => {
               />
             </a>
           </div>
-        </div>
+        </TransitionProvider>
       </div>
     </section>
   );

@@ -19,8 +19,13 @@ import {
   aboutLogoAsset7Image,
   aboutLogoAsset7WebpImage,
 } from "../../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const AboutHeader = () => {
+  const { isInView, ref } = useLazy(0.5);
   return (
     <section className={`${styles.aboutHeader} wrapperWhite`}>
       <div className="container">
@@ -119,8 +124,12 @@ const AboutHeader = () => {
         </div>
         {/* content */}
 
-        <div className={styles.aboutHeader__briefContainer}>
-          <div className={`${styles.aboutHeader__briefBlock} width60`}>
+        <div ref={ref} className={styles.aboutHeader__briefContainer}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.left}
+            className={`${styles.aboutHeader__briefBlock} width60`}
+          >
             <h2 className="titleSecondaryH2">
               Our&nbsp;
               <span className="titlePrimaryH2">Vision</span>
@@ -132,9 +141,13 @@ const AboutHeader = () => {
               aspirations. Through education and travel, we strive to foster a
               global perspective, and cultural understanding.
             </p>
-          </div>
+          </TransitionProvider>
 
-          <div className={`${styles.aboutHeader__briefBlock} width40`}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.right}
+            className={`${styles.aboutHeader__briefBlock} width40`}
+          >
             <h2 className="titleSecondaryH2">
               Our&nbsp;
               <span className="titlePrimaryH2">Mission</span>
@@ -144,7 +157,7 @@ const AboutHeader = () => {
               travel as opportunities for personal and professional growth for
               everyone.
             </p>
-          </div>
+          </TransitionProvider>
         </div>
         {/* briefContainer */}
       </div>

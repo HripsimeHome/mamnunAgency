@@ -15,6 +15,10 @@ import {
   chimganImage,
   chimganWebpImage,
 } from "../../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const destinationsData = [
   {
@@ -128,6 +132,7 @@ const destinationsData = [
 ];
 
 const TourismDestinations = () => {
+  const { isInView, ref } = useLazy(0.6);
   return (
     <section
       className={`${styles.tourismDestinations} wrapperWhite wrapperPadding`}
@@ -144,10 +149,16 @@ const TourismDestinations = () => {
           know!
         </p>
 
-        <div className={styles.tourismDestinations__container}>
+        <div ref={ref} className={styles.tourismDestinations__container}>
           {destinationsData.map(
             ({ img, webpImg, alt, title, description }, index) => (
-              <div className={styles.tourismDestinations__card} key={index}>
+              <TransitionProvider
+                inProp={isInView}
+                style={TransitionStyleTypes.bottom}
+                delay={index * 100}
+                className={styles.tourismDestinations__card}
+                key={index}
+              >
                 <ImageWebp
                   src={img}
                   srcSet={webpImg}
@@ -162,7 +173,7 @@ const TourismDestinations = () => {
                     {description}
                   </p>
                 </div>
-              </div> // card
+              </TransitionProvider> // card
             )
           )}
         </div>

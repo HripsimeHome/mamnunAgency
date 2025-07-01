@@ -1,5 +1,5 @@
 import styles from "./HeaderMenu.module.scss";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
@@ -40,11 +40,20 @@ const HeaderMenu = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const dropdownRef = useRef(null);
   useClickOutSide([dropdownRef], () => setIsServicesOpen(false));
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth <= 576
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 576);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleServices = () => setIsServicesOpen((prev) => !prev);
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 576;
 
   const servicesItems = allMenuItems.filter(
     (item) => item.group === "services"

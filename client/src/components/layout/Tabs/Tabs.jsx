@@ -1,12 +1,16 @@
 import { useState } from "react";
 import styles from "./Tabs.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-
+  const { isInView, ref } = useLazy(0.7);
   return (
-    <section className={styles.tabs}>
+    <section ref={ref} className={styles.tabs}>
       {/* Tab headers */}
       <div className={styles.tabs__titleContainer}>
         {tabHeaders.map((header, index) => (
@@ -30,7 +34,13 @@ const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
       {/* Tab content */}
       {tabContentGroups[activeTabIndex]?.map(
         ({ image, webpImage, title, description }, index) => (
-          <div key={index} className={styles.tabs__content}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.bottom}
+            delay={index * 100}
+            key={index}
+            className={styles.tabs__content}
+          >
             <div className={styles.tabs__titleBlock}>
               {image && (
                 <ImageWebp
@@ -43,7 +53,7 @@ const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
               <h3 className={styles.tabs__title}>{title}</h3>
             </div>
             <div className={styles.tabs__description}>{description}</div>
-          </div>
+          </TransitionProvider>
         )
       )}
     </section>
