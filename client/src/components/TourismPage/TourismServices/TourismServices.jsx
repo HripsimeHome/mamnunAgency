@@ -33,6 +33,10 @@ import {
   feedbackImage,
   feedbackWebpImage,
 } from "../../../assets/images";
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
 const serviceSections = [
   {
@@ -193,6 +197,58 @@ const serviceSections = [
   },
 ];
 
+const Section = ({ index, section }) => {
+  const { ref, isInView } = useLazy(0.4);
+  return (
+    <div>
+      <div
+        className={`
+                ${styles.tourismServices__titleBlock} 
+                ${
+                  !(index % 2)
+                    ? styles.tourismServices__titleBlock_reversed
+                    : ""
+                } 
+                ${index === 0 ? styles.tourismServices__titleBlock_first : ""}`}
+      >
+        <h3 className={styles.tourismServices__sectionTitle}>
+          {section.title}
+        </h3>
+
+        <ImageWebp
+          src={arrowLineImage}
+          srcSet={arrowLineWebpImage}
+          alt="Arrow"
+          pictureClass={styles.tourismServices__arrowPicture}
+          className={`${styles.tourismServices__arrowLine} ${
+            index % 2 ? styles.tourismServices__arrowLine_reversed : ""
+          }`}
+        />
+      </div>
+
+      <div ref={ref} className={styles.tourismServices__cardsContainer}>
+        {section.items.map(({ image, webpImage, title, description }, idx) => (
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.bottom}
+            delay={idx * 100}
+            key={idx}
+            className={styles.tourismServices__card}
+          >
+            <div className={styles.tourismServices__cardImage}>
+              <ImageWebp src={image} srcSet={webpImage} alt={title} />
+            </div>
+            <h4 className={styles.tourismServices__cardTitle}>{title}</h4>
+            <p className={styles.tourismServices__cardDescription}>
+              {description}
+            </p>
+          </TransitionProvider>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const TourismServices = () => {
   return (
     <section
@@ -205,50 +261,7 @@ const TourismServices = () => {
         </h2>
 
         {serviceSections.map((section, index) => (
-          <div key={index}>
-            <div
-              className={`
-                ${styles.tourismServices__titleBlock} 
-                ${
-                  !(index % 2)
-                    ? styles.tourismServices__titleBlock_reversed
-                    : ""
-                } 
-                ${index === 0 ? styles.tourismServices__titleBlock_first : ""}`}
-            >
-              <h3 className={styles.tourismServices__sectionTitle}>
-                {section.title}
-              </h3>
-
-              <ImageWebp
-                src={arrowLineImage}
-                srcSet={arrowLineWebpImage}
-                alt="Arrow"
-                pictureClass={styles.tourismServices__arrowPicture}
-                className={`${styles.tourismServices__arrowLine} ${
-                  index % 2 ? styles.tourismServices__arrowLine_reversed : ""
-                }`}
-              />
-            </div>
-
-            <div className={styles.tourismServices__cardsContainer}>
-              {section.items.map(
-                ({ image, webpImage, title, description }, idx) => (
-                  <div key={idx} className={styles.tourismServices__card}>
-                    <div className={styles.tourismServices__cardImage}>
-                      <ImageWebp src={image} srcSet={webpImage} alt={title} />
-                    </div>
-                    <h4 className={styles.tourismServices__cardTitle}>
-                      {title}
-                    </h4>
-                    <p className={styles.tourismServices__cardDescription}>
-                      {description}
-                    </p>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
+          <Section index={index} section={section} />
         ))}
       </div>
     </section>

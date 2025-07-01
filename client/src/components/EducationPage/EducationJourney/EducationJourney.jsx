@@ -1,4 +1,8 @@
 // src/components/pages/EducationJourney/EducationJourney.jsx
+import { useLazy } from "../../../hooks/useLazy";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 import styles from "./EducationJourney.module.scss";
 
 const assistData = [
@@ -18,8 +22,10 @@ const notAssistData = [
 ];
 
 const EducationJourney = () => {
+  const { ref, isInView } = useLazy(0.7);
   return (
     <section
+      ref={ref}
       className={`${styles.educationJourney} wrapperWhite wrapperPadding`}
     >
       <div className="container">
@@ -31,7 +37,11 @@ const EducationJourney = () => {
         </h2>
 
         <div className={styles.educationJourney__journeyContainer}>
-          <div className={styles.educationJourney__journeyColumn}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.right}
+            className={styles.educationJourney__journeyColumn}
+          >
             <h3 className={`${styles.educationJourney__title} titlePrimaryH3 `}>
               How We Assist You:
             </h3>
@@ -45,9 +55,14 @@ const EducationJourney = () => {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-          </div>
+          </TransitionProvider>
 
-          <div className={styles.educationJourney__journeyColumn}>
+          <TransitionProvider
+            inProp={isInView}
+            style={TransitionStyleTypes.right}
+            delay={100}
+            className={styles.educationJourney__journeyColumn}
+          >
             <h3 className={`${styles.educationJourney__title} titlePrimaryH3 `}>
               What We Do not Do:
             </h3>
@@ -61,7 +76,7 @@ const EducationJourney = () => {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-          </div>
+          </TransitionProvider>
         </div>
       </div>
     </section>

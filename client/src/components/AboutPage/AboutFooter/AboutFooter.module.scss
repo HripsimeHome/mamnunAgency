@@ -4,6 +4,7 @@
 .aboutFooter {
   max-width: 80%;
   margin: 0 auto;
+  min-height: 100px;
 
   @include lgScreenMedia {
     max-width: 90%;

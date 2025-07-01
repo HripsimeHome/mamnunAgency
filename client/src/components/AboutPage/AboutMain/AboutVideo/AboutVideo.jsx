@@ -9,7 +9,9 @@ const AboutVideo = () => {
   useEffect(() => {
     if (videoRef.current) {
       if (isInView) {
-        videoRef.current.play();
+        videoRef.current
+          .play()
+          .catch((err) => console.log("Play failed:", err));
       } else {
         videoRef.current.pause();
       }

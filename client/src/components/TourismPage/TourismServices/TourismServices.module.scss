@@ -87,6 +87,7 @@
     flex-direction: column;
     gap: 25px;
     margin-bottom: 25px;
+    min-height: 400px;
 
     @include lgScreenMedia {
       gap: 20px;

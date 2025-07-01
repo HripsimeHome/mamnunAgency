@@ -2,6 +2,7 @@ import styles from "./ServicesTraveller.module.scss";
 import { useNavigate } from "react-router-dom";
 import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+import { useLazy } from "../../../hooks/useLazy";
 
 import { contactsPagePath } from "../../../router/path";
 
@@ -27,6 +28,9 @@ import {
   wellnessTravelersImage,
   wellnessTravelersWebpImage,
 } from "../../../assets/images";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider.jsx";
 
 const cards = [
   {
@@ -107,6 +111,7 @@ const cards = [
 
 const ServicesTraveller = () => {
   const navigate = useNavigate();
+  const { ref, isInView } = useLazy(0.6);
   return (
     <section
       className={`${styles.servicesTraveller} wrapperWhite wrapperPadding`}
@@ -121,9 +126,15 @@ const ServicesTraveller = () => {
           needs.
         </p>
 
-        <div className={styles.servicesTraveller__cardContainer}>
+        <div className={styles.servicesTraveller__cardContainer} ref={ref}>
           {cards.map(({ title, image, webpImage, backDescription }, index) => (
-            <div key={index} className={styles.servicesTraveller__card}>
+            <TransitionProvider
+              inProp={isInView}
+              style={TransitionStyleTypes.bottom}
+              delay={index * 100}
+              key={index}
+              className={styles.servicesTraveller__card}
+            >
               <div className={styles.servicesTraveller__cardInner}>
                 <div
                   className={`${styles.servicesTraveller__cardFront} ${
@@ -164,7 +175,7 @@ const ServicesTraveller = () => {
                 </div>
                 {/* Back */}
               </div>
-            </div>
+            </TransitionProvider>
           ))}
           {/* Card */}
         </div>

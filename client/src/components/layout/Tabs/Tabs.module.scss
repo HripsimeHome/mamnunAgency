@@ -2,6 +2,7 @@
 @import "../../../styles/vars";
 
 .tabs {
+  min-height: 600px;
   &__titleContainer {
     display: flex;
     width: 100%;

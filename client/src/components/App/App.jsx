@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import HeaderMenu from "../global/HeaderMenu/HeaderMenu";
 import TodayNewsModal from "../global/TodayNewsModal/TodayNewsModal";
 import { scrollTop } from "../../utils/scrollTop";
+import eruda from "eruda";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
   const isAdmin = location.pathname.startsWith(adminPagePath);
 
   useEffect(() => {
+    eruda.init();
     dispatch(checkIsLoggedIn());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
