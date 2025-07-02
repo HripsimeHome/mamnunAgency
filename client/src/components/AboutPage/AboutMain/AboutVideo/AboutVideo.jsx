@@ -8,7 +8,7 @@ import { muteVideoIcon, unmuteVideoIcon } from "../../../../assets/svg";
 const AboutVideo = () => {
   const { ref, isInView } = useLazy(undefined, undefined, true);
   const videoRef = useRef(null);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(true);
   useEffect(() => {
     if (videoRef.current) {
       if (isInView) {
@@ -28,8 +28,8 @@ const AboutVideo = () => {
           <video
             ref={videoRef}
             className={styles.aboutVideo__video}
-            loop
-            muted
+            autoPlay
+            muted={muted}
             playsInline
           >
             <source src="/videos/about/about.mp4" type="video/mp4" />
@@ -38,8 +38,13 @@ const AboutVideo = () => {
           <button
             className={styles.aboutVideo__muteBtn}
             onClick={() => {
-              setMuted(!muted);
-              videoRef.current.muted = muted;
+              setMuted((prev) => {
+                const newMuted = !prev;
+                if (videoRef.current) {
+                  videoRef.current.muted = newMuted;
+                }
+                return newMuted;
+              });
             }}
           >
             <Svg
