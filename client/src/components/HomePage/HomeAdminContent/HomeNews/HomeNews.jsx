@@ -16,16 +16,7 @@ import {
 import "swiper/css/pagination";
 import "./sliderDots.scss";
 import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
-import { newsImage } from "../../../../assets/images";
 import { useLazy } from "../../../../hooks/useLazy";
-
-const dummyData = Array.from({ length: 5 }, (_, i) => ({
-  id: i + 1,
-  title: `News Title ${i + 1}`,
-  description: `This is a sample description for news item ${i + 1}.`,
-  image: newsImage,
-  date: `2024-06-${String(i + 1).padStart(2, "0")}`,
-}));
 
 const HomeNews = () => {
   const dispatch = useDispatch();

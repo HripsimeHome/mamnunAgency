@@ -13,6 +13,7 @@
     flex-direction: column;
     gap: 10px;
   }
+
   @include smScreenMedia {
     gap: 5px;
   }
@@ -192,9 +193,10 @@
     }
   }
 
-  &__header_active &__title {
+  &__header_active:not(&__header_inverse) &__title {
     color: $color-primary;
   }
+
   &__col_6Col &__title,
   &__col_4Col &__title {
     font-weight: 600;
