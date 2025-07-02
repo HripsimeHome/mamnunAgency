@@ -69,6 +69,7 @@
   font-size: $size;
   font-weight: $weight;
   color: $color;
+  font-family: $font-family;
 }
 
 @mixin flexCol($layout: center, $align: center) {

@@ -1,28 +1,14 @@
 import styles from "./AboutVideo.module.scss";
-import { useLazy } from "../../../../hooks/useLazy";
 import { useRef, useState } from "react";
-import { useEffect } from "react";
 import Svg from "../../../layout/Svg/Svg";
 import { muteVideoIcon, unmuteVideoIcon } from "../../../../assets/svg";
 
 const AboutVideo = () => {
-  const { ref, isInView } = useLazy(undefined, undefined, true);
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
-  useEffect(() => {
-    if (videoRef.current) {
-      if (isInView) {
-        videoRef.current
-          .play()
-          .catch((err) => console.log("Play failed:", err));
-      } else {
-        videoRef.current.pause();
-      }
-    }
-  }, [isInView]);
 
   return (
-    <section ref={ref} className={`${styles.aboutVideo}`}>
+    <section className={`${styles.aboutVideo}`}>
       <div className="container">
         <div className={styles.aboutVideo__videoContainer}>
           <video

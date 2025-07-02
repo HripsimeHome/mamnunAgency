@@ -1,4 +1,3 @@
-import styles from "./EducationStudying.module.scss";
 import Accordion from "../../layout/Accordion/Accordion";
 
 import {
@@ -165,8 +164,7 @@ const accordionItems = [
 const EducationStudying = () => {
   return (
     <section
-      className={`${styles.educationStudying} wrapperWhite wrapperPadding`}
-    >
+      className="wrapperWhite wrapperPadding">
       <div className="container">
         <h2 className="titleSecondaryH2 pbXlg">
           Pros and Cons of studying{" "}
@@ -176,8 +174,7 @@ const EducationStudying = () => {
           <Accordion
             accordionItems={accordionItems}
             by6And4Col={true}
-            inverse
-            className={styles.educationStudying__accordionContainer}
+            inverse          
           />
         </>
       </div>
