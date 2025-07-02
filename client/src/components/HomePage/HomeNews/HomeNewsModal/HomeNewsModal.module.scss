@@ -65,6 +65,7 @@
   &__title {
     @include setFont(48px, 600, $color-white);
     margin-bottom: 20px;
+    padding-right: 30px;
 
     @include xlScreenMedia {
       font-size: 32px;
