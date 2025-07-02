@@ -95,6 +95,7 @@ const AdminNewsAddEditModal = ({
     }
     setLoading(false);
   };
+  console.log({ formData });
 
   return (
     <Modal
@@ -173,7 +174,9 @@ const AdminNewsAddEditModal = ({
           </div>
         </div>
         <div className={styles.adminNewsAddEditModal__col}>
-          <MainBtn className={"textWhite"}>Cancel</MainBtn>
+          <MainBtn className={"textWhite"} type={"button"} onClick={onClose}>
+            Cancel
+          </MainBtn>
           <MainBtn className={"textWhite"} withBg>
             Save
           </MainBtn>
