@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { adminPagePath } from "../../../router/path";
 import { getActiveDayNews } from "../../../store/slices/newsSlice";
-import HomeNewsModal from "../../HomePage/HomeNews/HomeNewsModal/HomeNewsModal";
+import HomeNewsModal from "../../HomePage/HomeAdminContent/HomeNews/HomeNewsModal/HomeNewsModal";
 
 const TodayNewsModal = () => {
   const [open, setOpen] = useState(false);

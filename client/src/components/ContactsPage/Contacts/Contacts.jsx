@@ -129,7 +129,7 @@ const Contacts = () => {
                 isInvalid={getError("contactNumber")}
                 name="contactNumber"
                 onChange={onChange}
-                placeholder="Contact number:"
+                placeholder="Phone number:"
               />
             </div>
             <Select

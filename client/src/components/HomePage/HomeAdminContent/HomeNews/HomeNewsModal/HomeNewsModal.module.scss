@@ -1,5 +1,5 @@
-@import "../../../../styles/mixins";
-@import "../../../../styles/vars";
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
 
 .homeNewsModal {
   height: 578px;
@@ -63,12 +63,17 @@
   }
 
   &__title {
-    @include setFont(48px, 600, $color-white);
+    @include setFont(28px, 600, $color-white);
     margin-bottom: 20px;
-    padding-right: 30px;
+    line-height: 35px;
 
     @include xlScreenMedia {
-      font-size: 32px;
+      font-size: 26px;
+    }
+
+    @include lgScreenMedia {
+      font-size: 22px;
+      line-height: 25px;
     }
 
     @include smScreenMedia {
@@ -83,7 +88,6 @@
     overflow: auto;
     line-height: 30px;
     margin-bottom: 22px;
-    padding-right: 5px;
 
     @include lgScreenMedia {
       font-size: 16px;
@@ -95,7 +99,7 @@
     }
   }
   &__date {
-    @include setFont(16px, 200, $color-white);
+    @include setFont(16px, 300, $color-white);
 
     @include lgScreenMedia {
       font-size: 14px;

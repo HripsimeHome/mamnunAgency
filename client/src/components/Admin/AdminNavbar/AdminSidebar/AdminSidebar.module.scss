@@ -47,7 +47,7 @@
   }
 
   &__menuItem {
-    @include setFont(15px, 700, $color-white);
+    @include setFont(15px, 500, $color-white);
     text-decoration: none;
     transition: $transition;
 

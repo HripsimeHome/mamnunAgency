@@ -176,6 +176,7 @@ const EducationStudying = () => {
           <Accordion
             accordionItems={accordionItems}
             by6And4Col={true}
+            // by2Col={true}
             inverse
             className={styles.educationStudying__accordionContainer}
           />

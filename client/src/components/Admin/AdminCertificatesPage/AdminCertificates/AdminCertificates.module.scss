@@ -107,7 +107,7 @@
     padding: 4px;
     border-radius: 30px;
     transition: $transition;
-    @include setFont(18px, 600, $color-white);
+    @include setFont(18px, 500, $color-white);
     display: block;
 
     &:hover {

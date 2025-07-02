@@ -2,19 +2,22 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./HomeNews.module.scss";
 import TransitionProvider, {
   TransitionStyleTypes,
-} from "../../../providers/TransitionProvider";
-import NewsBlogItem from "../../global/NewsBlogItem/NewsBlogItem";
+} from "../../../../providers/TransitionProvider";
+import NewsBlogItem from "../../../global/NewsBlogItem/NewsBlogItem";
 import { useEffect, useRef, useState } from "react";
-import { getNewsList } from "../../../store/slices/newsSlice";
+import { getNewsList } from "../../../../store/slices/newsSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import Svg from "../../layout/Svg/Svg";
-import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
+import Svg from "../../../layout/Svg/Svg";
+import {
+  sliderArrowLeftIcon,
+  sliderArrowRightIcon,
+} from "../../../../assets/svg";
 import "swiper/css/pagination";
 import "./sliderDots.scss";
 import HomeNewsModal from "./HomeNewsModal/HomeNewsModal";
-import { newsImage } from "../../../assets/images";
-import { useLazy } from "../../../hooks/useLazy";
+import { newsImage } from "../../../../assets/images";
+import { useLazy } from "../../../../hooks/useLazy";
 
 const dummyData = Array.from({ length: 5 }, (_, i) => ({
   id: i + 1,

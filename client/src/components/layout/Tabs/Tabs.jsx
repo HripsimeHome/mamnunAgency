@@ -47,7 +47,7 @@ const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
                   src={image}
                   srcSet={webpImage}
                   alt={title}
-                  className={styles.tabs__img}
+                  className={styles.tabs__icon}
                 />
               )}
               <h3 className={styles.tabs__title}>{title}</h3>

@@ -122,13 +122,11 @@
   &__briefContainer {
     display: flex;
     gap: 48px;
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 100px;
     min-height: 400px;
 
     @include xlScreenMedia {
       padding-top: 50px;
-      padding-bottom: 50px;
     }
 
     @include mdScreenMedia {

@@ -1,8 +1,7 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
-
 .tabs {
-  min-height: 600px;
+  min-height: 400px;
   &__titleContainer {
     display: flex;
     width: 100%;
@@ -102,7 +101,7 @@
     }
   }
 
-  &__img {
+  &__icon {
     height: 40px;
 
     @include mdScreenMedia {

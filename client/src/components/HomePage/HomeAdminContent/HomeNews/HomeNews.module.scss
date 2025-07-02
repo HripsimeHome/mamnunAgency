@@ -1,5 +1,5 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
 
 .homeNews {
   :global(.swiper) {
@@ -11,16 +11,21 @@
     padding: 50px 0 100px;
     position: relative;
 
-    @include lgScreenMedia {
-      margin-inline: -20px;
+    @include xlScreenMedia {
+      padding: 25px 0 50px;
     }
 
-    @include smScreenMedia {
-      margin-inline: -00px;
+    @include lgScreenMedia {
+      margin-inline: -20px;
+      padding: 25px 0 20px;
     }
 
     @include mdScreenMedia {
       flex-direction: column;
+    }
+
+    @include smScreenMedia {
+      padding: 15px 0 10px;
     }
   }
 
@@ -34,7 +39,8 @@
     }
 
     @include smScreenMedia {
-      padding-inline: 0px;
+      padding-inline: 0;
+      padding-top: 10px;
     }
   }
 

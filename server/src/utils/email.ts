@@ -13,7 +13,7 @@ export class Email {
   from: string;
 
   constructor() {
-    this.from = "Mamnun Agency";
+    this.from = "MAMNUN Agency";
   }
 
   newTransport() {
