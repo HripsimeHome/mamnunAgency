@@ -155,7 +155,7 @@
     grid-column: 2 / -1;
     grid-row: 1 / 2;
     align-self: start;
-    @include setFont(20px, 600, $color-primary);
+    @include setFont(20px, 600, $color-secondary);
     line-height: 25px;
     padding-bottom: 5px;
 
