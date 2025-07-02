@@ -36,12 +36,12 @@ export const sendContactMail = createAsyncThunk(
 const sendBookUrl = "/contact/book";
 export const sendBook = createAsyncThunk(
   "constacts/sendBook",
-  async ({ fullName, contactNumber, service, email }, { rejectWithValue }) => {
+  async ({ fullName, contactNumber, services, email }, { rejectWithValue }) => {
     try {
       const resData = await fetchRequest(sendBookUrl, "POST", {
         fullName,
         contactNumber,
-        service,
+        services,
         email,
       });
 
