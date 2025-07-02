@@ -17,12 +17,14 @@ import { useLazy } from "../../../../hooks/useLazy";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../../providers/TransitionProvider";
+import { useEffect, useState } from "react";
 
 export const reasonsData = [
   {
     image: expertiseImage,
     webpImage: expertiseWebpImage,
     title: "8+ Years of Expertise",
+    index: 1,
     description:
       "Our experience and global network enable us to offer reliable and effective solutions",
   },
@@ -31,6 +33,8 @@ export const reasonsData = [
     image: personalizedApproachImage,
     webpImage: personalizedApproachWebpImage,
     title: "Personalized Approach",
+    index: 2,
+
     description:
       "We tailor our services to meet each client’s unique goals and aspirations",
   },
@@ -39,6 +43,7 @@ export const reasonsData = [
     image: improvementImage,
     webpImage: improvementWebpImage,
     title: "Continuous Growth & Improvement",
+    index: 5,
     description:
       "We never stop evolving, constantly enhancing our services to provide the best opportunities",
   },
@@ -47,6 +52,8 @@ export const reasonsData = [
     image: strongRelationshipsImage,
     webpImage: strongRelationshipsWebpImage,
     title: "Strong Relationships with Stakeholders",
+    index: 4,
+
     description:
       "We collaborate closely with universities, institutions, and industry leaders to create lasting opportunities",
   },
@@ -55,6 +62,7 @@ export const reasonsData = [
     image: integrityImage,
     webpImage: integrityWebpImage,
     title: "Transparency & Integrity",
+    index: 3,
     description:
       "No hidden fees, clear communication, and honest guidance every step of the way.",
   },
@@ -62,6 +70,25 @@ export const reasonsData = [
 
 const HomeReasons = () => {
   const { ref, isInView } = useLazy(0.6);
+
+  // INSERT_YOUR_CODE
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1440);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1440);
+    };
+
+    window.addEventListener("resize", handleResize);
+    // Set initial state in case of SSR or hydration mismatch
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className={styles.homeReasons}>
       <h2 className="titleWhiteH2">
@@ -75,24 +102,29 @@ const HomeReasons = () => {
           isInView ? styles.homeReasons__cardContainer_active : ""
         }`}
       >
-        {reasonsData.map(({ image, webpImage, title, description }, index) => (
-          <TransitionProvider
-            inProp={isInView}
-            style={TransitionStyleTypes.bottom}
-            delay={100 * index}
-            key={index}
-            className={styles.homeReasons__card}
-          >
-            <ImageWebp
-              src={image}
-              srcSet={webpImage}
-              alt={title}
-              className={styles.homeReasons__cardIcon}
-            />
-            <h4 className={styles.homeReasons__title}>{title}</h4>
-            <p className={styles.homeReasons__description}>{description}</p>
-          </TransitionProvider>
-        ))}
+        {reasonsData.map(
+          (
+            { image, webpImage, title, description, index: resIndex },
+            index
+          ) => (
+            <TransitionProvider
+              inProp={isInView}
+              style={TransitionStyleTypes.zoomIn}
+              delay={100 * (isMobile ? index : resIndex)}
+              key={index}
+              className={styles.homeReasons__card}
+            >
+              <ImageWebp
+                src={image}
+                srcSet={webpImage}
+                alt={title}
+                className={styles.homeReasons__cardIcon}
+              />
+              <h4 className={styles.homeReasons__title}>{title}</h4>
+              <p className={styles.homeReasons__description}>{description}</p>
+            </TransitionProvider>
+          )
+        )}
         {/* card */}
       </div>
       {/* cardContainer */}
