@@ -35,7 +35,7 @@
     gap: 58px;
 
     @include mdScreenMedia {
-      gap: 30px;
+      gap: 24px;
     }
 
     @include smScreenMedia {
@@ -121,6 +121,10 @@
     gap: 50px;
     cursor: pointer;
     position: relative;
+
+    @include mdScreenMedia {
+      gap: 24px;
+    }
   }
 
   &__arrowIcon {
