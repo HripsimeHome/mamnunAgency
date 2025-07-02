@@ -201,11 +201,7 @@ const EducationStudyingAbroad = () => {
         </h2>
 
         <>
-          <Accordion
-            accordionItems={accordionItems}
-            by6And4Col={true}
-            by2Col={true}
-          />
+          <Accordion accordionItems={accordionItems} by6And4Col={true} />
         </>
         <p className="paragraphWhite ptLg">
           At MAMNUN, we are here to guide you through these considerations,
