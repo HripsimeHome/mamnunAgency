@@ -156,7 +156,7 @@ const AdminNewsAddEditModal = ({
             <MainInput
               placeholder="Description"
               isTextArea
-              className={styles.adminNewsAddEditModal__textArea}
+              className={`thinScrollbar ${styles.adminNewsAddEditModal__textArea}`}
               value={formData.description}
               name={"description"}
               onChange={onChange}
