@@ -1,4 +1,5 @@
 import { BOOKING_FORM_TYPES } from "../constants/BookingFormtypes.js";
+import { CONTACT_FORM_TYPES } from "../constants/ContactFormTypes.js";
 import { errorTypes } from "../constants/errors.js";
 import { IBookingForm } from "../definitions/IBookingForm.js";
 import { IContactForm } from "../definitions/IContactForm.js";
@@ -26,7 +27,7 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
 
     switch (key) {
       case "needAssistanceAs":
-        return Object.values(BOOKING_FORM_TYPES).includes(value)
+        return Object.values(CONTACT_FORM_TYPES).includes(value)
           ? null
           : errorTypes.invalidvalue;
       case "email":
