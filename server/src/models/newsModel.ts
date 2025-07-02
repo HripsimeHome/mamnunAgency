@@ -38,6 +38,17 @@ News.init(
     date: {
       type: DataTypes.DATE,
       allowNull: false,
+      validate: {
+        isTodayOrFuture(value: number) {
+          const today = new Date();
+          today.setHours(0, 0, 0, 0); // Set to start of day
+          const inputDate = new Date(value);
+          inputDate.setHours(0, 0, 0, 0);
+          if (inputDate < today) {
+            throw new Error("Date must be today or in the future");
+          }
+        },
+      },
     },
     activeDayNews: {
       type: DataTypes.BOOLEAN,
@@ -54,6 +65,19 @@ News.init(
         deleteFiles([news.image]);
       },
     },
+    // validate: {
+    //   dateIsTodayOrFuture() {
+    //     if (this.date) {
+    //       const today = new Date();
+    //       today.setHours(0, 0, 0, 0);
+    //       const inputDate = new Date(this.date as number);
+    //       inputDate.setHours(0, 0, 0, 0);
+    //       if (inputDate < today) {
+    //         throw new Error("Date must be today or in the future");
+    //       }
+    //     }
+    //   },
+    // },
   }
 );
 
