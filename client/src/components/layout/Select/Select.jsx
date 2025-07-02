@@ -113,7 +113,8 @@ const Select = ({
             }}
             key={item.value}
             className={`${styles.select__dropdownContentBtn} ${
-              multiSelect && selectedValues.includes(item.value)
+              (multiSelect && selectedValues.includes(item.value)) ||
+              selectedValueItems?.value === item.value
                 ? styles.select__dropdownContentBtn_selected
                 : ""
             }`}
