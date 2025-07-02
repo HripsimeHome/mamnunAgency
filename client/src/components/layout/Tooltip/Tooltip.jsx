@@ -51,14 +51,14 @@ const Tooltip = () => {
       <TransitionProvider
         inProp={tooltipshowing}
         style={TransitionStyleTypes.top}
-        className={`${styles.tooltip} ${
-          tooltipshowing ? styles.tooltip_active : ""
-        }  ${isAnimated ? styles.tooltip_anim : ""}`}
+        className={styles.tooltip}
       >
-        <span className={styles.tooltip__txt}>{tooltipTxt}</span>
-        <button className={styles.tooltip__closeBtn} onClick={onClose}>
-          <Svg className={styles.tooltip__crossIcon} id={crossIcon} />
-        </button>
+        <div className={styles.tooltip__main}>
+          <span className={styles.tooltip__txt}>{tooltipTxt}</span>
+          <button className={styles.tooltip__closeBtn} onClick={onClose}>
+            <Svg className={styles.tooltip__crossIcon} id={crossIcon} />
+          </button>
+        </div>
       </TransitionProvider>
     </NewPortalProvider>
   );
