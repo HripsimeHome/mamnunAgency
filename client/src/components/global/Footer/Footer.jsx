@@ -10,7 +10,6 @@ import {
 } from ".././../../assets/images";
 
 import {
-  homePagePath,
   privacyPolicyPagePath,
   cookiePolicyPagePath,
 } from "../../../router/path";
@@ -28,7 +27,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footer__container}>
           <div className={styles.footer__logoBlock}>
-            <Link to={homePagePath}>
+            <a href="/" target="_blank">
               <ImageWebp
                 src={logoBlackImage}
                 srcSet={logoBlackWebpImage}
@@ -36,7 +35,7 @@ const Footer = () => {
                 className={styles.footer__logoImg}
                 pictureClass={styles.footer__logoImgPosition}
               />
-            </Link>
+            </a>
             MAMNUN Agency
           </div>
 
@@ -95,7 +94,7 @@ const Footer = () => {
           {/* socialMedia */}
           <div className={styles.footer__feedback}>
             <h4>Leave Your feedback Trustpilot</h4>
-            <a href="#" target="_blank">
+            <a href="/" target="_blank">
               <ImageWebp
                 src={companyLabelImage}
                 srcSet={companyLabelWebpImage}

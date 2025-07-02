@@ -6,14 +6,14 @@
   top: 0;
   left: 0;
   z-index: 10;
-  min-height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
   background-color: $color-secondary;
   transition: $transition;
 
   @include smScreenMedia {
-    min-height: 80px;
+    height: 80px;
   }
 
   &__container {
@@ -21,12 +21,10 @@
   }
 
   &__logoImg {
-    width: 100%;
-    max-width: 93px;
-    height: auto;
+    width: 80px;
 
     @include smScreenMedia {
-      max-width: 48px;
+      max-width: 58px;
     }
   }
 
@@ -55,7 +53,6 @@
       max-width: 193px;
       width: 100%;
       background-color: $color-secondary;
-      // justify-content: center;
       padding-top: 100px;
       padding-left: 20px;
     }
@@ -178,10 +175,6 @@
         background-color: $color-primary;
         color: $color-white;
       }
-    }
-
-    @include mdScreenMedia {
-      // optional responsive changes
     }
   }
 
