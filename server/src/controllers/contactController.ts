@@ -38,6 +38,12 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
         return /^https:\/\/t\.me\/[a-zA-Z0-9_]+$/.test(value)
           ? null
           : errorTypes.invalidvalue;
+      case "contactNumber":
+        // Accepts numbers, spaces, dashes, parentheses, and plus sign, min 7 digits
+        return typeof value === "string" && /^\+?[\d\s\-()]{7,}$/.test(value)
+          ? null
+          : errorTypes.invalidvalue;
+
       default:
         return null;
     }
