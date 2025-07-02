@@ -4,5 +4,5 @@ export interface IBookingForm {
   fullName: string;
   contactNumber: string;
   email: string;
-  service: string;
+  services: string[];
 }

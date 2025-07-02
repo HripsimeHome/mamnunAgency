@@ -15,6 +15,9 @@
     justify-content: center;
     gap: 20px;
 
+    @include xlScreenMedia {
+      grid-template-columns: repeat(5, 1fr);
+    }
     @include lgScreenMedia {
       grid-template-columns: repeat(4, 1fr);
     }

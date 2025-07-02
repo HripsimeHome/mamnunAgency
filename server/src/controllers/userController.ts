@@ -92,6 +92,10 @@ export const login = catchAsync(async (req, res, next) => {
   createAndSendToken(user, res);
 });
 
+export const checkToken = catchAsync(async (_req, res) => {
+  res.send({ status: "success" });
+});
+
 export const changePassword = catchAsync(async (req, res, next) => {
   const { currentPassword, newPassword, confirmPassword } = req.body;
 

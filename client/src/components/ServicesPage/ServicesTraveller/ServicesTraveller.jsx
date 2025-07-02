@@ -130,7 +130,7 @@ const ServicesTraveller = () => {
           {cards.map(({ title, image, webpImage, backDescription }, index) => (
             <TransitionProvider
               inProp={isInView}
-              style={TransitionStyleTypes.bottom}
+              style={TransitionStyleTypes.zoomIn}
               delay={index * 100}
               key={index}
               className={styles.servicesTraveller__card}

@@ -33,16 +33,17 @@ const serviceOptions = [
 const ServiceBookForm = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.contacts.bookError);
-  const { onChange, onChangeSelect, formData, getError } = useFormValue(
-    {
-      fullName: "",
-      contactNumber: "",
-      service: "",
-      email: "",
-    },
-    setBookError,
-    error
-  );
+  const { onChange, onChangeSelect, formData, onResetForm, getError } =
+    useFormValue(
+      {
+        fullName: "",
+        contactNumber: "",
+        services: [],
+        email: "",
+      },
+      setBookError,
+      error
+    );
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
@@ -51,6 +52,7 @@ const ServiceBookForm = () => {
       setLoading(true);
       await dispatch(sendBook(formData)).unwrap();
       dispatch(openTooltip("Form submitted successfully."));
+      onResetForm();
     } catch (error) {
       dispatch(openTooltip("Failed to submit."));
     }
@@ -79,12 +81,13 @@ const ServiceBookForm = () => {
       </div>
       <Select
         options={serviceOptions}
-        onChange={(val) => onChangeSelect("service", val)}
-        selectedValue={formData.service}
+        onChange={(val) => onChangeSelect("services", val)}
+        selectedValue={formData.services}
         disabled={loading}
-        isInvalid={getError("service")}
-        name="service"
-        placeholder="Service:"
+        isInvalid={getError("services")}
+        name="services"
+        placeholder="Service(s):"
+        multiSelect
       />
       <MainInput
         disabled={loading}

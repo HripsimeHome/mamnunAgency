@@ -1,5 +1,5 @@
 import styles from "./Contacts.module.scss";
-import { phone, email, address } from "../../../constants/contacts";
+import { phones, email, address } from "../../../constants/contacts";
 import MainBtn from "../../layout/MainBtn/MainBtn.jsx";
 import SocialIcons from "../../layout/SocialIcons/SocialIcons";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
@@ -20,7 +20,7 @@ import {
   sendContactMail,
   setContactError,
 } from "../../../store/slices/constactsSlice.js";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { openTooltip } from "../../../store/slices/UISlice.js";
 
 const assistanceOptions = [
@@ -47,14 +47,23 @@ const contactInfoData = [
     image: phoneImage,
     webpImage: phoneWebpImage,
     title: "Phone:",
-    text: phone,
+    text: phones.map((phone, index) => (
+      <Fragment key={index}>
+        <a href={`tel:${phone}`}>{phone}</a>
+        {index < phones.length - 1 && <span>, </span>}
+      </Fragment>
+    )),
   },
 
   {
     image: emailImage,
     webpImage: emailWebpImage,
     title: "Email:",
-    text: email,
+    text: (
+      <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
+        {email}
+      </a>
+    ),
   },
 
   {
