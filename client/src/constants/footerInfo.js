@@ -88,13 +88,17 @@ export const footerMenuItems = [
     title: "Contact Us",
     items: [
       {
-        text: "MAMNUN Agency",
+        text: (
+          <>
+            <span className="mediumText">Company Name:</span> MAMNUN Agency
+          </>
+        ),
       },
 
       {
         text: (
           <>
-            <span className="mediumText">Address:</span> ${address}
+            <span className="mediumText">Address:</span> {address}
           </>
         ),
       },
