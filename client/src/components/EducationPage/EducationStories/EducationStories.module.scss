@@ -12,6 +12,8 @@
   }
 
   &__slider {
+    padding-bottom: 30px !important;
+
     @include smScreenMedia {
       padding-inline: 20px !important;
     }
@@ -24,7 +26,7 @@
     border: 1px solid $color-secondary;
     border-radius: 25px;
     box-shadow: 6px 6px 23px 0 rgba(0, 0, 0, 0.25);
-    height: calc(100% - 60px);
+    height: calc(100% - 20px);
     display: flex;
     flex-direction: column;
   }
@@ -130,7 +132,7 @@
   &__sliderNavigation {
     @include flexCol(space-between);
     gap: 10px;
-    transform: translateY(-113%);
+    transform: translateY(-18%);
 
     @include lgScreenMedia {
       padding-inline: 20px;
