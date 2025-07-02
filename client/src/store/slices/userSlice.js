@@ -20,6 +20,20 @@ const loginUrl = "/users/login";
 const changePasswordUrl = "/users/changePassword";
 const forgotPasswordUrl = "/users/forgotPassword";
 const resetPasswordUrl = "/users/resetPassword";
+const checkTokenUrl = "/users/check";
+
+export const checkToken = createAsyncThunk(
+  "user/checkToken",
+  async (_, { rejectWithValue }) => {
+    try {
+      await fetchRequest(checkTokenUrl);
+    } catch (error) {
+      removeLSItem(lsProps.token);
+
+      return rejectWithValue(setFormError(error));
+    }
+  }
+);
 
 export const loginUser = createAsyncThunk(
   "user/login",
@@ -148,6 +162,9 @@ export const userSlice = createSlice({
       .addCase(changePassword.rejected, (state, { payload }) => {
         state.changePassLoading = false;
         if (payload) state.changePassError = payload;
+      })
+      .addCase(checkToken.rejected, (state, { payload }) => {
+        state.token = "";
       });
   },
 });

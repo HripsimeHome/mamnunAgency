@@ -1,8 +1,8 @@
-import { useEffect, Fragment } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, Fragment, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import AppRouter from "../../router/AppRouter";
-import { adminPagePath } from "../../router/path";
-import { checkIsLoggedIn } from "../../store/slices/userSlice";
+import { adminLoginPagePath, adminPagePath } from "../../router/path";
+import { checkIsLoggedIn, checkToken } from "../../store/slices/userSlice";
 import AdminNavbar from "../Admin/AdminNavbar/AdminNavbar";
 import AdminWrapper from "../Admin/AdminWrapper/AdminWrapper";
 import Footer from "../global/Footer/Footer";
@@ -11,11 +11,15 @@ import { useDispatch } from "react-redux";
 import HeaderMenu from "../global/HeaderMenu/HeaderMenu";
 import TodayNewsModal from "../global/TodayNewsModal/TodayNewsModal";
 import { scrollTop } from "../../utils/scrollTop";
+import { removeLSItem } from "../../utils/localStorage";
+import { lsProps } from "../../utils/lsProps";
 
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const isAdmin = location.pathname.startsWith(adminPagePath);
+  const [userLoginChecked, setUserLoginChecked] = useState(false);
 
   useEffect(() => {
     dispatch(checkIsLoggedIn());
@@ -24,6 +28,19 @@ function App() {
 
   useEffect(() => {
     scrollTop();
+
+    if (!userLoginChecked && location.pathname.includes(adminPagePath)) {
+      (async () => {
+        try {
+          await dispatch(checkToken()).unwrap();
+        } catch (error) {
+          navigate(adminLoginPagePath);
+        } finally {
+          setUserLoginChecked(true);
+        }
+      })();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   const Wrapper = isAdmin ? AdminWrapper : Fragment;
