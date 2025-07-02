@@ -15,6 +15,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { setImagePath } from "../../../../utils/files";
 import { openTooltip } from "../../../../store/slices/UISlice";
+import { noImage } from "../../../../assets/images";
 
 const AdminNewsAddEditModal = ({
   show,
@@ -129,6 +130,10 @@ const AdminNewsAddEditModal = ({
                 crossOrigin="anonimus"
                 alt="attached file"
                 className={styles.adminNewsAddEditModal__fileImg}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = noImage;
+                }}
               />
             )}
             <input
