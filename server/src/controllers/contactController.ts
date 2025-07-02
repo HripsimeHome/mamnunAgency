@@ -43,6 +43,10 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
         return typeof value === "string" && /^\+?[\d\s\-()]{7,}$/.test(value)
           ? null
           : errorTypes.invalidvalue;
+      case "message":
+        return typeof value === "string" && value.length <= 250
+          ? null
+          : errorTypes.invalidvalue;
 
       default:
         return null;
