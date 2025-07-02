@@ -9,6 +9,7 @@
     max-width: 70%;
     margin: 0 auto;
     text-align: center;
+    position: relative;
 
     @include mdScreenMedia {
       max-width: 100%;
@@ -17,5 +18,20 @@
 
   &__video {
     width: inherit;
+  }
+
+  &__muteBtn {
+    @include button();
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    @include flexCol();
+    background-color: $color-primary;
+  }
+  &__muteIcon {
+    @include svg(30px);
   }
 }

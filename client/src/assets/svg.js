@@ -34,6 +34,8 @@ export const relationshipsIcon = "relationships";
 export const feedbackIcon = "feedback";
 export const trustIcon = "trust";
 export const partnerIcon = "partner";
+export const unmuteVideoIcon = "unmuteVideo";
+export const muteVideoIcon = "muteVideo";
 
 //Tourism  - Services we provide
 export const itinerariesIcon = "itineraries";

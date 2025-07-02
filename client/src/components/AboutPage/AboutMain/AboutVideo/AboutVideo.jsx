@@ -1,11 +1,14 @@
 import styles from "./AboutVideo.module.scss";
 import { useLazy } from "../../../../hooks/useLazy";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useEffect } from "react";
+import Svg from "../../../layout/Svg/Svg";
+import { muteVideoIcon, unmuteVideoIcon } from "../../../../assets/svg";
 
 const AboutVideo = () => {
   const { ref, isInView } = useLazy(undefined, undefined, true);
   const videoRef = useRef(null);
+  const [muted, setMuted] = useState(false);
   useEffect(() => {
     if (videoRef.current) {
       if (isInView) {
@@ -22,11 +25,28 @@ const AboutVideo = () => {
     <section ref={ref} className={`${styles.aboutVideo}`}>
       <div className="container">
         <div className={styles.aboutVideo__videoContainer}>
-          <video ref={videoRef} className={styles.aboutVideo__video} loop>
+          <video
+            ref={videoRef}
+            className={styles.aboutVideo__video}
+            loop
+            muted
+            playsInline
+          >
             <source src="/videos/about/about.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-
+          <button
+            className={styles.aboutVideo__muteBtn}
+            onClick={() => {
+              setMuted(!muted);
+              videoRef.current.muted = muted;
+            }}
+          >
+            <Svg
+              className={styles.aboutVideo__muteIcon}
+              id={muted ? unmuteVideoIcon : muteVideoIcon}
+            />
+          </button>
           <p className="paragraphWhite ptLg">
             We are also a premier travel agency dedicated to providing unique
             travel packages and exceptional services. Our expertise extends
