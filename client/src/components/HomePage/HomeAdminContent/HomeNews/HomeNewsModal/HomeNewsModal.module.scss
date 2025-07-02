@@ -66,6 +66,7 @@
     @include setFont(28px, 600, $color-white);
     margin-bottom: 20px;
     line-height: 35px;
+    padding-right: 30px;
 
     @include xlScreenMedia {
       font-size: 26px;

@@ -6,7 +6,7 @@ export const baseUrl = "/api/v1";
 //export const proxy = isProduction ? "" : "http://localhost:5000";
 
 export const proxy = isProduction
-  ? ""
+  ? "https://cjw00spz-5000.euw.devtunnels.ms"
   : "https://cjw00spz-5000.euw.devtunnels.ms";
 
 export const authConfig = (isFormData) => {
