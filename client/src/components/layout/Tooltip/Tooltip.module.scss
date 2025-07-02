@@ -3,24 +3,19 @@
 
 .tooltip {
   position: fixed;
-  left: 50%;
-  top: -100px;
-  transform: translateX(-50%);
-  background: $color-white;
-  border-radius: 10px;
-  box-shadow: 3px 3px 40px 0px #10141d33;
-  @include flexCol();
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid $color-primary;
+  top: 100px;
   z-index: 999999;
+  width: 100%;
+  @include flexCol();
 
-  &_active {
-    top: 70px;
-  }
-
-  &_anim {
-    animation: anim 0.4s linear;
+  &__main {
+    background: $color-white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 40px 0px #10141d33;
+    @include flexCol();
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid $color-primary;
   }
 
   &__txt {

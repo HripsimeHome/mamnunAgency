@@ -50,6 +50,7 @@ export const useFormValue = (initialData, setError, error) => {
 
   const onResetForm = () => {
     setFormData(initialData);
+    dispatch(setError({}));
   };
 
   return {

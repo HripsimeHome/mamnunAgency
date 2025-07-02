@@ -15,6 +15,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { setImagePath } from "../../../../utils/files";
 import { openTooltip } from "../../../../store/slices/UISlice";
+import { noImage } from "../../../../assets/images";
 
 const AdminNewsAddEditModal = ({
   show,
@@ -94,6 +95,7 @@ const AdminNewsAddEditModal = ({
     }
     setLoading(false);
   };
+  console.log({ formData });
 
   return (
     <Modal
@@ -129,6 +131,10 @@ const AdminNewsAddEditModal = ({
                 crossOrigin="anonimus"
                 alt="attached file"
                 className={styles.adminNewsAddEditModal__fileImg}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = noImage;
+                }}
               />
             )}
             <input
@@ -151,7 +157,7 @@ const AdminNewsAddEditModal = ({
             <MainInput
               placeholder="Description"
               isTextArea
-              className={styles.adminNewsAddEditModal__textArea}
+              className={`thinScrollbar ${styles.adminNewsAddEditModal__textArea}`}
               value={formData.description}
               name={"description"}
               onChange={onChange}
@@ -168,7 +174,9 @@ const AdminNewsAddEditModal = ({
           </div>
         </div>
         <div className={styles.adminNewsAddEditModal__col}>
-          <MainBtn className={"textWhite"}>Cancel</MainBtn>
+          <MainBtn className={"textWhite"} type={"button"} onClick={onClose}>
+            Cancel
+          </MainBtn>
           <MainBtn className={"textWhite"} withBg>
             Save
           </MainBtn>
