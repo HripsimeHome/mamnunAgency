@@ -12,8 +12,6 @@
   }
 
   &__slider {
-    padding-bottom: 60px !important;
-
     @include smScreenMedia {
       padding-inline: 20px !important;
     }
@@ -132,7 +130,7 @@
   &__sliderNavigation {
     @include flexCol(space-between);
     gap: 10px;
-    padding-top: 25px;
+    transform: translateY(-113%);
 
     @include lgScreenMedia {
       padding-inline: 20px;
