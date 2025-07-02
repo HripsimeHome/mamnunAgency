@@ -139,6 +139,7 @@
 
   &__col_sm &__header {
     gap: 5px;
+    padding: 15px;
   }
   &__btn {
     @include flexCol(space-between, start);
@@ -204,7 +205,6 @@
 
   &__col_sm &__title {
     font-size: 20px;
-    font-weight: 400;
     line-height: 30px;
 
     @include smScreenMedia {

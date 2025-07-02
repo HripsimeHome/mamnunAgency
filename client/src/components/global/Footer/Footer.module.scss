@@ -5,6 +5,17 @@
   color: $color-secondary;
   border-top: 2px solid $color-secondary;
   margin-top: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @include lgScreenMedia {
+    padding-top: 50px;
+  }
+
+  @include smScreenMedia {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 
   &__container {
     display: grid;
