@@ -11,8 +11,6 @@ import { useDispatch } from "react-redux";
 import HeaderMenu from "../global/HeaderMenu/HeaderMenu";
 import TodayNewsModal from "../global/TodayNewsModal/TodayNewsModal";
 import { scrollTop } from "../../utils/scrollTop";
-import { removeLSItem } from "../../utils/localStorage";
-import { lsProps } from "../../utils/lsProps";
 
 function App() {
   const location = useLocation();
