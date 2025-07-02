@@ -73,7 +73,7 @@ export const bookJourney = catchAsync(async (req, res, next) => {
     fullName: req.body.fullName,
     contactNumber: req.body.contactNumber,
     email: req.body.email,
-    service: req.body.service,
+    services: req.body.services,
   };
   // validation
 
@@ -85,12 +85,20 @@ export const bookJourney = catchAsync(async (req, res, next) => {
     if (!value) return errorTypes.invalidvalue;
 
     switch (key) {
-      case "service":
-        return Object.values(BOOKING_FORM_TYPES).includes(value)
+      case "services":
+        // Check if value is an array and all elements are valid service types
+        return Array.isArray(value) &&
+          value.length > 0 &&
+          value.every((v) => Object.values(BOOKING_FORM_TYPES).includes(v))
           ? null
           : errorTypes.invalidvalue;
       case "email":
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+          ? null
+          : errorTypes.invalidvalue;
+      case "contactNumber":
+        // Accepts numbers, spaces, dashes, parentheses, and plus sign, min 7 digits
+        return typeof value === "string" && /^\+?[\d\s\-()]{7,}$/.test(value)
           ? null
           : errorTypes.invalidvalue;
 
