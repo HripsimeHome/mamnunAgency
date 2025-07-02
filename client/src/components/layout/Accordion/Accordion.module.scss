@@ -150,12 +150,8 @@
     @include flexCol();
     gap: 15px;
 
-    @include lgScreenMedia {
-      gap: 15px;
-    }
-
     @include smScreenMedia {
-      gap: 5px;
+      gap: 10px;
     }
   }
 
