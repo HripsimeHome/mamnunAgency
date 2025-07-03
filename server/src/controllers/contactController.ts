@@ -35,7 +35,7 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
           ? null
           : errorTypes.invalidvalue;
       case "telegramLink":
-        return /^https:\/\/t\.me\/[a-zA-Z0-9_]+$/.test(value)
+        return /^(https:\/\/)?t\.me\/[a-zA-Z0-9_]+$/.test(value)
           ? null
           : errorTypes.invalidvalue;
       case "contactNumber":
@@ -44,7 +44,7 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
           ? null
           : errorTypes.invalidvalue;
       case "message":
-        return typeof value === "string" && value.length <= 250
+        return typeof value === "string" && value.length <= 1000
           ? null
           : errorTypes.invalidvalue;
 

@@ -18,6 +18,7 @@ const HomeHeader = () => {
   const navigate = useNavigate();
   const [activeMottoIndex, setActiveMottoIndex] = useState(0);
   const { ref, isInView } = useLazy(0.6);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   const mottos = [
     {
@@ -38,34 +39,39 @@ const HomeHeader = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveMottoIndex((prev) => {
-        if (prev === mottos.length - 1) {
-          return 0;
-        } else return prev + 1;
-      });
-    }, 5000);
+    let interval = null;
+    if (videoLoaded) {
+      interval = setInterval(() => {
+        setActiveMottoIndex((prev) => {
+          if (prev === mottos.length - 1) {
+            return 0;
+          } else return prev + 1;
+        });
+      }, 5000);
+    }
 
     return () => {
-      clearInterval(interval);
+      if (interval) clearInterval(interval);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [videoLoaded]);
   return (
     <section ref={ref} className={styles.homeHeader}>
-      {/* {(true || process.env.NODE_ENV !== "development") && (
+      {(true || process.env.NODE_ENV !== "development") && (
         <video
           autoPlay
           muted
           loop
+          onCanPlay={() => setVideoLoaded(true)}
           className={styles.homeHeader__video}
           poster={homeVideoPosterImage}
           playsInline
         >
-          Your browser does not support the video tag.
+          <source src="/videos/home/home.webm" type="video/mp4" />
           <source src="/videos/home/home.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
-      )} */}
+      )}
 
       <div className={styles.homeHeader__mottoTextContainer}>
         {mottos.map((motto, index) => (
