@@ -17,7 +17,6 @@
 
     @include lgScreenMedia {
       margin-inline: -20px;
-      padding: 25px 0 20px;
     }
 
     @include mdScreenMedia {
@@ -25,7 +24,7 @@
     }
 
     @include smScreenMedia {
-      padding: 15px 0 10px;
+      padding: 15px 0 50px;
     }
   }
 
