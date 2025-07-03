@@ -2,6 +2,14 @@
 @import "../../../styles/vars";
 .tabs {
   min-height: 400px;
+  color: $color-grey;
+
+  &:hover {
+    color: $color-white;
+    cursor: pointer;
+    transition: $transitionEaseOut;
+  }
+
   &__titleContainer {
     display: flex;
     width: 100%;
@@ -52,16 +60,6 @@
       background-color: $color-lightPrimary;
       border-radius: 2px;
       transition: background-color 0.3s ease;
-    }
-  }
-
-  &_inActive {
-    color: $color-grey;
-
-    &:hover {
-      color: $color-white;
-      cursor: pointer;
-      transition: $transitionEaseOut;
     }
   }
 

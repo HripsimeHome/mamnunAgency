@@ -51,9 +51,9 @@ function App() {
 
       {!isAdmin && <Footer />}
       <Tooltip />
-      {/* {process.env.NODE_ENV === "production" && <TodayNewsModal />} */}
+      {process.env.NODE_ENV === "production" && <TodayNewsModal />}
 
-      <TodayNewsModal />
+      {/* <TodayNewsModal /> */}
     </>
   );
 }

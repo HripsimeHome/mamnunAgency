@@ -1,4 +1,3 @@
-import styles from "./EducationStudyingAbroad.module.scss";
 import Accordion from "../../layout/Accordion/Accordion";
 
 import {
@@ -192,8 +191,7 @@ const accordionItems = [
 const EducationStudyingAbroad = () => {
   return (
     <section
-      className={`${styles.educationStudyingAbroad} wrapperBlack wrapperPadding`}
-    >
+      className="wrapperBlack wrapperPadding">
       <div className="container">
         <h2 className="titleWhiteH2 pbXlg">
           Pros and Cons of studying&nbsp;
@@ -201,11 +199,7 @@ const EducationStudyingAbroad = () => {
         </h2>
 
         <>
-          <Accordion
-            accordionItems={accordionItems}
-            by6And4Col={true}
-            by2Col={true}
-          />
+          <Accordion accordionItems={accordionItems} by6And4Col={true} />
         </>
         <p className="paragraphWhite ptLg">
           At MAMNUN, we are here to guide you through these considerations,

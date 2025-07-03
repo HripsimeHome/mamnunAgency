@@ -12,7 +12,7 @@
   }
 
   &__slider {
-    padding-bottom: 30px !important;
+    padding-bottom: 50px !important;
 
     @include smScreenMedia {
       padding-inline: 20px !important;
@@ -132,14 +132,14 @@
   &__sliderNavigation {
     @include flexCol(space-between);
     gap: 10px;
-    transform: translateY(-18%);
+    transform: translateY(50%);
 
     @include lgScreenMedia {
       padding-inline: 20px;
     }
-
     @include smScreenMedia {
-      padding-inline: 0px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
 
@@ -158,5 +158,6 @@
 }
 
 :global(.swiper-pagination) {
-  padding-inline: 30px;
+  width: calc(100% - 70px) !important;
+  left: 35px !important;
 }

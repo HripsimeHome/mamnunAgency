@@ -18,11 +18,7 @@ const Tabs = ({ tabHeaders = [], tabContentGroups = [] }) => {
             key={index}
             className={` 
               ${styles.tabs__tabTitle}           
-              ${
-                index === activeTabIndex
-                  ? styles.tabs_active
-                  : styles.tabs_inActive
-              }
+              ${index === activeTabIndex ? styles.tabs_active : ""}
             `}
             onClick={() => setActiveTabIndex(index)}
           >

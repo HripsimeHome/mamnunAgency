@@ -62,7 +62,9 @@ const Accordion = ({
       <div
         className={`${styles.accordion__col} ${
           isDoubleCol ? styles.accordion__col_sm : ""
-        } ${by6And4Col ? styles.accordion__col_6Col : ""}`}
+        } ${by6And4Col ? styles.accordion__col_6Col : ""} ${
+          by2Col ? styles.accordion__col_2Col : ""
+        }`}
       >
         {by6And4Col && (
           <ImageWebp
@@ -88,7 +90,9 @@ const Accordion = ({
         <div
           className={`${styles.accordion__col} ${
             isDoubleCol ? styles.accordion__col_sm : ""
-          } ${by6And4Col ? styles.accordion__col_4Col : ""}`}
+          } ${by6And4Col ? styles.accordion__col_4Col : ""} ${
+            by2Col ? styles.accordion__col_2Col : ""
+          }`}
         >
           {by6And4Col && (
             <ImageWebp

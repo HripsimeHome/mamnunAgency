@@ -90,19 +90,29 @@
   }
 
   &__header {
-    @include flexCol(space-between, start);
+    @include flexCol(center, start);
     flex-direction: column;
     width: 100%;
     text-align: left;
     border-radius: 25px;
     cursor: pointer;
     position: relative;
-    padding: 25px;
+    min-height: 90px;
     transition: $transition;
     gap: 5px;
+    padding-block: 5px;
+    --paddingInline: 25px;
 
     @include smScreenMedia {
-      padding: 15px;
+      --paddingInline: 15px;
+      min-height: 60px;
+      padding-block: 5px;
+      padding-inline: 15px;
+    }
+
+    &_active {
+      padding-block: var(--paddingInline);
+      justify-content: space-between;
     }
 
     &:not(.accordion__header_inverse) {
@@ -135,11 +145,16 @@
 
     border: 2px solid var(--textColor);
     background-color: var(--bgColor);
+    padding-inline: var(--paddingInline);
   }
 
   &__col_sm &__header {
     gap: 5px;
-    padding: 15px;
+    --paddingInline: 15px;
+    min-height: 70px;
+  }
+  &__col_2Col &__header {
+    padding-block: var(--paddingInline);
   }
   &__btn {
     @include flexCol(space-between, start);
@@ -193,7 +208,9 @@
   &__header_active:not(&__header_inverse) &__title {
     color: $color-primary;
   }
-
+  &__col_2Col &__header_active:not(&__header_inverse) &__title {
+    color: var(--textColor);
+  }
   &__col_6Col &__title,
   &__col_4Col &__title {
     font-weight: 600;

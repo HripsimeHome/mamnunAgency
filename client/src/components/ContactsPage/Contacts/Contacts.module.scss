@@ -44,6 +44,11 @@
     gap: 15px;
     width: 100%;
 
+    @include lgScreenMedia {
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
     @include smScreenMedia {
       gap: 5px;
     }
