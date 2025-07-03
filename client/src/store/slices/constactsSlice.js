@@ -62,7 +62,7 @@ export const constactsSlice = createSlice({
       state.contactError = payload;
     },
     setBookError(state, { payload }) {
-      state.contactError = payload;
+      state.bookError = payload;
     },
   },
   extraReducers: (builder) => {
