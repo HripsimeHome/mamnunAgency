@@ -167,7 +167,10 @@ const ServicesTraveller = () => {
 
                     <MainBtn
                       onClick={() => navigate(contactsPagePath)}
-                      className={styles.authWrapper__btn}
+                      className={`         
+                        ${styles.authWrapper__btn} 
+                        ${styles.servicesTraveller__btn}
+                        `}
                     >
                       Learn more
                     </MainBtn>
