@@ -9,9 +9,8 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    overflow-x: hidden;
+    overflow: visible;
     min-height: 500px;
-    border-radius: 20px;
 
     @include lgScreenMedia {
       gap: 15px;
@@ -25,17 +24,10 @@
   &__card {
     perspective: 1000px;
     position: relative;
-    overflow: hidden;
     transition: $transition;
-    height: 350px;
-
-    @include lgScreenMedia {
-      height: 170px;
-    }
-
-    @include smScreenMedia {
-      max-height: 22vw;
-    }
+    max-height: 22vw;
+    overflow: visible;
+    border-radius: 20px;
 
     &:hover {
       max-height: 100vh;
@@ -48,12 +40,8 @@
     height: 100%;
     transition: transform 2s;
     transform-style: preserve-3d;
-    height: 100%;
-    // max-height: 22vw;
-
-    @include smScreenMedia {
-      max-height: 22vw;
-    }
+    max-height: 22vw;
+    border-radius: 20px;
   }
 
   &__card:hover &__cardInner {
@@ -67,16 +55,13 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    @include setFont(20px, 400, $color-secondary);
-    background-color: #f0f0f0;
-    // box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // тень у каждой стороны
   }
 
   &__cardFront {
     @include flexCol(end, center);
     background-color: $color-darkGrey;
-    border-radius: 20px;
-    height: 100%;
 
     @include xlScreenMedia {
       aspect-ratio: 6/2.5;
@@ -95,18 +80,14 @@
       justify-content: flex-start;
     }
 
-    @include smScreenMedia {
-      justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
     }
-  }
-
-  &__cardFront::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
   }
 
   &__cardFrontTitle {
@@ -129,7 +110,6 @@
   &__cardBack {
     background-color: $color-white;
     border: 4px solid $color-secondary;
-    border-radius: 20px;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -137,7 +117,6 @@
     padding: 25px;
     position: relative;
     z-index: 2;
-    height: 100%;
 
     @include mdScreenMedia {
       padding: 15px;
@@ -188,19 +167,6 @@
     }
   }
 
-  &__btn {
-    max-width: 300px;
-    margin: 0 auto;
-
-    @include lgScreenMedia {
-      max-width: 255px;
-    }
-
-    @include smScreenMedia {
-      max-width: 100%;
-    }
-  }
-
   &__img {
     position: absolute;
     left: 0;
@@ -215,6 +181,19 @@
 
     &_inactive {
       opacity: 0;
+    }
+  }
+
+  &__btn {
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include lgScreenMedia {
+      max-width: 255px;
+    }
+
+    @include smScreenMedia {
+      max-width: 100%;
     }
   }
 }
