@@ -11,7 +11,6 @@
       "text1 animation"
       "text2 animation";
     text-align: justify;
-    overflow: hidden;
 
     @include lgScreenMedia {
       grid-template-columns: 55% 40%;
@@ -127,12 +126,13 @@
     display: flex;
     gap: 48px;
     padding-top: 100px;
+    padding-bottom: 50px;
     width: 100%;
     overflow: hidden;
-    min-height: 400px;
 
     @include xlScreenMedia {
       padding-top: 50px;
+      padding-bottom: 30px;
     }
 
     @include mdScreenMedia {
