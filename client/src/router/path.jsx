@@ -7,7 +7,6 @@ import ContactsPage from "../pages/ContactsPage";
 import ImprintPage from "../pages/ImprintPage";
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
 import CookiePolicyPage from "../pages/CookiePolicyPage";
-import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import { Navigate } from "react-router-dom";
 import AdminLoginPage from "../pages/Admin/AdminLoginPage";
@@ -117,17 +116,20 @@ export const routes = [
   {
     path: adminNewsPagePath,
     component: <PrivateRoute element={<AdminNewsPage />} />,
+    private: true,
   },
   {
     path: adminCertificatesPagePath,
     component: <PrivateRoute element={<AdminCertificatesPage />} />,
+    private: true,
   },
   {
     path: adminSettingsPagePath,
     component: <PrivateRoute element={<AdminSettingsPage />} />,
+    private: true,
   },
   {
     path: "*",
-    component: <ErrorPage />,
+    component: <Navigate to={homePagePath} />,
   },
 ];

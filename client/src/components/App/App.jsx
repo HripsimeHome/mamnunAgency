@@ -1,7 +1,7 @@
 import { useEffect, Fragment, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import AppRouter from "../../router/AppRouter";
-import { adminLoginPagePath, adminPagePath } from "../../router/path";
+import { adminLoginPagePath, adminPagePath, routes } from "../../router/path";
 import { checkIsLoggedIn, checkToken } from "../../store/slices/userSlice";
 import AdminNavbar from "../Admin/AdminNavbar/AdminNavbar";
 import AdminWrapper from "../Admin/AdminWrapper/AdminWrapper";
@@ -27,7 +27,10 @@ function App() {
   useEffect(() => {
     scrollTop();
 
-    if (!userLoginChecked && location.pathname.includes(adminPagePath)) {
+    const curPath = routes.find(
+      (item) => item.path === location.pathname && item.private
+    );
+    if (!userLoginChecked && curPath) {
       (async () => {
         try {
           await dispatch(checkToken()).unwrap();

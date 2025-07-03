@@ -30,6 +30,15 @@ const AdminNews = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (!editModalOpened && editingItemid) {
+      setTimeout(() => {
+        setEditingItemid(null);
+      }, 500);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editModalOpened]);
+
   const onDelete = async (id) => {
     // eslint-disable-next-line no-undef
     await deleteNews(id);
