@@ -36,6 +36,15 @@
   &__logoBlock {
     text-align: center;
     max-width: 174px;
+    margin-right: 40px;
+
+    @include xlScreenMedia {
+      margin-right: 10px;
+    }
+
+    @include lgScreenMedia {
+      margin-right: 0;
+    }
 
     @include lgScreenMedia {
       order: 4;
