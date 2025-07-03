@@ -57,7 +57,7 @@ const HomeHeader = () => {
   }, [videoLoaded]);
   return (
     <section ref={ref} className={styles.homeHeader}>
-      {(true || process.env.NODE_ENV !== "development") && (
+      {/* {(true || process.env.NODE_ENV !== "development") && (
         <video
           autoPlay
           muted
@@ -71,7 +71,7 @@ const HomeHeader = () => {
           <source src="/videos/home/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      )}
+      )} */}
 
       <div className={styles.homeHeader__mottoTextContainer}>
         {mottos.map((motto, index) => (

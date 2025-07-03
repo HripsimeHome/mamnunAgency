@@ -27,6 +27,10 @@
   &__logoImg {
     width: 80px;
 
+    @include lgScreenMedia {
+      width: 65px;
+    }
+
     @include smScreenMedia {
       width: 48px;
     }
