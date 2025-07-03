@@ -36,7 +36,9 @@ export const fetchRequest = async (
   if (body && !isFormData) {
     for (let key in body) {
       if (body[key]) {
-        filteredBody[key] = body[key];
+        const value =
+          typeof body[key] === "string" ? body[key].trim() : body[key];
+        filteredBody[key] = value;
       }
     }
   }
@@ -60,13 +62,15 @@ export const createFormData = (data) => {
   const formData = new FormData();
 
   for (let key in data) {
-    const item = data[key];
+    let item = data[key];
     if (!item && item !== 0) continue;
     if (Array.isArray(item)) {
       for (let i = 0; i < item.length; i++) {
         formData.append(`${key}[]`, item[i]);
       }
     } else {
+      if (typeof item === "string") item = item.trim();
+
       formData.append(key, item);
     }
   }
