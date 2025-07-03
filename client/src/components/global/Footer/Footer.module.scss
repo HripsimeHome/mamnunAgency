@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(5, auto);
     gap: 20px;
+    justify-content: space-between;
 
     @include lgScreenMedia {
       grid-template-columns: repeat(3, 1fr);
