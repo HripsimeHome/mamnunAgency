@@ -44,7 +44,7 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
           ? null
           : errorTypes.invalidvalue;
       case "message":
-        return typeof value === "string" && value.length <= 250
+        return typeof value === "string" && value.length <= 1000
           ? null
           : errorTypes.invalidvalue;
 
