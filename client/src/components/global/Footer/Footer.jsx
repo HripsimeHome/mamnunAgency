@@ -17,10 +17,6 @@ import {
 import { logoBlackImage, logoBlackWebpImage } from "../../../assets/images";
 import { Fragment } from "react";
 
-// import {
-//   emailAddress
-// } from "../../../constants/contacts";
-
 const Footer = () => {
   return (
     <footer className={`${styles.footer} wrapperWhite `}>

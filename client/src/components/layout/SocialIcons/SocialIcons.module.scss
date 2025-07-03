@@ -5,7 +5,8 @@
   display: flex;
 
   &__icon {
-    @include svg(44px, 44px);
+    width: 44px;
+    height: 44px;
 
     &:hover {
       cursor: pointer;
