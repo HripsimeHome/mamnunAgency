@@ -175,7 +175,7 @@
     width: 100%;
     transition: $transition;
 
-    @include lgScreenMedia {
+    @include xlScreenMedia {
       font-size: 18px;
       line-height: 20px;
     }
