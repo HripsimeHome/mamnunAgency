@@ -70,7 +70,7 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.25);
     min-height: var(--height);
   }
 
@@ -93,6 +93,10 @@
 
     &_reversed {
       justify-content: flex-start;
+
+      @include smScreenMedia {
+        justify-content: center;
+      }
     }
 
     &::before {
@@ -142,16 +146,7 @@
       border-radius: 10px;
       padding: 10px;
     }
-
-    // & * {
-    //   opacity: 0;
-    //   transition: $transition;
-    // }
   }
-
-  // &__card:hover &__cardBack * {
-  //   opacity: 1;
-  // }
 
   &__cardBackTitle {
     @include setFont(32px, 600, $color-secondary);

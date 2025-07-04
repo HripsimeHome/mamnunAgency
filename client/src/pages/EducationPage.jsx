@@ -1,3 +1,4 @@
+import Head from "../components/global/Head/Head";
 import EducationHeader from "../components/EducationPage/EducationHeader/EducationHeader";
 
 import EducationStudying from "../components/EducationPage/EducationStudying/EducationStudying";
@@ -18,6 +19,13 @@ import EducationFAQ from "../components/EducationPage/EducationFAQ/EducationFAQ"
 const EducationPage = () => {
   return (
     <>
+      <Head
+        keyword={""}
+        title={""}
+        ogTitle={""}
+        description={""}
+        ogDescription={""}
+      />
       <EducationHeader />
       <EducationStudying />
       <EducationStudyingAbroad />
