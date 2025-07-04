@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-
 import { homePagePath } from "../router/path";
+import Head from "../components/global/Head/Head";
 
 function CookiePolicy() {
   return (
