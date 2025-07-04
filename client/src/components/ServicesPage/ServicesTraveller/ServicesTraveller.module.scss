@@ -143,15 +143,15 @@
       padding: 10px;
     }
 
-    & * {
-      opacity: 0;
-      transition: $transition;
-    }
+    // & * {
+    //   opacity: 0;
+    //   transition: $transition;
+    // }
   }
 
-  &__card:hover &__cardBack * {
-    opacity: 1;
-  }
+  // &__card:hover &__cardBack * {
+  //   opacity: 1;
+  // }
 
   &__cardBackTitle {
     @include setFont(32px, 600, $color-secondary);
