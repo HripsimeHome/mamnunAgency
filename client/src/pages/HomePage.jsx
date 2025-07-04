@@ -1,3 +1,4 @@
+import Head from "../components/global/Head/Head";
 import HomeHeader from "../components/HomePage/HomeHeader/HomeHeader";
 import HomeBrief from "../components/HomePage/HomeBrief/HomeBrief";
 import HomeMain from "../components/HomePage/HomeMain/HomeMain";
@@ -6,6 +7,13 @@ import HomeAdminContentPage from "../components/HomePage/HomeAdminContent/HomeAd
 const HomePage = () => {
   return (
     <>
+      <Head
+        keyword={""}
+        title={""}
+        ogTitle={""}
+        description={""}
+        ogDescription={""}
+      />
       <HomeHeader />
       <HomeBrief />
       <HomeMain />

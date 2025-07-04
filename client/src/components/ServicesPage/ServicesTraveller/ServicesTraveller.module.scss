@@ -93,6 +93,10 @@
 
     &_reversed {
       justify-content: flex-start;
+
+      @include smScreenMedia {
+        justify-content: center;
+      }
     }
 
     &::before {
