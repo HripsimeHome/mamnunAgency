@@ -80,12 +80,22 @@ const AdminNewsAddEditModal = ({
   const onClickUploadImg = (e) => {
     e.target.value = "";
   };
+
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const { image, ...form } = formData;
     try {
+      const data = {
+        ...form,
+        ...(typeof formData.image === "string"
+          ? {}
+          : { image: formData.image }),
+      };
+
       await dispatch(
-        submitAction(isEdit ? { ...formData, id: newsData.id } : formData)
+        submitAction(isEdit ? { ...data, id: newsData.id } : formData)
       ).unwrap();
       dispatch(openTooltip(`News ${isEdit ? "Edited" : "Added"}`));
       await fetchData();
@@ -95,7 +105,6 @@ const AdminNewsAddEditModal = ({
     }
     setLoading(false);
   };
-  console.log({ formData });
 
   return (
     <Modal
