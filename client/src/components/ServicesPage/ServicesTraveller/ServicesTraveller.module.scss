@@ -71,6 +71,7 @@
     backface-visibility: hidden;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    min-height: var(--height);
   }
 
   &__cardFront {
