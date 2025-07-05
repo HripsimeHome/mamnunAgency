@@ -60,8 +60,8 @@
 
 @mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
   width: $width;
-  height: $height;
   fill: $color;
+  height: $height;
   stroke: $stroke;
 }
 

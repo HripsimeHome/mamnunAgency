@@ -1,0 +1,13 @@
+@import "../../../styles/mixins";
+
+.servicesHeader {
+  &__subtitleMain {
+    display: inline;
+  }
+
+  &__subtitleExtra {
+    @include smScreenMedia {
+      display: none;
+    }
+  }
+}
