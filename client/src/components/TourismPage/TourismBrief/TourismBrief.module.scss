@@ -12,7 +12,7 @@
       "text1 image"
       "text2 image";
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       grid-template-columns: 1fr;
       grid-template-areas:
         "text1"
