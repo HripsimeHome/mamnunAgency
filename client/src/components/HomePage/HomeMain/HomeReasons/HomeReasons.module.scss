@@ -5,10 +5,7 @@
   &__cardContainer {
     margin-bottom: 200px;
     margin-top: 56px;
-    @include bgWebp(
-      "../../../../assets/images/home/reasons/homereasonsLinebg.png",
-      "../../../../assets/images/home/reasons/homereasonsLinebg.webp"
-    );
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,21 +16,34 @@
     min-height: 600px;
     gap: 50px;
     transition: $transition;
+    position: relative;
 
     @include xxlScreenMedia {
       max-width: 500px;
       margin-inline: auto;
       background: none;
       aspect-ratio: unset;
-    }
-
-    &_active {
       @include xxlScreenMedia {
         @include bgWebp(
           "../../../../assets/images/home/reasons/homereasonsLinebgMob.png",
           "../../../../assets/images/home/reasons/homereasonsLinebgMob.webp"
         );
       }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-secondary;
+        transition: all 2s;
+      }
+    }
+
+    &_active::after {
+      height: 0%;
     }
 
     @include xxlScreenMedia {
@@ -46,34 +56,49 @@
     }
   }
 
+  &__video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: inherit;
+
+    @include xxlScreenMedia {
+      display: none;
+    }
+  }
+
   &__card {
     @include flexCol();
     flex-direction: column;
     text-align: center;
     line-height: 30px;
     position: absolute;
+    z-index: 1;
 
-    &:nth-child(1) {
+    &:nth-child(2) {
       left: 0;
       top: 0;
       max-width: 390px;
     }
-    &:nth-child(2) {
+    &:nth-child(3) {
       right: 13.6%;
       top: 3%;
       max-width: 335px;
     }
-    &:nth-child(3) {
+    &:nth-child(4) {
       left: 0;
       bottom: 0;
       max-width: 422px;
     }
-    &:nth-child(4) {
+    &:nth-child(5) {
       left: 32%;
       bottom: 23%;
       max-width: 482px;
     }
-    &:nth-child(5) {
+    &:nth-child(6) {
       right: 3%;
       bottom: 15%;
       max-width: 422px;

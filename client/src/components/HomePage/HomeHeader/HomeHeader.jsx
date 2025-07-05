@@ -75,7 +75,7 @@ const HomeHeader = () => {
         {mottos.map((motto, index) => (
           <TransitionProvider
             inProp={index === activeMottoIndex}
-            style={TransitionStyleTypes.left}
+            style={TransitionStyleTypes.leftToRight}
             className={styles.homeHeader__mottoTextWrapper}
             key={index}
           >
