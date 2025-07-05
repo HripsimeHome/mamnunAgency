@@ -6,11 +6,17 @@ function CookiePolicy() {
   return (
     <>
       <Head
-        keyword={""}
-        title={""}
-        ogTitle={""}
-        description={""}
-        ogDescription={""}
+        keyword={
+          "cookies policy, website cookies, cookie settings, manage cookies, use of cookies, essential cookies, functional cookies, analytical cookies, user preferences, website privacy, cookie consent"
+        }
+        title={"Cookies Policy | Cookies Use & Preferences | MAMNUN Agency"}
+        ogTitle={"Cookies Policy | Cookies Use & Preferences | MAMNUN Agency"}
+        description={
+          "Learn how we use cookies to enhance your experience, ensure smooth functionality, and remember preferences for a more personalized visit"
+        }
+        ogDescription={
+          "Learn how we use cookies to enhance your experience, ensure smooth functionality, and remember preferences for a more personalized visit"
+        }
       />
       <section className="container doc wrapperPadding">
         <h1>Cookies Policy for MAMNUN Agency</h1>

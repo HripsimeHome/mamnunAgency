@@ -4,11 +4,17 @@ function PrivacyPolicyPage() {
   return (
     <>
       <Head
-        keyword={""}
-        title={""}
-        ogTitle={""}
-        description={""}
-        ogDescription={""}
+        keyword={
+          "privacy policy, personal data protection, GDPR compliance, data processing, data security, user data rights, data retention, MAMNUN Agency privacy, data privacy laws, data protection policy"
+        }
+        title={"Privacy Policy | Data Protection & GDPR | MAMNUN Agency"}
+        ogTitle={"Privacy Policy | Data Protection & GDPR | MAMNUN Agency"}
+        description={
+          "Protecting your personal data is our priority. Learn how MAMNUN Agency collects and safeguards your information following GDPR and applicable laws."
+        }
+        ogDescription={
+          "Protecting your personal data is our priority. Learn how MAMNUN Agency collects and safeguards your information following GDPR and applicable laws."
+        }
       />
       <section className="container doc wrapperWhite wrapperPadding">
         <h1>Privacy Policy for MAMNUN Agency</h1>
