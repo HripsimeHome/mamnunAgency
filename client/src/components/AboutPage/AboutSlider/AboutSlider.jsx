@@ -31,8 +31,8 @@ import {
   feedbackWebpImage,
   trustImage,
   trustIWebpImage,
-  partnersWhiteImage,
-  partnersWhiteWebpImage,
+  partnersBlackImage,
+  partnersBlackWebpImage,
 } from "../../../assets/images";
 import { useRef } from "react";
 import Svg from "../../layout/Svg/Svg";
@@ -143,8 +143,8 @@ const slideData = [
   },
 
   {
-    image: partnersWhiteImage,
-    webpImage: partnersWhiteWebpImage,
+    image: partnersBlackImage,
+    webpImage: partnersBlackWebpImage,
     alt: "Trusted education and travel partner",
     description:
       "Choose MAMNUN as your trusted partner in education and travel, and let us help you turn your dreams into reality—ensuring your satisfaction every step of the way!",
