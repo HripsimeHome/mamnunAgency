@@ -5,8 +5,12 @@
   display: flex;
 
   &__icon {
-    width: 44px;
-    height: 44px;
+    @include svg(44px, 44px, black, black);
+
+    &:hover {
+      stroke: $color-primary;
+      fill: $color-primary;
+    }
 
     &:hover {
       cursor: pointer;
