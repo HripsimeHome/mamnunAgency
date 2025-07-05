@@ -17,7 +17,7 @@
       grid-template-columns: 55% 40%;
     }
 
-    @include mdScreenMedia {
+    @include lgScreenMedia {
       grid-template-columns: 1fr;
       grid-template-areas:
         "text1"

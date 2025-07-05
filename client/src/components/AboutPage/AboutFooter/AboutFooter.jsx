@@ -1,5 +1,7 @@
 import styles from "./AboutFooter.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+import { Link } from "react-router-dom";
+import { contactsPagePath } from "../../../router/path";
 
 import {
   companyLabelImage,
@@ -25,12 +27,14 @@ const AboutFooter = () => {
         >
           <h2 className={styles.aboutFooter__text}>
             Feel free to&nbsp;
-            <span className="textPrimary">reach out&nbsp;</span>
+            <Link to={contactsPagePath}>
+              <span className="textPrimary">reach out&nbsp;</span>
+            </Link>
             if you have any other questions or need further assistance!
           </h2>
 
           <div>
-            <a href="#" target="_blank">
+            <a href="/" target="_blank">
               <ImageWebp
                 src={companyLabelImage}
                 srcSet={companyLabelWebpImage}
