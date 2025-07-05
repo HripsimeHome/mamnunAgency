@@ -20,11 +20,17 @@ const EducationPage = () => {
   return (
     <>
       <Head
-        keyword={""}
-        title={""}
-        ogTitle={""}
-        description={""}
-        ogDescription={""}
+        keyword={
+          "study in Uzbekistan, study abroad, education in Uzbekistan, degree programs Uzbekistan, international degree programs, scholarships for students, internships abroad, language courses abroad, summer camps for students, winter camps for students, short-term study programs, work and travel Germany, au pair programs, teacher training abroad, career support for students"
+        }
+        title={"Education & Careers | Study in Uzbekistan or Abroad"}
+        ogTitle={"Education & Careers | Study in Uzbekistan or Abroad"}
+        description={
+          "Get expert guidance on studying in Uzbekistan and abroad with MAMNUN Agency. Explore degree programs, scholarships, internships, language courses."
+        }
+        ogDescription={
+          "Get expert guidance on studying in Uzbekistan and abroad with MAMNUN Agency. Explore degree programs, scholarships, internships, language courses."
+        }
       />
       <EducationHeader />
       <EducationStudying />

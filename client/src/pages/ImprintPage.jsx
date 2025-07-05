@@ -3,11 +3,19 @@ function ImprintPage() {
   return (
     <>
       <Head
-        keyword={""}
-        title={""}
-        ogTitle={""}
-        description={""}
-        ogDescription={""}
+        keyword={
+          "imprint, company information, legal details, business address, contact information, tax identification number, LLC, MAMNUN Agency, official company data, website disclaimer"
+        }
+        title={"Imprint | Company Information & Legal Details | MAMNUN Agency"}
+        ogTitle={
+          "Imprint | Company Information & Legal Details | MAMNUN Agency"
+        }
+        description={
+          "Find MAMNUN Agency’s official company details, office and business addresses, contact info, legal structure, tax ID, and important disclaimer information"
+        }
+        ogDescription={
+          "Find MAMNUN Agency’s official company details, office and business addresses, contact info, legal structure, tax ID, and important disclaimer information"
+        }
       />
       <section className="container doc wrapperPadding">
         <h1>Imprint</h1>
