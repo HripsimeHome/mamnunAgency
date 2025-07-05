@@ -121,6 +121,7 @@ const AboutHeader = () => {
         <div ref={ref} className={styles.aboutHeader__briefContainer}>
           <TransitionProvider
             inProp={isInView}
+            delay={300}
             style={TransitionStyleTypes.left}
             className={`${styles.aboutHeader__briefBlock} width60`}
           >
@@ -139,6 +140,7 @@ const AboutHeader = () => {
 
           <TransitionProvider
             inProp={isInView}
+            delay={300}
             style={TransitionStyleTypes.right}
             className={`${styles.aboutHeader__briefBlock} width40`}
           >
