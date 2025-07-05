@@ -51,7 +51,7 @@ const AboutHeader = () => {
               className={styles.aboutHeader__logoAnim}
               pictureClass={styles.aboutHeader__logoAnimPicture}
             />
-            <div className={styles.aboutHeader__assetCol}>
+            <div className={styles.aboutHeader__assets}>
               <ImageWebp
                 src={aboutLogoAsset1Image}
                 srcSet={aboutLogoAsset1WebpImage}
@@ -66,9 +66,7 @@ const AboutHeader = () => {
                 pictureClass={styles.aboutHeader__assetImgPicture}
                 className={styles.aboutHeader__assetImg}
               />
-            </div>
 
-            <div className={styles.aboutHeader__assetCol}>
               <ImageWebp
                 src={aboutLogoAsset3Image}
                 srcSet={aboutLogoAsset3WebpImage}
@@ -83,9 +81,7 @@ const AboutHeader = () => {
                 pictureClass={styles.aboutHeader__assetImgPicture}
                 className={styles.aboutHeader__assetImg}
               />
-            </div>
 
-            <div className={styles.aboutHeader__assetCol}>
               <ImageWebp
                 src={aboutLogoAsset5Image}
                 srcSet={aboutLogoAsset5WebpImage}
@@ -100,8 +96,6 @@ const AboutHeader = () => {
                 pictureClass={styles.aboutHeader__assetImgPicture}
                 className={styles.aboutHeader__assetImg}
               />
-            </div>
-            <div className={styles.aboutHeader__assetCol}>
               <ImageWebp
                 src={aboutLogoAsset7Image}
                 srcSet={aboutLogoAsset7WebpImage}
@@ -127,6 +121,7 @@ const AboutHeader = () => {
         <div ref={ref} className={styles.aboutHeader__briefContainer}>
           <TransitionProvider
             inProp={isInView}
+            delay={300}
             style={TransitionStyleTypes.left}
             className={`${styles.aboutHeader__briefBlock} width60`}
           >
@@ -145,6 +140,7 @@ const AboutHeader = () => {
 
           <TransitionProvider
             inProp={isInView}
+            delay={300}
             style={TransitionStyleTypes.right}
             className={`${styles.aboutHeader__briefBlock} width40`}
           >

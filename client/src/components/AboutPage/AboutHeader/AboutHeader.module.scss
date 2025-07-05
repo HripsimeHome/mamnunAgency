@@ -14,10 +14,6 @@
     overflow: hidden;
 
     @include lgScreenMedia {
-      grid-template-columns: 55% 40%;
-    }
-
-    @include lgScreenMedia {
       grid-template-columns: 1fr;
       grid-template-areas:
         "text1"
@@ -83,32 +79,43 @@
     z-index: 2;
   }
 
-  &__assetCol {
+  &__assetImgPicture {
     position: absolute;
-    left: 50%;
-    top: 0;
-    height: 100%;
-    @include flexCol(space-between);
-    flex-direction: column;
-    animation-duration: 40s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+
+    &:nth-child(1) {
+      top: 5%;
+      left: 10%;
+    }
 
     &:nth-child(2) {
-      animation-name: assetsAnim1;
+      bottom: 0;
+      left: 10%;
     }
     &:nth-child(3) {
-      animation-name: assetsAnim2;
+      right: 0;
+      top: 30%;
     }
     &:nth-child(4) {
-      animation-name: assetsAnim3;
+      right: 0;
+      bottom: 10%;
     }
     &:nth-child(5) {
-      animation-name: assetsAnim4;
+      top: 0;
+      left: 0;
     }
-  }
+    &:nth-child(6) {
+      top: 5%;
+      right: 10%;
+    }
+    &:nth-child(7) {
+      top: 40%;
+      left: 0%;
+    }
 
-  &__assetImgPicture {
+    &:nth-child(n + 4) {
+      animation: rotate 20s linear infinite;
+    }
+
     @include smScreenMedia {
       max-height: 20%;
     }
@@ -177,46 +184,20 @@
   }
 }
 
-@keyframes assetsAnim1 {
+@keyframes rotate {
   from {
-    transform: translateX(-50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: translateX(-50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes assetsAnim2 {
-  from {
-    transform: translateX(-50%) rotate(45deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(405deg);
-  }
-}
-
-@keyframes assetsAnim3 {
-  from {
-    transform: translateX(-50%) rotate(90deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(450deg);
-  }
-}
-
-@keyframes assetsAnim4 {
-  from {
-    transform: translateX(-50%) rotate(135deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(495deg);
-  }
-}
 @keyframes logoAnim {
   from {
-    transform: scale(0) rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: scale(1) rotate(720deg);
+    opacity: 1;
   }
 }

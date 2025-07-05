@@ -5,6 +5,7 @@ export const TransitionStyleTypes = {
   opacity: "opacity",
   right: "right",
   left: "left",
+  leftToRight: "leftToRight",
   top: "top",
   bottom: "bottom",
   zoomIn: "zoomIn",
@@ -37,6 +38,11 @@ const TransitionProvider = ({
       from: { opacity: 0, translateX: "-60px" },
       enter: { opacity: 1, translateX: "0%" },
       leave: { opacity: 0, translateX: "-60px" },
+    },
+    [TransitionStyleTypes.leftToRight]: {
+      from: { opacity: 0, translateX: "100%" },
+      enter: { opacity: 1, translateX: "0%" },
+      leave: { opacity: 0, translateX: "-100%" },
     },
     [TransitionStyleTypes.top]: {
       from: { opacity: 0, translateY: "-60px" },

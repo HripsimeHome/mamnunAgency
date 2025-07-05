@@ -11,13 +11,13 @@ import {
   educationPagePath,
   servicesPagePath,
 } from "../../../router/path";
-import { homeVideoPosterImage } from "../../../assets/images";
 import { useLazy } from "../../../hooks/useLazy";
 
 const HomeHeader = () => {
   const navigate = useNavigate();
   const [activeMottoIndex, setActiveMottoIndex] = useState(0);
   const { ref, isInView } = useLazy(0.6);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   const mottos = [
     {
@@ -53,26 +53,29 @@ const HomeHeader = () => {
   }, []);
   return (
     <section ref={ref} className={styles.homeHeader}>
-      {(true || process.env.NODE_ENV !== "development") && (
-        <video
-          autoPlay
-          muted
-          loop
-          className={styles.homeHeader__video}
-          poster={homeVideoPosterImage}
-          playsInline
-        >
-          Your browser does not support the video tag.
-          <source src="/videos/home/home.webm" type="video/mp4" />
-          <source src="/videos/home/home.mp4" type="video/mp4" />
-        </video>
-      )}
-
+      <div className={styles.homeHeader__videoWrapper}>
+        {(true || process.env.NODE_ENV !== "development") && (
+          <video
+            autoPlay
+            muted
+            loop
+            onCanPlay={() => setVideoLoaded(true)}
+            className={`${styles.homeHeader__video} ${
+              videoLoaded ? styles.homeHeader__video_loaded : ""
+            }`}
+            playsInline
+          >
+            Your browser does not support the video tag.
+            <source src="/videos/home/home.webm" type="video/mp4" />
+            <source src="/videos/home/home.mp4" type="video/mp4" />
+          </video>
+        )}
+      </div>
       <div className={styles.homeHeader__mottoTextContainer}>
         {mottos.map((motto, index) => (
           <TransitionProvider
             inProp={index === activeMottoIndex}
-            style={TransitionStyleTypes.left}
+            style={TransitionStyleTypes.leftToRight}
             className={styles.homeHeader__mottoTextWrapper}
             key={index}
           >
