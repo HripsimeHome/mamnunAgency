@@ -645,7 +645,7 @@ export {
   integrityWebpImage,
   newsImage,
 
-  // Home Accordion
+  // Home  Accordion
   careersWhiteImage,
   careersWhiteWebpImage,
   careersBlackImage,
