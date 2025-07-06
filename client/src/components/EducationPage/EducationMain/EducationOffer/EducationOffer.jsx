@@ -98,10 +98,10 @@ const offerData = [
 ];
 
 const Panel = ({ index, icon, title, description, setVisited, active }) => {
-  const { ref, isInView } = useLazy(0.3, undefined, true);
+  const { ref, isInView } = useLazy(0.8);
 
   useEffect(() => {
-    if (isInView) setVisited(index);
+    if (isInView) setVisited((prev) => (prev >= index ? prev : index));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
@@ -142,7 +142,7 @@ const EducationOffer = () => {
               {...offer}
               index={index}
               setVisited={setActivePanelIndex}
-              active={activePanelIndex === index}
+              active={activePanelIndex >= index}
             />
           ))}
         </div>

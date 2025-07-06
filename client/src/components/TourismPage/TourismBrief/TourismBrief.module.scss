@@ -3,6 +3,7 @@
 
 .tourismBrief {
   min-height: 400px;
+  overflow: hidden;
 
   &__content {
     display: grid;
