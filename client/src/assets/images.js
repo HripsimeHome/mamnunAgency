@@ -408,8 +408,36 @@ import accessWhiteImage from "./images/education/studying/iconsAbroad/accessWhit
 import accessWhiteWebpImage from "./images/education/studying/iconsAbroad/accessWhite.webp";
 
 // Education - Stories
-import storyImage from "./images/education/stories/story.jpg";
-import storyWebpImage from "./images/education/stories/story.webp";
+
+import OtabekImage from "./images/education/stories/Otabek.jpg";
+import OtabekWebpImage from "./images/education/stories/Otabek.webp";
+
+import FarrukhImage from "./images/education/stories/Farrukh.jpg";
+import FarrukhWebpImage from "./images/education/stories/Farrukh.webp";
+
+import JonyImage from "./images/education/stories/Jony.jpg";
+import JonyWebpImage from "./images/education/stories/Jony.webp";
+
+import MukhammadBoburImage from "./images/education/stories/MukhammadBobur.jpg";
+import MukhammadBoburWebpImage from "./images/education/stories/MukhammadBobur.webp";
+
+import DilafruzImage from "./images/education/stories/Dilafruz.jpg";
+import DilafruzWebpImage from "./images/education/stories/Dilafruz.webp";
+
+import AlphaImage from "./images/education/stories/Alpha.jpg";
+import AlphaWebpImage from "./images/education/stories/Alpha.webp";
+
+import JasminImage from "./images/education/stories/Jasmin.jpg";
+import JasminWebpImage from "./images/education/stories/Jasmin.webp";
+
+import NilufarImage from "./images/education/stories/Nilufar.jpg";
+import NilufarWebpImage from "./images/education/stories/Nilufar.webp";
+
+import MukhabbatOImage from "./images/education/stories/MukhabbatO.jpg";
+import MukhabbatOWebpImage from "./images/education/stories/MukhabbatO.webp";
+
+import AygerimImage from "./images/education/stories/Aygerim.jpg";
+import AygerimWebpImage from "./images/education/stories/Aygerim.webp";
 
 //Education - Scholarships
 
@@ -751,11 +779,29 @@ export {
   visitImage,
   visitWebpImage,
 
-  //Education
-  storyImage,
-  storyWebpImage,
+  //Educatione
   educationHeaderImage,
   educationHeaderWebpImage,
+  OtabekImage,
+  OtabekWebpImage,
+  FarrukhImage,
+  FarrukhWebpImage,
+  JonyImage,
+  JonyWebpImage,
+  MukhammadBoburImage,
+  MukhammadBoburWebpImage,
+  DilafruzImage,
+  DilafruzWebpImage,
+  AlphaImage,
+  AlphaWebpImage,
+  JasminImage,
+  JasminWebpImage,
+  NilufarImage,
+  NilufarWebpImage,
+  MukhabbatOImage,
+  MukhabbatOWebpImage,
+  AygerimImage,
+  AygerimWebpImage,
 
   // Education - Accordion
   accordionMinusImage,
