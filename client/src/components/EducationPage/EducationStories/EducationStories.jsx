@@ -2,7 +2,7 @@ import styles from "./EducationStories.module.scss";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { sliderArrowLeftIcon, sliderArrowRightIcon } from "../../../assets/svg";
 import "swiper/css/pagination";
 // import "./sliderDots.scss";
@@ -157,12 +157,12 @@ const EducationStories = () => {
             className={styles.educationStories__slider}
             spaceBetween={20}
             centeredSlides={false}
-            // loop
-            // autoplay={{
-            //   disableOnInteraction: false,
-            //   pauseOnMouseEnter: true,
-            // }}
-            modules={[Navigation, Pagination, Autoplay]}
+            loop
+            autoplay={{
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Navigation, Autoplay]}
             pagination={{
               clickable: true,
               renderBullet: (index, className) =>

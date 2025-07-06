@@ -90,7 +90,8 @@ export const footerMenuItems = [
       {
         text: (
           <>
-            <span className="mediumText">Company Name:</span> MAMNUN Agency
+            <span className="mediumText">Company Name:</span>
+            <span className="lightText">&nbsp;MAMNUN Agency</span>
           </>
         ),
       },
@@ -98,7 +99,8 @@ export const footerMenuItems = [
       {
         text: (
           <>
-            <span className="mediumText">Address:</span> {address}
+            <span className="mediumText">Address:</span>
+            <span className="lightText">&nbsp;{address}</span>
           </>
         ),
       },
@@ -108,7 +110,7 @@ export const footerMenuItems = [
           <>
             <span className="mediumText">Email:</span>{" "}
             <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
-              {email}
+              <span className="lightText">{email}</span>
             </a>
           </>
         ),

@@ -236,6 +236,81 @@ import gallerySlide8WebpImage from "./images/tourism/gallery/gallerySlide8.webp"
 import gallerySlide9Image from "./images/tourism/gallery/gallerySlide9.jpg";
 import gallerySlide9WebpImage from "./images/tourism/gallery/gallerySlide9.webp";
 
+import gallerySlide10Image from "./images/tourism/gallery/gallerySlide10.jpg";
+import gallerySlide10WebpImage from "./images/tourism/gallery/gallerySlide10.webp";
+
+import gallerySlide11Image from "./images/tourism/gallery/gallerySlide11.jpg";
+import gallerySlide11WebpImage from "./images/tourism/gallery/gallerySlide11.webp";
+
+import gallerySlide12Image from "./images/tourism/gallery/gallerySlide12.jpg";
+import gallerySlide12WebpImage from "./images/tourism/gallery/gallerySlide12.webp";
+
+import gallerySlide13Image from "./images/tourism/gallery/gallerySlide13.jpg";
+import gallerySlide13WebpImage from "./images/tourism/gallery/gallerySlide13.webp";
+
+import gallerySlide14Image from "./images/tourism/gallery/gallerySlide14.jpg";
+import gallerySlide14WebpImage from "./images/tourism/gallery/gallerySlide14.webp";
+
+import gallerySlide15Image from "./images/tourism/gallery/gallerySlide15.jpg";
+import gallerySlide15WebpImage from "./images/tourism/gallery/gallerySlide15.webp";
+
+import gallerySlide16Image from "./images/tourism/gallery/gallerySlide16.jpg";
+import gallerySlide16WebpImage from "./images/tourism/gallery/gallerySlide16.webp";
+
+import gallerySlide17Image from "./images/tourism/gallery/gallerySlide17.jpg";
+import gallerySlide17WebpImage from "./images/tourism/gallery/gallerySlide17.webp";
+
+import gallerySlide18Image from "./images/tourism/gallery/gallerySlide18.jpg";
+import gallerySlide18WebpImage from "./images/tourism/gallery/gallerySlide18.webp";
+
+import gallerySlide19Image from "./images/tourism/gallery/gallerySlide19.jpg";
+import gallerySlide19WebpImage from "./images/tourism/gallery/gallerySlide19.webp";
+
+import gallerySlide20Image from "./images/tourism/gallery/gallerySlide20.jpg";
+import gallerySlide20WebpImage from "./images/tourism/gallery/gallerySlide20.webp";
+
+import gallerySlide21Image from "./images/tourism/gallery/gallerySlide21.jpg";
+import gallerySlide21WebpImage from "./images/tourism/gallery/gallerySlide21.webp";
+
+import gallerySlide22Image from "./images/tourism/gallery/gallerySlide22.jpg";
+import gallerySlide22WebpImage from "./images/tourism/gallery/gallerySlide22.webp";
+
+import gallerySlide23Image from "./images/tourism/gallery/gallerySlide23.jpg";
+import gallerySlide23WebpImage from "./images/tourism/gallery/gallerySlide23.webp";
+
+import gallerySlide24Image from "./images/tourism/gallery/gallerySlide24.jpg";
+import gallerySlide24WebpImage from "./images/tourism/gallery/gallerySlide24.webp";
+
+import gallerySlide25Image from "./images/tourism/gallery/gallerySlide25.jpg";
+import gallerySlide25WebpImage from "./images/tourism/gallery/gallerySlide25.webp";
+
+import gallerySlide26Image from "./images/tourism/gallery/gallerySlide26.jpg";
+import gallerySlide26WebpImage from "./images/tourism/gallery/gallerySlide26.webp";
+
+import gallerySlide27Image from "./images/tourism/gallery/gallerySlide27.jpg";
+import gallerySlide27WebpImage from "./images/tourism/gallery/gallerySlide27.webp";
+
+import gallerySlide28Image from "./images/tourism/gallery/gallerySlide28.jpg";
+import gallerySlide28WebpImage from "./images/tourism/gallery/gallerySlide28.webp";
+
+import gallerySlide29Image from "./images/tourism/gallery/gallerySlide29.jpg";
+import gallerySlide29WebpImage from "./images/tourism/gallery/gallerySlide29.webp";
+
+import gallerySlide30Image from "./images/tourism/gallery/gallerySlide30.jpg";
+import gallerySlide30WebpImage from "./images/tourism/gallery/gallerySlide30.webp";
+
+import gallerySlide31Image from "./images/tourism/gallery/gallerySlide31.jpg";
+import gallerySlide31WebpImage from "./images/tourism/gallery/gallerySlide31.webp";
+
+import gallerySlide32Image from "./images/tourism/gallery/gallerySlide32.jpg";
+import gallerySlide32WebpImage from "./images/tourism/gallery/gallerySlide32.webp";
+
+import gallerySlide33Image from "./images/tourism/gallery/gallerySlide33.jpg";
+import gallerySlide33WebpImage from "./images/tourism/gallery/gallerySlide33.webp";
+
+import gallerySlide34Image from "./images/tourism/gallery/gallerySlide34.jpg";
+import gallerySlide34WebpImage from "./images/tourism/gallery/gallerySlide34.webp";
+
 //Tourism Packeages
 import classicTourImage from "./images/tourism/packages/icons/classicTour.png";
 import classicTourWebpImage from "./images/tourism/packages/icons/classicTour.webp";
@@ -762,6 +837,56 @@ export {
   gallerySlide8WebpImage,
   gallerySlide9Image,
   gallerySlide9WebpImage,
+  gallerySlide10Image,
+  gallerySlide10WebpImage,
+  gallerySlide11Image,
+  gallerySlide11WebpImage,
+  gallerySlide12Image,
+  gallerySlide12WebpImage,
+  gallerySlide13Image,
+  gallerySlide13WebpImage,
+  gallerySlide14Image,
+  gallerySlide14WebpImage,
+  gallerySlide15Image,
+  gallerySlide15WebpImage,
+  gallerySlide16Image,
+  gallerySlide16WebpImage,
+  gallerySlide17Image,
+  gallerySlide17WebpImage,
+  gallerySlide18Image,
+  gallerySlide18WebpImage,
+  gallerySlide19Image,
+  gallerySlide19WebpImage,
+  gallerySlide20Image,
+  gallerySlide20WebpImage,
+  gallerySlide21Image,
+  gallerySlide21WebpImage,
+  gallerySlide22Image,
+  gallerySlide22WebpImage,
+  gallerySlide23Image,
+  gallerySlide23WebpImage,
+  gallerySlide24Image,
+  gallerySlide24WebpImage,
+  gallerySlide25Image,
+  gallerySlide25WebpImage,
+  gallerySlide26Image,
+  gallerySlide26WebpImage,
+  gallerySlide27Image,
+  gallerySlide27WebpImage,
+  gallerySlide28Image,
+  gallerySlide28WebpImage,
+  gallerySlide29Image,
+  gallerySlide29WebpImage,
+  gallerySlide30Image,
+  gallerySlide30WebpImage,
+  gallerySlide31Image,
+  gallerySlide31WebpImage,
+  gallerySlide32Image,
+  gallerySlide32WebpImage,
+  gallerySlide33Image,
+  gallerySlide33WebpImage,
+  gallerySlide34Image,
+  gallerySlide34WebpImage,
 
   //Tourism Packeages
   classicTourImage,

@@ -20,6 +20,56 @@ import {
   gallerySlide8WebpImage,
   gallerySlide9Image,
   gallerySlide9WebpImage,
+  gallerySlide10Image,
+  gallerySlide10WebpImage,
+  gallerySlide11Image,
+  gallerySlide11WebpImage,
+  gallerySlide12Image,
+  gallerySlide12WebpImage,
+  gallerySlide13Image,
+  gallerySlide13WebpImage,
+  gallerySlide14Image,
+  gallerySlide14WebpImage,
+  gallerySlide15Image,
+  gallerySlide15WebpImage,
+  gallerySlide16Image,
+  gallerySlide16WebpImage,
+  gallerySlide17Image,
+  gallerySlide17WebpImage,
+  gallerySlide18Image,
+  gallerySlide18WebpImage,
+  gallerySlide19Image,
+  gallerySlide19WebpImage,
+  gallerySlide20Image,
+  gallerySlide20WebpImage,
+  gallerySlide21Image,
+  gallerySlide21WebpImage,
+  gallerySlide22Image,
+  gallerySlide22WebpImage,
+  gallerySlide23Image,
+  gallerySlide23WebpImage,
+  gallerySlide24Image,
+  gallerySlide24WebpImage,
+  gallerySlide25Image,
+  gallerySlide25WebpImage,
+  gallerySlide26Image,
+  gallerySlide26WebpImage,
+  gallerySlide27Image,
+  gallerySlide27WebpImage,
+  gallerySlide28Image,
+  gallerySlide28WebpImage,
+  gallerySlide29Image,
+  gallerySlide29WebpImage,
+  gallerySlide30Image,
+  gallerySlide30WebpImage,
+  gallerySlide31Image,
+  gallerySlide31WebpImage,
+  gallerySlide32Image,
+  gallerySlide32WebpImage,
+  gallerySlide33Image,
+  gallerySlide33WebpImage,
+  gallerySlide34Image,
+  gallerySlide34WebpImage,
 } from "../../../../assets/images";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -63,6 +113,106 @@ const galleryImages = [
   {
     image: gallerySlide9Image,
     webp: gallerySlide9WebpImage,
+  },
+  {
+    image: gallerySlide10Image,
+    webp: gallerySlide10WebpImage,
+  },
+  {
+    image: gallerySlide11Image,
+    webp: gallerySlide11WebpImage,
+  },
+  {
+    image: gallerySlide12Image,
+    webp: gallerySlide12WebpImage,
+  },
+  {
+    image: gallerySlide13Image,
+    webp: gallerySlide13WebpImage,
+  },
+  {
+    image: gallerySlide14Image,
+    webp: gallerySlide14WebpImage,
+  },
+  {
+    image: gallerySlide15Image,
+    webp: gallerySlide15WebpImage,
+  },
+  {
+    image: gallerySlide16Image,
+    webp: gallerySlide16WebpImage,
+  },
+  {
+    image: gallerySlide17Image,
+    webp: gallerySlide17WebpImage,
+  },
+  {
+    image: gallerySlide18Image,
+    webp: gallerySlide18WebpImage,
+  },
+  {
+    image: gallerySlide19Image,
+    webp: gallerySlide19WebpImage,
+  },
+  {
+    image: gallerySlide20Image,
+    webp: gallerySlide20WebpImage,
+  },
+  {
+    image: gallerySlide21Image,
+    webp: gallerySlide21WebpImage,
+  },
+  {
+    image: gallerySlide22Image,
+    webp: gallerySlide22WebpImage,
+  },
+  {
+    image: gallerySlide23Image,
+    webp: gallerySlide23WebpImage,
+  },
+  {
+    image: gallerySlide24Image,
+    webp: gallerySlide24WebpImage,
+  },
+  {
+    image: gallerySlide25Image,
+    webp: gallerySlide25WebpImage,
+  },
+  {
+    image: gallerySlide26Image,
+    webp: gallerySlide26WebpImage,
+  },
+  {
+    image: gallerySlide27Image,
+    webp: gallerySlide27WebpImage,
+  },
+  {
+    image: gallerySlide28Image,
+    webp: gallerySlide28WebpImage,
+  },
+  {
+    image: gallerySlide29Image,
+    webp: gallerySlide29WebpImage,
+  },
+  {
+    image: gallerySlide30Image,
+    webp: gallerySlide30WebpImage,
+  },
+  {
+    image: gallerySlide31Image,
+    webp: gallerySlide31WebpImage,
+  },
+  {
+    image: gallerySlide32Image,
+    webp: gallerySlide32WebpImage,
+  },
+  {
+    image: gallerySlide33Image,
+    webp: gallerySlide33WebpImage,
+  },
+  {
+    image: gallerySlide34Image,
+    webp: gallerySlide34WebpImage,
   },
 ];
 
