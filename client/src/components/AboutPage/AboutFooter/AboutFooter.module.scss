@@ -44,6 +44,12 @@
     }
   }
 
+  &__textLink {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__img {
     max-width: 60%;
     width: 100%;

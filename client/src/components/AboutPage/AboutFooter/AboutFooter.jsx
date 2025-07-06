@@ -27,7 +27,10 @@ const AboutFooter = () => {
         >
           <h2 className={styles.aboutFooter__text}>
             Feel free to&nbsp;
-            <Link to={contactsPagePath}>
+            <Link
+              to={contactsPagePath}
+              className={styles.aboutFooter__textLink}
+            >
               <span className="textPrimary">reach out&nbsp;</span>
             </Link>
             if you have any other questions or need further assistance!
