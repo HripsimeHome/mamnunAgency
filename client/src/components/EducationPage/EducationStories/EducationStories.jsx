@@ -139,7 +139,6 @@ const storyData = [
 const EducationStories = () => {
   const nextButtonRef = useRef(null);
   const prevButtonRef = useRef(null);
-  const paginationContainerRef = useRef(null);
 
   return (
     <section
@@ -163,11 +162,6 @@ const EducationStories = () => {
               pauseOnMouseEnter: true,
             }}
             modules={[Navigation, Autoplay]}
-            pagination={{
-              clickable: true,
-              renderBullet: (index, className) =>
-                `<span class="${className}">${index + 1}</span>`,
-            }}
             onSwiper={(swiper) => {
               // Update navigation elements after refs are set
               swiper.params.navigation.nextEl = nextButtonRef.current;
@@ -175,7 +169,6 @@ const EducationStories = () => {
               swiper.navigation.destroy();
               swiper.navigation.init();
               swiper.navigation.update();
-              swiper.params.pagination.el = paginationContainerRef.current;
             }}
             breakpoints={{
               576: {
@@ -256,10 +249,6 @@ const EducationStories = () => {
               >
                 <Svg id={sliderArrowLeftIcon} />
               </button>
-              <div
-                className={styles.educationStories__pagination}
-                ref={paginationContainerRef}
-              ></div>
               <button
                 ref={nextButtonRef}
                 className={styles.educationStories__sliderNavBtn}

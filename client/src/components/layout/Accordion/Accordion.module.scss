@@ -74,13 +74,13 @@
 
   &__bgImg {
     position: absolute;
-    left: -50px;
+    left: -20px;
     top: -50px;
     width: 100px;
     z-index: 0;
 
     @include xxlScreenMedia {
-      left: -20px;
+      left: -10px;
     }
 
     @include smScreenMedia {
