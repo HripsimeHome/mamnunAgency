@@ -31,17 +31,24 @@
     height: var(--height);
     min-height: var(--height);
 
+    @include xlScreenMedia {
+      --height: 300px;
+    }
+
     @include lgScreenMedia {
-      --height: 172px;
+      --height: 250px;
     }
 
     @include smScreenMedia {
-      --height: 77px;
+      //--height: 200px;
+      margin-bottom: 10px;
     }
 
-    &:hover {
-      height: auto;
-      max-height: 100vh;
+    /* Show back with fade on hover */
+    &:hover .servicesTraveller__cardBack {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
   }
 
@@ -55,12 +62,6 @@
     min-height: var(--height);
 
     border-radius: 20px;
-  }
-
-  &__card:hover &__cardInner {
-    transform: rotateY(180deg);
-    max-height: 100vh;
-    height: auto;
   }
 
   &__cardFront,
@@ -129,13 +130,21 @@
   &__cardBack {
     background-color: $color-white;
     border: 4px solid $color-secondary;
-    transform: rotateY(180deg);
+    transform: none; /* no rotation */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 25px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+
+    box-sizing: border-box;
+    height: 100%;
+    min-height: var(--height);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 1.2s ease, visibility 0.1s ease;
 
     @include mdScreenMedia {
       padding: 15px;

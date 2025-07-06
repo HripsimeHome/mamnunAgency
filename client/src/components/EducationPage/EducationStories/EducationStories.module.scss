@@ -154,12 +154,4 @@
       height: 27px;
     }
   }
-  &__pagination {
-    @include flexCol(space-around);
-  }
-}
-
-:global(.swiper-pagination) {
-  width: calc(100% - 70px) !important;
-  left: 35px !important;
 }
