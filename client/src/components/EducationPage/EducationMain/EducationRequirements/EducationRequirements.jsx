@@ -117,7 +117,7 @@ function EducationRequirements() {
                 <TransitionProvider
                   inProp={isInView}
                   style={TransitionStyleTypes.zoomIn}
-                  delay={100 * index}
+                  delay={500 * index}
                   className={styles.educationRequirements__stepContainer}
                 >
                   <div className={styles.educationRequirements__circle}>

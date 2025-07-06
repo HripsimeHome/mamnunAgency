@@ -61,7 +61,7 @@
     grid-area: animation;
     @include flexCol();
     position: relative;
-    animation: logoAnim 1s linear;
+    animation: logoAnim 3s ease-in-out forwards;
     aspect-ratio: 1/1;
     width: 100%;
     max-width: 600px;
@@ -83,17 +83,17 @@
     position: absolute;
 
     &:nth-child(1) {
-      top: 5%;
-      left: 10%;
+      top: 10%;
+      left: 13%;
     }
 
     &:nth-child(2) {
-      bottom: 0;
-      left: 10%;
+      bottom: 50px;
+      left: 12%;
     }
     &:nth-child(3) {
-      right: 0;
-      top: 30%;
+      right: 25px;
+      top: 33%;
     }
     &:nth-child(4) {
       right: 0;
