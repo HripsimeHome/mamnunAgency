@@ -261,7 +261,7 @@ const TourismServices = () => {
         </h2>
 
         {serviceSections.map((section, index) => (
-          <Section index={index} section={section} />
+          <Section index={index} key={index} section={section} />
         ))}
       </div>
     </section>
