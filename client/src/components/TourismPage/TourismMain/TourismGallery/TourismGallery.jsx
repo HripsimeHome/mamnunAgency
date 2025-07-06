@@ -230,16 +230,16 @@ const TourismGallery = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const visibleCount = isMobile ? 3 : 9;
 
-  const tumbnails = !isMobile
-    ? galleryImages
-    : galleryImages.slice(
-        Math.max(
-          0,
-          activeIndex - (activeIndex === galleryImages.length - 1 ? 2 : 1)
-        ),
-        Math.min(galleryImages.length, activeIndex + (activeIndex ? 2 : 3))
-      );
+  const half = Math.floor(visibleCount / 2);
+
+  const start = Math.max(0, activeIndex - half);
+  const end = Math.min(galleryImages.length, start + visibleCount);
+
+  // Adjust start if we're at the end so we always show `visibleCount` if possible
+  const adjustedStart = Math.max(0, end - visibleCount);
+  const tumbnails = galleryImages.slice(adjustedStart, end);
 
   return (
     <section className={`container ${styles.tourismGallery}`}>
