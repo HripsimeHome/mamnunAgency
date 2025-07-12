@@ -140,21 +140,6 @@ import trustIWebpImage from "./images/about/icons/trust.webp";
 import aboutMapImage from "./images/about/aboutMap.png";
 import aboutMapWebpImage from "./images/about/aboutMap.webp";
 
-import aboutLogoAsset1Image from "./images/about/logoAssets/aboutLoggoAsset1.png";
-import aboutLogoAsset1WebpImage from "./images/about/logoAssets/aboutLoggoAsset1.webp";
-import aboutLogoAsset2Image from "./images/about/logoAssets/aboutLoggoAsset2.png";
-import aboutLogoAsset2WebpImage from "./images/about/logoAssets/aboutLoggoAsset2.webp";
-import aboutLogoAsset3Image from "./images/about/logoAssets/aboutLoggoAsset3.png";
-import aboutLogoAsset3WebpImage from "./images/about/logoAssets/aboutLoggoAsset3.webp";
-import aboutLogoAsset4Image from "./images/about/logoAssets/aboutLoggoAsset4.png";
-import aboutLogoAsset4WebpImage from "./images/about/logoAssets/aboutLoggoAsset4.webp";
-import aboutLogoAsset5Image from "./images/about/logoAssets/aboutLoggoAsset5.png";
-import aboutLogoAsset5WebpImage from "./images/about/logoAssets/aboutLoggoAsset5.webp";
-import aboutLogoAsset6Image from "./images/about/logoAssets/aboutLoggoAsset6.png";
-import aboutLogoAsset6WebpImage from "./images/about/logoAssets/aboutLoggoAsset6.webp";
-import aboutLogoAsset7Image from "./images/about/logoAssets/aboutLoggoAsset7.png";
-import aboutLogoAsset7WebpImage from "./images/about/logoAssets/aboutLoggoAsset7.webp";
-
 //Tourism
 import tourismHeaderImage from "./images/tourism/header/tourismHeader.jpg";
 import tourismHeaderWebpImage from "./images/tourism/header/tourismHeader.webp";
@@ -737,20 +722,6 @@ export {
   valuesWebpImage,
   aboutMapImage,
   aboutMapWebpImage,
-  aboutLogoAsset1Image,
-  aboutLogoAsset1WebpImage,
-  aboutLogoAsset2Image,
-  aboutLogoAsset2WebpImage,
-  aboutLogoAsset3Image,
-  aboutLogoAsset3WebpImage,
-  aboutLogoAsset4Image,
-  aboutLogoAsset4WebpImage,
-  aboutLogoAsset5Image,
-  aboutLogoAsset5WebpImage,
-  aboutLogoAsset6Image,
-  aboutLogoAsset6WebpImage,
-  aboutLogoAsset7Image,
-  aboutLogoAsset7WebpImage,
 
   // About - Slider
   educationImage,

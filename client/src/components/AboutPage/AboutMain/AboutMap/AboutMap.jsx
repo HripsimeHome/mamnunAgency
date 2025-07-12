@@ -20,9 +20,9 @@ const AboutMap = () => {
   return (
     <section ref={ref} className={`${styles.aboutMap} wrapperBlack`}>
       <div className={`container ${styles.aboutMap__container}`}>
-        <h2 className={`titleWhiteH2 center ${styles.aboutMap__title}`}>
-          We Operate&nbsp;
-          <span className="titlePrimaryH2">Worldwide</span>
+        <h2 className={`titlePrimaryH2 center ${styles.aboutMap__title}`}>
+          We&nbsp;
+          <span className="titleWhiteH2">Operate Worldwide</span>
         </h2>
         <video
           ref={videoRef}

@@ -58,16 +58,6 @@
   &__mottoText {
     @include setFont(65px, 700, $color-white);
     text-align: center;
-    background: linear-gradient(
-      270deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      #fff 49.56%,
-      rgba(255, 255, 255, 0.7) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
 
     @include lgScreenMedia {
       font-size: 32px;

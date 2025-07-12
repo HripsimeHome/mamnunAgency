@@ -190,8 +190,7 @@ const accordionItems = [
 
 const EducationStudyingAbroad = () => {
   return (
-    <section
-      className="wrapperBlack wrapperPadding">
+    <section className="wrapperBlack wrapperPadding">
       <div className="container">
         <h2 className="titleWhiteH2 pbXlg">
           Pros and Cons of studying&nbsp;
@@ -201,7 +200,7 @@ const EducationStudyingAbroad = () => {
         <>
           <Accordion accordionItems={accordionItems} by6And4Col={true} />
         </>
-        <p className="paragraphWhite ptLg">
+        <p className="paragraphWhite center ptLg ">
           At MAMNUN, we are here to guide you through these considerations,
           ensuring you have all the information you need to make the best
           decision for your future. Let us help you navigate your educational
