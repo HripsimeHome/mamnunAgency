@@ -72,7 +72,10 @@ const NewsBlogItem = ({
         }}
       />
       <h4 className={styles.newsBlogItem__title}>{title}</h4>
-      <p className={styles.newsBlogItem__description}>{description}</p>
+      <p
+        className={styles.newsBlogItem__description}
+        dangerouslySetInnerHTML={{ __html: description || "" }}
+      ></p>
       <div className={styles.newsBlogItem__footer}>
         <span className={styles.newsBlogItem__date}>{formatDate(date)}</span>
         {isAdmin && (

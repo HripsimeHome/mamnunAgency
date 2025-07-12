@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import ReactQuill from "react-quill-new";
+
 import Modal from "../../../layout/Modal/Modal";
 import MainInput from "../../../layout/MainInput/MainInput";
 import styles from "./AdminNewsAddEditModal.module.scss";
@@ -6,6 +8,8 @@ import Svg from "../../../layout/Svg/Svg";
 import { attachIcon } from "../../../../assets/svg";
 import MainBtn from "../../../layout/MainBtn/MainBtn";
 import { useFormValue } from "../../../../hooks/useFormValue";
+import "react-quill-new/dist/quill.snow.css";
+
 import {
   addNews,
   editNews,
@@ -16,6 +20,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { setImagePath } from "../../../../utils/files";
 import { openTooltip } from "../../../../store/slices/UISlice";
 import { noImage } from "../../../../assets/images";
+
+const quilModules = {
+  toolbar: [
+    [{ size: [] }],
+    ["bold", "italic", "underline"],
+    [{ color: [] }],
+    [{ list: "ordered" }, { list: "bullet" }],
+    [{ align: [] }],
+    ["link"],
+    ["clean"],
+  ],
+};
 
 const AdminNewsAddEditModal = ({
   show,
@@ -163,7 +179,7 @@ const AdminNewsAddEditModal = ({
               onChange={onChange}
               isInvalid={getError("title")}
             />
-            <MainInput
+            {/* <MainInput
               placeholder="Description"
               isTextArea
               className={`thinScrollbar ${styles.adminNewsAddEditModal__textArea}`}
@@ -171,6 +187,23 @@ const AdminNewsAddEditModal = ({
               name={"description"}
               onChange={onChange}
               isInvalid={getError("description")}
+            /> */}
+            <ReactQuill
+              modules={quilModules}
+              formats={[
+                "bold",
+                "italic",
+                "underline",
+                "strike",
+                "list",
+                "bullet",
+                "link",
+                "size",
+                "color",
+              ]}
+              className={`thinScrollbar ${styles.adminNewsAddEditModal__textArea}`}
+              value={formData.description}
+              onChange={(val) => onChangeSelect("description", val)}
             />
             <MainInput
               placeholder="Date"
