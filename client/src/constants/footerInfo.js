@@ -77,8 +77,8 @@ export const footerMenuItems = [
       },
 
       {
-        text: "Useful link 1",
-        link: "https://docs.google.com/forms/d/e/1FAIpQLSfA4peXy1Mwe6rJSO9oLXVEkbxJ1zNmRZd7xClTJbQ-1ts6jA/viewform?usp=sharing",
+        text: "Useful link",
+        link: "https://drive.google.com/drive/folders/1f3l0JLhL4_eQgF7mE0hhKotbRKv1nxDL",
         target: "_blank",
       },
     ],

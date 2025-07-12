@@ -1,24 +1,7 @@
 import styles from "./AboutHeader.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
-import {
-  logoBlackImage,
-  logoBlackWebpImage,
-  aboutLogoAsset1Image,
-  aboutLogoAsset1WebpImage,
-  aboutLogoAsset2Image,
-  aboutLogoAsset2WebpImage,
-  aboutLogoAsset3Image,
-  aboutLogoAsset3WebpImage,
-  aboutLogoAsset4Image,
-  aboutLogoAsset4WebpImage,
-  aboutLogoAsset5Image,
-  aboutLogoAsset5WebpImage,
-  aboutLogoAsset6Image,
-  aboutLogoAsset6WebpImage,
-  aboutLogoAsset7Image,
-  aboutLogoAsset7WebpImage,
-} from "../../../assets/images";
+import { logoBlackImage, logoBlackWebpImage } from "../../../assets/images";
 import { useLazy } from "../../../hooks/useLazy";
 import TransitionProvider, {
   TransitionStyleTypes,
@@ -32,7 +15,8 @@ const AboutHeader = () => {
         <div className={styles.aboutHeader__content}>
           <div className={styles.aboutHeader__text1}>
             <h2 className={styles.aboutHeader__title}>
-              MAMNUN is not just an education consultancy agency
+              <span className="textPrimary">MAMNUN</span>&nbsp;is not just an
+              education consultant
             </h2>
             <p className="textMain">
               We are also a premier travel agency dedicated to providing unique
@@ -51,59 +35,6 @@ const AboutHeader = () => {
               className={styles.aboutHeader__logoAnim}
               pictureClass={styles.aboutHeader__logoAnimPicture}
             />
-            <div className={styles.aboutHeader__assets}>
-              <ImageWebp
-                src={aboutLogoAsset1Image}
-                srcSet={aboutLogoAsset1WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-              <ImageWebp
-                src={aboutLogoAsset2Image}
-                srcSet={aboutLogoAsset2WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-
-              <ImageWebp
-                src={aboutLogoAsset3Image}
-                srcSet={aboutLogoAsset3WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-              <ImageWebp
-                src={aboutLogoAsset4Image}
-                srcSet={aboutLogoAsset4WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-
-              <ImageWebp
-                src={aboutLogoAsset5Image}
-                srcSet={aboutLogoAsset5WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-              <ImageWebp
-                src={aboutLogoAsset6Image}
-                srcSet={aboutLogoAsset6WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-              <ImageWebp
-                src={aboutLogoAsset7Image}
-                srcSet={aboutLogoAsset7WebpImage}
-                alt="asset"
-                pictureClass={styles.aboutHeader__assetImgPicture}
-                className={styles.aboutHeader__assetImg}
-              />
-            </div>
           </div>
 
           <div className={styles.aboutHeader__text2}>
