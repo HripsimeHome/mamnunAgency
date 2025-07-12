@@ -71,6 +71,9 @@ import visaImage from "./images/footer/cards/visa.png";
 import mvisaWebpImage from "./images/footer/cards/visa.webp";
 
 // Home
+import valuesImage from "./images/home/values.jpg";
+import valuesWebpImage from "./images/home/values.webp";
+
 import expertiseImage from "./images/home/icons/reasons/expertise.png";
 import expertiseWebpImage from "./images/home/icons/reasons/expertise.webp";
 
@@ -100,13 +103,6 @@ import travelTourismBlackImage from "./images/home/icons/accordion/travelTourism
 import travelTourismBlackWebpImage from "./images/home/icons/accordion/travelTourismBlack.webp";
 
 import newsImage from "./images/home/news/news.jpg";
-
-// About
-import missionImage from "./images/home/mission.jpg";
-import missionWebpImage from "./images/home/mission.webp";
-
-import valuesImage from "./images/home/values.jpg";
-import valuesWebpImage from "./images/home/values.webp";
 
 // About - Slider
 
@@ -693,6 +689,8 @@ export {
   mvisaWebpImage,
 
   // Home
+  valuesImage,
+  valuesWebpImage,
   expertiseImage,
   expertiseWebpImage,
   personalizedApproachImage,
@@ -716,10 +714,6 @@ export {
   travelTourismBlackWebpImage,
 
   // About
-  missionImage,
-  missionWebpImage,
-  valuesImage,
-  valuesWebpImage,
   aboutMapImage,
   aboutMapWebpImage,
 
