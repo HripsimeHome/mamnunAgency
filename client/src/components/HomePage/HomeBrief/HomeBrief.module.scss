@@ -2,38 +2,73 @@
 @import "../../../styles/vars";
 
 .homeBrief {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 50px;
-  row-gap: 40px;
-  width: 100%;
+  // min-height: 400px;
+  // overflow: hidden;
 
-  @include lgScreenMedia {
-    row-gap: 25px;
-    column-gap: 25px;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // column-gap: 50px;
+  // row-gap: 40px;
+  // width: 100%;
+
+  // @include lgScreenMedia {
+  //   row-gap: 25px;
+  //   column-gap: 25px;
+  // }
+
+  // @include mdScreenMedia {
+  //   grid-template-columns: 1fr;
+  // }
+
+  // @include smScreenMedia {
+  //   row-gap: 5px;
+  // }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 50px;
+    grid-template-areas:
+      "text1 image"
+      "text2 image";
+
+    @include lgScreenMedia {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "text1"
+        "image"
+        "text2";
+    }
+
+    @include xlScreenMedia {
+      gap: 25px;
+    }
+
+    @include smScreenMedia {
+      gap: 5px;
+    }
+  }
+  &__text1 {
+    grid-area: text1;
   }
 
-  @include mdScreenMedia {
-    grid-template-columns: 1fr;
+  &__text2 {
+    grid-area: text2;
   }
 
-  @include smScreenMedia {
-    row-gap: 5px;
-  }
-
-  &__column {
+  &__imageColumn {
+    grid-area: image;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 25px;
 
     @include smScreenMedia {
-      row-gap: 5px;
+      gap: 5px;
     }
   }
 
-  &__missionImg,
-  &__valuesImg {
+  &__briefImg {
     width: 100%;
     height: auto;
     border-radius: 25px;
@@ -47,6 +82,13 @@
     }
   }
 
-
-  
+  &__btn {
+    @include lgScreenMedia {
+      width: 70%;
+      margin: 0 auto;
+    }
+    @include mdScreenMedia {
+      width: 100%;
+    }
+  }
 }
