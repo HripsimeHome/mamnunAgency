@@ -1,4 +1,4 @@
-name: Deploy React Client to VPS
+name: Deploy  Client to VPS
 
 on:
   push:
