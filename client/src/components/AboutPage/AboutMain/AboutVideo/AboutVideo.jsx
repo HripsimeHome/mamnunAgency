@@ -15,6 +15,7 @@ const AboutVideo = () => {
             ref={videoRef}
             className={styles.aboutVideo__video}
             autoPlay
+            loop
             muted={muted}
             playsInline
           >
