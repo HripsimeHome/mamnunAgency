@@ -23,11 +23,9 @@ import { noImage } from "../../../../assets/images";
 
 const quilModules = {
   toolbar: [
-    [{ size: [] }],
     ["bold", "italic", "underline"],
     [{ color: [] }],
     [{ list: "ordered" }, { list: "bullet" }],
-    [{ align: [] }],
     ["link"],
     ["clean"],
   ],
