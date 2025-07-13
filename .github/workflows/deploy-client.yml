@@ -26,10 +26,6 @@ jobs:
         working-directory: client
         run: npm run build
 
-      - name: Test SSH Connection
-        run: |
-        echo "VPS_PATH is: ${{ secrets.VPS_PATH }}"
-
       - name: Deploy /client/build to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -38,3 +34,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "client/build/*"
           target: ${{ secrets.VPS_PATH }}
+          strip_components: 2
