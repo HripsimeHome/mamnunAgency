@@ -83,10 +83,15 @@ const Footer = () => {
               iconClass={styles.footer__socialIconsItem}
             />
           </div>{" "}
-          <TrustPilotLink
-            className={styles.footer__img}
-            pictureClass={styles.footer__imgPosition}
-          />
+          {/* socialMedia */}
+          <div className={styles.footer__feedback}>
+            <h4>Leave Your feedback Trustpilot</h4>
+
+            <TrustPilotLink
+              className={styles.footer__img}
+              pictureClass={styles.footer__imgPosition}
+            />
+          </div>{" "}
           {/* feedback */}
           <div className={styles.footer__paymentsBLock}>
             <h4>We accept:</h4>
