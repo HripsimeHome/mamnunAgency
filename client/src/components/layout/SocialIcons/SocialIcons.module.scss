@@ -4,8 +4,12 @@
 .socialIcons {
   display: flex;
 
+  a {
+    height: 44px;
+  }
+
   &__icon {
-    @include svg(44px, 44px, black, black);
+    @include svg(44px, black, 44px, black);
 
     &:hover,
     &:active {
