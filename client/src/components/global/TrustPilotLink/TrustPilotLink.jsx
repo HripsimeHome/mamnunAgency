@@ -8,7 +8,7 @@ import {
 const TrustPilotLink = ({ className, pictureClass }) => {
   return (
     <div
-      class="trustpilot-widget"
+      className="trustpilot-widget"
       data-locale="en-US"
       data-template-id="56278e9abfbbba0bdcd568bc"
       data-businessunit-id="67abb63c21d7cd3d58ca403f"
