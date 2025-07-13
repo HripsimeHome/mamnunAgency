@@ -1,5 +1,10 @@
 import styles from "./TourismGallery.module.scss";
 import ImageWebp from "../../../layout/ImageWebp/ImageWebp";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { useEffect, useRef, useState } from "react";
+import Svg from "../../../layout/Svg/Svg";
+import { tourismGallerySliderArrowIcon } from "../../../../assets/svg";
 
 import {
   gallerySlide1Image,
@@ -71,149 +76,42 @@ import {
   gallerySlide34Image,
   gallerySlide34WebpImage,
 } from "../../../../assets/images";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import { useEffect, useRef, useState } from "react";
-import Svg from "../../../layout/Svg/Svg";
-import { tourismGallerySliderArrowIcon } from "../../../../assets/svg";
 
 const galleryImages = [
-  {
-    image: gallerySlide1Image,
-    webp: gallerySlide1WebpImage,
-  },
-  {
-    image: gallerySlide2Image,
-    webp: gallerySlide2WebpImage,
-  },
-  {
-    image: gallerySlide3Image,
-    webp: gallerySlide3WebpImage,
-  },
-  {
-    image: gallerySlide4Image,
-    webp: gallerySlide4WebpImage,
-  },
-  {
-    image: gallerySlide5Image,
-    webp: gallerySlide5WebpImage,
-  },
-  {
-    image: gallerySlide6Image,
-    webp: gallerySlide6WebpImage,
-  },
-  {
-    image: gallerySlide7Image,
-    webp: gallerySlide7WebpImage,
-  },
-  {
-    image: gallerySlide8Image,
-    webp: gallerySlide8WebpImage,
-  },
-  {
-    image: gallerySlide9Image,
-    webp: gallerySlide9WebpImage,
-  },
-  {
-    image: gallerySlide10Image,
-    webp: gallerySlide10WebpImage,
-  },
-  {
-    image: gallerySlide11Image,
-    webp: gallerySlide11WebpImage,
-  },
-  {
-    image: gallerySlide12Image,
-    webp: gallerySlide12WebpImage,
-  },
-  {
-    image: gallerySlide13Image,
-    webp: gallerySlide13WebpImage,
-  },
-  {
-    image: gallerySlide14Image,
-    webp: gallerySlide14WebpImage,
-  },
-  {
-    image: gallerySlide15Image,
-    webp: gallerySlide15WebpImage,
-  },
-  {
-    image: gallerySlide16Image,
-    webp: gallerySlide16WebpImage,
-  },
-  {
-    image: gallerySlide17Image,
-    webp: gallerySlide17WebpImage,
-  },
-  {
-    image: gallerySlide18Image,
-    webp: gallerySlide18WebpImage,
-  },
-  {
-    image: gallerySlide19Image,
-    webp: gallerySlide19WebpImage,
-  },
-  {
-    image: gallerySlide20Image,
-    webp: gallerySlide20WebpImage,
-  },
-  {
-    image: gallerySlide21Image,
-    webp: gallerySlide21WebpImage,
-  },
-  {
-    image: gallerySlide22Image,
-    webp: gallerySlide22WebpImage,
-  },
-  {
-    image: gallerySlide23Image,
-    webp: gallerySlide23WebpImage,
-  },
-  {
-    image: gallerySlide24Image,
-    webp: gallerySlide24WebpImage,
-  },
-  {
-    image: gallerySlide25Image,
-    webp: gallerySlide25WebpImage,
-  },
-  {
-    image: gallerySlide26Image,
-    webp: gallerySlide26WebpImage,
-  },
-  {
-    image: gallerySlide27Image,
-    webp: gallerySlide27WebpImage,
-  },
-  {
-    image: gallerySlide28Image,
-    webp: gallerySlide28WebpImage,
-  },
-  {
-    image: gallerySlide29Image,
-    webp: gallerySlide29WebpImage,
-  },
-  {
-    image: gallerySlide30Image,
-    webp: gallerySlide30WebpImage,
-  },
-  {
-    image: gallerySlide31Image,
-    webp: gallerySlide31WebpImage,
-  },
-  {
-    image: gallerySlide32Image,
-    webp: gallerySlide32WebpImage,
-  },
-  {
-    image: gallerySlide33Image,
-    webp: gallerySlide33WebpImage,
-  },
-  {
-    image: gallerySlide34Image,
-    webp: gallerySlide34WebpImage,
-  },
+  { image: gallerySlide1Image, webp: gallerySlide1WebpImage },
+  { image: gallerySlide2Image, webp: gallerySlide2WebpImage },
+  { image: gallerySlide3Image, webp: gallerySlide3WebpImage },
+  { image: gallerySlide4Image, webp: gallerySlide4WebpImage },
+  { image: gallerySlide5Image, webp: gallerySlide5WebpImage },
+  { image: gallerySlide6Image, webp: gallerySlide6WebpImage },
+  { image: gallerySlide7Image, webp: gallerySlide7WebpImage },
+  { image: gallerySlide8Image, webp: gallerySlide8WebpImage },
+  { image: gallerySlide9Image, webp: gallerySlide9WebpImage },
+  { image: gallerySlide10Image, webp: gallerySlide10WebpImage },
+  { image: gallerySlide11Image, webp: gallerySlide11WebpImage },
+  { image: gallerySlide12Image, webp: gallerySlide12WebpImage },
+  { image: gallerySlide13Image, webp: gallerySlide13WebpImage },
+  { image: gallerySlide14Image, webp: gallerySlide14WebpImage },
+  { image: gallerySlide15Image, webp: gallerySlide15WebpImage },
+  { image: gallerySlide16Image, webp: gallerySlide16WebpImage },
+  { image: gallerySlide17Image, webp: gallerySlide17WebpImage },
+  { image: gallerySlide18Image, webp: gallerySlide18WebpImage },
+  { image: gallerySlide19Image, webp: gallerySlide19WebpImage },
+  { image: gallerySlide20Image, webp: gallerySlide20WebpImage },
+  { image: gallerySlide21Image, webp: gallerySlide21WebpImage },
+  { image: gallerySlide22Image, webp: gallerySlide22WebpImage },
+  { image: gallerySlide23Image, webp: gallerySlide23WebpImage },
+  { image: gallerySlide24Image, webp: gallerySlide24WebpImage },
+  { image: gallerySlide25Image, webp: gallerySlide25WebpImage },
+  { image: gallerySlide26Image, webp: gallerySlide26WebpImage },
+  { image: gallerySlide27Image, webp: gallerySlide27WebpImage },
+  { image: gallerySlide28Image, webp: gallerySlide28WebpImage },
+  { image: gallerySlide29Image, webp: gallerySlide29WebpImage },
+  { image: gallerySlide30Image, webp: gallerySlide30WebpImage },
+  { image: gallerySlide31Image, webp: gallerySlide31WebpImage },
+  { image: gallerySlide32Image, webp: gallerySlide32WebpImage },
+  { image: gallerySlide33Image, webp: gallerySlide33WebpImage },
+  { image: gallerySlide34Image, webp: gallerySlide34WebpImage },
 ];
 
 const TourismGallery = () => {
@@ -221,25 +119,30 @@ const TourismGallery = () => {
   const prevButtonRef = useRef(null);
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
 
-  // Update isMobile on window resize
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 576);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   const visibleCount = isMobile ? 3 : 9;
 
-  const half = Math.floor(visibleCount / 2);
+  // Remove active image from thumbnail list
+  const thumbnailsWithoutActive = galleryImages.filter(
+    (_, index) => index !== activeIndex
+  );
 
-  const start = Math.max(0, activeIndex - half);
-  const end = Math.min(galleryImages.length, start + visibleCount);
+  let visibleThumbnails = thumbnailsWithoutActive.slice(
+    activeIndex,
+    activeIndex + visibleCount
+  );
 
-  // Adjust start if we're at the end so we always show `visibleCount` if possible
-  const adjustedStart = Math.max(0, end - visibleCount);
-  const tumbnails = galleryImages.slice(adjustedStart, end);
+  if (visibleThumbnails.length < visibleCount) {
+    const remaining = visibleCount - visibleThumbnails.length;
+    visibleThumbnails.push(...thumbnailsWithoutActive.slice(0, remaining));
+  }
 
   return (
     <section className={`container ${styles.tourismGallery}`}>
@@ -269,47 +172,51 @@ const TourismGallery = () => {
                 <ImageWebp src={image.image} webp={image.webp} alt="Preview" />
               </SwiperSlide>
             ))}
+
             <div>
               <button
                 ref={prevButtonRef}
-                className={`${styles.tourismGallery__sliderNavBtn} ${styles.tourismGallery__sliderNavBtn_left} `}
+                className={`${styles.tourismGallery__sliderNavBtn} ${styles.tourismGallery__sliderNavBtn_left}`}
               >
                 <Svg id={tourismGallerySliderArrowIcon} />
               </button>
               <button
                 ref={nextButtonRef}
-                className={`${styles.tourismGallery__sliderNavBtn} ${styles.tourismGallery__sliderNavBtn_right} `}
+                className={`${styles.tourismGallery__sliderNavBtn} ${styles.tourismGallery__sliderNavBtn_right}`}
               >
                 <Svg id={tourismGallerySliderArrowIcon} />
               </button>
             </div>
           </Swiper>
         </div>
-        {/* Thumbnails */}
-        {tumbnails.map((img, index) => (
-          <button
-            key={index}
-            className={`${styles.tourismGallery__tumbnailBtn} ${
-              activeIndex === index ? styles.active : ""
-            }`}
-            onClick={() => {
-              setActiveIndex(index);
-              if (swiperRef.current) {
-                swiperRef.current.slideTo(index);
-              }
-            }}
-            type="button"
-            aria-label={`Show gallery image ${index + 1}`}
-          >
-            <ImageWebp
-              src={img.image}
-              webp={img.webp}
-              className={styles.tourismGallery__tumbnailImage}
-              pictureClass={styles.tourismGallery__tumbnailPicture}
-              alt={`Gallery image ${index + 1}`}
-            />
-          </button>
-        ))}
+
+        {visibleThumbnails.map((img, index) => {
+          const globalIndex = galleryImages.indexOf(img);
+          return (
+            <button
+              key={index}
+              className={`${styles.tourismGallery__tumbnailBtn} ${
+                activeIndex === globalIndex ? styles.active : ""
+              }`}
+              onClick={() => {
+                setActiveIndex(globalIndex);
+                if (swiperRef.current) {
+                  swiperRef.current.slideTo(globalIndex);
+                }
+              }}
+              type="button"
+              aria-label={`Show gallery image ${globalIndex + 1}`}
+            >
+              <ImageWebp
+                src={img.image}
+                webp={img.webp}
+                className={styles.tourismGallery__tumbnailImage}
+                pictureClass={styles.tourismGallery__tumbnailPicture}
+                alt={`Gallery image ${globalIndex + 1}`}
+              />
+            </button>
+          );
+        })}
       </div>
     </section>
   );

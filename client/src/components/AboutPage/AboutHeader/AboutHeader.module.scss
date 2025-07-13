@@ -3,7 +3,7 @@
 
 .aboutHeader {
   &__content {
-    min-height: 400px;
+    // min-height: 400px;
     display: grid;
     grid-template-columns: 8fr 5fr;
     gap: 15px 50px;
@@ -27,11 +27,6 @@
     @include setFont(34px, 600);
     text-align: left;
     margin-bottom: 25px;
-    padding-top: 100px;
-
-    @include xxlScreenMedia {
-      padding-top: 50px;
-    }
 
     @include lgScreenMedia {
       font-size: 24px;
@@ -43,7 +38,6 @@
       font-size: 18px;
       line-height: 20px;
       margin-bottom: 10px;
-      padding-top: 25px;
     }
   }
 
@@ -61,7 +55,7 @@
     grid-area: animation;
     @include flexCol();
     animation: logoAnim 1s linear;
-    aspect-ratio: 1/1;
+    //aspect-ratio: 1/1;
     width: 100%;
     max-width: 600px;
     align-self: flex-start;
@@ -74,6 +68,10 @@
   &__logoAnimPicture {
     width: 60%;
     aspect-ratio: 1/1;
+
+    @include lgScreenMedia {
+      width: 40%;
+    }
   }
 
   &__briefImg {
@@ -131,15 +129,6 @@
     @include smScreenMedia {
       font-size: 16px;
     }
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 
