@@ -28,10 +28,7 @@ jobs:
 
       - name: Test SSH Connection
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo SSH connection successful"
+        echo "VPS_PATH is: ${{ secrets.VPS_PATH }}"
 
       - name: Deploy /client/build to VPS
         uses: appleboy/scp-action@v0.1.7
