@@ -153,6 +153,7 @@ const TourismGallery = () => {
             className={styles.tourismGallery__slider}
             spaceBetween={0}
             modules={[Navigation]}
+            loop={true}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
               if (typeof swiper.params.navigation === "object") {
