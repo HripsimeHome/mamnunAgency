@@ -33,17 +33,23 @@ const serviceOptions = [
 const ServiceBookForm = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.contacts.bookError);
-  const { onChange, onChangeSelect, formData, onResetForm, getError } =
-    useFormValue(
-      {
-        fullName: "",
-        contactNumber: "",
-        services: [],
-        email: "",
-      },
-      setBookError,
-      error
-    );
+  const {
+    onChange,
+    onChangeSelect,
+    onNumberChange,
+    formData,
+    onResetForm,
+    getError,
+  } = useFormValue(
+    {
+      fullName: "",
+      contactNumber: "",
+      services: [],
+      email: "",
+    },
+    setBookError,
+    error
+  );
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
@@ -75,7 +81,7 @@ const ServiceBookForm = () => {
           value={formData.contactNumber}
           isInvalid={getError("contactNumber")}
           name="contactNumber"
-          onChange={onChange}
+          onChange={onNumberChange}
           placeholder="Phone number:"
         />
       </div>

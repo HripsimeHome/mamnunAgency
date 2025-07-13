@@ -327,3 +327,14 @@ a {
     padding-right: 20px;
   }
 }
+
+.quilText {
+  list-style-position: inside;
+
+  & li[data-list="bullet"] {
+    list-style-type: disc;
+  }
+  & a {
+    color: $color-primary;
+  }
+}

@@ -4,7 +4,6 @@ export interface IContactForm {
   fullName: string;
   contactNumber: string;
   needAssistanceAs: keyof typeof CONTACT_FORM_TYPES;
-  email?: string;
-  telegramLink?: string;
+  email: string;
   message: string;
 }

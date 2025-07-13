@@ -174,6 +174,38 @@ function EducationRequirements() {
             </button>
           </div>
         </Swiper>
+        <div className={styles.educationRequirements__mobWrapper}>
+          {requirementsData.map(({ step, title, image, webpImage }, index) => (
+            <TransitionProvider
+              inProp={isInView}
+              style={TransitionStyleTypes.zoomIn}
+              delay={500 * index}
+              className={styles.educationRequirements__stepContainer}
+            >
+              <div className={styles.educationRequirements__circle}>
+                <div className={styles.educationRequirements__flipInner}>
+                  <div className={styles.educationRequirements__front}>
+                    <span className={styles.educationRequirements__step}>
+                      {step}
+                    </span>
+                  </div>
+                  <div className={styles.educationRequirements__back}>
+                    <ImageWebp
+                      src={image}
+                      srcSet={webpImage}
+                      alt="Step icon"
+                      className={styles.educationRequirements__icon}
+                      pictureClass={styles.educationRequirements__iconPicture}
+                    />
+                  </div>
+                </div>
+              </div>
+              <span className={styles.educationRequirements__title}>
+                {title}
+              </span>
+            </TransitionProvider>
+          ))}
+        </div>
       </div>
     </section>
   );

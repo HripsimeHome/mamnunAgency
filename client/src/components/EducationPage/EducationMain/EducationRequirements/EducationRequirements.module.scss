@@ -34,10 +34,6 @@
       @include lgScreenMedia {
         display: flex;
       }
-
-      @include mdScreenMedia {
-        width: 100%;
-      }
     }
   }
 
@@ -63,6 +59,19 @@
     @include lgScreenMedia {
       padding-inline: 10px !important;
     }
+
+    @include mdScreenMedia {
+      display: none;
+    }
+  }
+
+  &__mobWrapper {
+    display: none;
+
+    @include mdScreenMedia {
+      flex-direction: column;
+      @include flexCol();
+    }
   }
 
   &__stepContainer {
@@ -85,6 +94,10 @@
     align-items: center;
     cursor: pointer;
     min-width: 60px;
+
+    @include mdScreenMedia {
+      width: 100px;
+    }
   }
 
   &__flipInner {
@@ -178,18 +191,6 @@
     @include xlScreenMedia {
       font-size: 18px;
       line-height: 20px;
-    }
-
-    &_next {
-      @include mdScreenMedia {
-        width: 220px;
-      }
-    }
-
-    &:not(&_next) {
-      @include mdScreenMedia {
-        display: none;
-      }
     }
   }
 

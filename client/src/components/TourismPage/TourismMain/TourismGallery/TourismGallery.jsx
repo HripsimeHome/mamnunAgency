@@ -120,6 +120,7 @@ const TourismGallery = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
+  console.log({ activeIndex });
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 576);
@@ -153,6 +154,7 @@ const TourismGallery = () => {
             className={styles.tourismGallery__slider}
             spaceBetween={0}
             modules={[Navigation]}
+            loop={true}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
               if (typeof swiper.params.navigation === "object") {
@@ -164,7 +166,7 @@ const TourismGallery = () => {
               nextEl: nextButtonRef.current,
               prevEl: prevButtonRef.current,
             }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             initialSlide={activeIndex}
           >
             {galleryImages.map((image, index) => (
