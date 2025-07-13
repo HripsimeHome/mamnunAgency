@@ -19,10 +19,6 @@
         "text2";
     }
 
-    @include xlScreenMedia {
-      column-gap: 25px;
-    }
-
     @include smScreenMedia {
       gap: 5px;
     }
