@@ -26,6 +26,13 @@ jobs:
         working-directory: client
         run: npm run build
 
+      - name: Test SSH Connection
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo SSH connection successful"
+
       - name: Deploy /client/build to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
