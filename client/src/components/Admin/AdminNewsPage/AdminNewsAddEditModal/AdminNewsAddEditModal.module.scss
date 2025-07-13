@@ -90,6 +90,7 @@
     :global(.ql-container) {
       flex: 1;
       overflow: hidden;
+      font-size: 16px;
     }
     :global(.ql-editor) {
       &::-webkit-scrollbar {
