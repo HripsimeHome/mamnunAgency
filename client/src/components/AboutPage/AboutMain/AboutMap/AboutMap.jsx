@@ -32,6 +32,11 @@ const AboutMap = () => {
           muted
           onCanPlay={() => setVideoLoaded(true)}
           className={styles.aboutMap__video}
+          playsInline
+          disablePictureInPicture
+          controls={false}
+          controlsList="nodownload nofullscreen noremoteplayback"
+          preload="auto"
         ></video>
         <TransitionProvider
           inProp={!videoLoaded}
