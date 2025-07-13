@@ -5,20 +5,17 @@
   position: relative;
   @include flexCol();
   flex-direction: column;
-  aspect-ratio: 6/2;
   text-align: center;
   padding-bottom: 32px;
   overflow: hidden;
 
-  @media (max-width: 1200px) {
-    aspect-ratio: 6/2.5;
-  }
+  height: calc(100vh - 122px);
 
-  @include mdScreenMedia {
-    aspect-ratio: 360/300;
+  @include lgScreenMedia {
+    height: calc(100vh - 108px);
   }
   @include smScreenMedia {
-    aspect-ratio: 360/500;
+    height: calc(100vh - 80px);
   }
 
   &__videoWrapper {

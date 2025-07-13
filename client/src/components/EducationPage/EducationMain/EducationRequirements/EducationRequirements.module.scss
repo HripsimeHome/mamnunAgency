@@ -61,7 +61,7 @@
     }
 
     @include mdScreenMedia {
-      display: none;
+      display: none !important;
     }
   }
 

@@ -26,7 +26,6 @@ const quilModules = {
     ["bold", "italic", "underline"],
     [{ color: [] }],
     [{ list: "ordered" }, { list: "bullet" }],
-    ["link"],
     ["clean"],
   ],
 };
