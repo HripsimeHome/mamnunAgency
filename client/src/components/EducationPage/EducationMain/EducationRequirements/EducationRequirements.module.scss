@@ -67,11 +67,10 @@
 
   &__mobWrapper {
     display: none;
-    @include flexCol();
-    flex-direction: column;
 
     @include mdScreenMedia {
-      display: flex;
+      flex-direction: column;
+      @include flexCol();
     }
   }
 
