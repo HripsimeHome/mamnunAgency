@@ -36,8 +36,23 @@
     box-shadow: 0 0 0px 1000px $color-white inset;
   }
 
-  ::placeholder {
+  &::placeholder {
     color: $color-grey;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    color: $color-secondary;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: $color-secondary;
+    transition: background-color 5000s ease-in-out 0s;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
   }
 
   &_invalid {
