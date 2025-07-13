@@ -1,0 +1,36 @@
+name: Deploy React Client to VPS
+
+on:
+  push:
+    branches:
+      - main # or your branch name
+
+jobs:
+  deploy-client:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install Dependencies
+        working-directory: client
+        run: npm install
+
+      - name: Build React App
+        working-directory: client
+        run: npm run build
+
+      - name: Deploy /client/build to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "client/build/*"
+          target: ${{ secrets.VPS_PATH }}
