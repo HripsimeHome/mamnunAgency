@@ -3,7 +3,7 @@ name: Deploy  Client to VPS
 on:
   push:
     branches:
-      - main # or your branch name
+      - dev
 
 jobs:
   deploy-client:
