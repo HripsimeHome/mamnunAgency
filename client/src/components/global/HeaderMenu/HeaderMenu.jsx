@@ -70,7 +70,7 @@ const HeaderMenu = () => {
 
   return (
     <div className={styles.headerMenu}>
-      <div className={`${styles.headerMenu__container} container`}>
+      <div className={`${styles.headerMenu__container}`}>
         <div>
           <Link to={homePagePath}>
             <ImageWebp

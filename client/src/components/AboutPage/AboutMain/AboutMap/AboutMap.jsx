@@ -22,7 +22,9 @@ const AboutMap = () => {
       <div className={`container ${styles.aboutMap__container}`}>
         <h2 className={`titlePrimaryH2 center ${styles.aboutMap__title}`}>
           We&nbsp;
-          <span className="titleWhiteH2">Operate Worldwide</span>
+          <span className={`titleWhiteH2 ${styles.aboutMap__titleWeight}`}>
+            Operate Worldwide
+          </span>
         </h2>
         <video
           ref={videoRef}

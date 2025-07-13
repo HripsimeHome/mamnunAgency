@@ -10,7 +10,7 @@ import TransitionProvider, {
 const AboutHeader = () => {
   const { isInView, ref } = useLazy(0.5);
   return (
-    <section className={`${styles.aboutHeader} wrapperWhite`}>
+    <section className={`${styles.aboutHeader} wrapperWhite wrapperPadding`}>
       <div className="container">
         <div className={styles.aboutHeader__content}>
           <div className={styles.aboutHeader__text1}>
