@@ -74,23 +74,21 @@ const contactInfoData = [
   },
 ];
 
-const telegramOptions = ["Student", "Parent"];
-
 const Contacts = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.contacts.contactError);
-  const { onChange, onChangeSelect, formData, getError } = useFormValue(
-    {
-      fullName: "",
-      contactNumber: "",
-      needAssistanceAs: "",
-      email: "",
-      telegramLink: "",
-      message: "",
-    },
-    setContactError,
-    error
-  );
+  const { onChange, onChangeSelect, formData, getError, onNumberChange } =
+    useFormValue(
+      {
+        fullName: "",
+        contactNumber: "",
+        needAssistanceAs: "",
+        email: "",
+        message: "",
+      },
+      setContactError,
+      error
+    );
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
@@ -128,7 +126,7 @@ const Contacts = () => {
                 value={formData.contactNumber}
                 isInvalid={getError("contactNumber")}
                 name="contactNumber"
-                onChange={onChange}
+                onChange={onNumberChange}
                 placeholder="Phone number:"
               />
             </div>
@@ -141,25 +139,14 @@ const Contacts = () => {
               name="needAssistanceAs"
               placeholder="Need assistance as a..."
             />
-            {!telegramOptions.includes(formData.needAssistanceAs) ? (
-              <MainInput
-                disabled={loading}
-                value={formData.email}
-                isInvalid={getError("email")}
-                name="email"
-                onChange={onChange}
-                placeholder="Email:"
-              />
-            ) : (
-              <MainInput
-                disabled={loading}
-                value={formData.telegramLink}
-                isInvalid={getError("telegramLink")}
-                name="telegramLink"
-                onChange={onChange}
-                placeholder="Telegram link:"
-              />
-            )}
+            <MainInput
+              disabled={loading}
+              value={formData.email}
+              isInvalid={getError("email")}
+              name="email"
+              onChange={onChange}
+              placeholder="Email:"
+            />
             <MainInput
               isTextArea
               className={styles.contacts__textArea}

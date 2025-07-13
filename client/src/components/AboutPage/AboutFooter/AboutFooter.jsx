@@ -1,16 +1,12 @@
 import styles from "./AboutFooter.module.scss";
-import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import { Link } from "react-router-dom";
 import { contactsPagePath } from "../../../router/path";
 
-import {
-  companyLabelImage,
-  companyLabelWebpImage,
-} from ".././../../assets/images";
 import { useLazy } from "../../../hooks/useLazy";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
+import TrustPilotLink from "../../global/TrustPilotLink/TrustPilotLink";
 
 const AboutFooter = () => {
   const { ref, isInView } = useLazy(0.4);
@@ -37,15 +33,10 @@ const AboutFooter = () => {
           </h2>
 
           <div>
-            <a href="/" target="_blank">
-              <ImageWebp
-                src={companyLabelImage}
-                srcSet={companyLabelWebpImage}
-                alt="MAMNUN Agency"
-                className={styles.aboutFooter__img}
-                pictureClass={styles.aboutFooter__imgPosition}
-              />
-            </a>
+            <TrustPilotLink
+              className={styles.aboutFooter__img}
+              pictureClass={styles.aboutFooter__imgPosition}
+            />
           </div>
         </TransitionProvider>
       </div>

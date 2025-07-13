@@ -5,17 +5,13 @@ import SocialIcons from "../../layout/SocialIcons/SocialIcons";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 import {
-  companyLabelImage,
-  companyLabelWebpImage,
-} from ".././../../assets/images";
-
-import {
   privacyPolicyPagePath,
   cookiePolicyPagePath,
 } from "../../../router/path";
 
 import { logoBlackImage, logoBlackWebpImage } from "../../../assets/images";
 import { Fragment } from "react";
+import TrustPilotLink from "../TrustPilotLink/TrustPilotLink";
 
 const Footer = () => {
   return (
@@ -90,15 +86,11 @@ const Footer = () => {
           {/* socialMedia */}
           <div className={styles.footer__feedback}>
             <h4>Leave Your feedback Trustpilot</h4>
-            <a href="/" target="_blank">
-              <ImageWebp
-                src={companyLabelImage}
-                srcSet={companyLabelWebpImage}
-                alt="MAMNUN Agency"
-                className={styles.footer__img}
-                pictureClass={styles.footer__imgPosition}
-              />
-            </a>
+
+            <TrustPilotLink
+              className={styles.footer__img}
+              pictureClass={styles.footer__imgPosition}
+            />
           </div>{" "}
           {/* feedback */}
           <div className={styles.footer__paymentsBLock}>

@@ -13,7 +13,6 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
     contactNumber: req.body.contactNumber,
     needAssistanceAs: req.body.needAssistanceAs,
     email: req.body.email,
-    telegramLink: req.body.telegramLink,
     message: req.body.message,
   };
   // validation
@@ -34,10 +33,7 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
           ? null
           : errorTypes.invalidvalue;
-      case "telegramLink":
-        return /^(https:\/\/)?t\.me\/[a-zA-Z0-9_]+$/.test(value)
-          ? null
-          : errorTypes.invalidvalue;
+
       case "contactNumber":
         // Accepts numbers, spaces, dashes, parentheses, and plus sign, min 7 digits
         return typeof value === "string" && /^\+?[\d\s\-()]{7,}$/.test(value)
@@ -53,15 +49,8 @@ export const sendContactMail = catchAsync(async (req, res, next) => {
     }
   };
 
-  const { needAssistanceAs } = reqData;
-  const skipFields = {
-    telegramLink: ["Partner", "Traveler"].includes(needAssistanceAs),
-    email: ["Student", "Parent"].includes(needAssistanceAs),
-  };
-
   for (const key in reqData) {
     const typedKey = key as keyof IContactForm;
-    if (skipFields[typedKey as keyof typeof skipFields]) continue;
 
     const error = validateField(typedKey, reqData[typedKey]);
     if (error) errorObj[typedKey] = error;

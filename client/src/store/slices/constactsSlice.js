@@ -11,7 +11,7 @@ const sendContactMailUrl = "/contact";
 export const sendContactMail = createAsyncThunk(
   "constacts/sendContactMail",
   async (
-    { fullName, contactNumber, needAssistanceAs, email, telegramLink, message },
+    { fullName, contactNumber, needAssistanceAs, email, message },
     { rejectWithValue }
   ) => {
     try {
@@ -20,7 +20,6 @@ export const sendContactMail = createAsyncThunk(
         contactNumber,
         needAssistanceAs,
         email,
-        telegramLink,
         message,
       });
 
