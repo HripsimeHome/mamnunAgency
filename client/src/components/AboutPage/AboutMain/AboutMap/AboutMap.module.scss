@@ -12,6 +12,7 @@
     width: 100%;
     position: relative;
   }
+
   &__title {
     position: absolute;
     top: 40%;
@@ -28,6 +29,8 @@
 
   &__video {
     width: 100%;
+    pointer-events: none;
+    user-select: none;
   }
 
   &__teaserImgWrapper {
