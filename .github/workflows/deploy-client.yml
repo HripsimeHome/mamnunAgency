@@ -38,3 +38,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "client/build/*"
           target: ${{ secrets.VPS_PATH }}
+          strip_components: 2
