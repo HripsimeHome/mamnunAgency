@@ -1,19 +1,21 @@
+import { useEffect } from "react";
 import styles from "./HomeSocialCard.module.scss";
 
 function HomeSocialCard() {
+  useEffect(() => {
+    // Load Elfsight script only once when component mounts
+    const script = document.createElement("script");
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <div className={styles.homeSocialCard}>
-      <iframe
-        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61572399132304&tabs=timeline&width=380&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true"
-        width="380"
-        height="400"
-        style={{ border: "none", overflow: "hidden" }}
-        scrolling="no"
-        frameBorder="0"
-        allowFullScreen={true}
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        title="Facebook Page Plugin"
-      />
+      <div
+        className="elfsight-app-442d2002-a9c5-4937-8290-c81d0426e3a8"
+        data-elfsight-app-lazy
+      ></div>
     </div>
   );
 }
