@@ -2,5 +2,24 @@
 @import "../../../styles/vars";
 
 .homeSocialCard {
-  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 45px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  margin: 0 auto 50px;
+
+  @include smScreenMedia {
+    max-width: 360px;
+  }
+
+  @include xsmScreenMedia {
+    max-width: 280px;
+  }
+
+  // optional: control Elfsight widget size
+  .elfsight-app-442d2002-a9c5-4937-8290-c81d0426e3a8 {
+  }
 }
