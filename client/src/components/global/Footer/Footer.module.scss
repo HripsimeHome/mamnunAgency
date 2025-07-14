@@ -212,9 +212,9 @@
     }
   }
 
-  &__sociaBlockTItle {
+  &__title {
     @include setFont(20px, 600, $color-secondary);
-    line-height: 16px;
+    line-height: 20px;
 
     @include lgScreenMedia {
       font-size: 16px;
@@ -223,6 +223,7 @@
 
     @include smScreenMedia {
       font-size: 16px;
+      line-height: 16px;
     }
   }
 
@@ -243,6 +244,16 @@
     @include mdScreenMedia {
       width: 25px;
       height: 25px;
+    }
+  }
+  &__feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include smScreenMedia {
+      align-items: center;
+      gap: 5px;
     }
   }
 
@@ -377,4 +388,9 @@
       }
     }
   }
+}
+
+// .tp-widget-wrapper
+:global(.trustpilot-widget) {
+  text-align: left !important;
 }
