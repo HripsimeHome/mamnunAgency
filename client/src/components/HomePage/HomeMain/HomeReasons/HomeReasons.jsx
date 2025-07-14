@@ -119,6 +119,11 @@ const HomeReasons = () => {
           muted
           autoPlay
           onCanPlay={() => setVideoLoaded(true)}
+          playsInline
+          disablePictureInPicture
+          controls={false}
+          controlsList="nodownload nofullscreen noremoteplayback"
+          preload="auto"
         ></video>
         {reasonsData.map(
           (
