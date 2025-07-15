@@ -3,7 +3,6 @@ import styles from "./HomeSocialCard.module.scss";
 
 function HomeSocialCard() {
   useEffect(() => {
-    // Load Elfsight script only once when component mounts
     const script = document.createElement("script");
     script.src = "https://static.elfsight.com/platform/platform.js";
     script.async = true;

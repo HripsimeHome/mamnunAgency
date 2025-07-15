@@ -15,7 +15,7 @@
   background-color: $color-secondary;
   display: flex;
   flex-direction: column;
-  z-index: 99999;
+  z-index: 99999999;
 
   @include lgScreenMedia {
     border-radius: 25px;
