@@ -59,6 +59,7 @@ const HomeHeader = () => {
             autoPlay
             muted
             loop
+            preload="auto"
             onCanPlay={() => setVideoLoaded(true)}
             className={`${styles.homeHeader__video} ${
               videoLoaded ? styles.homeHeader__video_loaded : ""

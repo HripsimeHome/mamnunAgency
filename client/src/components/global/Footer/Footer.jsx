@@ -74,9 +74,7 @@ const Footer = () => {
         {/* menuContainer */}
         <div className={styles.footer__info}>
           <div className={styles.footer__sociaBlock}>
-            <h4 className={styles.footer__sociaBlockTItle}>
-              Our social media channels:
-            </h4>
+            <h4 className={styles.footer__title}>Our social media channels:</h4>
 
             <SocialIcons
               className={styles.footer__socialIcons}
@@ -85,7 +83,9 @@ const Footer = () => {
           </div>{" "}
           {/* socialMedia */}
           <div className={styles.footer__feedback}>
-            <h4>Leave Your feedback Trustpilot</h4>
+            <h4 className={styles.footer__title}>
+              Leave Your feedback Trustpilot
+            </h4>
 
             <TrustPilotLink
               className={styles.footer__img}
@@ -94,7 +94,7 @@ const Footer = () => {
           </div>{" "}
           {/* feedback */}
           <div className={styles.footer__paymentsBLock}>
-            <h4>We accept:</h4>
+            <h4 className={styles.footer__title}>We accept:</h4>
 
             <div className={styles.footer__paymentsCard}>
               {paymentsData.map(({ image, webpImage, alt }, index) => (
