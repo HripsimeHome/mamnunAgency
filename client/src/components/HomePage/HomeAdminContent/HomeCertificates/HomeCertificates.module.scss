@@ -3,8 +3,16 @@
 
 .homeCertificates {
   width: 100%;
-  margin-top: 100px;
   position: relative;
+  padding-top: 100px;
+
+  @include xlScreenMedia {
+    padding-top: 50px;
+  }
+
+  @include smScreenMedia {
+    padding-top: 25px;
+  }
 
   &__slider {
     width: 100%;

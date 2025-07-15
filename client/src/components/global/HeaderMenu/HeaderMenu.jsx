@@ -23,7 +23,7 @@ import { useClickOutSide } from "../../../hooks/useClickOutside";
 
 const allMenuItems = [
   { text: "Home", link: homePagePath, group: null },
-  { text: "About us", link: aboutPagePath, group: null },
+  { text: "About Us", link: aboutPagePath, group: null },
   { text: "Travel to Uzbekistan", link: tourismPagePath, group: "services" },
   {
     text: "Study Abroad Consulting",
@@ -31,7 +31,7 @@ const allMenuItems = [
     group: "services",
   },
   { text: "Extra VIP Services", link: servicesPagePath, group: "services" },
-  { text: "Contact us", link: contactsPagePath, group: null },
+  { text: "Contact Us", link: contactsPagePath, group: null },
 ];
 
 const HeaderMenu = () => {
