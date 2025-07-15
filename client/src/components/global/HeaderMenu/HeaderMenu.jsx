@@ -113,7 +113,7 @@ const HeaderMenu = () => {
                   </NavLink>
                 ))
               : mainMenuItems.map(({ text, link }, i) => {
-                  if (text === "Contact us") {
+                  if (text === "Contact Us") {
                     return (
                       <div
                         key="dropdown-wrapper"
