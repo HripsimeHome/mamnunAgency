@@ -12,14 +12,6 @@
   @include setFont(18px, 700, $color-secondary);
   display: block;
 
-  // &:not(&:disabled) &:hover {
-  //   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25),
-  //     inset -5px -5px 20px 0 rgba(0, 0, 0, 0.25),
-  //     inset 5px 5px 20px 0 rgba(0, 0, 0, 0.25),
-  //     inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
-  //   color: $color-white;
-  // }
-
   &:not(&:disabled):not(&_negative):hover {
     background: linear-gradient(180deg, #8c52ff 0%, #b164ff 100%);
   }

@@ -54,23 +54,21 @@ const HomeHeader = () => {
   return (
     <section ref={ref} className={styles.homeHeader}>
       <div className={styles.homeHeader__videoWrapper}>
-        {/* {(true || process.env.NODE_ENV !== "development") && (
-          <video
-            autoPlay
-            muted
-            loop
-            preload="auto"
-            onCanPlay={() => setVideoLoaded(true)}
-            className={`${styles.homeHeader__video} ${
-              videoLoaded ? styles.homeHeader__video_loaded : ""
-            }`}
-            playsInline
-          >
-            Your browser does not support the video tag.
-            <source src="/videos/home/home.webm" type="video/mp4" />
-            <source src="/videos/home/home.mp4" type="video/mp4" />
-          </video>
-        )} */}
+        <video
+          autoPlay
+          muted
+          loop
+          preload="auto"
+          onCanPlay={() => setVideoLoaded(true)}
+          className={`${styles.homeHeader__video} ${
+            videoLoaded ? styles.homeHeader__video_loaded : ""
+          }`}
+          playsInline
+        >
+          Your browser does not support the video tag.
+          <source src="/videos/home/home.webm" type="video/mp4" />
+          <source src="/videos/home/home.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className={styles.homeHeader__mottoTextContainer}>
         {mottos.map((motto, index) => (
