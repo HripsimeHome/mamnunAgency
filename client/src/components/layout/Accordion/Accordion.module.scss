@@ -153,9 +153,11 @@
     --paddingInline: 15px;
     min-height: 70px;
   }
+
   &__col_2Col &__header {
     padding-block: var(--paddingInline);
   }
+
   &__btn {
     @include flexCol(space-between, start);
     width: 100%;
