@@ -66,7 +66,10 @@ export class Email {
     );
   }
   async sendContactForm(params: IContactForm) {
-    const supportMail = process.env.SUPPORT_MAIL;
+    const supportMail =
+      params.needAssistanceAs === "Traveler"
+        ? process.env.TRAVEL_SUPPORT_MAIL
+        : process.env.CONTACT_SUPPORT_MAIL;
 
     if (!supportMail) throw new Error("support mail not found in env");
     await this.send(
@@ -77,7 +80,7 @@ export class Email {
     );
   }
   async sendBookingForm(params: IBookingForm) {
-    const supportMail = process.env.SUPPORT_MAIL;
+    const supportMail = process.env.TRAVEL_SUPPORT_MAIL;
 
     if (!supportMail) throw new Error("support mail not found in env");
     await this.send("booking", "New Booking Submission", params, supportMail);
